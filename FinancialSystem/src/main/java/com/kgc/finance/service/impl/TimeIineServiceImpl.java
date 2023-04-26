@@ -15,12 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.service.impl.TimeIineServiceImpl
- * @explain: 时间线业务接口实现类
- * @create: 2019-09-20 11:27
- **/
+
 @Service
 @Transactional
 public class TimeIineServiceImpl implements TimeIineService {

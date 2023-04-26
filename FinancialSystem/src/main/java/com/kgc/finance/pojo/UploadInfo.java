@@ -7,11 +7,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-/**
- * @version 1.0
- * @auther 何鑫
- * @Date 2019/9/916:19
- */
 @Component
 @Data
 //上传信息表

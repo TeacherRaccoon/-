@@ -6,10 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-/**
- * @author 何夏麟
- * @date 9/24/2019 15:46
- */
+
 @ComponentScan
 @Data
 public class ImgUp {

@@ -1,10 +1,6 @@
 package com.kgc.finance.filter;
 
-/**
- * @description:
- * @author: 卢智伟
- * @date: 2019-08 17:20
- */
+
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

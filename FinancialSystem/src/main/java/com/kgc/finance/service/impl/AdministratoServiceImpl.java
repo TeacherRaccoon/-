@@ -16,12 +16,6 @@ import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.service.impl.AdministratoServiceImpl
- * @explain: 管理员表的业务实现类
- * @create: 2019-09-07 14:38
- **/
 @Service
 @Transactional
 public class AdministratoServiceImpl implements AdministratoService {

@@ -5,11 +5,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-/**
- * @description:
- * @author: 卢智伟
- * @date: 2019-10 23:57
- */
+
 @Data
 public class UpFiles {
     private MultipartFile[] upFiles;//要上传的文件

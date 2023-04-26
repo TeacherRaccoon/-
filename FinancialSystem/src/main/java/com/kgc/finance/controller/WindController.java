@@ -13,14 +13,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-/**
- * @program: demo
- * @Description: $
- * @Param: $
- * @return: $
- * @Author: xieyongde
- * @Date: 2019-09-20
- */
 @Controller
 public class WindController {
     @Resource

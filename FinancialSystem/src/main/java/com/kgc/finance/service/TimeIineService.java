@@ -5,12 +5,7 @@ import com.kgc.finance.pojo.TimeIine;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.service.impl.TimeIineService
- * @explain: 时间线业务接口
- * @create: 2019-09-20 11:25
- **/
+
 public interface TimeIineService {
 
 

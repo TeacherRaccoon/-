@@ -7,11 +7,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-/**
- * @version 1.0
- * @auther 何鑫
- * @Date 2019/9/916:13
- */
 @Component
 @Data
 //出款账户信息表

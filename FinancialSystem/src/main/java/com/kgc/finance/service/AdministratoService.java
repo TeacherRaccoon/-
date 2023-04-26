@@ -5,12 +5,7 @@ import com.kgc.finance.pojo.Administrator;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.service.AdministratoService
- * @explain: 管理员表的业务层接口
- * @create: 2019-09-07 14:23
- **/
+
 
 public interface AdministratoService {
 

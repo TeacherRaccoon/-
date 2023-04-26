@@ -7,11 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-/**
- * @description:
- * @author: 卢智伟
- * @date: 2019-10 19:29
- */
+
 @Component
 public class DateUtil {
 

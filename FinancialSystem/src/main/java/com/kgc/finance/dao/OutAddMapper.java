@@ -5,14 +5,6 @@ import com.kgc.finance.service.OutAddService;
 
 import java.util.Map;
 
-/**
- * @program: demo
- * @Description: $
- * @Param: $
- * @return: $
- * @Author: xieyongde
- * @Date: 2019-09-27
- */
 
 public interface OutAddMapper {
     /**

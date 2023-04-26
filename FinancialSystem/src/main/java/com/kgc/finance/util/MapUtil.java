@@ -7,11 +7,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/***
- * Map封装工具类
- * @author 何夏麟
- * @Date 2019/8/01
- */
+
 @Component
 public class MapUtil {
 

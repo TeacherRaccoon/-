@@ -5,12 +5,7 @@ import com.kgc.finance.pojo.Administrator;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.dao.AdministratorDao
- * @explain: 管理员表dao
- * @create: 2019-09-07 14:06
- **/
+
 public interface AdministratorDao {
     /**
      * 添加信息

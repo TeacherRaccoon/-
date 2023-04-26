@@ -6,11 +6,6 @@ import com.kgc.finance.pojo.InfoEntry;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @version 1.0
- * @auther 何鑫
- * @Date 2019/9/1620:02
- */
 public interface InfoEntryMapper {
     /**
      * 添加订单信息

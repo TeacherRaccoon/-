@@ -2,14 +2,7 @@ package com.kgc.finance.service;
 
 import java.util.Map;
 
-/**
- * @program: FinancialSystem
- * @Description: $
- * @Param: $
- * @return: $
- * @Author: xieyongde
- * @Date: 2019-09-17
- */
+
 
 public interface ViewService {
     /**

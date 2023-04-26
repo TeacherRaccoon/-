@@ -7,12 +7,6 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * @author: 方子瑞
- * @program: com.token.util.TokenUtil
- * @explain: Token的生成
- * @create: 2019-09-09 09:00
- **/
 @Component
 public class TokenUtil {
     @Autowired

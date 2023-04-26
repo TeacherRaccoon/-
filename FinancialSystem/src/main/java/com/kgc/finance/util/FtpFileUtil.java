@@ -8,11 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-/**
- * @description: 上传文件工具类
- * @author: 卢智伟
- * @Date: 2019-08 11:40
- */
+
 @Component
 public class FtpFileUtil {
     //ftp服务器地址

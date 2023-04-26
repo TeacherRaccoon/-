@@ -10,14 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import java.util.Map;
 
-/**
- * @program: FinancialSystem
- * @Description: $
- * @Param: $
- * @return: $
- * @Author: xieyongde
- * @Date: 2019-09-17
- */
 @Controller
 @RequestMapping("/view")
 public class ViewController {

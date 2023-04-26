@@ -10,12 +10,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author: 方子瑞
- * @program: com.duoduo.util.RedisUtil
- * @explain: Redis的工具类
- * @create: 2019-08-13 12:00
- **/
+
 @Component
 public class RedisUtil {
 

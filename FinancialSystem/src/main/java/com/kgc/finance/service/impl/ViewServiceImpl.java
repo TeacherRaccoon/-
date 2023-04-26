@@ -14,14 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @program: FinancialSystem
- * @Description: $
- * @Param: $
- * @return: $
- * @Author: xieyongde
- * @Date: 2019-09-17
- */
+
 @Service
 public class ViewServiceImpl implements ViewService {
     @Resource

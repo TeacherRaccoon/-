@@ -9,12 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.controller.TimeIineController
- * @explain: 时间线控制层
- * @create: 2019-09-20 11:30
- **/
 @RequestMapping("/background/timeIine")
 @RestController
 public class TimeIineController {

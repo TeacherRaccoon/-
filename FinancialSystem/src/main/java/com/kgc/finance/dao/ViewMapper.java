@@ -5,14 +5,7 @@ import com.kgc.finance.pojo.OutAmountInfo;
 import com.kgc.finance.pojo.UploadInfo;
 import java.util.List;
 
-/**
- * @program: demo
- * @Description: $
- * @Param: $
- * @return: $
- * @Author: xieyongde
- * @Date: 2019-09-16
- */
+
 
 public interface ViewMapper {
 

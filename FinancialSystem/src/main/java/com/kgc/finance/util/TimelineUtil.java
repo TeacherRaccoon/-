@@ -10,12 +10,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.util.TimelineUtil
- * @explain: 时间线，状态，操作员，转换
- * @create: 2019-09-22 14:50
- **/
+
 @Component
 public class TimelineUtil {
 

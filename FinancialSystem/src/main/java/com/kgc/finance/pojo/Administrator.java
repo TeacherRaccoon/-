@@ -5,12 +5,6 @@ import lombok.Data;
 
 import java.util.Date;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.pojo.Administrator
- * @explain: 管理员pojo
- * @create: 2019-09-07 13:55
- **/
 @Data
 public class Administrator {
 

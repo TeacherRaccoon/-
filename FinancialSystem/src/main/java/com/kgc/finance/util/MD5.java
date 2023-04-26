@@ -4,12 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
-/**
- * @author: 方子瑞
- * @program: com.token.util.MD5
- * @explain: 加密
- * @create: 2019-09-09 09:48
- **/
+
 
 public class MD5 {
 

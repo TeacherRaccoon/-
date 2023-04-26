@@ -15,12 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.controller.LoginAdminController
- * @explain: 登录操作控制层
- * @create: 2019-09-07 17:59
- **/
+
 @RequestMapping("/background/login")
 @RestController
 public class LoginAdminController {

@@ -13,12 +13,7 @@ import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author: 方子瑞
- * @program: com.kgc.finance.controller.AdministratorController
- * @explain: 管理员控制层
- * @create: 2019-09-07 14:53
- **/
+
 @RequestMapping("/background/administrator")
 @RestController
 public class AdministratorController {

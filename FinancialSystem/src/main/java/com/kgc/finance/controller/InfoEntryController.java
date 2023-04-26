@@ -18,11 +18,7 @@ import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-/**
- * @version 1.0
- * @auther 何鑫
- * @Date 2019/9/1620:25
- */
+
 @RestController
 public class InfoEntryController {
 

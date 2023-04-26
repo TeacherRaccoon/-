@@ -5,11 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-/**
- * @version 1.0
- * @auther 何鑫
- * @Date 2019/9/916:30
- */
+
 @Component
 @Data
 //时间线表

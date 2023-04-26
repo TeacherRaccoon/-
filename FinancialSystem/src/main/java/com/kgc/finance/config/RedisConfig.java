@@ -16,12 +16,7 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 
 import java.lang.reflect.Method;
 
-/**
- * @author: 方子瑞
- * @program: com.duoduo.config.RedisConfig
- * @explain: Redis的配置bean，至spring中，使得能够使用该接口的类
- * @create: 2019-08-13 11:51
- **/
+
 @Configuration
 public class RedisConfig extends CachingConfigurerSupport {
 

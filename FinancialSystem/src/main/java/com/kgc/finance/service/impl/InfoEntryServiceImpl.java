@@ -24,11 +24,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @version 1.0
- * @auther 何鑫
- * @Date 2019/9/1620:20
- */
 @Service
 @Transactional
 public class InfoEntryServiceImpl implements InfoEntryService {
