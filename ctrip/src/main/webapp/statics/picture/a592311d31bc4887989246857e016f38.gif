@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <title>广东景点门票,广东景区门票查询预订【携程门票】</title>
+    <meta name="keywords" content="广东景点门票,广东景区门票查询,广东景区门票预订" />
+    <meta name="description" content="携程门票频道提供广东景点门票查询预订服务,推荐广东热门景点门票,大量广东特价打折景点门票供大家选择,给广大用户带来便利同时实现了大幅度优惠。携程门票提供最便捷的景点门票预订方式。" />
+    
+    <link href="https://webresource.c-ctrip.com/ResTTDOnline/R3/css/vacation_v2/ticket_index.css?ReleaseNo=prd_2018_0502_0000" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <input type="hidden" id="CorrelationId" name="CorrelationId" value="6595073902282140710"/><link href="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/css/PageHeader_V4.css?temp=4,954,932,699,924,890,653" rel="stylesheet" /> <div class="cui-nav-bar">
+<div class="nav-bar-cont">
+<div class="slogan">让旅行更幸福</div>
+<ul class="language">
+<li>
+<a rel="nofollow" style="cursor:default" class="selected" onmouseover="this.className='selected language_current';this.nextElementSibling.style.display='block';" onmouseout="this.className= 'selected';this.nextElementSibling.style.display='none';"><span><em class="ico-global"></em> Language <b class="n-arrow"></b></span></a>
+<div class="language_wrap drowndrop" style="display: none;" onmouseover="this.style.display='block';this.previousElementSibling.className='selected language_current';" onmouseout="this.style.display='none';this.previousElementSibling.className='selected';">
+<ul class="language_list" id="cui_lang_list">
+<li>
+<a id="ctrip_cn" class="language_big5" href="//www.ctrip.com">简体中文</a>
+</li>
+<li>
+<a id="ctrip_eng" class="language_en" href="https://www.trip.com/?locale=en_US">English (United States)</a>
+</li>
+<li>
+<a id="ctrip_uk" class="language_gb" href="https://uk.trip.com/?locale=en_gb">English (United Kingdom)</a>
+</li>
+<li>
+<a id="ctrip_hk" class="language_hk" href="http://hk.trip.com/?locale=zh_hk">繁&#39636;中文 (香港)</a>
+</li>
+<li>
+<a id="ctrip_hk_en" class="language_hk" href="https://hk.trip.com/?locale=en_hk">English(Hong Kong)</a>
+</li>
+<li>
+<a id="ctrip_korea" class="language_korea" href="https://kr.trip.com/?locale=ko_KR">韩语版</a>
+</li>
+<li>
+<a id="ctrip_jap" class="language_jap" href="https://jp.trip.com/?locale=ja_JP">日语版</a>
+</li>
+<li>
+<a id="ctrip_sg" class="language_sg" href="https://sg.trip.com/?locale=en_SG">English (Singapore)</a>
+</li>
+<li>
+<a id="ctrip_au" class="language_au" href="https://au.trip.com/?locale=en_au">English (Australia)</a>
+</li>
+<li>
+<a id="ctrip_de" class="language_de" href="https://de.trip.com/?locale=de_DE">Deutsch</a>
+</li>
+<li>
+<a id="ctrip_fr" class="language_fr" href="https://fr.trip.com/?locale=fr_FR">Fran&ccedil;ais</a>
+</li>
+<li>
+<a id="ctrip_es" class="language_es" href="https://es.trip.com/?locale=es_ES">Espa&ntilde;ol</a>
+</li>
+<li>
+<a id="ctrip_it" class="language_it" href="https://it.trip.com/?locale=it_IT">Italiano</a>
+</li>
+<li>
+<a id="ctrip_ru" class="language_ru" href="https://ru.trip.com/?locale=ru_RU">Русский</a>
+</li>
+<li>
+<a id="ctrip_th" class="language_th" href="https://th.trip.com/?locale=th_TH">泰国站</a>
+</li>
+<li>
+<a id="ctrip_id" class="language_id" href="https://id.trip.com/?locale=id_ID">Bahasa Indonesia</a>
+</li>
+<li>
+<a id="ctrip_my" class="language_my" href="https://my.trip.com/?locale=ms_MY">Bahasa Malaysia</a>
+</li>
+<li>
+<a id="ctrip_my_en" class="language_my" href="https://my.trip.com/?locale=en_my">English (Malaysia)</a>
+</li>
+<li>
+<a id="ctrip_vn" class="language_vn" href="https://vn.trip.com/?locale=vi_VN">越南语</a>
+</li>
+<li>
+<a id="ctrip_nl" class="language_nl" href="https://nl.trip.com/?locale=nl_NL">荷兰语</a>
+</li>
+<li>
+<a id="ctrip_pl" class="language_pl" href="https://pl.trip.com/?locale=pl_PL">波兰语&gt;</a>
+</li>
+<li>
+<a id="ctrip_gr" class="language_gr" href="https://gr.trip.com/?locale=el_GR">希腊语</a>
+</li>
+<li>
+<a id="ctrip_tr" class="language_tr" href="https://tr.trip.com/?locale=tr_TR">土耳其语</a>
+</li>
+<li>
+<a id="ctrip_pt" class="language_pt" href="https://br.trip.com/?locale=pt_BR">巴西葡萄牙语</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<ul class="nav-bar-set">
+<li class="set-list set-logIn" id="nav-bar-set-login" style="display:none">
+<a class="person-text" onclick="DoLogin()" style="cursor:pointer;"><span class="set-text"><span class="member-name" name="nav-bar-mname">您好</span>，请登录 </span></a>
+</li>
+<li class="set-list" id="nav-bar-set-reg" style="display:none">
+<a class="person-text nav-per" href="https://passport.ctrip.com/user/reg/home "><span class="set-text"> 免费注册 </span></a>
+</li>
+<li class="set-list myctrip-name" name="cui-nav-bar-set-list" id="nav-bar-set-myctrip-name" style="display:none">
+<a href="https://my.ctrip.com/home/myinfo.aspx#ctm_ref=ssc_hp_myctrip_a" class="person-text nav-myctrip"><span class="set-text"><span class="member-name" name="nav-bar-d-info">普通会员</span><b class="n-arrow"></b></span></a>
+<ul class="per-drowndrop" style="display: none;" id="nav-bar-set-my-info">
+<li class="my-img">
+<a rel="nofollow" href="https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx"><img name="nav-bar-d-info" src="https://pic.c-ctrip.com/platform/online/home/ico_deafult.png"></a>
+</li>
+<li class="my-data">
+<p class="integral" name="nav-bar-d-info" rel="nofollow">积分：<a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/MineMileage.aspx ">0</a>
+</p>
+<p class="member-grade" name="nav-bar-d-info">普通会员<a style="display:none">领福利</a>
+</p>
+</li>
+<li class="sign-out">
+<a rel="nofollow" href="https://passport.ctrip.com/user/logout ">退出</a>
+</li>
+</ul>
+</li>
+<li class="set-list set-infor">
+<i class="infor-notice"></i><a class="infor-num" id="nav-bar-set-msgnum" rel="nofollow">消息<span>0</span></a>
+</li>
+<li class="set-list set-myctrip-list" name="cui-nav-bar-set-list">
+<a class="person-text nav-myctrip" href="https://my.ctrip.com/home/myinfo.aspx#ctm_ref=ssc_hp_myctrip_a "><span class="set-text"> 我的携程 <b class="n-arrow"></b></span></a>
+<ul class="nav-drowndrop" style="display: none;">
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/favorite/myfav#ctm_ref=ssc_hp_myctrip_collect_a ">我的收藏 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://smarket.ctrip.com/Promocode/zh-cn/Promocode.aspx#ctm_ref=ssc_hp_myctrip_integral_a ">我的优惠券 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Passenger/PassengerList.aspx#ctm_ref=ssc_hp_myctrip_info_a ">常用信息 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://secure.ctrip.com/webwallet/index#ctm_ref=ssc_hp_myctrip_wallet_a ">我的钱包 </a>
+</li>
+</ul>
+</li>
+<li class="set-list set-myorder-list" name="cui-nav-bar-set-list">
+<a class="person-text nav-myctrip" rel="nofollow" href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a "><span class="set-text"> 我的订单 <b class="n-arrow"></b></span></a>
+<ul class="nav-drowndrop drowndrop-order" style="display: none;">
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx#ctm_ref=ssc_hp_myctrip_flightorders_a ">机票+相关订单 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx#ctm_ref=ssc_hp_myctrip_hotelorders_a ">酒店订单 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx#ctm_ref=ssc_hp_myctrip_tourorders_a ">旅游订单 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx#ctm_ref=ssc_hp_myctrip_trainorders_a ">火车票订单 </a>
+</li>
+<li>
+<a href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a ">全部订单 </a>
+</li>
+<li>
+<a class="phone-line" href="https://passport.ctrip.com/user/member/fastOrder#ctm_ref=ssc_hp_myctrip_phoneorders_a ">手机号查订单 </a>
+</li>
+</ul>
+</li>
+<li class="set-list">
+<a target="_blank" class="person-text nav-per" href="http://kefu.ctrip.com"><span class="set-text"> 客服中心 </span></a>
+</li>
+<li class="set-list set-phone" name="cui-nav-bar-set-list">
+<a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_app"></i></span></a>
+<ul class="phone-drowndrop" style="display: none;">
+<li class="ico_code">
+<img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_app.jpg" alt=""><p>手机扫码快速下载</p>
+</li>
+<li class="ctrip-app">
+<a href="http://app.ctrip.com">携程旅行手机版</a><i class="arrow-right"></i>
+</li>
+</ul>
+</li>
+<li class="set-list set-wechat" name="cui-nav-bar-set-list">
+<a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_wechat"></i></span></a>
+<ul class="wechat-drowndrop" style="display: none;">
+<li class="ico_code">
+<img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_wechat.jpg" alt=""><p>携程订阅号：helloctrip</p>
+<p class="nth2">扫一扫，<span>领旅行福利</span>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div><div class="cui_hd_cont">
+<div class="cui_hd">
+<input type="hidden" id="_searchboxNo_" value="ws_www20140409"><input type="hidden" id="_newHeaderFlag_" value="true">
+<div class="ctriplogo">
+<a title="携程旅行网" href="http://www.ctrip.com">携程旅行网 </a>
+</div>
+<div class="nav-tel">
+<ul class="nav-tel-list" id="cui-nav-tel-list">
+<li> 境内：95010</li>
+<li>（或）400-830-6666</li>
+<li class="tel-list-more">香港(中国)：+852-3069-9966</li>
+<li class="tel-list-more">境外：+86-21-3406-4888</li>
+</ul>
+</div>
+</div>
+</div><div id="cui_nav">
+<div class="base_nav">
+<ul id="cui_nav_ul" class="cui_nav cui_content">
+<li id="cui_c_ph_hp">
+<a id="c_ph_hp" class="cui_nav_non" href="https://www.ctrip.com/">首页</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_hotel">
+<a id="nav_hotel" class="cui_nav_has" href="https://hotels.ctrip.com/">酒店<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_hotel" class="cui_sub_nav">
+<li id="ul_c_ph_hotel_h">
+<a id="c_ph_hotel_h" href="https://hotels.ctrip.com/">国内酒店</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hoteli_h">
+<a id="c_ph_hoteli_h" href="https://hotels.ctrip.com/international/">海外酒店</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_inn_h">
+<a id="c_ph_inn_h" href="https://inn.ctrip.com/onlineinn/index?channelid=211">民宿客栈</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_apartment_h">
+<a id="c_ph_apartment_h" href="https://inn.ctrip.com/onlineinn/international/index?channelid=209">海外民宿</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_tuan_h">
+<a id="c_ph_tuan_h" href="http://tuan.ctrip.com">团购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocanj_h">
+<a id="c_ph_taocanj_h" href="https://vacations.ctrip.com/diysh/hotel">酒店+景点</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_meetingroom_h">
+<a id="c_ph_meetingroom_h" href="http://meeting.ctrip.com/?channel=0#ctm_ref=mtg_meetingroom_2dh">团队房&bull;长住房</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_meeting_h">
+<a id="c_ph_meeting_h" href="https://meeting.ctrip.com/?channel=1#ctm_ref=mtg_meeting_2dh">会议<span class="label-cn" id="ACT_Label_14" style="display:none"><em>会员日</em><i class="triangle"></i></span></a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx"><i class="cui-icon-hotel"></i>酒店订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_vac">
+<a id="nav_vac" class="cui_nav_has" href="https://vacations.ctrip.com/">旅游<span class="label-cn" id="ACT_Label_40" style="display:none"><em>嗨暑价</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_vac" class="cui_sub_nav">
+<li id="ul_c_ph_vacations_v">
+<a id="c_ph_vacations_v" href="https://vacations.ctrip.com/">旅游首页<span class="label-cn" id="ACT_Label_41" style="display:none"><em>678月节</em><i class="triangle"></i></span></a>
+</li>
+<li class="divider " style="display:none"></li>
+<li id="ul_c_ph_around_v">
+<a id="c_ph_around_v" href="https://vacations.ctrip.com/around">周末游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_vacationsd_v">
+<a id="c_ph_vacationsd_v" href="https://vacations.ctrip.com/grouptravel/">跟团游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocan_v">
+<a id="c_ph_taocan_v" href="https://vacations.ctrip.com/idiytour">自由行</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_sijiatuan">
+<a id="c_ph_sijiatuan" href="https://vacations.ctrip.com/tangram/MTczNg==?ctm_ref=vactang_page_1736">私家团</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cruise_v">
+<a id="c_ph_cruise_v" href="https://cruise.ctrip.com/">邮轮</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocanj_v">
+<a id="c_ph_taocanj_v" href="https://vacations.ctrip.com/diysh">酒店+景点</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_huodong_v">
+<a id="c_ph_huodong_v" href="https://huodong.ctrip.com/">当地玩乐</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_zhutiyou_v">
+<a id="c_ph_zhutiyou_v" href="https://vacations.ctrip.com/themetravel/">主题游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_baotuan_v">
+<a id="c_ph_baotuan_v" href="https://vacations.ctrip.com/customtravel">定制旅行</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_youxue_v">
+<a id="c_ph_youxue_v" href="https://vacations.ctrip.com/youxue">游学</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_visa_v">
+<a id="c_ph_visa_v" href="https://vacations.ctrip.com/visa">签证</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_mice_v">
+<a id="c_ph_mice_v" href="https://mice.ctrip.com">企业会奖</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hh_v">
+<a id="c_ph_hh_v" target="_blank" rel="nofollow" href="https://www.hhtravel.com/#ctm_ref=hh_ct_thp_nav">高端游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_golf_v">
+<a id="c_ph_golf_v" href="http://fun.iwanoutdoor.com/">爱玩户外</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_insurance_v">
+<a id="c_ph_insurance_v" href="https://vacations.ctrip.com/insurance">保险</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_deals_v">
+<a id="c_ph_deals_v" href="https://vacations.ctrip.com/tours/deals/index">特卖汇</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i class="cui-icon-vacations"></i>旅游订单 &gt;</a>
+</div>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_gentuan">
+<a id="nav_gentuan" class="cui_nav_non" DividerClass="divider_spec" href="https://vacations.ctrip.com/grouptravel">跟团游</a>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_ziyouxing">
+<a id="nav_ziyouxing" class="cui_nav_non" DividerClass="divider_spec" href="https://vacations.ctrip.com/idiytour">自由行</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_flight">
+<a id="nav_flight" class="cui_nav_has" href="https://flights.ctrip.com/">机票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_flight" class="cui_sub_nav">
+<li id="ul_c_ph_flights_f">
+<a id="c_ph_flights_f" href="https://flights.ctrip.com">国内机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightsi_f">
+<a id="c_ph_flightsi_f" href="https://flights.ctrip.com/international/search/">国际&bull;港澳台机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_fuzzy_f">
+<a id="c_ph_fuzzy_f" href="https://flights.ctrip.com/fuzzy/#ctm_ref=ctr_nav_flt_fz_pgs">特价机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocan_f">
+<a id="c_ph_taocan_f" href="https://taocan.ctrip.com">机+酒</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightstoolbox_f">
+<a id="c_ph_flightstoolbox_f" href="https://flights.ctrip.com/actualtime">航班动态</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_bookseat_f">
+<a id="c_ph_bookseat_f" rel="nofollow" href="https://flights.ctrip.com/domestic/checkinseat/index">值机选座</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightorderlist_f">
+<a id="c_ph_flightorderlist_f" rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx">退票改签</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_airportguides_f">
+<a id="c_ph_airportguides_f" rel="nofollow" href="https://flights.ctrip.com/booking/airport-guides.html">机场攻略</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightdingzhi_f">
+<a id="c_ph_flightdingzhi_f" href="https://flights.ctrip.com/itinerary/charter/book">定制包机</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx"><i class="cui-icon-flight"></i>机票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_trains">
+<a id="nav_trains" class="cui_nav_has" href="https://trains.ctrip.com">火车<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_trains" class="cui_sub_nav">
+<li id="ul_c_ph_train_t">
+<a id="c_ph_train_t" href="https://trains.ctrip.com">国内火车票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_traino_t">
+<a id="c_ph_traino_t" href="http://rails.ctrip.com">国际&bull;港台火车票</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx"><i class="cui-icon-train"></i>火车票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_destination">
+<a id="nav_destination" class="cui_nav_has" href="https://bus.ctrip.com/">汽车 &middot; 船<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_destination" class="cui_sub_nav">
+<li id="ul_c_ph_bus_t">
+<a id="c_ph_bus_t" href="https://bus.ctrip.com/">汽车票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ship_t">
+<a id="c_ph_ship_t" href="https://bus.ctrip.com/ship/">船票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_yacht_t">
+<a id="c_ph_yacht_t" target="_blank" rel="nofollow" href="https://yacht.ctrip.com/">游艇帆船</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_daozy_t">
+<a id="c_ph_daozy_t" href="http://pages.c-ctrip.com/bus/xicui/201803/dzy/html/pc.html">到站游</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/QicheOrderlist.aspx"><i class="cui-icon-bus"></i>汽车票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_car">
+<a id="nav_car" class="cui_nav_has" href="https://car.ctrip.com/#ctm_ref=chp_var_txt">用车<span class="label-cn" id="ACT_Label_43" style="display:none"><em>抢五折</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_car" class="cui_sub_nav">
+<li id="ul_c_ph_car_c">
+<a id="c_ph_car_c" href="https://car.ctrip.com/#ctm_ref=chp_var_txt">用车首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwzj_c">
+<a id="c_ph_hwzj_c" href="https://car.ctrip.com/hwzijia#ctm_ref=chp_var_txt">境外租车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwdaijia_c">
+<a id="c_ph_hwdaijia_c" href="https://car.ctrip.com/hwdaijia#ctm_ref=chp_var_txt">境外接送机<span class="label-cn" id="ACT_Label_44" style="display:none"><em>暑期特价</em><i class="triangle"></i></span></a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwrizu_c">
+<a id="c_ph_hwrizu_c" href="https://car.ctrip.com/line/index">境外包车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_zj_c">
+<a id="c_ph_zj_c" href="https://car.ctrip.com/zijia#ctm_ref=chp_var_txt">国内租车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_daijia_c">
+<a id="c_ph_daijia_c" href="https://car.ctrip.com/daijia#ctm_ref=chp_var_txt">国内接送机/火车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_rizu_c">
+<a id="c_ph_rizu_c" href="https://car.ctrip.com/idayweb">国内包车</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/CarOrderList.aspx"><i class="cui-icon-car"></i>用车订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_ticket" class="cui_nav_current">
+<a id="nav_ticket" class="cui_nav_has" href="https://piao.ctrip.com/">门票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_ticket" class="cui_sub_nav">
+<li id="ul_c_ph_piao_p">
+<a id="c_ph_piao_p" class="cui_sub_current" href="https://piao.ctrip.com/?clear=t#ctm_ref=tkt_home_tab_inland">境内门票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_piaooversea_p">
+<a id="c_ph_piaooversea_p" href="https://piao.ctrip.com/oversea#ctm_ref=tkt_home_tab_oversea">出境&bull;港澳台门票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_huodong_p">
+<a id="c_ph_huodong_p" href="https://huodong.ctrip.com#ctm_ref=ctr_hp_ttd">当地玩乐</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_wifi_p">
+<a id="c_ph_wifi_p" href="https://huodong.ctrip.com/wifi#ctm_ref=ctr_hp_wifi">出境WiFi&bull;电话卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_around_p">
+<a id="c_ph_around_p" href="https://vacations.ctrip.com/around">周末游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_disney_p">
+<a id="c_ph_disney_p" href="http://piao.ctrip.com/dest/t4651499.html">上海海昌</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/LocalUnionOrderList.aspx"><i class="cui-icon-ticket"></i>门票玩乐订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_c_ph_you">
+<a id="c_ph_you" class="cui_nav_non" href="https://you.ctrip.com/">攻略</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_g">
+<a id="nav_g" class="cui_nav_has" href="http://g.ctrip.com/">全球购<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_g" class="cui_sub_nav">
+<li id="ul_c_ph_mdg_g">
+<a id="c_ph_mdg_g" href="https://g.ctrip.com/">名店购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cshop_g">
+<a id="c_ph_cshop_g" href="https://pages.c-ctrip.com/shoppingchic/cshop/index.html">旅游购物商城</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ts_g">
+<a id="c_ph_ts_g" href="https://tax.ctrip.com/?bid=2&amp;cid=1&amp;pid=1">退税</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ylth_g">
+<a id="c_ph_ylth_g" href="https://g.ctrip.com/gsmarketingactive/unionpay?ctm_ref=M_gw_3home_paypal_cl">银联特惠</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_skjl_g">
+<a id="c_ph_skjl_g" href="https://card.ctrip.com/#ctm_ref=ctr_bid_0_cid_1_pid_1">万千赏</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_forex_g">
+<a id="c_ph_forex_g" href="https://forex.ctrip.com/?bid=62&amp;1=1">外币兑换</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://forex.ctrip.com/order/list/"><i class="cui-icon-foreign"></i>外币兑换订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_lpk">
+<a id="nav_lpk" class="cui_nav_has" href="https://lipin.ctrip.com">礼品卡<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_lpk" class="cui_sub_nav">
+<li id="ul_c_ph_lipin_l">
+<a id="c_ph_lipin_l" href="https://lipin.ctrip.com">礼品卡首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_lipinholiday_l">
+<a id="c_ph_lipinholiday_l" href="https://lipin.ctrip.com/lipinonline/theme">节日/主题购卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_xcb_l">
+<a id="c_ph_xcb_l" href="https://lipin.ctrip.com/xcb">礼品卡福袋</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_lipincorp_l">
+<a id="c_ph_lipincorp_l" href="https://lipin.ctrip.com/lipinonline/static/intentional">企业采购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_dhq_l">
+<a id="c_ph_dhq_l" href="https://lipin.ctrip.com/voucher">兑换券</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_forexlipin_l">
+<a id="c_ph_forexlipin_l" href="https://forex.ctrip.com/?bid=12&amp;1=1">外币兑换</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/TicketOrderList.aspx"><i class="cui-icon-card"></i>礼品卡订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_sl">
+<a id="nav_sl" class="cui_nav_has" href="https://ct.ctrip.com/#ctm_ref=xcct">商旅<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_sl" class="cui_sub_nav">
+<li id="ul_c_ph_slsy_s">
+<a id="c_ph_slsy_s" href="https://ct.ctrip.com/#ctm_ref=xcct">商旅首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_chl_s">
+<a id="c_ph_chl_s" href="https://ct.ctrip.com/platformquery/landing/index#ctm_ref=xcpt">企业差旅平台</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hj_s">
+<a id="c_ph_hj_s" href="https://mice.ctrip.com">会议旅游</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_cruise">
+<a id="nav_cruise" class="cui_nav_non" DividerClass="divider_spec" href="https://cruise.ctrip.com">邮轮</a>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_mudidi">
+<a id="nav_mudidi" class="cui_nav_non" DividerClass="divider_spec" href="https://dst.ctrip.com/">目的地</a>
+</li>
+<li class="divider "></li>
+<li id="cui_finance_pc">
+<a id="finance_pc" class="cui_nav_non" href="https://jr.ctrip.com">金融</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_more">
+<a id="nav_more" class="cui_nav_has" rel="nofollow" href="https://mall.ctrip.com">更多<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_more" class="cui_sub_nav">
+<li id="ul_c_ph_ypsc_m">
+<a id="c_ph_ypsc_m" href="https://mall.ctrip.com">优品商城</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_sjhy_m">
+<a id="c_ph_sjhy_m" href="https://pages.c-ctrip.com/commerce/dy1/index10.html">超级会员</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_tuangou_m">
+<a id="c_ph_tuangou_m" href="https://tuan.ctrip.com">团购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cards_m">
+<a id="c_ph_cards_m" rel="nofollow" href="https://cards.ctrip.com">合作卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_xcyd_m">
+<a id="c_ph_xcyd_m" href="https://sport.ctrip.com/">携程运动</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="nav_bh" class="cui_nav_behind" style="display:none;height:0px;"></div>
+</div><div id="ActConfig_ID" style="display:none">[{"id":"41","onlinetime":"2019/07/17 11:30:17$2019/08/04 23:55:14"},{"id":"40","onlinetime":"2019/07/17 11:30:26$2019/08/04 23:55:14"},{"id":"44","onlinetime":"2019/07/11 00:00:03$2019/07/25 23:55:01"},{"id":"43","onlinetime":"2019/07/11 00:00:03$2019/07/25 23:55:01"},{"id":"14","onlinetime":"2019/12/31 23:55:04$2200/08/08 16:19:09"},{"id":"15","onlinetime":"2018/12/13 08:23:32$2180/12/31 23:55:09"}]</div><input type="hidden" id="popfloating_isshow" value="0"><input type="hidden" id="siteDomainHeadFloat" value="ctrip"><input type="hidden" id="bsType" value="0"><input type="hidden" id="formatTel" value="[{'formatTelNum':'95010','prefix':'境内：','sortIndex':'1','standardTelNum':'SHMobile95010','suffix':''},{'formatTelNum':'400-830-6666','prefix':'（或）','sortIndex':'2','standardTelNum':'4008306666','suffix':''},{'formatTelNum':'+ 852-3008-3268','prefix':'香港（中国）：','sortIndex':'3','standardTelNum':'85230083268','suffix':''},{'formatTelNum':'+ 86-21-3406-4888','prefix':'境外：','sortIndex':'4','standardTelNum':'34064888','suffix':''}]">
+<script> ;window.replace=function(){return ''};window.replace=function(){return""}; !function(){window.replace=function(){return""};(function(){var h=document,c=function(a){return h.getElementById(a)},k=null,l=null,m=0,d=[c("cui_nav_hotel"),c("cui_nav_vac"),c("cui_nav_flight"),c("cui_nav_trains"),c("cui_nav_destination"),c("cui_nav_car"),c("cui_nav_ticket"),c("cui_nav_g"),c("cui_nav_lpk"),c("cui_nav_sl"),c("cui_nav_more")],g={onmouseenter:function(a,b){(h.all?a.onmouseenter=b:a.onmouseover=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&& b())})},onmouseout:function(a,b){(h.all?a.onmouseleave=b:a.onmouseout=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&&b())})},addEvent:function(a,b,f){(a.addEventListener?a.addEventListener(b,f,!1):(a.attachEvent?a.attachEvent("on"+b,f):a["on"+b]=f))}},e={setTime:function(){g.onmouseenter(c("cui_nav"),function(){setTimeout(function(){m=150},30)});g.onmouseout(c("cui_nav"),function(){m=0})},initEvent:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b= a;g.onmouseenter(d[b],function(){e.interFn(d[b])});g.onmouseout(d[b],function(){e.outerFn(d[b])})})(a)},reset:function(){for(var a=0,b=d.length;b>a;a++)d[a].className=(-1<d[a].className.indexOf("cui_nav_current")?"cui_nav_current":"")},padReset:function(a){for(var b=0,f=d.length;f>b;b++)(-1<d[b].className.indexOf("cui_nav_current")?d[b].className="cui_nav_current":b!==a&&(d[b].className=""))},interFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),f="",d=0;d<b.length;d++)b[d].className.match((/cui_nav_current/))&& (f=b[d]);null!=l&&(clearTimeout(l),l=null);k=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")?f.className="cui_nav_current":(a.className="cui_nav_o",f.className="cui_nav_current cui_nav_unhover"))},m)},outerFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),d="",c=0;c<b.length;c++)b[c].className.match((/cui_nav_current/))&&(d=b[c]);null!=k&&(clearTimeout(k),k=null);l=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")? d.className="cui_nav_current":(a.className="",d.className="cui_nav_current"))},250)},initMobile:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b=a,c=d[b].getElementsByTagName("A")[0];c.href="###";c.onmousedown=function(){e.padReset(b);-1===d[b].className.indexOf("cui_nav_current")&&((-1<d[b].className.indexOf("cui_nav_o")?(d[b].className="",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",c.style.visibility="hidden",setTimeout(function(){c.style.visibility= "visible"},10)):(d[b].className="cui_nav_o",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",document.getElementsByClassName("cui_nav_current")[0].className+=" cui_nav_unhover")))}})(a)},contains:function(a){for(var b=0,c=d.length;c>b;b++)if(0<d[b].compareDocumentPosition(a)-19)return!0;return!1}};c("headStyleId")&&c("headStyleId").parentNode.removeChild(c("headStyleId"));((/ip(hone|od)|ipad/i).test(navigator.userAgent)?(e.initMobile(),g.addEvent(h.body,"click",function(a){e.contains(a.target|| a.srcElement)||e.reset()})):(e.setTime(),e.initEvent()))})()}(); </script>
+
+    
+
+
+    <div id="base_bd">
+        <div class="ticket_bd">
+            <div class="basefix">
+                <input type="hidden" id="DomainUrl" name="DomainUrl" value="https://piao.ctrip.com"/>
+                <input type="hidden" id="page_id" value="103059" />
+                <input type="hidden" id="hdSiteID" name="hdSiteID" value="1012" />
+                
+
+    <div class="side_left">
+        <ul class="side_nav">
+                <li>
+                    <h2>
+本月活动精选                    </h2>
+                    <p>
+                            <a href="https://piao.ctrip.com/ticket/dest/t5356386.html#ctm_ref=va_tkt1_s1012_idx_p0_l1_1_txt" target="_blank">融创乐园</a>
+                            <a href="https://piao.ctrip.com/ticket/dest/t50102.html#ctm_ref=va_tkt1_s1012_idx_p0_l1_2_txt" target="_blank">东部华侨城</a>
+                            <a href="https://piao.ctrip.com/dest/t65581.html#ctm_ref=va_tkt1_s1012_idx_p0_l1_3_txt" target="_blank">百万葵园</a>
+                            <a href="https://piao.ctrip.com/dest/t1477926.html#ctm_ref=va_tkt1_s1012_idx_p0_l1_4_txt" target="_blank">国艺影视城</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+找好玩                    </h2>
+                    <p>
+                            <a href="http://piao.ctrip.com/ticket/dest/t4709346.html#ctm_ref=va_tkt1_s1012_idx_p0_l2_1_txt" target="_blank">古龙峡</a>
+                            <a href="https://piao.ctrip.com/dest/t66224.html#ctm_ref=va_tkt1_s1012_idx_p0_l2_2_txt" target="_blank">黄腾峡</a>
+                            <a href="https://piao.ctrip.com/dest/t6037.html#ctm_ref=va_tkt1_s1012_idx_p0_l2_3_txt" target="_blank">深圳野生动物园</a>
+                            <a href="https://piao.ctrip.com/dest/t76192.html#ctm_ref=va_tkt1_s1012_idx_p0_l2_4_txt" target="_blank">长鹿农庄</a>
+                            <a href="https://piao.ctrip.com/dest/t136155.html#ctm_ref=va_tkt1_s1012_idx_p0_l2_5_txt" target="_blank">清泉湾</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+找低价                    </h2>
+                    <p>
+                            <a href="https://piao.ctrip.com/dest/t136203.html#ctm_ref=va_tkt1_s1012_idx_p0_l3_1_txt" target="_blank">中山影视城</a>
+                            <a href="https://piao.ctrip.com/dest/t110076.html#ctm_ref=va_tkt1_s1012_idx_p0_l3_2_txt" target="_blank">南丹山</a>
+                            <a href="http://piao.ctrip.com/dest/t135906.html#ctm_ref=va_tkt1_s1012_idx_p0_l3_3_txt" target="_blank">洞天仙境</a>
+                            <a href="http://piao.ctrip.com/ticket/dest/t140555.html#ctm_ref=va_tkt1_s1012_idx_p0_l3_4_txt" target="_blank">白水寨</a>
+                            <a href="http://piao.ctrip.com/ticket/dest/t51254.html#ctm_ref=va_tkt1_s1012_idx_p0_l3_5_txt" target="_blank">宝墨园</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+找地标                    </h2>
+                    <p>
+                            <a href="https://piao.ctrip.com/dest/t6802.html#ctm_ref=va_tkt1_s1012_idx_p0_l4_1_txt" target="_blank">长隆野生动物世界</a>
+                            <a href="https://piao.ctrip.com/dest/t1815375.html#ctm_ref=va_tkt1_s1012_idx_p0_l4_2_txt" target="_blank">正佳海洋世界</a>
+                            <a href="https://piao.ctrip.com/dest/t50516.html#ctm_ref=va_tkt1_s1012_idx_p0_l4_3_txt" target="_blank">小梅沙</a>
+                            <a href="https://piao.ctrip.com/dest/t23047.html#ctm_ref=va_tkt1_s1012_idx_p0_l4_4_txt" target="_blank">詹园</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+找热门                    </h2>
+                    <p>
+                            <a href="https://piao.ctrip.com/ticket/dest/t1410757.html#ctm_ref=va_tkt1_s1012_idx_p0_l5_1_txt" target="_blank">海泉湾</a>
+                            <a href="https://piao.ctrip.com/dest/t110029.html#ctm_ref=va_tkt1_s1012_idx_p0_l5_2_txt" target="_blank">地派温泉</a>
+                            <a href="https://piao.ctrip.com/dest/t5551401.html#ctm_ref=va_tkt1_s1012_idx_p0_l5_3_txt" target="_blank">狮门娱乐天地</a>
+                            <a href="https://piao.ctrip.com/dest/t48593.html#ctm_ref=va_tkt1_s1012_idx_p0_l5_4_txt" target="_blank">长隆欢乐世界</a>
+                            <a href="https://piao.ctrip.com/dest/t23047.html#ctm_ref=va_tkt1_s1012_idx_p0_l5_5_txt" target="_blank">詹园</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+找周边                    </h2>
+                    <p>
+                            <a href="https://piao.ctrip.com/ticket/dest/t1408240.html#ctm_ref=va_tkt1_s1012_idx_p0_l6_1_txt" target="_blank">珠海长隆海洋王国</a>
+                            <a href="https://piao.ctrip.com/dest/t4330349.html#ctm_ref=va_tkt1_s1012_idx_p0_l6_2_txt" target="_blank">禅域小镇</a>
+                            <a href="http://piao.ctrip.com/ticket/dest/t110164.html#ctm_ref=va_tkt1_s1012_idx_p0_l6_3_txt" target="_blank">上下川岛</a>
+                            <a href="https://piao.ctrip.com/dest/t12346.html#ctm_ref=va_tkt1_s1012_idx_p0_l6_4_txt" target="_blank">万绿湖</a>
+                    </p>
+                </li>
+        </ul>
+    </div>
+                
+
+
+    <div class="main_right">
+        
+        <div class="search_wrap basefix">
+            <input class="main_search_txt" type="text" id="mainInput" placeholder="请输入目的地、主题或关键字" />
+            <a class="main_search_btn" href="###">搜&nbsp;索</a>
+
+            <div class="hot_search_box hidden" id="HotSearchBox">
+                
+                <ul class="hot_list" style="border-bottom: 0px;"></ul>
+                <div class="hot_page hidden">
+                    <a href="###" class="page_l">&lt;</a>
+                    <a href="###" class="cur">1</a>
+                    <a href="###">2</a>
+                    <a href="###">3</a>
+                    <a href="###" class="page_r">&gt;</a>
+                </div>
+            </div>
+            <div class="city_station">
+                
+                    <em class="city_present"><span>广东<i></i></span></em>
+                    <div class="city_box">
+                                    <a href="https://piao.ctrip.com/anhui">安徽</a>
+                                    <a href="https://piao.ctrip.com/beijing">北京</a>
+                                    <a href="https://piao.ctrip.com/chongqing">重庆</a>
+                                    <a href="https://piao.ctrip.com/fujian">福建</a>
+                                    <a href="https://piao.ctrip.com/gansu">甘肃</a>
+                                    <a href="https://piao.ctrip.com/guangdong">广东</a>
+                                    <a href="https://piao.ctrip.com/guangxi">广西</a>
+                                    <a href="https://piao.ctrip.com/guizhou">贵州</a>
+                                    <a href="https://piao.ctrip.com/hainan">海南</a>
+                                    <a href="https://piao.ctrip.com/hebei">河北</a>
+                                    <a href="https://piao.ctrip.com/henan">河南</a>
+                                    <a href="https://piao.ctrip.com/heilongjiang">黑龙江</a>
+                                    <a href="https://piao.ctrip.com/hubei">湖北</a>
+                                    <a href="https://piao.ctrip.com/hunan">湖南</a>
+                                    <a href="https://piao.ctrip.com/jilin">吉林</a>
+                                    <a href="https://piao.ctrip.com/jiangsu">江苏</a>
+                                    <a href="https://piao.ctrip.com/jiangxi">江西</a>
+                                    <a href="https://piao.ctrip.com/liaoning">辽宁</a>
+                                    <a href="https://piao.ctrip.com/neimenggu">内蒙古</a>
+                                    <a href="https://piao.ctrip.com/ningxia">宁夏</a>
+                                    <a href="https://piao.ctrip.com/qinghai">青海</a>
+                                    <a href="https://piao.ctrip.com/shandong">山东</a>
+                                    <a href="https://piao.ctrip.com/shanxi">山西</a>
+                                    <a href="https://piao.ctrip.com/shaanxi">陕西</a>
+                                    <a href="https://piao.ctrip.com/shanghai">上海</a>
+                                    <a href="https://piao.ctrip.com/sichuan">四川</a>
+                                    <a href="https://piao.ctrip.com/tianjin">天津</a>
+                                    <a href="https://piao.ctrip.com/xizang">西藏</a>
+                                    <a href="https://piao.ctrip.com/xinjiang">新疆</a>
+                                    <a href="https://piao.ctrip.com/yunnan">云南</a>
+                                    <a href="https://piao.ctrip.com/zhejiang">浙江</a>
+                                    <a href="https://piao.ctrip.com/oversea">出境&#183;港澳台</a>
+                    </div>
+            </div>
+        </div>
+        
+        <p class="hot_search">
+            热门搜索：<a  title="珠海长隆海洋王国" target="_blank" href="https://piao.ctrip.com/ticket/dest/t1408240.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_1_txt">珠海长隆海洋王国</a><a  title="融创乐园" target="_blank" href="https://piao.ctrip.com/ticket/dest/t5356386.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_2_txt">融创乐园</a><a  title="小梅沙海洋世界" target="_blank" href="https://piao.ctrip.com/dest/t50516.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_3_txt">小梅沙海洋世界</a><a  title="欢乐谷" target="_blank" href="https://piao.ctrip.com/dest/t13720.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_4_txt">欢乐谷</a><a  title="世界之窗" target="_blank" href="https://piao.ctrip.com/dest/t2778.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_5_txt">世界之窗</a><a  title="野生动物园" target="_blank" href="http://piao.ctrip.com/ticket/dest/t6037.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_6_txt">野生动物园</a><a  title="观澜山水田园" target="_blank" href="https://piao.ctrip.com/ticket/dest/t50575.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_7_txt">观澜山水田园</a><a  title="香江健康山谷" target="_blank" href="https://piao.ctrip.com/ticket/dest/t136111.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_8_txt">香江健康山谷</a><a  title="牛鱼嘴" target="_blank" href="https://piao.ctrip.com/ticket/dest/t50019.html#ctm_ref=va_tkt1_s1012_hot_p0_l1_9_txt">牛鱼嘴</a>
+        </p>
+        
+        <div class="ticket_banner" id="ticket_banner">
+            <div class="banner_col">
+                            <input type="hidden" id="hdTicketBanner" name="hdTicketBanner" value="3425,3426,3427,3428,3429,3430,3431,3432,3433,3434,4104,4105,4381,4382,4383" />
+            </div>
+            <div class="banner_num"></div>
+            <a href="###" class="arrow_left"><i></i></a>
+            <a href="###" class="arrow_right"><i></i></a>
+        </div>
+
+    </div>
+
+            </div>
+            
+
+
+        </div>
+        
+
+        <div class="ticket_bg">
+            <div class="ticket_bd">
+                <div class="ticket_mod privilege_mod">
+                    <div class="mod_hd">
+                        <h2>特权日</h2>
+                        <span class="title_tips">意想不到的惊喜优惠 整月high不停</span>
+                        <i class="title_img"></i>
+                    </div>
+                    <div class="mod_bd">
+                        <ul class="ticket_list_b privilege_list">
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t5118364.html#ctm_ref=va_tkt1_s1012__p0_l1_1_img" title="广州融创主题乐园门票成人票(夜场票，仅限17点后入园)">
+                                        <img src="https://dimg04.c-ctrip.com/images/350816000000z0sg53023_C_280_158.jpg" alt="" class="list_pic" />
+                                            <em class="icon_discount">5.4<span>折</span><i></i></em>
+                                        <h3 class="list_title" title="广州融创主题乐园门票成人票(夜场票，仅限17点后入园)">广州融创主题乐园门票成人票(夜场票，仅限17点后入园)</h3>
+                                        <p class="list_time" title="扎根于千年南越古国文化的六大主题区域">扎根于千年南越古国文化的六大主题区域</p>
+                                        <span class="btn_panic">抢购<i></i></span>
+                                            <p>
+                                                <em class="base_price">
+                                                    特权价<dfn>&yen;</dfn><strong>
+
+                                                        139
+                                                    </strong>
+                                                </em>
+                                            </p>
+                                       
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t65581.html#ctm_ref=va_tkt1_s1012__p0_l1_2_img" title="百万葵园门票大小同价(花海水城泡沫节)(8.2-8.4限时特惠)">
+                                        <img src="https://dimg04.c-ctrip.com/images/350i10000000q5rajDEDF_C_280_158.jpg" alt="" class="list_pic" />
+                                            <em class="icon_discount">2.6<span>折</span><i></i></em>
+                                        <h3 class="list_title" title="百万葵园门票大小同价(花海水城泡沫节)(8.2-8.4限时特惠)">百万葵园门票大小同价(花海水城泡沫节)(8.2-8.4限时特惠)</h3>
+                                        <p class="list_time" title="以观赏向日葵为主的大型主题园林公园
+">以观赏向日葵为主的大型主题园林公园
+</p>
+                                        <span class="btn_panic">抢购<i></i></span>
+                                            <p>
+                                                <em class="base_price">
+                                                    特权价<dfn>&yen;</dfn><strong>
+
+                                                        39
+                                                    </strong>
+                                                </em>
+                                            </p>
+                                       
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t50575.html#ctm_ref=va_tkt1_s1012__p0_l1_3_img" title="观澜山水田园旅游文化园+乡村温泉+飘雪世界门票大小同价(“温泉飘雪”冰火两重天  特惠49.9元)">
+                                        <img src="https://dimg04.c-ctrip.com/images/350j12000000sf8li2AD6_C_280_158.jpg" alt="" class="list_pic" />
+                                            <em class="icon_discount">2.6<span>折</span><i></i></em>
+                                        <h3 class="list_title" title="观澜山水田园旅游文化园+乡村温泉+飘雪世界门票大小同价(“温泉飘雪”冰火两重天  特惠49.9元)">观澜山水田园旅游文化园+乡村温泉+飘雪世界门票大小同价(“温泉飘雪”冰火两重天  特惠49.9元)</h3>
+                                        <p class="list_time" title="依山傍水，都市人的世外桃源。
+">依山傍水，都市人的世外桃源。
+</p>
+                                        <span class="btn_panic">抢购<i></i></span>
+                                            <p>
+                                                <em class="base_price">
+                                                    特权价<dfn>&yen;</dfn><strong>
+
+                                                        49.9
+                                                    </strong>
+                                                </em>
+                                            </p>
+                                       
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t49949.html#ctm_ref=va_tkt1_s1012__p0_l1_4_img" title="南风古灶门票成人票">
+                                        <img src="https://dimg01.c-ctrip.com/images/100j0a00000056m57014C_C_280_158.jpg" alt="" class="list_pic" />
+                                            <em class="icon_discount">8.0<span>折</span><i></i></em>
+                                        <h3 class="list_title" title="南风古灶门票成人票">南风古灶门票成人票</h3>
+                                        <p class="list_time" title="这里有着“陶瓷活化石”之称。">这里有着“陶瓷活化石”之称。</p>
+                                        <span class="btn_panic">抢购<i></i></span>
+                                            <p>
+                                                <em class="base_price">
+                                                    特权价<dfn>&yen;</dfn><strong>
+
+                                                        19.9
+                                                    </strong>
+                                                </em>
+                                            </p>
+                                       
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ticket_bd bd_middle">
+            
+            
+            <div class="tick_mod area_mod">
+                <div class="mod_hd">
+                    <div class="hd_tab" id="ticket_tab">
+                        <a data-tabId="466" href="" class="cur">广东</a> <a data-tabId="421" href="" >广西</a> <a data-tabId="648" href="" >湖南</a> <a data-tabId="641" href="" >湖北</a> <a data-tabId="628" href="" >海南</a> <a data-tabId="653" href="" >江西</a> <a data-tabId="501" href="" >福建</a> <a data-tabId="6" href="" >上海</a> <a data-tabId="39" href="" >浙江</a> <a data-tabId="474" href="" >江苏</a>;
+                    </div>
+                    <i class="title_img"></i>
+                </div>
+                <div class="mod_bd" id="ticket_list">
+                    <ul class="ticket_list_b area_list">
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t1408240.html#ctm_ref=va_tkt1_s1012_prd1_p0_l1_1_img" title="珠海长隆海洋王国">
+                                        <img src="https://dimg04.c-ctrip.com/images/350l16000000ytq151DD2_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="珠海长隆海洋王国">珠海长隆海洋王国</h3>
+                                        <p class="list_time" title="参观大型鲸鲨展馆，挑战超长飞行过山车。
+">参观大型鲸鲨展馆，挑战超长飞行过山车。
+...</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    375
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t48597.html#ctm_ref=va_tkt1_s1012_prd1_p0_l1_2_img" title="长隆水上乐园">
+                                        <img src="https://dimg04.c-ctrip.com/images/350v16000000z663o6C4D_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="长隆水上乐园">长隆水上乐园</h3>
+                                        <p class="list_time" title="水上夜场电音show,从早嗨到晚">水上夜场电音show,从早嗨到晚</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    185
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t5356386.html#ctm_ref=va_tkt1_s1012_prd1_p0_l1_3_img" title="广州融创乐园">
+                                        <img src="https://dimg04.c-ctrip.com/images/350716000000zha1k4823_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="广州融创乐园">广州融创乐园</h3>
+                                        <p class="list_time" title="拥有8大业态，集休闲娱乐于一体">拥有8大业态，集休闲娱乐于一体</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    92
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t13720.html#ctm_ref=va_tkt1_s1012_prd1_p0_l1_4_img" title="深圳欢乐谷">
+                                        <img src="https://dimg04.c-ctrip.com/images/350e160000010dxqj5095_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="深圳欢乐谷">深圳欢乐谷</h3>
+                                        <p class="list_time" title="欢乐谷带给你充满阳光气息和动感魅力的欢乐之旅！">欢乐谷带给你充满阳光气息和动感魅力的欢乐...</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    49.9
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t6037.html#ctm_ref=va_tkt1_s1012_prd1_p0_l2_1_img" title="深圳野生动物园">
+                                        <img src="https://dimg02.c-ctrip.com/images/fd/tg/g4/M01/1A/C7/CggYHlXJyO6AWI2oAAJJQTk6VNA030_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="深圳野生动物园">深圳野生动物园</h3>
+                                        <p class="list_time" title="中国首批放养式野生动物园之一。">中国首批放养式野生动物园之一。</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    80
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t50575.html#ctm_ref=va_tkt1_s1012_prd1_p0_l2_2_img" title="观澜山水田园旅游文化园">
+                                        <img src="https://dimg04.c-ctrip.com/images/350j12000000sf8li2AD6_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="观澜山水田园旅游文化园">观澜山水田园旅游文化园</h3>
+                                        <p class="list_time" title="依山傍水，都市人的世外桃源。
+">依山傍水，都市人的世外桃源。
+</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    49.9
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t76192.html#ctm_ref=va_tkt1_s1012_prd1_p0_l2_3_img" title="长鹿旅游休博园">
+                                        <img src="https://dimg04.c-ctrip.com/images/350l16000000ytw6pD6EA_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="长鹿旅游休博园">长鹿旅游休博园</h3>
+                                        <p class="list_time" title="全国农业旅游示范点
+">全国农业旅游示范点
+</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    70
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://piao.ctrip.com/dest/t5252406.html#ctm_ref=va_tkt1_s1012_prd1_p0_l2_4_img" title="禅域小镇《六祖大典》实景演出">
+                                        <img src="https://dimg04.c-ctrip.com/images/100913000000uz6x337F2_C_280_158.jpg" alt="" class="list_pic" />
+                                        <h3 class="list_title" title="禅域小镇《六祖大典》实景演出">禅域小镇《六祖大典》实景演出</h3>
+                                        <p class="list_time" title="打造禅宗文化情景体验大型实景音画大典。">打造禅宗文化情景体验大型实景音画大典。</p>
+                                        <p>
+                                            <em class="base_price">
+                                                <dfn>&yen;</dfn><strong>
+                                                                    
+                                                    142
+                                                </strong>
+                                            </em>起
+                                        </p>
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        <dl class="product_list">
+            <dt>
+                <a target="_blank" href="https://piao.ctrip.com/dest/u-_b3_a4_c2_a1/s-tickets/#ctm_ref=vat_hp_sb_lst">
+                    <img src="https://images3.c-ctrip.com/dm/201611chl/6367_180_210x.png" alt="" width="180" height="210" />
+                </a>
+            </dt>
+            <dd>
+                <div class="basefix">
+                        <a href="https://piao.ctrip.com/dest/t48593.html#ctm_ref=va_tkt1_s1012_prd2_p0_l1_1_img" title="长隆欢乐世界" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350b16000000yxibx78EA_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="长隆欢乐世界">长隆欢乐世界</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        225
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.0</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        25
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t48597.html#ctm_ref=va_tkt1_s1012_prd2_p0_l1_2_img" title="长隆水上乐园" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350v16000000z663o6C4D_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="长隆水上乐园">长隆水上乐园</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        185
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.5</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        10
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t5110391.html#ctm_ref=va_tkt1_s1012_prd2_p0_l1_3_img" title="广州融创水世界" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350u160000010b4wp8C41_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="广州融创水世界">广州融创水世界</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        180
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>7.9</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        48
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t6037.html#ctm_ref=va_tkt1_s1012_prd2_p0_l1_4_img" title="深圳野生动物园" target="_blank">
+                            <img src="https://dimg02.c-ctrip.com/images/fd/tg/g4/M01/1A/C7/CggYHlXJyO6AWI2oAAJJQTk6VNA030_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="深圳野生动物园">深圳野生动物园</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        80
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>8.9</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        10
+                                    </span>
+                                </p>
+                        </a>
+                </div>
+            </dd>
+        </dl>
+        <dl class="product_list">
+            <dt>
+                <a target="_blank" href="https://piao.ctrip.com/dest/u-_c0_d6_d4_b0/s-tickets/#ctm_ref=vat_hp_sb_lst">
+                    <img src="https://pages.ctrip.com/ticket/temp_pic2/leyuan-03.jpg" alt="" width="180" height="210" />
+                </a>
+            </dt>
+            <dd>
+                <div class="basefix">
+                        <a href="https://piao.ctrip.com/dest/t1408240.html#ctm_ref=va_tkt1_s1012_prd2_p0_l2_1_img" title="珠海长隆海洋王国" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350l16000000ytq151DD2_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="珠海长隆海洋王国">珠海长隆海洋王国</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        375
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.5</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        20
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t76192.html#ctm_ref=va_tkt1_s1012_prd2_p0_l2_2_img" title="长鹿旅游休博园" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350l16000000ytw6pD6EA_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="长鹿旅游休博园">长鹿旅游休博园</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        70
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.0</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        8
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t5551401.html#ctm_ref=va_tkt1_s1012_prd2_p0_l2_3_img" title="珠海横琴狮门娱乐天地" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350a15000000ylnhe4B45_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="珠海横琴狮门娱乐天地">珠海横琴狮门娱乐天地</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        257
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.2</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        23
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t50102.html#ctm_ref=va_tkt1_s1012_prd2_p0_l2_4_img" title="东部华侨城" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350616000000z0s3aE151_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="东部华侨城">东部华侨城</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        135
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.0</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        15
+                                    </span>
+                                </p>
+                        </a>
+                </div>
+            </dd>
+        </dl>
+        <dl class="product_list">
+            <dt>
+                <a target="_blank" href="https://piao.ctrip.com/dest/u-_cd_e6_cb_ae/s-tickets/#ctm_ref=vat_hp_sb_lst">
+                    <img src="https://images3.c-ctrip.com/dm/20160601/djrmm1_001.png" alt="" width="180" height="210" />
+                </a>
+            </dt>
+            <dd>
+                <div class="basefix">
+                        <a href="https://piao.ctrip.com/dest/t2776.html#ctm_ref=va_tkt1_s1012_prd2_p0_l3_1_img" title="锦绣中华民俗村" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350215000000xn8ylB056_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="锦绣中华民俗村">锦绣中华民俗村</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        63.8
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>8.0</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        16.2
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t65581.html#ctm_ref=va_tkt1_s1012_prd2_p0_l3_2_img" title="百万葵园" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350i10000000q5rajDEDF_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="百万葵园">百万葵园</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        39
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>2.6</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        111
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t140538.html#ctm_ref=va_tkt1_s1012_prd2_p0_l3_3_img" title="高明盈香生态园" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350r0y000000mclcx33A2_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="高明盈香生态园">高明盈香生态园</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        110
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.2</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        10
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t2778.html#ctm_ref=va_tkt1_s1012_prd2_p0_l3_4_img" title="世界之窗" target="_blank">
+                            <img src="https://dimg09.c-ctrip.com/images/100p0c000000670n3BABE_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="世界之窗">世界之窗</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        85
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>8.5</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        15
+                                    </span>
+                                </p>
+                        </a>
+                </div>
+            </dd>
+        </dl>
+        <dl class="product_list">
+            <dt>
+                <a target="_blank" href="https://piao.ctrip.com/dest/u-_c0_d6_d4_b0/s-tickets/#ctm_ref=vat_hp_sb_lst">
+                    <img src="https://images3.c-ctrip.com/dm/20160402/wqxb_180_210.png" alt="" width="180" height="210" />
+                </a>
+            </dt>
+            <dd>
+                <div class="basefix">
+                        <a href="https://piao.ctrip.com/dest/t6802.html#ctm_ref=va_tkt1_s1012_prd2_p0_l4_1_img" title="长隆野生动物世界" target="_blank">
+                            <img src="https://dimg04.c-ctrip.com/images/350116000000z8l1l8C74_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="长隆野生动物世界">长隆野生动物世界</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        294
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>9.8</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        6
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t1815375.html#ctm_ref=va_tkt1_s1012_prd2_p0_l4_2_img" title="正佳极地海洋世界" target="_blank">
+                            <img src="https://dimg10.c-ctrip.com/images/fd/tg/g5/M0B/56/D8/CggYsVcVlWqAKEPGAADdEAQX3L4573_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="正佳极地海洋世界">正佳极地海洋世界</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        138
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>7.7</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        42
+                                    </span>
+                                </p>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t1410757.html#ctm_ref=va_tkt1_s1012_prd2_p0_l4_3_img" title="海泉湾旅游度假区" target="_blank">
+                            <img src="https://dimg02.c-ctrip.com/images/fd/tg/g2/M02/94/C5/Cghzf1S01FSARkxFAAE00Id4tns038_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="海泉湾旅游度假区">海泉湾旅游度假区</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        55
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                        </a>
+                        <a href="https://piao.ctrip.com/dest/t50019.html#ctm_ref=va_tkt1_s1012_prd2_p0_l4_4_img" title="牛鱼嘴风景区" target="_blank">
+                            <img src="https://youimg1.c-ctrip.com/target/100910000000ppwd8E90E_C_280_158.jpg" width="230" height="130" />
+                            <h3 title="牛鱼嘴风景区">牛鱼嘴风景区</h3>
+                            <p class="price_box">
+                                <em class="base_price">
+                                    <dfn>&yen;</dfn><strong>
+                                        50
+                                    </strong>
+                                </em>起
+                               
+                            </p>
+                            <span class="btn_buy">抢购</span>
+                                <p class="discount_price">
+                                    <em>6.7</em>折&nbsp;/&nbsp;省&nbsp;<span>
+                                        <dfn>&yen;</dfn>
+                                        25
+                                    </span>
+                                </p>
+                        </a>
+                </div>
+            </dd>
+        </dl>
+        </div>
+        
+
+
+
+        <div class="ticket_bg">
+            <div class="ticket_bd">
+                <div class="ranking_col basefix">
+                        <div class="ranking_box">
+                            <h3>畅销玩水推荐</h3>
+                            <ol>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t48597.html#ctm_ref=va_tkt1_s1012_rkl_p1_l1_1_txt">
+                                            <em class="ranking_num num_hot">1</em>
+                                            <span class="ranking_area" title="长隆水上乐园">长隆水上乐园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    185
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t131371.html#ctm_ref=va_tkt1_s1012_rkl_p1_l2_1_txt">
+                                            <em class="ranking_num num_hot">2</em>
+                                            <span class="ranking_area" title="古龙峡漂流">古龙峡漂流</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    158
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t110164.html#ctm_ref=va_tkt1_s1012_rkl_p1_l3_1_txt">
+                                            <em class="ranking_num num_hot">3</em>
+                                            <span class="ranking_area" title="川岛旅游度假区">川岛旅游度假区</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    140
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t135768.html#ctm_ref=va_tkt1_s1012_rkl_p1_l4_1_txt">
+                                            <em class="ranking_num num_hot">4</em>
+                                            <span class="ranking_area" title="长江水世界">长江水世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    110
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t5110391.html#ctm_ref=va_tkt1_s1012_rkl_p1_l5_1_txt">
+                                            <em class="ranking_num num_hot">5</em>
+                                            <span class="ranking_area" title="广州融创水世界">广州融创水世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    180
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t23017.html#ctm_ref=va_tkt1_s1012_rkl_p1_l6_1_txt">
+                                            <em class="ranking_num num_hot">6</em>
+                                            <span class="ranking_area" title="闸坡大角湾">闸坡大角湾</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    47
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t136155.html#ctm_ref=va_tkt1_s1012_rkl_p1_l7_1_txt">
+                                            <em class="ranking_num num_hot">7</em>
+                                            <span class="ranking_area" title="清泉湾生态旅游度假区">清泉湾生态旅游度假区</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    90
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t3980171.html#ctm_ref=va_tkt1_s1012_rkl_p1_l8_1_txt">
+                                            <em class="ranking_num num_hot">8</em>
+                                            <span class="ranking_area" title="德萨斯水世界">德萨斯水世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    115
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1411764.html#ctm_ref=va_tkt1_s1012_rkl_p1_l9_1_txt">
+                                            <em class="ranking_num num_hot">9</em>
+                                            <span class="ranking_area" title="观澜生态水上乐园">观澜生态水上乐园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    110
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1701258.html#ctm_ref=va_tkt1_s1012_rkl_p1_l10_1_txt">
+                                            <em class="ranking_num num_hot">10</em>
+                                            <span class="ranking_area" title="流星谷水上乐园">流星谷水上乐园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    39
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                            </ol>
+                        </div>
+                        <div class="ranking_box">
+                            <h3>畅销山水风光</h3>
+                            <ol>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t140555.html#ctm_ref=va_tkt1_s1012_rkl_p2_l1_1_txt">
+                                            <em class="ranking_num num_hot">1</em>
+                                            <span class="ranking_area" title="白水寨风景名胜区">白水寨风景名胜区</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    50
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t12346.html#ctm_ref=va_tkt1_s1012_rkl_p2_l2_1_txt">
+                                            <em class="ranking_num num_hot">2</em>
+                                            <span class="ranking_area" title="万绿湖">万绿湖</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    168
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1408735.html#ctm_ref=va_tkt1_s1012_rkl_p2_l3_1_txt">
+                                            <em class="ranking_num num_hot">3</em>
+                                            <span class="ranking_area" title="丹霞山">丹霞山</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    100
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t9440.html#ctm_ref=va_tkt1_s1012_rkl_p2_l4_1_txt">
+                                            <em class="ranking_num num_hot">4</em>
+                                            <span class="ranking_area" title="鼎湖山">鼎湖山</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    30
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1512537.html#ctm_ref=va_tkt1_s1012_rkl_p2_l5_1_txt">
+                                            <em class="ranking_num num_hot">5</em>
+                                            <span class="ranking_area" title="奇石河">奇石河</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    54
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t50020.html#ctm_ref=va_tkt1_s1012_rkl_p2_l6_1_txt">
+                                            <em class="ranking_num num_hot">6</em>
+                                            <span class="ranking_area" title="清远天子山瀑布">清远天子山瀑布</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    48
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t142169.html#ctm_ref=va_tkt1_s1012_rkl_p2_l7_1_txt">
+                                            <em class="ranking_num num_hot">7</em>
+                                            <span class="ranking_area" title="七星岩">七星岩</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    66
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t135906.html#ctm_ref=va_tkt1_s1012_rkl_p2_l8_1_txt">
+                                            <em class="ranking_num num_hot">8</em>
+                                            <span class="ranking_area" title="洞天仙境">洞天仙境</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    75
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t51254.html#ctm_ref=va_tkt1_s1012_rkl_p2_l9_1_txt">
+                                            <em class="ranking_num num_hot">9</em>
+                                            <span class="ranking_area" title="宝墨园">宝墨园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    48
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t110076.html#ctm_ref=va_tkt1_s1012_rkl_p2_l10_1_txt">
+                                            <em class="ranking_num num_hot">10</em>
+                                            <span class="ranking_area" title="南丹山森林王国">南丹山森林王国</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    58
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                            </ol>
+                        </div>
+                        <div class="ranking_box">
+                            <h3>畅销主题公园</h3>
+                            <ol>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1408240.html#ctm_ref=va_tkt1_s1012_rkl_p3_l1_1_txt">
+                                            <em class="ranking_num num_hot">1</em>
+                                            <span class="ranking_area" title="珠海长隆海洋王国">珠海长隆海洋王国</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    375
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t50102.html#ctm_ref=va_tkt1_s1012_rkl_p3_l2_1_txt">
+                                            <em class="ranking_num num_hot">2</em>
+                                            <span class="ranking_area" title="东部华侨城">东部华侨城</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    135
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t2778.html#ctm_ref=va_tkt1_s1012_rkl_p3_l3_1_txt">
+                                            <em class="ranking_num num_hot">3</em>
+                                            <span class="ranking_area" title="世界之窗">世界之窗</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    85
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t2776.html#ctm_ref=va_tkt1_s1012_rkl_p3_l4_1_txt">
+                                            <em class="ranking_num num_hot">4</em>
+                                            <span class="ranking_area" title="锦绣中华民俗村">锦绣中华民俗村</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    63.8
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1410757.html#ctm_ref=va_tkt1_s1012_rkl_p3_l5_1_txt">
+                                            <em class="ranking_num num_hot">5</em>
+                                            <span class="ranking_area" title="海泉湾旅游度假区">海泉湾旅游度假区</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    55
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t76192.html#ctm_ref=va_tkt1_s1012_rkl_p3_l6_1_txt">
+                                            <em class="ranking_num num_hot">6</em>
+                                            <span class="ranking_area" title="长鹿旅游休博园">长鹿旅游休博园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    70
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t2483418.html#ctm_ref=va_tkt1_s1012_rkl_p3_l7_1_txt">
+                                            <em class="ranking_num num_hot">7</em>
+                                            <span class="ranking_area" title="美的鹭湖探索王国">美的鹭湖探索王国</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    80
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1477926.html#ctm_ref=va_tkt1_s1012_rkl_p3_l8_1_txt">
+                                            <em class="ranking_num num_hot">8</em>
+                                            <span class="ranking_area" title="西樵山国艺影视城">西樵山国艺影视城</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    89
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t136087.html#ctm_ref=va_tkt1_s1012_rkl_p3_l9_1_txt">
+                                            <em class="ranking_num num_hot">9</em>
+                                            <span class="ranking_area" title="石头记矿物园">石头记矿物园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    47.4
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t49960.html#ctm_ref=va_tkt1_s1012_rkl_p3_l10_1_txt">
+                                            <em class="ranking_num num_hot">10</em>
+                                            <span class="ranking_area" title="故乡里主题公园">故乡里主题公园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    55
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                            </ol>
+                        </div>
+                        <div class="ranking_box">
+                            <h3>本地人气推荐</h3>
+                            <ol>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t6037.html#ctm_ref=va_tkt1_s1012_rkl_p4_l1_1_txt">
+                                            <em class="ranking_num num_hot">1</em>
+                                            <span class="ranking_area" title="深圳野生动物园">深圳野生动物园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    80
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t48593.html#ctm_ref=va_tkt1_s1012_rkl_p4_l2_1_txt">
+                                            <em class="ranking_num num_hot">2</em>
+                                            <span class="ranking_area" title="长隆欢乐世界">长隆欢乐世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    225
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t6802.html#ctm_ref=va_tkt1_s1012_rkl_p4_l3_1_txt">
+                                            <em class="ranking_num num_hot">3</em>
+                                            <span class="ranking_area" title="长隆野生动物世界">长隆野生动物世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    294
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1815375.html#ctm_ref=va_tkt1_s1012_rkl_p4_l4_1_txt">
+                                            <em class="ranking_num num_hot">4</em>
+                                            <span class="ranking_area" title="正佳极地海洋世界">正佳极地海洋世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    138
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t13720.html#ctm_ref=va_tkt1_s1012_rkl_p4_l5_1_txt">
+                                            <em class="ranking_num num_hot">5</em>
+                                            <span class="ranking_area" title="深圳欢乐谷">深圳欢乐谷</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    49.9
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t50516.html#ctm_ref=va_tkt1_s1012_rkl_p4_l6_1_txt">
+                                            <em class="ranking_num num_hot">6</em>
+                                            <span class="ranking_area" title="小梅沙海洋世界">小梅沙海洋世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    155
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t110464.html#ctm_ref=va_tkt1_s1012_rkl_p4_l7_1_txt">
+                                            <em class="ranking_num num_hot">7</em>
+                                            <span class="ranking_area" title="珠江夜游">珠江夜游</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    78
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t1792131.html#ctm_ref=va_tkt1_s1012_rkl_p4_l8_1_txt">
+                                            <em class="ranking_num num_hot">8</em>
+                                            <span class="ranking_area" title="Mag环球魔幻世界">Mag环球魔幻世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    138
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t2003242.html#ctm_ref=va_tkt1_s1012_rkl_p4_l9_1_txt">
+                                            <em class="ranking_num num_hot">9</em>
+                                            <span class="ranking_area" title="史努比缤纷世界">史努比缤纷世界</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    99
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://piao.ctrip.com/dest/t51254.html#ctm_ref=va_tkt1_s1012_rkl_p4_l10_1_txt">
+                                            <em class="ranking_num num_hot">10</em>
+                                            <span class="ranking_area" title="宝墨园">宝墨园</span>
+                                            <span class="price_r">
+                                                <span class="base_price">
+                                                    <dfn>&yen;</dfn>
+                                                    48
+                                                </span>起
+                                            </span>
+                                        </a>
+                                    </li>
+                            </ol>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="ticket_bd">
+            
+            
+    <div class="bottom_banner">
+        <div class="banner_list_s basefix">
+            <div id="s_1"></div><div id="s_2"></div><div id="s_3"></div><div id="s_4"></div>
+        </div>
+        <div class="banner_list_b basefix">
+            <div id="b_1"></div>  <div id="b_2"></div>
+        </div>
+    </div>
+
+            <div class="characteristic">
+                <dl class="fast">
+                    <dt>入园快</dt>
+                    <dd>方便快捷随到随入</dd>
+                    <i></i>
+                </dl>
+                <dl class="down">
+                    <dt>价格低</dt>
+                    <dd>比门市价贵就赔</dd>
+                    <i></i>
+                </dl>
+                <dl class="quan">
+                    <dt>覆盖全</dt>
+                    <dd>全球门票预订平台</dd>
+                    <i></i>
+                </dl>
+            </div>
+            
+            
+        <div class="bottom_seo">
+            <p>
+                携程景点门票频道为用户提供广东景点门票查询预订服务，并且为用户提供广东景点介绍，景点交通，景点附近酒店以及用户真实的点评信息，全年有各种广东景点景区打折门票，景点节庆假日促销活动，给广大用户带来便利的同时，让用户享受到优惠。
+                                                                                                                  
+            </p>
+                <dl class="area_seo whole">
+                    <dt class="b J-expand">
+广东景点门票推荐：
+                    <a href="###" class="ico_fold">+</a>
+                </dt>
+                    <dd class="bottom_line">
+                            <a href="https://piao.ctrip.com/dest/t6802.html" target="_blank">长隆野生动物世界</a>
+                            <a href="https://piao.ctrip.com/dest/t1408240.html" target="_blank">珠海长隆海洋王国</a>
+                            <a href="https://piao.ctrip.com/dest/t137991.html" target="_blank">长隆国际马戏大剧院</a>
+                            <a href="https://piao.ctrip.com/dest/t48597.html" target="_blank">长隆水上乐园</a>
+                            <a href="https://piao.ctrip.com/dest/t48593.html" target="_blank">长隆欢乐世界</a>
+                            <a href="https://piao.ctrip.com/dest/t107540.html" target="_blank">广州塔</a>
+                            <a href="https://piao.ctrip.com/dest/t2778.html" target="_blank">世界之窗</a>
+                            <a href="https://piao.ctrip.com/dest/t1408228.html" target="_blank">珠海横琴&#183;长隆国际海洋度假区</a>
+                            <a href="https://piao.ctrip.com/dest/t13720.html" target="_blank">深圳欢乐谷</a>
+                            <a href="https://piao.ctrip.com/dest/t110464.html" target="_blank">珠江夜游</a>
+                            <a href="https://piao.ctrip.com/dest/t5118364.html" target="_blank">广州融创主题乐园</a>
+                            <a href="https://piao.ctrip.com/dest/t131371.html" target="_blank">古龙峡漂流</a>
+                            <a href="https://piao.ctrip.com/dest/t1815375.html" target="_blank">正佳极地海洋世界</a>
+                            <a href="https://piao.ctrip.com/dest/t55474.html" target="_blank">珠海海泉湾神秘岛乐园</a>
+                            <a href="https://piao.ctrip.com/dest/t1827423.html" target="_blank">珠海长隆剧院</a>
+                            <a href="https://piao.ctrip.com/dest/t4709346.html" target="_blank">古龙峡玻璃大峡谷</a>
+                            <a href="https://piao.ctrip.com/dest/t76192.html" target="_blank">长鹿旅游休博园</a>
+                            <a href="https://piao.ctrip.com/dest/t2776.html" target="_blank">锦绣中华民俗村</a>
+                            <a href="https://piao.ctrip.com/dest/t2508917.html" target="_blank">长隆横琴湾水世界</a>
+                            <a href="https://piao.ctrip.com/dest/t6037.html" target="_blank">深圳野生动物园</a>
+                    </dd>
+                </dl>
+        </div>
+
+        </div>
+    </div>
+
+<input type='hidden' name='versionTag' value='1_1012_1000_2019-07-31 00:39:30_r'>
+
+
+    <div id="base_ft">
+<p>
+<a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引" href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;<a rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp; |&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com/crptravel/default/landing" title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a>
+</p>
+<p>
+<a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop" target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://join.easytrip.com/jiameng/#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://dst.ctrip.com/">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="隐私政策">隐私政策</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://m.ctrip.com/webapp/vacations/tour/supplier" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright&copy;</a>,&nbsp;<a href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a>
+</p>
+<p class="gns">
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002731"><i class="icon-gns"></i>沪公网备31010502002731号</a>
+</p>
+<div class="honour_wrap">
+<a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow">信用评级</a><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow">上海工商</a><a href="https://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow">诚信网站</a><a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网">网络社会征信网</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心">信息举报中心</a><a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站">可信网站</a><a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow">违法和不良信息举报中心</a>
+</div>
+</div><config id="timespan" value="20160329"></config><!--InstanceEnd name="position"-->
+<script type="text/javascript">var globalConfig={H1:'https',AjaxUrl:'accounts.ctrip.com',H3:'my.ctrip.com',PassportUrl:'passport.ctrip.com',Lang:'gb2312'};</script><script type="text/javascript" src="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/js/ActivityController_V2.min.js?temp=-766,134,989" charset="utf-8"></script>
+    
+    
+    
+    <script type="text/javascript" src="https://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://webresource.c-ctrip.com/code/cquery/cQuery_110421.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $LAB.padScript({ src: 'https://webresource.c-ctrip.com/code/cquery/pad.js', charset: "utf-8" });
+    </script>
+    
+
+    <script type="text/javascript">
+    var GV = GV || {};
+    GV.app = GV.app || {};
+    GV.app.ticket = {
+        baseUrl: 'https://webresource.c-ctrip.com/ResTTDOnline/R3/js/booking/scripts/min/ticket'
+    };
+</script>
+    <script src="https://webresource.c-ctrip.com/ResTTDOnline/R3/js/booking/scripts/min/ticket/require.min.js?ReleaseNo=prd_2018_0502_0000" type="text/javascript"></script>
+    <script src="https://webresource.c-ctrip.com/ResTTDOnline/R3/js/booking/scripts/min/ticket/ticket.main.js?ReleaseNo=prd_2018_0502_0000" type="text/javascript"></script>
+    <script src="https://webresource.c-ctrip.com/ResTTDOnline/R3/js/booking/scripts/min/ticket/ticket.index.js?ReleaseNo=prd_2018_0502_0000" type="text/javascript"></script>
+
+</body>
+</html>

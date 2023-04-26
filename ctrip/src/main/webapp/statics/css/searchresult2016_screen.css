@@ -1,0 +1,124 @@
+﻿@charset "utf-8";
+.vacation_bd{width:980px;margin:0 auto;}
+/*==== search box S ====*/
+.search_wrap { width: 660px; }
+.search_wrap .main_search_txt { width: 290px; }
+.search_wrap .main_search_btn { width: 100px;text-indent: 22px; }
+.search_wrap .main_search_btn i { left: 18px; }
+.search_wrap .visited_link {display: none;}
+.search_wrap .senior_search_box { width: 616px; }
+.search_wrap .senior_search_box .select_box { width: 502px; }
+.search_wrap .senior_search_box label { width: 90px; }
+.start_city_station dd { width: 280px; }
+.start_city_station .station_list a { margin-right: 4px; }
+.start_city_station .hot_station a { margin-right: 6px; }
+.start_city_station .station_list span { margin-right: 14px; }
+.channel_hot_destination { width: 302px; }
+.channel_destination_detail .channel_destination_link a, .channel_hot_search .channel_destination_link a { margin-right: 8px; }
+.channel_hot_jmp { left: 308px; }
+.channel_hot_dest dt { width: 133px; }
+.channel_hot_dest dd { width: 308px; }
+.channel_hot_bd {width:301px;}
+.channel_hot_bd .destination_list li{padding:0 8px;}
+.channel_hot_bd .destination_list .destination_col{padding:5px 10px 5px 45px;}
+.channel_hot_bd .destination_list .destination_col p{margin-left:-5px;}
+.channel_hot_bd .destination_list .destination_col a{margin-left:5px;}
+.channel_hot_bd .side_jmp{left:300px;}
+.hot_search_box{width: 359px;}
+/*==== search box E ====*/
+/*==== compare S ====*/
+.compare_fixed{width: 980px;margin-left:-490px;}
+.compare_wrap{height: 80px;}
+.compare_list { width: 820px; }
+.compare_list li{width: 270px;}
+.compare_notice_wrap, .compare_product_wrap{width: 250px; height: 60px;}
+.compare_notice_wrap .compare_num{font:48px/58px tahoma,sans-serif;}
+.compare_notice_wrap .compare_notice{ font-size: 12px; padding-top: 12px;}
+.compare_product_wrap .compare_pic img { display: block; width: 100px; height: 56px; }
+.compare_product_wrap .compare_name{font-size: 12px;line-height:14px; width: 140px; height: 42px;}
+.compare_product_wrap .compare_price{width: 140px;}
+.compare_product_wrap .compare_price .base_price strong{font-size: 14px;}
+.compare_begin{ padding-right: 12px;}
+.compare_begin .begin{ font-size: 14px; width: 100px;}
+/*==== compare S ====*/
+/*==== seo S ====*/
+.detail_seo{width:960px;}
+.detail_seo .booking_info_box{width:856px;}
+/*==== seo E ====*/
+/*==== bottom_advantage S ====*/
+.bottom_advantage {width:980px;}
+.bottom_advantage .security {width:366px;}
+.bottom_advantage .help {width:230px;}
+.bottom_advantage .guide{width:142px;}
+.bottom_advantage dd{width:115px;}
+/*==== bottom_advantage E ====*/
+/*==== search_filtrate S ====*/
+.search_fixed{width:980px;}
+.filtrate_nav .filtrate_list span{display:none;}
+/*==== search_filtrate E ====*/
+/*==== main_mod S ====*/
+.main_col{width:790px;}
+/*==== main_mod E ====*/
+/*==== flthlt_box S ====*/
+.flthlt_content{float:none;width:100%;}
+.flthlt_img{display: none;}
+/*==== flthlt_box E ====*/
+/*==== recommend_mod & product_mod S====*/
+.product_con{width:560px;}
+.product_l{width:384px;}
+.recommend_pic{width:90px;}
+.recommend_pic img{width:90px;height:50px;}
+.calendar_top{margin-left:20px;}
+.reference_price,.loading_tip02,.comment_mod,.more_comment{margin-left:105px;}
+.calendar_right{right:5px;}
+.product_pic{width:100px;}
+.product_pic img{width:100px;height:56px;}
+.product_main{width:666px;}
+.product_main .calendar_top{margin-left:-84px;}
+/*==== recommend_mod & product_mod S====*/
+/*==== product_other S ====*/
+.scenery_htl_img,.product_other_pic{width:100px;}
+.scenery_htl_img img,.product_other_pic img{width:100px;}
+.product_other_con{width:530px;}
+.hot_scenery dd{width:96px;}
+.product_other_pic img{height:56px;}
+.product_list{width:657px;}
+/*==== product_other E ====*/
+a.adv_visaforfree{width:790px;}
+/*==== main_box S ====*/
+.main_box{width:750px;}
+.scenic_list{margin-left:-36px;}
+.scenic_list li{margin-left:36px;}
+.qa_list li,.remark_list li{width:335px;}
+/*==== main_box E ====*/
+/*==== side_mod S ====*/
+.side_col{width:180px;}
+/*==== side_mod E ====*/
+/*==== side_ad S ====*/
+.ico_ad_private{width:40px;height:30px;margin-right:5px;}
+.ad_bussi .ico_ad_private{background-position:-60px 0;}
+.ad_package .ico_ad_private{background-position:-60px -30px;}
+.ad_text{margin-left:20px;}
+/*==== side_ad E ====*/
+/*==== search_bar S ====*/
+.search_bar_weather h2,.playing_method h2,.similarity_region h2,.hot_label .hd,.travel_notes h2{font-size:14px;}
+.search_bar_weather .weather{ float: left; text-align: left;}
+.weather_content{ width: 154px; top: 42px;}
+.playing_method_centent .line{ width: 100px;}
+/*==== search_bar E ====*/
+.similarity_region a{width:71px;}
+.side_list .list_pic{display:none;}
+.side_listbox h2{font-size:14px;}
+.sort_width{ padding-right:10px;}
+
+
+
+.flthlt_imgb{ display:none;}
+.float_right{margin-top: 1px;}
+.sort .all{padding: 0 5px 0 0px;}
+.sort li b{ right: 7px;}
+.sort li a{padding-right: 22px;}
+
+.special_more .more_dot{ max-width:713px;}
+.new_flthlt_imgb{ display:none;}
+.offline_quote_box{ padding-left:0;}

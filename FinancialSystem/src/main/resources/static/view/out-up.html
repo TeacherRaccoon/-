@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <script type="text/javascript" src="../lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/xadmin.js"></script>
+
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form" id="outadd">
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    出款账户
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="amountNo" name="amountNo" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>账户必须有效
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    户主姓名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="amountName" name="amountName" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>请填入真实姓名
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    开户银行
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="amountBank" name="amountBank" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>账户必须有效
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    回款户名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="returnedName" name="returnedName" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>账户必须有效
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    回款银行
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="returnedBank" name="returnedBank" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>必须是开户银行
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    回款账号
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="returnedAmount" name="returnedAmount" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>账户必须有效
+                </div>
+            </div>
+            <input type="text" id="outAmountId" name="outAmountId" value="1" hidden>
+            <div class="layui-form-item">
+                <label  class="layui-form-label">
+                </label>
+                <button class="layui-btn" lay-filter="add" lay-submit="" type="submit">
+                    保存
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common/jquery.form.js"></script>
+<script src="../js/common/ajaxcommon.js"></script>
+</body>
+</html>
+<script>
+    //查询出款信息
+    $.ajax({
+        url: "/view/outAmountInfo.htm?orderId=" + 1,
+        type: 'get',
+        contentType: 'json',
+        success: function (data) {
+            if (data.result) {
+                show(data.data)
+            } else {
+                alert("查询失败")
+            }
+        },
+        error: function (result) {
+        }
+    });
+
+    function show(data) {
+        console.log(data)
+        $("#amountNo").val(data.amountNo)//出款账户
+        $("#amountName").val(data.amountName)//户主姓名
+        $("#amountBank").val(data.amountBank)//开户银行
+        $("#returnedName").val(data.returnedName)//回款户名
+        $("#returnedBank").val(data.returnedBank)//回款银行
+        $("#returnedAmount").val(data.returnedAmount)//回款账号
+    }
+
+    layui.use(['jquery','form'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+        var $= layui.jquery;
+        //监听提交
+        form.on('submit()', function(data){
+            requestAjaxForm("outadd","/outUp",function(data) {
+                console.log(data)
+                if(data.result){
+                    alert("修改成功")
+                }else {
+                    alert("修改失败")
+                }
+            })
+        });
+    });
+</script>
+

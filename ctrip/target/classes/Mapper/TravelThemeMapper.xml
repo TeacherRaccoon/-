@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ctrip.Dao.TravelThemeMapper">
+    <select id="getTravelThemeById" resultType="com.example.ctrip.Pojo.TravelTheme">
+        select * from travel_theme where id=#{id}
+    </select>
+    <select id="getCount" resultType="integer">
+        select count(1) from travel_theme
+    </select>
+    <select id="getTravelThemeByPage" resultType="com.example.ctrip.Pojo.TravelTheme" parameterType="map">
+        select * from travel_theme
+        limit #{start},#{length}
+    </select>
+    <insert id="addTravelTheme" parameterType="com.example.ctrip.Pojo.TravelTheme">
+        insert into travel_theme(travelTheme,themeName) value(#{travelTheme},#{themeName})
+    </insert>
+    <update id="updateTravelTheme" parameterType="com.example.ctrip.Pojo.TravelTheme">
+        update travel_theme set
+            travelTheme=#{travelTheme},
+            themeName=#{themeName}
+        where id=#{id}
+    </update>
+    <delete id="delTravelTheme" parameterType="integer">
+        delete from travel_theme where id=#{id}
+    </delete>
+</mapper>

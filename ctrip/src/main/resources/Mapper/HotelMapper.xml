@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--该映射文件映射的接口为UserMapper-->
+<mapper namespace="com.example.ctrip.Dao.HotelMapper">
+
+    <!--酒店评论插入-->
+    <insert id="insertHotelComment">
+        insert into hotel_comment(hotel_id,user_id,content,score,creationDate,OccupancyType)
+        values (#{hotel_id},#{user_id},#{content},#{score},#{creationDate},#{OccupancyType})
+    </insert>
+
+    <!--将预定的订单插入到数据库-->
+    <insert id="insertHotelOrder" useGeneratedKeys="true" keyProperty="id">
+        insert into hotel_order
+        (orderCode,hotelName,roomId,orderType,orderStatus,totalPrice,inTime,outTime,orderPayDate,creationDate,hotel_Code,roomType,email,EstimatedTime,beforePrice,roomNum,userName,mobilePhone)
+        values
+        (#{orderCode},#{hotelName},#{roomId},#{orderType},1,#{totalPrice},#{inTime},#{outTime},#{orderPayDate},now(),#{hotel_Code},#{roomType},#{email},#{EstimatedTime},#{beforePrice},#{roomNum},#{userName},#{mobilePhone})
+    </insert>
+
+    <!--酒店条件分页查询-->
+    <select id="getHotelDataByPage" resultType="com.example.ctrip.Pojo.Hotel">
+       select h.*,i.imgUrl,(select count(1) from hotel_comment where hotel_id = h.id) as commemtCount,
+      (select content as difftime from hotel_comment where hotel_id = h.id order by ABS(now()-creationDate) asc limit 1) as lateComment,
+      (select truncate(avg(score),1) from hotel_comment where hotel_id = h.id) as score,
+      (select(select count(1) from hotel_comment where hotel_id = h.id and score>4.6)
+      /
+      (select count(1) from hotel_comment where hotel_id = h.id)) as Recommend
+       from hotel h,ctrip_img i
+       <where>
+           h.id = i.hotelId
+           <if test="id!=null and id!=''">
+                and h.id = #{id}
+           </if>
+           <if test="hotelName!=null and hotelName!=''">
+               and hotelName like concat('%',#{hotelName},'%')
+           </if>
+
+       </where>
+       order by id asc limit #{index},#{end};
+    </select>
+
+    <!--获取多条图片的ResultMap-->
+    <resultMap id="getHotel_infoById" type="com.example.ctrip.Pojo.Hotel">
+        <id property="id" column="id"/>
+        <collection property="img" ofType="com.example.ctrip.Pojo.Img">
+            <id property="id" column="i.id"/>
+            <result property="imgUrl" column="imgUrl"/>
+        </collection>
+    </resultMap>
+
+    <!--根据酒店Id获取酒店数据 评分,用户名,评论一条-->
+    <select id="getHotelInfoById" resultMap="getHotel_infoById">
+        select h.*,i.imgUrl,(select userName from `user` where id = (select user_id from hotel_comment limit 1)) as CommentName,
+        (select content as difftime from hotel_comment where hotel_id = h.id order by ABS(now()-creationDate) asc limit 1) as lateComment,
+        (select truncate(avg(score),1) from hotel_comment where hotel_id = h.id) as score,
+        (select count(1) from hotel_comment where hotel_id = h.id) as commemtCount,
+        (select count(1) from hotel_img where hotelCode = h.hotelCode) as pictureCount
+
+        from hotel h,hotel_img i
+        where h.id = #{id} and i.hotelCode = h.hotelCode
+    </select>
+
+
+    <!--查询城市-->
+    <select id="getCityName" resultType="com.example.ctrip.Pojo.City">
+        select cityName,id from ctrip_city;
+    </select>
+
+    <!--插入折扣-->
+    <update id="inserDiscount">
+        update hotel  set Discount = #{f} where id = #{id};
+    </update>
+
+    <!--支付成功后修改订单状态-->
+    <update id="updateOrderStatus">
+        update hotel_order set orderStatus=#{StatusCode},orderPayDate=now() where id = #{id}
+    </update>
+
+    <!--修改入住偏好-->
+    <update id="updateOrderEnteringHobby">
+        update hotel_order set EnteringHobby = #{content} where id = #{id}
+    </update>
+
+    <!--修改联系人-->
+    <update id="updateOrderContacts">
+        update hotel_order set mobilePhone = #{phone},email=#{email} where id = #{id}
+    </update>
+
+    <!--根据酒店名称获取数据总数-->
+    <select id="getDataCountByHotelName" resultType="int">
+        select count(1) from hotel
+        <if test="hotelName!='' and hotelName!=null">
+            where hotelName like concat("%",#{hotelName},"%")
+        </if>
+    </select>
+
+    <!--根据酒店Id获取评论信息-->
+    <select id="getHotelCommemtById" resultType="com.example.ctrip.Pojo.HotelComment">
+        select count(1) CommemtCount,* from hotel_comment where id = #{id};
+    </select>
+
+    <!--根据Id获取所有评论-->
+    <select id="getHotelAllComment" resultType="com.example.ctrip.Pojo.HotelComment">
+        <!--获取用户名-->
+        select h.*,(select userName from `user` where h.user_id = id) userName,
+        <!--用户评论图片-->
+        (select imgUrl from hotel_img where userId = (select id from `user`)) as userCommentImg,
+        <!--酒店评论总数-->
+        (select count(1) from `user` where id = h.user_id) commemtCount
+        from hotel_comment h
+        where h.hotel_id = #{id} limit #{index},#{end}
+    </select>
+
+    <!--订单详情查询-->
+    <select id="selectHotelBill" resultType="com.example.ctrip.Pojo.HotelOrder">
+        select o.*,h.level,h.address,h.id as hotelId from hotel_order o,hotel h where o.id = #{id} and hotel_Code = hotelCode;
+    </select>
+
+
+</mapper>

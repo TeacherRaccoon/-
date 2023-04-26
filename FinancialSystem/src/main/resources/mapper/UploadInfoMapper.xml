@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kgc.finance.dao.UploadInfoMapper">
+    <!--上传资料-->
+    <insert id="addUploadInfo">
+    INSERT INTO
+        uploadinfo(
+            customerInfo,
+            houseInfo,
+            bankInfo,
+            accountInfo,
+            interviewInfo,
+            otherInfo,
+            orderId)
+                VALUES(
+                    #{customerInfo},
+                    #{houseInfo},
+                    #{bankInfo},
+                    #{accountInfo},
+                    #{interviewInfo},
+                    #{otherInfo},
+                    #{orderId}
+                )
+    </insert>
+</mapper>

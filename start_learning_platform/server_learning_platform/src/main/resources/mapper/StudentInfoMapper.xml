@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.performance.mapper.StudentInfoMapper">
+
+    <resultMap id="BaseResultMap" type="StudentInfo">
+        <id property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="studentNumber" column="student_number" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <select id="selectStudentInfoList" resultType="map" parameterType="map">
+        select
+        t1.id,
+        t1.class_info_id as classInfoId,
+        t1.user_info_id as userInfoId,
+        t2.nick_name as nickName,
+        t2.code ,
+        t3.class_name as className
+        from student_info t1,
+        user_info t2,
+        class_info t3
+        where t1.user_info_id = t2.id
+        and t1.class_info_id = t3.id
+        <if test="param.nickName !=null and param.nickName !=''">
+            ANd t2.nick_name like concat('%',#{param.nickName},'%')
+        </if>
+        <if test="param.userInfoId !=null and param.userInfoId !=''">
+            ANd t1.user_info_id = #{param.userInfoId}
+        </if>
+        <if test="param.classInfoId !=null and param.classInfoId !=''">
+            ANd t1.class_info_id = #{param.classInfoId}
+        </if>
+        order by t1.id desc
+    </select>
+</mapper>

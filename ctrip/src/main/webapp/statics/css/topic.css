@@ -1,0 +1,366 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, img, button {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #FFF;
+}
+
+body {
+    background-color: #FFF;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: Tahoma, Simsun, sans-serif !important;
+    color: #333 !important;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    color: #06C;
+    text-decoration: none;
+    outline: none;
+}
+
+a: hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 100%;
+    font-family: Arial, Simsun, sans-serif;
+}
+
+ul li, ol li {
+    list-style: none;
+}
+
+img {
+    border: 0 none;
+}
+
+dfn {
+    margin-right: 2px;
+    font-style: normal;
+    font-size: 12px;
+    font-family: Arial !important;
+}
+
+.base_price {
+    color: #F60;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+/* Structure Begin */
+.cui_hd, .cui_nav {
+    _width: 980px;
+}
+
+#base_bd {
+    width: auto;
+    max-width: 1180px;
+    min-width: 980px;
+    margin: 0 auto;
+    _width: 980px;
+}
+
+.header_ad {
+    height: 280px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    _width: 980px;
+}
+
+/* Structure End */
+
+/* Common Begin */
+.input_text {
+    width: 160px;
+    padding: 4px;
+    border-color: #BBB #DDD #DDD #BBB;
+    border-style: solid;
+    border-width: 1px;
+    font: 14px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    *vertical-align: middle;
+    outline: none;
+    box-shadow: 1px 1px 1px #DDD inset;
+}
+
+/*=S background pictures*/
+.icon_circle, .icon_circle_first, .icon_circle_last {
+    background: url(../images/icon_circles.png) no-repeat;
+}
+
+.anchor_list a {
+    background: url(../images/anchor.png) no-repeat;
+}
+
+/*=E background pictures*/
+
+
+/*=S search button*/
+.s_btn, .s_btn_disabled {
+    height: 30px;
+    margin-left: -12px;
+    padding: 0 14px;
+    color: #FFF;
+    font-size: 14px;
+    font-family: SimSun, Tahoma, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(95, 50, 0, 0.7);
+    border-radius: 3px;
+    *filter: chroma(color=#000000);
+    _height: 27px;
+    *padding: 0;
+}
+
+.s_btn {
+    text-shadow: 1px 1px 0 #CF7000;
+    background-color: #FFB000;
+    border: solid 1px #E77C00;
+}
+
+.s_btn_disabled {
+    color: #999;
+    background-color: #EFEFEF;
+    border: solid 1px #CCC;
+    cursor: default;
+}
+
+.s_btn:hover {
+    background-color: #F79700;
+    border-color: #DE7800;
+}
+
+/*=E search button*/
+/* Common End */
+
+/*=S anchor_list*/
+.anchor_list {
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+    *zoom: 1;
+}
+
+.anchor_list:after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: '.';
+    overflow: hidden;
+}
+
+.anchor_list li {
+    float: left;
+}
+
+.anchor_list a {
+    display: inline-block;
+    width: 39px;
+    height: 21px;
+    line-height: 21px \9;
+    text-align: center;
+}
+
+.anchor_list a:hover {
+    background-position: 0 -32px;
+    color: #fff;
+}
+
+.anchor_list span {
+    padding: 0 5px;
+    color: #06C;
+}
+
+/*=E anchor_list*/
+
+/*railway_city Begin*/
+.railway_city {
+    position: relative;
+    margin-left: 26px;
+    padding: 0 0 30px 42px;
+    border-left: 12px solid #EEEEEE;
+    *zoom: 1;
+}
+
+.railway_city_last {
+    border-left-color: #FFF;
+}
+
+.icon_circle {
+    display: block;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    left: -33px;
+    background-position: 0 -64px;
+}
+
+.icon_circle_first {
+    background-position: 0 0;
+}
+
+.icon_circle_last {
+    background-position: 0 -128px;
+}
+
+.city_details {
+    height: 290px;
+    padding-left: 676px;
+    max-width: 424px;
+    min-width: 224px;
+    *zoom: 1;
+    _width: 224px;
+}
+
+.city_details:after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: '.';
+    overflow: hidden;
+}
+
+.city_details_pics {
+    width: 660px;
+    float: left;
+    margin-left: -676px;
+    overflow: hidden;
+    *zoom: 1;
+    _margin-left: -338px;
+}
+
+.city_details_txts {
+    width: 100%;
+    height: 290px;
+    float: right;
+    overflow: hidden;
+    _width: 224px;
+}
+
+.city_details_txts p {
+    line-height: 2em;
+}
+
+/*=S search box*/
+.box_search {
+    height: 32px;
+    margin-bottom: 16px;
+    padding: 12px 24px 12px 8px;
+    background-color: #EEEEEE;
+    *zoom: 1;
+}
+
+.box_search:after {
+    display: block;
+    height: 0;
+    content: '.';
+    clear: both;
+    overflow: hidden;
+}
+
+.box_search h2 {
+    float: left;
+    font: 28px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    line-height: 28px;
+}
+
+.search_content {
+    float: right;
+}
+
+.search_content input, .search_content span, .search_content button {
+    vertical-align: middle;
+}
+
+.search_content span {
+    font: 14px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+}
+
+.search_content label {
+    margin-right: 20px;
+}
+
+/*=E search box*/
+
+/*=S city_details' pictures*/
+.city_details_pics_main {
+    width: 400px;
+    height: 290px;
+    float: left;
+}
+
+.city_details_pics_thumbnail {
+    width: 260px;
+    float: right;
+    margin-top: -10px;
+}
+
+.city_details_pics_thumbnail ul {
+    overflow: hidden;
+    *zoom: 1;
+    _margin-left: -10px;
+}
+
+.city_details_pics_thumbnail li {
+    width: 120px;
+    height: 90px;
+    float: left;
+    margin: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.city_details_pics_thumbnail a {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 90px;
+}
+
+.city_details_pics_thumbnail img {
+    width: 120px;
+    height: 90px;
+}
+
+.city_details_pics_thumbnail span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 114px;
+    height: 84px;
+    padding: 3px;
+    z-index: 2;
+}
+
+.city_details_pics_thumbnail a:hover span, .city_details_pics_thumbnail a.current span {
+    padding: 0;
+    border: 3px solid #008AFF;
+}
+
+/*=E city_details' pictures*/
+
+/*railway_city End*/
+
+
+
+
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--旅游产品订单评论-->
+<mapper namespace="com.example.ctrip.Dao.TravelProReviewMapper">
+    <!--获取指定id的评论-->
+    <select id="getTravelProReviewById" resultType="com.example.ctrip.Pojo.TravelProReview">
+        select * from travel_product_review where id=#{id}
+    </select>
+    <!--获取指定产品id的评论-->
+    <select id="getCountByProductId" resultType="integer">
+        select count(1) from travel_product_review where tripProductId=#{tripProductId}
+    </select>
+    <!--分页查询，根据指定产品id-->
+    <select id="getTravelProReviewListByPage" resultType="com.example.ctrip.Pojo.TravelProReview">
+            select * from travel_product_review
+            <where>
+                <if test="tripProductId !=null">
+                    tripProductId=#{tripProductId}
+                </if>
+                <if test="userId !=null">
+                    and userId=#{userId}
+                </if>
+            </where>
+            <!--是否有排序条件-->
+            limit #{start},#{length}
+    </select>
+    <!--获取指定用户id的旅游评论总数-->
+    <select id="getCountByUserId" resultType="integer">
+        select count(1) from travel_product_review where userId=#{userId}
+    </select>
+    <!--获取指定用户id的旅游评论列表-->
+    <select id="getTroProRevListByUserId" resultType="com.example.ctrip.Pojo.TravelProReview">
+        select * from travel_product_review where  userId=#{userId}
+    </select>
+    <!--添加评论-->
+    <insert id="addTraProRev">
+        insert into travel_product_review value(
+            #{tripProductId},
+            #{reviewType},
+            #{travelOrderId},
+            #{productScore},
+            #{userId},
+            NOW(),
+            #{reviewComment},
+            #{guideComment},
+            #{guideIsOk},
+            #{journeyComment},
+            #{journeyIsOk},
+            #{productDescComment},
+            #{productDescIsOk},
+            #{hasUploadImg}
+        )
+    </insert>
+    <!--修改评论-->
+    <update id="updateTraProRev">
+        update into travel_product_review set
+            reviewType=#{reviewType},
+            productScore=#{productScore},
+            reviewComment=#{reviewComment},
+            guideComment=#{guideComment},
+            guideIsOk=#{guideIsOk},
+            journeyComment=#{journeyComment},
+            journeyIsOk=#{journeyIsOk},
+            productDescComment=#{productDescComment},
+            productDescIsOk=#{productDescIsOk},
+            hasUploadImg=#{hasUploadImg}
+         where id=#{id}
+    </update>
+    <!--删出指定id的评论-->
+    <delete id="delTrApRroRev">
+        delete from travel_product_review where id=#{id}
+    </delete>
+</mapper>

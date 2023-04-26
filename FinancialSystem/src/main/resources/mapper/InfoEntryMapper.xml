@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kgc.finance.dao.InfoEntryMapper">
+    <!--订单信息的resultMap包含图片信息-->
+    <resultMap id="infoEntryMap" type="com.kgc.finance.pojo.InfoEntry">
+        <id property="orderId" column="orderId"></id>
+        <result property="userName" column="userName"></result>
+        <result property="identity" column="identity"></result>
+        <result property="phone" column="phone"></result>
+        <result property="maritalStatus" column="maritalStatus"></result>
+        <result property="spouseName" column="spouseName"></result>
+        <result property="spouseIdentity" column="spouseIdentity"></result>
+        <result property="privateLending" column="privateLending"></result>
+        <result property="lawsuitCase" column="lawsuitCase"></result>
+        <result property="totalAmount" column="totalAmount"></result>
+        <result property="foreclosure" column="foreclosure"></result>
+        <result property="houseName" column="houseName"></result>
+        <result property="area" column="area"></result>
+        <result property="address" column="address"></result>
+        <result property="assessment" column="assessment"></result>
+        <result property="ownerName" column="ownerName"></result>
+        <result property="originalBank" column="originalBank"></result>
+        <result property="originalAmount" column="originalAmount"></result>
+        <result property="amountBlance" column="amountBlance"></result>
+        <result property="newBank" column="newBank"></result>
+        <result property="newAmount" column="newAmount"></result>
+        <result property="managerName" column="managerName"></result>
+        <result property="managerPhone" column="managerPhone"></result>
+        <result property="amount" column="amount"></result>
+        <result property="amountDays" column="amountDays"></result>
+        <result property="rate" column="rate"></result>
+        <result property="brokerage" column="brokerage"></result>
+        <result property="feeWay" column="feeWay"></result>
+        <result property="paragraphTime" column="paragraphTime"></result>
+        <result property="dealPrice" column="dealPrice"></result>
+        <result property="orderAmount" column="orderAmount"></result>
+        <result property="superviseAmount" column="superviseAmount"></result>
+        <result property="buyerName" column="buyerName"></result>
+        <result property="buyerIdentity" column="buyerIdentity"></result>
+        <result property="createDate" column="createDate"></result>
+        <result property="status" column="status"></result>
+        <result property="salesmanId" column="salesmanId"></result>
+        <result property="payType" column="payType"></result>
+        <result property="returnReson" column="returnReson"></result>
+        <collection property="imgUp" ofType="com.kgc.finance.pojo.ImgUp">
+            <result column="imgUrl" property="imgUrl" ></result>
+            <result column="imageType" property="imageType"></result>
+            <result column="OrderId" property="orderId"></result>
+        </collection>
+    </resultMap>
+
+
+    <!--添加订单信息-->
+    <insert id="addInfoEntry" useGeneratedKeys="true" keyColumn="orderId" keyProperty="orderId">
+    INSERT INTO
+		infoentry(
+			userName,
+			identity,
+			phone,
+			maritalStatus,
+			spouseName,
+			spouseIdentity,
+			privateLending,
+			lawsuitCase,
+			totalAmount,
+			foreclosure,
+			houseName,
+			area,
+			address,
+			assessment,
+			ownerName,
+			originalBank,
+			originalAmount,
+			amountBlance,
+			newBank,
+			newAmount,
+			managerName,
+			managerPhone,
+			amount,
+			amountDays,
+			rate,
+			brokerage,
+			feeWay,
+			paragraphTime,
+			dealPrice,
+			orderAmount,
+			superviseAmount,
+			buyerName,
+			buyerIdentity,
+			createDate,
+			status,
+			payType,
+			salesmanId)
+			    VALUES(
+			    #{userName},
+                #{identity},
+                #{phone},
+                #{maritalStatus},
+                #{spouseName},
+                #{spouseIdentity},
+                #{privateLending},
+                #{lawsuitCase},
+                #{totalAmount},
+                #{foreclosure},
+                #{houseName},
+                #{area},
+                #{address},
+                #{assessment},
+                #{ownerName},
+                #{originalBank},
+                #{originalAmount},
+                #{amountBlance},
+                #{newBank},
+                #{newAmount},
+                #{managerName},
+                #{managerPhone},
+                #{amount},
+                #{amountDays},
+                #{rate},
+                #{brokerage},
+                #{feeWay},
+                #{paragraphTime},
+                #{dealPrice},
+                #{orderAmount},
+                #{superviseAmount},
+                #{buyerName},
+                #{buyerIdentity},
+                NOW(),
+                1,
+                #{payType},
+                #{salesmanId})
+    </insert>
+
+    <update id="upInfoEntry">
+        update infoentry
+        <set>
+        <if test="userName !=null and userName!=''">
+            userName = #{userName},
+        </if>
+        <if test="identity!=null and identity!=''">
+            identity = #{identity},
+        </if>
+        <if test="phone!=null and phone!=''">
+            phone = #{phone},
+        </if>
+        <if test="maritalStatus!=null and maritalStatus!=''">
+            maritalStatus = #{maritalStatus},
+        </if>
+        <if test="spouseName!=null and spouseName!=''">
+            spouseName = #{spouseName},
+        </if>
+        <if test="spouseIdentity!=null and spouseIdentity!=''">
+            spouseIdentity = #{spouseIdentity},
+        </if>
+        <if test="privateLending!=null and privateLending!=''">
+            privateLending = #{privateLending},
+        </if>
+        <if test="lawsuitCase!=null and lawsuitCase!=''">
+            lawsuitCase = #{lawsuitCase},
+        </if>
+        <if test="totalAmount!=null and totalAmount!=''">
+            totalAmount = #{totalAmount},
+        </if>
+        <if test="foreclosure!=null and foreclosure!=''">
+            foreclosure = #{foreclosure},
+        </if>
+        <if test="houseName!=null and houseName!=''">
+            houseName = #{houseName},
+        </if>
+        <if test="area!=null and area!=''">
+            area = #{area},
+        </if>
+        <if test="address!=null and address!=''">
+            address = #{address},
+        </if>
+        <if test="assessment!=null and assessment!=''">
+            assessment = #{assessment},
+        </if>
+        <if test="ownerName!=null and ownerName!=''">
+            ownerName = #{ownerName},
+        </if>
+        <if test="originalBank!=null and originalBank!=''">
+            originalBank = #{originalBank},
+        </if>
+        <if test="originalAmount!=null and originalAmount!=''">
+            originalAmount = #{originalAmount},
+        </if>
+        <if test="amountBlance!=null and amountBlance!=''">
+            amountBlance = #{amountBlance},
+        </if>
+        <if test="newBank!=null and newBank!=''">
+            newBank = #{newBank},
+        </if>
+        <if test="newAmount!=null and newAmount!=''">
+            newAmount = #{newAmount},
+        </if>
+        <if test="managerName!=null and managerName!=''">
+            managerName = #{managerName},
+        </if>
+        <if test="managerPhone!=null and managerPhone!=''">
+            managerPhone = #{managerPhone},
+        </if>
+        <if test="amount!=null and amount!=''">
+            amount = #{amount},
+        </if>
+        <if test="amountDays!=null and amountDays!=''">
+            amountDays = #{amountDays},
+        </if>
+        <if test="rate!=null and rate!=''">
+            rate = #{rate},
+        </if>
+        <if test="brokerage!=null and brokerage!=''">
+            brokerage = #{brokerage},
+        </if>
+        <if test="feeWay!=null and feeWay!=''">
+            feeWay = #{feeWay},
+        </if>
+        <if test="paragraphTime!=null">
+            paragraphTime = #{paragraphTime},
+        </if>
+        <if test="dealPrice!=null and dealPrice!=''">
+            dealPrice = #{dealPrice},
+        </if>
+        <if test="orderAmount!=null and orderAmount!=''">
+            orderAmount = #{orderAmount},
+        </if>
+        <if test="superviseAmount!=null and superviseAmount!=''">
+            superviseAmount = #{superviseAmount},
+        </if>
+        <if test="buyerName!=null and buyerName!=''">
+            buyerName = #{buyerName},
+        </if>
+        <if test="buyerIdentity!=null and buyerIdentity!=''">
+            buyerIdentity = #{buyerIdentity},
+        </if>
+        <if test="status!=null and status!=''">
+            status = #{status},
+        </if>
+        <if test="salesmanId!=null and salesmanId!=''">
+            salesmanId = #{salesmanId},
+        </if>
+        </set>
+        where orderId = #{orderId}
+    </update>
+
+
+    <!--插入图片-->
+    <insert id="inserImgInfo">
+        insert into uploadinfo(imgUrl,orderId,imageType,creationDate)
+        values (#{imgUrl},#{orderId},#{imageType},now());
+    </insert>
+
+    <!--根据订单id获取订单信息包括图片-->
+    <select id="getInfoEntryByOrderId" parameterType="integer" resultMap="infoEntryMap">
+       SELECT
+        inf.orderId,
+        userName,
+        identity,
+        phone,
+        maritalStatus,
+        spouseName,
+        spouseIdentity,
+        privateLending,
+        lawsuitCase,
+        totalAmount,
+        foreclosure,
+        houseName,
+        `area`,
+        address,
+        assessment,
+        ownerName,
+        originalBank,
+        originalAmount,
+        amountBlance,
+        newBank,
+        newAmount,
+        managerName,
+        managerPhone,
+        amount,
+        amountDays,
+        rate,
+        brokerage,
+        feeWay,
+        paragraphTime,
+        dealPrice,
+        orderAmount,
+        superviseAmount,
+        buyerName,
+        buyerIdentity,
+        createDate,
+        `status`,
+        salesmanId,
+        payType,
+        windId,
+        financeId,
+        upi.imgUrl,
+        upi.orderId,
+        upi.imageType,
+        (SELECT returnReson FROM timeiine WHERE orderId=#{orderId} ORDER BY modeifyDate DESC LIMIT 1) returnReson
+            FROM infoentry inf LEFT JOIN uploadinfo upi
+            ON inf.orderId = upi.`orderId`  WHERE inf.orderId = #{orderId}
+    </select>
+
+    <!--根据图片imgURl删除图片-->
+    <delete id="delImgByImgName" parameterType="list">
+        delete from uploadinfo
+         where imgUrl in
+        <foreach collection="list" item="imgNames" open="(" separator="," close=")">
+            #{imgNames}
+        </foreach>
+    </delete>
+
+</mapper>

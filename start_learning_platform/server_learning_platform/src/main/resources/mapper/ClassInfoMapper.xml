@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.performance.mapper.ClassInfoMapper">
+
+    <resultMap id="BaseResultMap" type="ClassInfo">
+        <id property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="grade" column="grade" jdbcType="VARCHAR"/>
+        <result property="className" column="class_name" jdbcType="VARCHAR"/>
+        <result property="classSize" column="class_size" jdbcType="INTEGER"/>
+        <result property="headmaster" column="headmaster" jdbcType="VARCHAR"/>
+        <result property="constructionTime" column="construction_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,grade,class_name,
+        class_size,headmaster,construction_time
+    </sql>
+
+    <select id="selectClassInfoAllList" resultType="map" parameterType="map">
+        SELECT
+        t1.id,
+        t1.grade,
+        t1.class_name AS className,
+        t1.class_size AS classSize,
+        t1.class_number AS classNumber,
+        DATE_FORMAT( t1.construction_time, '%Y-%m-%d %H:%i:%s' ) AS constructionTime,
+        t2.nick_name AS nickName,
+        t2.code,
+        GROUP_CONCAT( t4.courseware_name SEPARATOR ',' ) AS coursewareName
+        FROM
+        class_info t1 left join
+        user_info t2
+        on
+        t1.user_info_id = t2.id
+        AND t2.user_identity = 1
+        left join courseware_class_relationship t3 on t1.id = t3.class_info_id
+        left join courseware_info t4 on t3.courseware_info_id = t4.id
+        <where>
+            <if test="param.className !=null and param.className!=''">
+                and t1.class_name like CONCAT('%',#{param.className},'%')
+
+            </if>
+           <if test="param.classNumber !=null and param.classNumber!=''">
+               and  t1.class_number like CONCAT('%',#{param.classNumber},'%')
+            </if>
+            <if test="param.classInfoIdList !=null ">
+                AND  t1.id  in
+                <foreach collection="param.classInfoIdList" item="id" index="index" open="(" close=")" separator=",">
+                    #{id}
+                </foreach>
+            </if>
+        </where>
+        GROUP BY
+        t1.id
+        ORDER BY
+        t1.id DESC
+    </select>
+
+    <update id="updateClassInfoUserInfoId" parameterType="map">
+
+        UPDATE class_info
+        SET user_info_id = NULL
+        WHERE user_info_id = #{userInfoId};
+
+
+        UPDATE class_info
+        SET user_info_id = #{userInfoId}
+        WHERE id IN (
+            ${classInfoId}
+            );
+
+    </update>
+</mapper>

@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>携程旅行网</title>
+    <link rel="stylesheet" type="text/css" href="css/style.90201b7d_1.css">
+    <link rel="stylesheet" type="text/css" href="css/banklogo.05c0e9fd_1.css">
+</head>
+<body>
+<div class="pop_s2" style="width:600px; display: none" w-action='{"popInit":"","pop":"#payData.isShowHint"}' id="pop_2">
+    <div class="pop_hd">
+        <h3>温馨提示</h3>
+    </div>
+    <div class="pop_bd">
+        <div class="txt_s2">
+            <div class="txt_s_inner">
+                <h4>尊敬的顾客：</h4>
+                <p>按照国家有关税收法律法规，在您购买应税货物或接受应税服务的同时，有权索取增值税发票。</p>
+                <p>如您为自然人以外的单位或个体工商户，符合规定条件的，索取增值税专用发票时，应向我们提供购买方名称、纳税人识别号、地址电话、开户行及账号信息等四项信息，不需相关证件或其他证明材料。</p>
+                <p>您在索取增值税普通发票时，不需提供相关证件或其他证明材料。</p>
+                <p>欢迎您对我们的工作进行监督。</p>
+                <p>主管税务机关投诉举报电话：12366</p>
+            </div>
+        </div>
+    </div>
+    <div class="pop_btn">
+        <a href="javascript:;" class="btn_03" id="pop_close" onclick="payData.hidehint()">关闭</a>
+    </div>
+</div>
+<div class="header_area">
+    <h1 class="ctrip_logo">携程</h1>
+    <div class="sub_bar">
+        <a href="javascript:;" class="prompt" onclick="payData.showhint()"><i></i>温馨提示</a>
+        <a href="http://my.ctrip.com/uxp/Community/CommunityAdvice.aspx#ctm_ref=sbr_hp_nav_commu_txt_21" class="advice"
+           target="_blank"><i></i>建议与反馈</a>
+    </div>
+</div>
+<div id="main_area" class="main_area" style=" margin-top:5px;">
+
+
+    <div class="return_area" w-show="[==,#payData.status,#1]">
+        <h3 class="return_tit"><i class="return_icon loading_b1"></i>加载支付方式中，请耐心等待</h3>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#2]">
+        <h3 class="return_tit"><i class="return_icon abnormal_b1"></i>未成功加载支付方式，请尝试刷新</h3>
+        <div class="btn_area">
+            <a href="javascript:;" class="btn_01" onclick="window.location.reload()">立即刷新</a>
+        </div>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#4]">
+        <h3 class="return_tit"><i class="return_icon abnormal_b1"></i>该订单暂无法支付，请联系携程客服 </h3>
+        <ul class="return_list">
+            <li>国内：1010-6666</li>
+            <li>国内（座机拨打）：800-820-6666</li>
+            <li>香港：852-3610-6666</li>
+            <li>海外：+86-21-3406-4888</li>
+        </ul>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#6]">
+        <h3 class="return_tit"><i class="return_icon abnormal_b1"></i>系统异常，请稍后再试</h3>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#7]">
+        <h3 class="return_tit"><i class="return_icon fail_b1"></i>证件信息不正确，无法支付！</h3>
+        <p class="return_p">可能是您的个人信息（姓名、证件类型或证件号）有误</p>
+        <div class="btn_area">
+            <a href="javascript:history.back();" class="btn_01">返回订单填写页检查</a>
+        </div>
+    </div>
+</div>
+<div class="security">
+    <div class="md">
+        <div class="safety"></div>
+        <div>携程支付安全承诺</div>
+    </div>
+    <div class="md">
+        <a href="http://www.atsec.cn/cn/pci-attestation/CTRIP-PCIAttestation-atsec-PCI-DSS-C-55161.jpg" class="pci"
+           target="_blank"></a>
+        <div>通过PCI DSS标准</div>
+    </div>
+</div>
+<div id="tmpl" style="display: none">
+</div>
+<div id="mask" style="display: none" class="mask_w1"></div>
+<div class="pop_s1" id="expiredsuper" style="display:none;width:220px;position:absolute;top:0px;left:0px;z-index:10">
+    <h3 class="pop_tit1">卡有效期</h3>
+    <p class="pop_txt2"><img src="../../statics/picture/04.3712bdfd_1.png">通常位于卡正面的卡号下方，月份/年份<br>例：左图为2034年12月</p>
+    <i class="pop_arrow_bt"></i>
+</div>
+<div class="pop_s1" id="ameexpiredsuper" style="display:none;width:220px;position:absolute;top:0px;left:0px;z-index:10">
+    <h3 class="pop_tit1">卡有效期</h3>
+    <p class="pop_txt2"><img src="../../statics/picture/03.8e4fb5e5_1.png">通常位于卡正面的卡号下方，月份/年份<br>例：左图为2034年12月</p>
+    <i class="pop_arrow_bt"></i>
+</div>
+<div class="pop_s1" id="cvvsuper" style="display:none;width:220px;position:absolute;top:0px;left:0px;z-index:10">
+    <h3 class="pop_tit1">卡验证码</h3>
+    <p class="pop_txt2"><img src="../../statics/picture/02.72ce5798_1.png">印刷在卡背面签名栏附近的3位数字</p>
+    <i class="pop_arrow_bt"></i>
+</div>
+<div class="pop_s1" id="amecvvsuper" style="display:none;width:220px;position:absolute;top:0px;left:0px;z-index:10">
+    <h3 class="pop_tit1">卡验证码</h3>
+    <p class="pop_txt2"><img src="../../statics/picture/01.83d2eb7d_1.png"> 印在卡正面，位于卡号上方的4位非凸出数字</p>
+    <i class="pop_arrow_bt"></i>
+</div>
+
+
+<div id="notSupportIETip" class="pop_s3" style="display:none;width:200px;position:absolute;top:0px;left:0px;z-index:10">
+    <p class="pop_txt1">您当前的浏览器环境可能不支持您选择的网银，建议更换为IE浏览器。</p>
+    <i class="pop_arrow_bt"></i>
+</div>
+<div id="limitPayWarnning" class="pop_s3"
+     style="display:none;width:200px;position:absolute;top:0px;left:0px;z-index:10">
+    <p class="pop_txt1"></p>
+    <i class="pop_arrow_bt"></i>
+</div>
+
+<script type="text/javascript" src="js/_bfa.min_1.js"></script>
+
+<script type="text/javascript" src="js/json2.5eecb009_1.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.3576a6e7_1.js"></script>
+<script type="text/javascript" src="js/jquery.tmpl.min.27bc9d7d_1.js"></script>
+<script type="text/javascript" src="js/qrcode.min.517b55d3_1.js"></script>
+<script type="text/javascript" src="js/jsencrypt.min.37fde4d5_1.js"></script>
+<script type="text/javascript" src="js/helper.24b7e10e_1.js"></script>
+<script type="text/javascript" src="js/ubt.b46eeb46_1.js"></script>
+<script type="text/javascript" src="js/cbuservice.f3bd13b9_1.js"></script>
+<script type="text/javascript" src="js/pay.6377325f_1.js"></script>
+<script type="text/javascript" src="js/datamodel.9372800d_1.js"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+        payInit();
+    });
+
+</script>
+<script>
+    var payConfig = {
+        CBUUrl: "https://gateway.secure.ctrip.com/restful/soa2/11948/{0}",
+        platform: "20",
+        version: "1.0.0.2",
+        auth: "_CFT03431040049",
+        language: "ZH",
+        orderId: "10358069894",
+        token: "D30C2E0E8466B556FEA203BA2AB0B644.3-605940281129054208",
+        merchantId: "200002",
+        requestId: "1180883318",
+        clientIp: "183.236.41.2",
+        ticket_ctrip: "",
+        ticket_ctrip_new: "",
+        tmplurl: "//webresource.c-ctrip.com/resaresonline/fncpaymentonline/cnres/tmpl/onlinepay/tmpl.b749af4c.html",
+        proxyrUrl: "../NewPay/TransferData",
+        rmsTokenjsUrl: "//webresource.c-ctrip.com/resaresonline/risk/ubtrms/latest/default/mrms.js",
+        ebankPayReturnUrl: "https://secure.ctrip.com/RealTimePay/EBankPayReturn",
+        publicKey: "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCWAhvFQjS7RH2CvFo0B4lUqNWdNsd+w1VtV9d6soeAvC+VbFlVHIIhQoWDCKCgPG/3aGSJJ3czX3u1U62DuVLyayTaKnwlQIxBOgU0wP7159bcxnaCSmIEXyiqgHB6k7hO3bF1mGC8sD18IM4NR3OeC/8Ko4LeCgFzERcn4M6v+wIDAQAB"
+    };
+
+    var imgDic = {
+        cvv: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/02.72ce5798.png',
+        loading_2: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_2.084ecff5.gif',
+        loading_1: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_1.9e391eb0.gif',
+        loading_c3: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_c3.0cc7fc67.gif',
+        validity: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/04.3712bdfd.png',
+        cvv_ame: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/01.83d2eb7d.png',
+        loading_3: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_3.37c907bf.gif',
+        validity_ame: '//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/03.8e4fb5e5.png',
+        aa: ""
+    }
+
+</script>
+<script type="text/javascript">
+    (function () {
+        var url = payConfig.rmsTokenjsUrl, timeout = 10;
+        var now = new Date();
+        setTimeout(function () {
+            var f = document.createElement('script')
+            f.type = 'text/javascript';
+            f.id = 'scrmsd__script';
+            f.async = true;
+            f.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + url + "?v=" + now.getYear() + now.getMonth() + "-" + now.getDate();
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(f, s);
+        }, timeout);
+        window.scrmsd__startScriptLoad = 1 * new Date();
+    })();
+</script>
+<!-- ABTesting -->
+<input type="hidden" id="ab_testing_tracker" value=""/>
+<input type="hidden" id="page_id" value="10320675578"/>
+<!-- UBT -->
+<input type="hidden" id="bf_ubt_tl_MerchantID" value="200002"/>
+<input type="hidden" id="bf_ubt_orderid" value="10358069894"/>
+<input type="hidden" id="bf_ubt_tl_PaySiteType" value="online"/>
+<input type="hidden" id="bf_ubt_tl_requestid" value="1180883318"/>
+<!--支付平台添加DeviceID代码 隐藏域 -->
+<input id="EncryptID" value="10358069894-2-_CFT03431040049" type="hidden"/>
+<input id="EncryptID_GUID_URL" type="hidden"
+       value="https://cdid.c-ctrip.com/Payment-CardRisk-DeviceWebSite/DeviceGuid.aspx?EncryptID={$EncryptID}"/>
+<input id="EncryptID_DeviceID_URL" type="hidden"
+       value="https://cdid.c-ctrip.com/Payment-CardRisk-DeviceWebSite/EntryWay.aspx?Plugid=5&EncryptID={$EncryptID}&GUID={$GUID}&DeviceID={$DeviceID}"/>
+<script src="js/deviceid_1.js" defer="defer" type="text/javascript"></script>
+
+</body>
+</html>

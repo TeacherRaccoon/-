@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kgc.finance.dao.OutAddMapper">
+    <insert id="out_add">
+        INSERT INTO `outamountinfo` (
+          `amountNo`,
+          `amountName`,
+          `amountBank`,
+          `returnedName`,
+          `returnedBank`,
+          `returnedAmount`,
+          `creationDate`,
+          `orderId`
+        )
+        VALUES
+          (
+            #{amountNo},
+            #{amountName},
+            #{amountBank},
+            #{returnedName},
+            #{returnedBank},
+            #{returnedAmount},
+            NOW(),
+            #{orderId}
+          )
+    </insert>
+    <update id="out_up">
+        UPDATE
+        `outamountinfo`
+        <trim prefix="set" suffixOverrides=",">
+            <if test="amountNo!=null and amountNo!=''">
+                `amountNo` = #{amountNo},
+            </if>
+            <if test="amountName!=null and amountName!=''">
+                `amountName` = #{amountName},
+            </if>
+            <if test="amountBank!=null and amountBank!=''">
+                `amountBank` = #{amountBank},
+            </if>
+            <if test="returnedName!=null and returnedName!=''">
+                `returnedName` = #{returnedName},
+            </if>
+            <if test="returnedBank!=null and returnedBank!=''">
+                `returnedBank` = #{returnedBank},
+            </if>
+            <if test="returnedAmount!=null and returnedAmount!=''">
+                `returnedAmount` = #{returnedAmount},
+            </if>
+                `modifyDate` = NOW()
+        </trim>
+        WHERE `outAmountId` = #{outAmountId}
+    </update>
+    <delete id="out_dele">
+        DELETE FROM
+	      `outamountinfo`
+	    WHERE
+	      `outAmountId` =#{outAmountId}
+    </delete>
+</mapper>

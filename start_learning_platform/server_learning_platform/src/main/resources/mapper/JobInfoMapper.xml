@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.performance.mapper.JobInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.performance.bean.JobInfo">
+        <id property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="describe" column="describe" jdbcType="VARCHAR"/>
+        <result property="attachmentAddress" column="attachment_address" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,
+        describe,
+            attachment_address,create_time
+    </sql>
+
+    <select id="selectJobInfoList" resultType="map" parameterType="map">
+        select t1.id as id,
+               t1.title as title,
+               t1.remarks as remarks,
+               t1.attachment_address as attachmentAddress,
+               t1.courseware_info_id as coursewareInfoId,
+               t1.class_info_id as classInfoId,
+               DATE_FORMAT(t1.create_time, '%Y-%c-%d %h:%i:%s') as createTime,
+               t2.class_name as className,
+               t3.courseware_name as coursewareName
+        from job_info t1,
+             class_info t2 ,
+             courseware_info t3
+        where t1.class_info_id = t2.id
+          and t1.courseware_info_id = t3.id
+        <if test="param.title !=null and param.title!=''">
+            and  t1.title like CONCAT('%',#{param.title},'%')
+        </if>
+
+        <if test="param.classInfoIdList !=null ">
+            AND  t1.class_info_id  in
+            <foreach collection="param.classInfoIdList" item="id" index="index" open="(" close=")" separator=",">
+                #{id}
+            </foreach>
+        </if>
+    </select>
+</mapper>

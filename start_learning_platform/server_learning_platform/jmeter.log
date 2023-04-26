@@ -1,0 +1,22 @@
+2023-03-29 15:30:35,701 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2023-03-29 15:30:35,723 INFO o.a.j.JMeter: Loading user properties from: D:\Jmeter\apache-jmeter-5.4.3\apache-jmeter-5.4.3\bin\user.properties
+2023-03-29 15:30:35,723 INFO o.a.j.JMeter: Loading system properties from: D:\Jmeter\apache-jmeter-5.4.3\apache-jmeter-5.4.3\bin\system.properties
+2023-03-29 15:30:35,733 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: Version 5.4.3
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: java.version=1.8.0_131
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: os.name=Windows 10
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: os.arch=amd64
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: os.version=10.0
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: file.encoding=GBK
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: java.awt.headless=null
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-03-29 15:30:35,734 INFO o.a.j.JMeter: Available Processors =8
+2023-03-29 15:30:35,739 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-03-29 15:30:35,740 INFO o.a.j.JMeter: JMeter  Locale=Chinese (China)
+2023-03-29 15:30:35,740 INFO o.a.j.JMeter: JMeterHome=D:\Jmeter\apache-jmeter-5.4.3\apache-jmeter-5.4.3
+2023-03-29 15:30:35,740 INFO o.a.j.JMeter: user.dir  =D:\IDEXiangMu\private-project\old_private\project\E032--dk-4-10\server_learning_platform
+2023-03-29 15:30:35,741 INFO o.a.j.JMeter: PWD       =D:\IDEXiangMu\private-project\old_private\project\E032--dk-4-10\server_learning_platform
+2023-03-29 15:30:35,743 INFO o.a.j.JMeter: IP: 192.168.137.1 Name: DESKTOP-9GAAVES FullName: DESKTOP-9GAAVES.mshome.net
+2023-03-29 15:30:35,840 INFO o.a.j.JMeter: Setting LAF to: laf:com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+2023-03-29 15:30:36,055 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties

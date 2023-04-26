@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html><!--STATUS OK-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="baidu-site-verification" content="jpBCrwX689"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="/tb/cms/content-search.xml" title="百度贴吧"/>
+    <title>支付成功页面</title>
+    <script type="text/javascript">void function (t, e, n, a, o, i, r) {
+        t.alogObjectName = o, t[o] = t[o] || function () {
+            (t[o].q = t[o].q || []).push(arguments)
+        }, t[o].l = t[o].l || +new Date, a = "https:" === t.location.protocol ? "https://fex.bdstatic.com" + a : "http://fex.bdstatic.com" + a;
+        var c = !0;
+        if (t.alogObjectConfig && t.alogObjectConfig.sample) {
+            var s = Math.random();
+            t.alogObjectConfig.rand = s, s > t.alogObjectConfig.sample && (c = !1)
+        }
+        c && (i = e.createElement(n), i.async = !0, i.src = a + "?v=" + ~(new Date / 864e5) + ~(new Date / 864e5), r = e.getElementsByTagName(n)[0], r.parentNode.insertBefore(i, r))
+    }(window, document, "script", "/hunter/alog/alog.min.js", "alog"), void function () {
+        function t() {
+        }
+
+        window.PDC = {
+            mark: function (t, e) {
+                alog("speed.set", t, e || +new Date), alog.fire && alog.fire("mark")
+            }, init: function (t) {
+                alog("speed.set", "options", t)
+            }, view_start: t, tti: t, page_ready: t
+        }
+    }(), void function (t) {
+        var e = !1;
+        t.onerror = function (t, n, a, o) {
+            var i = !0;
+            return !n && /^script error/i.test(t) && (e ? i = !1 : e = !0), i && alog("exception.send", "exception", {
+                msg: t,
+                js: n,
+                ln: a,
+                col: o
+            }), !1
+        }, alog("exception.on", "catch", function (t) {
+            alog("exception.send", "exception", {msg: t.msg, js: t.path, ln: t.ln, method: t.method, flag: "catch"})
+        })
+    }(window), window.xssfw = function (t) {
+        function e(t, e) {
+            if (!(10 < ++p)) {
+                var n = {type: "INLINE", path: t, code: e.substr(0, 400), len: e.length};
+                alog("xss.send", "xss", n), d.push(n), c()
+            }
+        }
+
+        function n(t, e) {
+            if (t && 0 != e) {
+                var a = t.tagName;
+                if ("BODY" != a) {
+                    t.id && (a += "#" + t.id);
+                    var o = t.className;
+                    return o && (a += "." + o.split(" ")[0]), (o = n(t.parentNode, e - 1)) ? o + " " + a : a
+                }
+            }
+        }
+
+        function a(t) {
+            for (var e = g.length - 1; e >= 0; e--) {
+                var n = g[e];
+                if (t > n.b) return n
+            }
+        }
+
+        function o(t) {
+            for (var e = f.length - 1; e >= 0; e--) {
+                var n = f[e];
+                if (n.b.test(t)) return n
+            }
+        }
+
+        function i(t, i) {
+            function r(s) {
+                var l = s._k;
+                if (l || (l = s._k = ++u), l = l << 8 | i, !m[l] && (m[l] = !0, 1 == s.nodeType)) {
+                    var f;
+                    s[t] && (f = s.getAttribute(t)) && (l = a(f.length) || o(f) || {}, l.a && (s[t] = null), l.c && e(n(s, 5) + "[" + t + "]", f)), c && "A" == s.tagName && "javascript:" == s.protocol && (f = s.href.substr(11), l = a(f.length) || o(f) || {}, l.a && (s.href = "javascript:void(0)"), l.c && e(n(s, 5) + "[href]", f)), r(s.parentNode)
+                }
+            }
+
+            var c = "onclick" == t;
+            document.addEventListener(t.substr(2), function (t) {
+                r(t.target)
+            }, !0)
+        }
+
+        function r(t) {
+            var e = [];
+            if (t) for (var n = t.length - 1; n >= 0; n--) {
+                var a = t[n], o = a.target;
+                e.push({b: a.match, a: /D/.test(o), c: /W/.test(o)})
+            }
+            return e
+        }
+
+        function c() {
+            if (s) {
+                for (var t = 0; t < d.length; t++) s(d[t]);
+                d = []
+            }
+        }
+
+        var s, l, f, g, p = 0, m = {}, u = 0, d = [], h = {};
+        return h.init = function (e) {
+            if (t.addEventListener && !l) {
+                l = !0, alog("xss.create", {
+                    dv: 5,
+                    postUrl: "https:" === document.location.protocol ? "https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/pms/img/st.gif" : "https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/pms/img/st.gif",
+                    page: "tb-xss"
+                }), g = r(e["len-limit"]), f = r(e["key-limit"]), e = 0;
+                for (var n in document) /^on./i.test(n) && i(n, e++)
+            }
+        }, h.watch = function (t) {
+            s = t, c()
+        }, h
+    }(this), xssfw.init({
+        "len-limit": [{match: 400, target: "Warn"}],
+        "key-limit": [{match: /createElement/, target: "Warn"}, {
+            match: /fromCharCode|eval|getScript|xss/,
+            target: "Warn,Deny"
+        }, {match: /alert\(|prompt/, target: "Warn"}]
+    });</script>
+    <!--[if lt IE 9]>
+    <script>(function () {
+        var tags = ['header', 'footer', 'figure', 'figcaption', 'details', 'summary', 'hgroup', 'nav', 'aside', 'article', 'section', 'mark', 'abbr', 'meter', 'output', 'progress', 'time', 'video', 'audio', 'canvas', 'dialog'];
+        for (var i = tags.length - 1; i > -1; i--) {
+            document.createElement(tags[i]);
+        }
+    })();</script><![endif]-->
+    <link rel="shortcut icon" href="//tb1.bdstatic.com/tb/favicon.ico"/>
+    <link rel="stylesheet" href="../../statics/css/2a09125323a7407193aa8bd5c4c4c6d6.css"/>
+    <link rel="stylesheet" href="../../statics/css/7dabc00d7d8747ad8c041fe592dc29ac.css"/>
+    <script>    var PageData = {"tbs": "", "charset": "UTF-8", "product": "comforum", "page": "game"};
+    PageData.user = {
+        "id": "",
+        "user_id": "",
+        "name": "",
+        "user_name": "",
+        "user_nickname": "",
+        "name_url": "",
+        "no_un": 0,
+        "is_login": 0,
+        "portrait": "",
+        "balv": {}, /* Ban 这个模块真够讨厌的 */
+        "Parr_props": null,
+        "Parr_scores": null,
+        "mParr_props": null,
+        "vipInfo": null,
+        "new_iconinfo": null,
+        "power": {}
+    };
+    PageData.search_what = "";
+    var Env = {server_time: 1567707700000};
+    var Tbs = {"common": ""};</script>
+    <script type="text/javascript">function resizePic_temp(e, t, i, s, n) {
+        function r(e, t, i, s) {
+            var n = 0, r = e, a = t;
+            switch (e > i && (n += 1), t > s && (n += 2), n) {
+                case 1:
+                    r = i, a = t * i / e;
+                case 2:
+                    a = s, r = e * s / t;
+                case 3:
+                    a = t / s > e / i ? s : t * i / e, r = t / s > e / i ? e * s / t : i
+            }
+            return 0 != n && (l = !0), [r, a]
+        }
+
+        var a = t || 120, c = i || 120, l = !1, p = new Image;
+        p.src = e.src;
+        var h = r(p.width, p.height, a, c);
+        return e.style.width = h[0] + "px", e.style.height = h[1] + "px", "function" == typeof n && n.apply(this, arguments), e.style.visibility = "visible", 1 == s && (e.style.marginTop = (i - parseInt(h[1])) / 2 + "px"), p = null, l
+    }</script>
+    <script type="text/javascript">alog("speed.set", "ht", new Date);</script>
+    <script>var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?98b9d8c2fd6608d564bf2ac2ae642948";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();</script>
+</head>
+<body>
+<div class="wrap1">
+
+    <div class="wrap2">
+        <header class="wrap ">
+            <nav><a href="" target="_blank"><img src="../../statics/images/success.jpg" class="logo fleft"></a>
+            </nav>
+        </header>
+        <div class="tdou_wrap">
+            <div class="messOuter">
+                <div class="mess"><img src="../../statics/picture/success_1d68c01.png"><span>支付成功</span></div>
+                <span class="costMoney">您已经成功支付<span class="money-num-color" id="orderName">旅游订单</span>消费<span
+                        class="money-num-color" id="price"></span>元</span>
+                <div class="recharge-info">
+                    <!--<div class="recharge-item"><span class="recharge-left" >门票类型：</span><span
+                            class="game-name" id="ticketType">2019-9-8</span></div>-->
+                    <div class="recharge-item"><span class="recharge-left">预订日期：</span><span
+                            class="game-account" id="orderTime">早9:00-17:00</span></div>
+                    <div class="recharge-item"><span class="recharge-left">订单编号：</span><span class="game-account"></span>
+                    </div>
+                    <div class="recharge-item"><span class="recharge-left">支付时间：</span><span class="game-time" id="payDate">2017-09-22 20:33:35</span>
+                    </div>
+                    <a class="recharge" href="http://localhost:8080/views/ctrip/ctrip_index.html">返回首页</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../../statics/jquery-2.1.4/jquery.js"></script>
+<script src="../../statics/js_myt/layui/layui.all.js"></script>
+<script src="js_three/common.js"></script>
+<script>
+    $(function () {
+        var href=window.location.href.split("?")[1];
+        alert(href)
+        $(".money-num-color:last").text(href.split("&")[1].split("=")[1]);
+        $(".game-account:last").text(href.split("&")[0].split("=")[1]);
+        $("#payDate").text(href.split("&")[2].split("=")[1].replace("%20"," "));
+        $("#orderTime").text(sessionStorage.getItem("startDate").substring(0,10))
+        /*for (var i = 0; i <params.length ; i++) {
+                console.log(params[i])
+        }*/
+       /* var href=window.location.href.split("?")[1].split("&");
+        alert(href)
+       var params={
+               charset:"utf-8",
+               out_trade_no:href[1].split("=")[1],
+               total_amount:href[3].split("=")[1],
+                //method:"alipay.trade.page.pay.return",
+               sign:href[4].split("=")[1],
+               trade_no:href[5].split("=")[1],
+               auth_app_id:href[6].split("=")[1],
+               version:href[7].split("=")[1],
+               app_id:href[8].split("=")[1],
+               sign_type:href[9].split("=")[1],
+               seller_id:href[10].split("=")[1],
+               timestamp:href[11].split("=")[1],
+        }
+        /!*for (var i = 0; i <href.length ; i++) {
+                href[i]=href[i].replace("=",":");
+        }*!/
+        commonAjax("/return_url?","post",params,"json",function (data) {
+            if(data.result){
+                layer.msg(data.msg)
+            }
+        })*/
+
+    })
+
+</script>

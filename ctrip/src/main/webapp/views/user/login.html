@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>登录首页</title>
+
+    <link href="../../statics/css/login.49ce70dd.css" rel="stylesheet" type="text/css" />
+      <link href="../../statics/css/login_1.css"
+           rel="stylesheet" type="text/css"/>
+          
+    <link href="../../statics/css/header_public.css"
+          rel="stylesheet" type="text/css"/>
+          <head>
+         <body>
+         	<div style="margin-right:550px;"><img src="images/login.jpg" /></div>
+				 <div class="lg_loginbox" id="lg_loginbox" style="top: 10px; margin-top: 27.5px;">
+			
+			  <h2 class="lg_loginbox_title" id="logintitle">携程账号登录<a href="javascript:void(0)" class="login_phone_number getOrder">手机号查单<i>&gt;</i></a></h2>
+					<div class="form_wrap" id="normalview" style="display: block;">
+
+
+						<dl>
+	                <dd><input class="r_input" type="text" id="nloginname" placeholder="国内手机号/用户名/邮箱/卡号"></dd>
+	            </dl>
+	            <dl>
+	                <dd class="r_input input_auth-code"><input type="password" id="npwd" placeholder="登录密码"><a href="https://passport.ctrip.com/user/resetpwd/verifyIdentity" class="forgotpwd" target="_black">忘记密码</a></dd>
+	            </dl>
+
+
+	            <dl style="display: none;">
+	            <dd id="sliderddnormal" style="dlsplay:none"><div class=" cpt-drop-box"><div class="cpt-loading-box" style="display: block;"><img class="cpt-loading-img" src="https://webresource.c-ctrip.com/ares/infosec/captcha/2.5.30/default/img/loading.gif" style="display: none;"><span class="cpt-loading-info-box" style="position: static; display: inline-block;"><span class="cpt-loading-icon-content" style="display: inline-block;"><i class="cpt-logo cpt-loading-right" style="display: block;"></i><i class="cpt-logo cpt-loading-error" style="display: none;"></i></span><span class="cpt-loading-text" style="display: inline-block; color: rgb(85, 85, 85);">检测风险通过！</span></span></div><div class="cpt-drop-btn"><div class="cpt-img-double-right-outer"><i class="cpt-logo cpt-img-double-right"></i><i class="cpt-logo cpt-img-check-right"></i><i class="cpt-logo cpt-img-check-error"></i><i class="cpt-logo cpt-img-check-refresh"></i><img class="cpt-img-check-loading" src="https://webresource.c-ctrip.com/ares/infosec/captcha/2.5.30/default/img/loading.gif"></div></div><div class="cpt-drop-bg"></div><div class="cpt-bg-bar" unselectable="on"><span class="cpt-info-board" style="background: none; -webkit-text-fill-color: inherit; position: static;"></span></div></div><div class=" cpt-img-box"><input type="text" class="cpt-text-input" name="captcha" placeholder="验证码"><div class="cpt-img-check-outer"><i class="cpt-logo cpt-check-right"></i><i class="cpt-logo cpt-check-error"></i></div><img class="cpt-img-verif" src=""><div class="cpt-img-refresh-outer"><a class="cpt-logo cpt-img-refresh" title="刷新验证码" href="javascript:;"></a></div><span class="cpt-info-text">输入有误，请重新输入</span></div></dd>
+	            </dl>
+	            <div class="base_error" style="display:none" id="nerr"></div>
+                <dl>
+	            <div class="login-set">
+	            	<label class="auto-login"><input type="checkbox" checked="checked" id="normal30day">30天内自动登录</label>
+	            	<a href="javascript:;" class="login-entry-dynamic">手机动态密码登录 <i class="icon-arrowr"></i></a>
+	            </div>
+
+	            	<dd>
+	            		<input class="form_btn form_btn--block" id="nsubmit" type="submit" value="登   录">
+	            	</dd>
+	            </dl>
+	        	<p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+               </div><div class="form_wrap" id="personview" style="display: none;">
+				<div class="avatar-box">
+					<span class="avatar-img">
+						<img id="beforeHeadPic" src="https://dimg04.c-ctrip.com/images/t1/headphoto/724/518/802/e201a429d7a54f72ade0df32a3d59b2f.jpg" alt="">
+					</span>
+					<p class="user-name">134****1242</p>
+					<p class="change-user"><a href="javascript:;" id="changeaccount">更换账号</a></p>
+				</div>
+	            <dl>
+	                <dd class="r_input input_auth-code"><input type="password" placeholder="登录密码" id="personpwd"><a href="https://passport.ctrip.com/user/resetpwd/verifyIdentity" class="forgotpwd" target="_black">忘记密码</a></dd>
+	            </dl>
+	            <div class="base_error" style="display:none" id="personErr"></div>
+	            <div class="login-set">
+	            	<label class="auto-login"><input type="checkbox" checked="checked" id="person30day">30天内自动登录</label>
+	            	<a href="javascript:;" class="login-entry-dynamic">手机动态密码登录 <i class="icon-arrowr"></i></a>
+	            </div>
+
+	            <dl>
+	            	<dd>
+	            		<input class="form_btn form_btn--block" type="submit" id="personSubmit" value="登   录">
+	            	</dd>
+	            </dl>
+	            <p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+	        </div><div class="form_wrap" id="dynamicview" style="display:none">
+						<dl>
+							<dd class="r_input input_country-code" id="dyCcode" code="86">
+								中国大陆 86 <a href="javascript:;" class="link_code"></a>
+							</dd>
+						</dl>
+			            <dl>
+			                <dd><input class="r_input" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="15" id="dyphone" placeholder="注册或绑定手机号"></dd>
+			            </dl>
+			            <dl>
+			                <dd id="sliderdddynamic" style="dlsplay:none"></dd>
+			            </dl>
+			            <dl>
+			                <dd class="r_input input_auth-code dynamic"><input type="text" id="dypwd" maxlength="8" placeholder="短信动态码"><a href="javascript:;" id="sdy">发送动态码</a></dd>
+			            </dl>
+			            <div class="base_error" style="display:none" id="dyerr"></div>
+			            <div class="login-set">
+			            	<label class="auto-login"><input type="checkbox" id="dynamic30d" checked="checked">30天内自动登录</label>
+			            </div>
+
+			            <dl>
+			            	<dd>
+			            		<input class="form_btn form_btn--block" id="dylogin" type="submit" value="登   录">
+			            	</dd>
+			            </dl>
+			        	<p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+                        <a href="javascript:;" class="go_prev-step"><i>&lt;</i>携程账号登录</a>
+			        </div><div class="form_wrap" id="overseasview" style="display:none">
+				<dl>
+					<dd class="r_input input_country-code" id="overcode" code="86">
+						中国大陆 86 <a href="javascript:;" class="link_code"></a>
+					</dd>
+				</dl>
+	            <dl>
+	                <dd><input class="r_input" type="text" id="overphone" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="15" placeholder="注册或绑定手机号"></dd>
+	            </dl>
+	            <dl>
+	                <dd class="r_input input_auth-code"><input type="password" id="overpwd" placeholder="登录密码"><a href="https://passport.ctrip.com/user/resetpwd/verifyIdentity" class="forgotpwd" target="_black">忘记密码</a></dd>
+	            </dl>
+	            <dl>
+                	<dd id="slideroverseas" style="dlsplay:none"></dd>
+                </dl>
+                 <div class="base_error" style="display:none" id="overerr"></div>
+	            <div class="login-set">
+	            	<label class="auto-login"><input type="checkbox" id="overseas30day" checked="checked">30天内自动登录</label>
+	            	<a href="javascript:;" class="login-entry-dynamic">手机动态密码登录 <i class="icon-arrowr"></i></a>
+	            </div>
+	            <dl>
+	            	<dd>
+	            		<input class="form_btn form_btn--block" id="oversubmit" type="submit" value="登   录">
+	            	</dd>
+	            </dl>
+	        	<p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+                <a href="javascript:;" class="go_prev-step"><i>&lt;</i>携程账号登录</a>
+	        </div>        <div class="lg_weblogin" id="loginbanner" style="display: block;">
+				<div class="login-about">
+					<a href="javascript:;" id="overseas_login">境外手机</a><span class="sep">|</span><a href="http://ct.ctrip.com/crpTravel/zh-cn" class="companylogin">公司客户</a><span class="sep">|</span><a class="cardlogin" target="_self" href="javascript:;">合作卡</a><span class="sep">|</span><a class="fuli" target="_self" href="https://b.ctrip.com/welfarelogin/login/">携程通</a><a href="zhuce.html" class="free-regist" target="_black">免费注册</a>
+				</div>
+				<div class="login-other">
+					<a href="javascript:;" class="icon-alipay" url="/member/alipayLogin/AlipayAuthorize.aspx">支付宝</a><a href="javascript:;" class="icon-qq" url="/member/QQLogin/QQAuthorize.aspx">QQ</a><a href="javascript:;" class="icon-baidu" url="/member/BaiduLogin/BauiduAuthorize.aspx">百度</a><a href="javascript:;" class="icon-sina" url="/member/SinaLogin/SinaAuthorize2.aspx">新浪微博</a><a href="javascript:;" class="icon-wechat" url="/member/WeChatLogin/Authorize.aspx">微信</a><a href="javascript:;" style="display:none" class="icon-163" url="/member/neteLogin/NeteAuthorize.aspx">网易</a><a href="javascript:;" class="icon-renren" url="/member/RenrenLogin/Authorize.aspx" style="display: none;">人人网</a>
+				</div>
+				</body>
+				</html>
+
+<script src="../../statics/jquery-2.1.4/jquery.js"></script>
+<script src="../../statics/js_myt/jquery.form.js"></script>
+<script src="../../statics/js_myt/layui/layui.all.js"></script>
+<script src="../../statics/js_myt/common.js"></script>
+
+
+<script src="js_three/login.js"></script>

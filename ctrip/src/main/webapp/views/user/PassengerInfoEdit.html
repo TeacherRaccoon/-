@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="../../statics/jquery-2.1.4/jquery.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF8"/>
+    <link href="css/cui110425_1.css" type="text/css" rel="stylesheet"/>
+    <link href="css/private_myctrip_1.css" type="text/css" rel="stylesheet"/>
+    <title>
+        常用旅客信息-携程旅行网
+    </title></head>
+<body id="mainbody">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+           value="/wEPDwUJMTk1MzE3ODYxZGTL18JSO2PyP0jWCU12XKMUQpwkCg=="/>
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E3FF735D"/>
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+           value="/wEdAAOv5ObKZZ69GyTJOfvJGadi719oBxpXhQLOL0qwuv8/qV1DinUw/JpZiOSI5UqMgWTD996KZ1aX0tyKiSgMMbZUpW5vjg=="/>
+    <input type="hidden" id="CorrelationId" name="CorrelationId" value="8512136345347452194"/>
+    <link href="css/pageheader_v4_1.css" rel="stylesheet"/>
+    <div class="cui-nav-bar">
+        <div class="nav-bar-cont">
+            <div class="slogan">让旅行更幸福</div>
+            <ul class="language">
+                <li>
+                    <a rel="nofollow" style="cursor:default" class="selected"
+                       onmouseover="this.className='selected language_current';this.nextElementSibling.style.display='block';"
+                       onmouseout="this.className= 'selected';this.nextElementSibling.style.display='none';"><span><em
+                            class="ico-global"></em> Language <b class="n-arrow"></b></span></a>
+                    <div class="language_wrap drowndrop" style="display: none;"
+                         onmouseover="this.style.display='block';this.previousElementSibling.className='selected language_current';"
+                         onmouseout="this.style.display='none';this.previousElementSibling.className='selected';">
+                        <ul class="language_list" id="cui_lang_list">
+                            <li>
+                                <a id="ctrip_cn" class="language_big5" href="//www.ctrip.com">简体中文</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_eng" class="language_en" href="https://www.trip.com/?locale=en_US">English
+                                    (United States)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_uk" class="language_gb" href="https://uk.trip.com/?locale=en_gb">English
+                                    (United Kingdom)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_hk" class="language_hk" href="http://hk.trip.com/?locale=zh_hk">繁&#39636;中文
+                                    (香港)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_hk_en" class="language_hk" href="https://hk.trip.com/?locale=en_hk">English(Hong
+                                    Kong)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_korea" class="language_korea"
+                                   href="https://kr.trip.com/?locale=ko_KR">韩语版</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_jap" class="language_jap" href="https://jp.trip.com/?locale=ja_JP">日语版</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_sg" class="language_sg" href="https://sg.trip.com/?locale=en_SG">English
+                                    (Singapore)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_au" class="language_au" href="https://au.trip.com/?locale=en_au">English
+                                    (Australia)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_de" class="language_de"
+                                   href="https://de.trip.com/?locale=de_DE">Deutsch</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_fr" class="language_fr" href="https://fr.trip.com/?locale=fr_FR">Fran&ccedil;ais</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_es" class="language_es" href="https://es.trip.com/?locale=es_ES">Espa&ntilde;ol</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_it" class="language_it"
+                                   href="https://it.trip.com/?locale=it_IT">Italiano</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_ru" class="language_ru"
+                                   href="https://ru.trip.com/?locale=ru_RU">Русский</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_th" class="language_th" href="https://th.trip.com/?locale=th_TH">泰国站</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_id" class="language_id" href="https://id.trip.com/?locale=id_ID">Bahasa
+                                    Indonesia</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_my" class="language_my" href="https://my.trip.com/?locale=ms_MY">Bahasa
+                                    Malaysia</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_my_en" class="language_my" href="https://my.trip.com/?locale=en_my">English
+                                    (Malaysia)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_vn" class="language_vn" href="https://vn.trip.com/?locale=vi_VN">越南语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_nl" class="language_nl" href="https://nl.trip.com/?locale=nl_NL">荷兰语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_pl" class="language_pl"
+                                   href="https://pl.trip.com/?locale=pl_PL">波兰语&gt;</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_gr" class="language_gr" href="https://gr.trip.com/?locale=el_GR">希腊语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_tr" class="language_tr" href="https://tr.trip.com/?locale=tr_TR">土耳其语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_pt" class="language_pt" href="https://br.trip.com/?locale=pt_BR">巴西葡萄牙语</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav-bar-set">
+                <li class="set-list set-logIn" id="nav-bar-set-login" style="display:none">
+                    <a class="person-text" onclick="login()" style="cursor:pointer;"><span class="set-text"><span
+                            class="member-name" name="nav-bar-mname">您好</span>，请登录 </span></a>
+                </li>
+                <li class="set-list" id="nav-bar-set-reg" style="display:none">
+                    <a class="person-text nav-per" href="https://passport.ctrip.com/user/reg/home "><span
+                            class="set-text"> 免费注册 </span></a>
+                </li>
+                <li class="set-list myctrip-name" name="cui-nav-bar-set-list" id="nav-bar-set-myctrip-name"
+                    style="display:none">
+                    <a href="../user/userCenter_index.html" class="person-text nav-myctrip"><span class="set-text"><span
+                            class="member-name" name="nav-bar-d-info">普通会员</span><b class="n-arrow"></b></span></a>
+                    <ul class="per-drowndrop" style="display: none;" id="nav-bar-set-my-info">
+                        <li class="my-img">
+                            <a rel="nofollow"
+                               href="https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx"><img
+                                    name="nav-bar-d-info" src="picture/ico_deafult_1.png"></a>
+                        </li>
+                        <li class="my-data">
+                            <p class="integral" name="nav-bar-d-info" rel="nofollow">积分：<a
+                                    href="https://sinfo.ctrip.com/MyInfo/AccountCenter/MineMileage.aspx ">0</a>
+                            </p>
+                            <p class="member-grade" name="nav-bar-d-info">普通会员<a style="display:none">领福利</a>
+                            </p>
+                        </li>
+                        <li class="sign-out">
+                            <a rel="nofollow" href="https://passport.ctrip.com/user/logout ">退出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list set-infor">
+                    <i class="infor-notice"></i><a class="infor-num" id="nav-bar-set-msgnum"
+                                                   rel="nofollow">消息<span>0</span></a>
+                </li>
+                <li class="set-list set-myctrip-list" name="cui-nav-bar-set-list">
+                    <a class="person-text nav-myctrip" href="../user/userCenter_index.html "><span class="set-text"> 我的携程 <b
+                            class="n-arrow"></b></span></a>
+                    <ul class="nav-drowndrop" style="display: none;">
+                        <li>
+                            <a rel="nofollow"
+                               href="https://my.ctrip.com/favorite/myfav#ctm_ref=ssc_hp_myctrip_collect_a ">我的收藏 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow"
+                               href="https://smarket.ctrip.com/Promocode/zh-cn/Promocode.aspx#ctm_ref=ssc_hp_myctrip_integral_a ">我的优惠券 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow"
+                               href="https://my.ctrip.com/Home/Passenger/PassengerList.aspx#ctm_ref=ssc_hp_myctrip_info_a ">常用信息 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow"
+                               href="https://secure.ctrip.com/webwallet/index#ctm_ref=ssc_hp_myctrip_wallet_a ">我的钱包 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list set-myorder-list" name="cui-nav-bar-set-list">
+                    <a class="person-text nav-myctrip" rel="nofollow"
+                       href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a "><span
+                            class="set-text"> 我的订单 <b class="n-arrow"></b></span></a>
+                    <ul class="nav-drowndrop drowndrop-order" style="display: none;">
+                        <li>
+                            <a rel="nofollow"
+                               href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx#ctm_ref=ssc_hp_myctrip_flightorders_a ">机票+相关订单 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow"
+                               href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx#ctm_ref=ssc_hp_myctrip_hotelorders_a ">酒店订单 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow"
+                               href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx#ctm_ref=ssc_hp_myctrip_tourorders_a ">旅游订单 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow"
+                               href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx#ctm_ref=ssc_hp_myctrip_trainorders_a ">火车票订单 </a>
+                        </li>
+                        <li>
+                            <a href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a ">全部订单 </a>
+                        </li>
+                        <li>
+                            <a class="phone-line"
+                               href="https://passport.ctrip.com/user/member/fastOrder#ctm_ref=ssc_hp_myctrip_phoneorders_a ">手机号查订单 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list">
+                    <a target="_blank" class="person-text nav-per" href="http://kefu.ctrip.com"><span class="set-text"> 客服中心 </span></a>
+                </li>
+                <li class="set-list set-phone" name="cui-nav-bar-set-list">
+                    <a href="#" class="person-text nav-myctrip"><span class="set-text"><i
+                            class="ico_app"></i></span></a>
+                    <ul class="phone-drowndrop" style="display: none;">
+                        <li class="ico_code">
+                            <img src="picture/er_ctrip_app_1.jpg" alt="">
+                            <p>手机扫码快速下载</p>
+                        </li>
+                        <li class="ctrip-app">
+                            <a href="http://app.ctrip.com">携程旅行手机版</a><i class="arrow-right"></i>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list set-wechat" name="cui-nav-bar-set-list">
+                    <a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_wechat"></i></span></a>
+                    <ul class="wechat-drowndrop" style="display: none;">
+                        <li class="ico_code">
+                            <img src="picture/er_ctrip_wechat_1.jpg" alt="">
+                            <p>携程订阅号：helloctrip</p>
+                            <p class="nth2">扫一扫，<span>领旅行福利</span>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cui_hd_cont">
+        <div class="cui_hd">
+            <input type="hidden" id="_searchboxNo_" value="ws_www20140409"><input type="hidden" id="_newHeaderFlag_"
+                                                                                  value="true">
+            <div class="ctriplogo">
+                <a title="携程旅行网" href="http://www.ctrip.com">携程旅行网 </a>
+            </div>
+            <div class="cui_search">
+                <input type="text" id="_allSearchKeyword" onfocus="_historyResultDiv();"
+                       onkeydown="_allSearchEnterIn(this,event);" onkeyup="_callMCtripData(this.value,event);"
+                       autocomplete="off">
+                <button type="button" id="search_button_global"></button>
+                <div class="cui_search_list" id="_allSearchResult" style="display:none;"></div>
+            </div>
+            <div class="nav-tel">
+                <ul class="nav-tel-list" id="cui-nav-tel-list">
+                    <li> 境内：95010</li>
+                    <li>（或）400-830-6666</li>
+                    <li class="tel-list-more">香港(中国)：+852-3069-9966</li>
+                    <li class="tel-list-more">境外：+86-21-3406-4888</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="cui_nav" class="cui_nav_single">
+        <div class="base_nav">
+            <ul id="cui_nav_ul" class="cui_nav cui_content">
+                <li id="cui_c_ph_hp">
+                    <a id="c_ph_hp" class="cui_nav_non" href="../ctrip/ctrip_index.html">首页</a>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_hotel">
+                    <a id="nav_hotel" class="cui_nav_has" href="../ctrip/hotel_index.html">酒店<i
+                            class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_hotel" class="cui_sub_nav">
+                            <li id="ul_c_ph_hotel_h">
+                                <a id="c_ph_hotel_h" href="../ctrip/hotel_index.html">国内酒店</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_hoteli_h">
+                                <a id="c_ph_hoteli_h" href="javascript:void(0)">海外酒店</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_inn_h">
+                                <a id="c_ph_inn_h" href="javascript:void(0)">民宿客栈</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_apartment_h">
+                                <a id="c_ph_apartment_h" href="javascript:void(0)">海外民宿</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_tuan_h">
+                                <a id="c_ph_tuan_h" href="javascript:void(0)">团购</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_taocanj_h">
+                                <a id="c_ph_taocanj_h" href="javascript:void(0)">酒店+景点</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_meetingroom_h">
+                                <a id="c_ph_meetingroom_h" href="javascript:void(0)">团队房&bull;长住房</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_meeting_h">
+                                <a id="c_ph_meeting_h" href="javascript:void(0)">会议<span class="label-cn"
+                                                                                         id="ACT_Label_14"
+                                                                                         style="display:none"><em>会员日</em><i
+                                        class="triangle"></i></span></a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-hotel"></i>酒店订单
+                            &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_vac">
+                    <a id="nav_vac" class="cui_nav_has" href="../vacation/vacation.html">旅游<span class="label-cn"
+                                                                                                 id="ACT_Label_40"
+                                                                                                 style="display:none"><em>嗨暑价
+</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_vac" class="cui_sub_nav">
+                            <li id="ul_c_ph_vacations_v">
+                                <a id="c_ph_vacations_v" href="../vacation/vacation.html">旅游首页<span class="label-cn"
+                                                                                                    id="ACT_Label_41"
+                                                                                                    style="display:none"><em>678月节</em><i
+                                        class="triangle"></i></span></a>
+                            </li>
+                            <li class="divider " style="display:none"></li>
+                            <li id="ul_c_ph_around_v">
+                                <a id="c_ph_around_v" href="javascript:void(0)">周末游</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_vacationsd_v">
+                                <a id="c_ph_vacationsd_v" href="../vacation/vacation.html">跟团游</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_taocan_v">
+                                <a id="c_ph_taocan_v" href="../vacation/vacation.html">自由行</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_sijiatuan">
+                                <a id="c_ph_sijiatuan" href="javascript:void(0)">私家团</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_cruise_v">
+                                <a id="c_ph_cruise_v" href="javascript:void(0)">邮轮</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_taocanj_v">
+                                <a id="c_ph_taocanj_v" href="https://vacations.ctrip.com/diysh">酒店+景点</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_huodong_v">
+                                <a id="c_ph_huodong_v" href="https://huodong.ctrip.com/">当地玩乐</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_zhutiyou_v">
+                                <a id="c_ph_zhutiyou_v" href="javascript:void(0)">主题游</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_baotuan_v">
+                                <a id="c_ph_baotuan_v" href="javascript:void(0)">定制旅行</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_youxue_v">
+                                <a id="c_ph_youxue_v" href="javascript:void(0)">游学</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_visa_v">
+                                <a id="c_ph_visa_v" href="javascript:void(0)">签证</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_mice_v">
+                                <a id="c_ph_mice_v" href="javascript:void(0)">企业会奖</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_hh_v">
+                                <a id="c_ph_hh_v" target="_blank" rel="nofollow" href="javascript:void(0)">高端游</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_golf_v">
+                                <a id="c_ph_golf_v" href="javascript:void(0)">爱玩户外</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_insurance_v">
+                                <a id="c_ph_insurance_v" href="javascript:void(0)">保险</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_deals_v">
+                                <a id="c_ph_deals_v" href="javascript:void(0)">特卖汇</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i
+                                class="cui-icon-vacations"></i>旅游订单 &gt;</a>
+                    </div>
+                </li>
+                <li class="divider divider_spec"></li>
+                <li id="cui_nav_gentuan">
+                    <a id="nav_gentuan" class="cui_nav_non" DividerClass="divider_spec"
+                       href="https://vacations.ctrip.com/grouptravel">跟团游</a>
+                </li>
+                <li class="divider divider_spec"></li>
+                <li id="cui_nav_ziyouxing">
+                    <a id="nav_ziyouxing" class="cui_nav_non" DividerClass="divider_spec"
+                       href="https://vacations.ctrip.com/idiytour">自由行</a>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_flight">
+                    <a id="nav_flight" class="cui_nav_has" href="javascript:void(0)">机票<i
+                            class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_flight" class="cui_sub_nav">
+                            <li id="ul_c_ph_flights_f">
+                                <a id="c_ph_flights_f" href="javascript:void(0)">国内机票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_flightsi_f">
+                                <a id="c_ph_flightsi_f" href="javascript:void(0)">国际&bull;港澳台机票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_fuzzy_f">
+                                <a id="c_ph_fuzzy_f" href="javascript:void(0)">特价机票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_taocan_f">
+                                <a id="c_ph_taocan_f" href="https://taocan.ctrip.com">机+酒</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_flightstoolbox_f">
+                                <a id="c_ph_flightstoolbox_f" href="javascript:void(0)">航班动态</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_bookseat_f">
+                                <a id="c_ph_bookseat_f" rel="nofollow" href="javascript:void(0)">值机选座</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_flightorderlist_f">
+                                <a id="c_ph_flightorderlist_f" rel="nofollow" href="javascript:void(0)">退票改签</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_airportguides_f">
+                                <a id="c_ph_airportguides_f" rel="nofollow" href="javascript:void(0)">机场攻略</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_flightdingzhi_f">
+                                <a id="c_ph_flightdingzhi_f" href="javascript:void(0)">定制包机</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i
+                                class="cui-icon-flight"></i>机票订单 &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_trains">
+                    <a id="nav_trains" class="cui_nav_has" href="javascript:void(0)">火车<i
+                            class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_trains" class="cui_sub_nav">
+                            <li id="ul_c_ph_train_t">
+                                <a id="c_ph_train_t" href="javascript:void(0)">国内火车票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_traino_t">
+                                <a id="c_ph_traino_t" href="javascript:void(0)">国际&bull;港台火车票</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-train"></i>火车票订单
+                            &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_destination">
+                    <a id="nav_destination" class="cui_nav_has" href="javascript:void(0)">汽车 &middot; 船<i
+                            class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_destination" class="cui_sub_nav">
+                            <li id="ul_c_ph_bus_t">
+                                <a id="c_ph_bus_t" href="javascript:void(0)">汽车票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_ship_t">
+                                <a id="c_ph_ship_t" href="javascript:void(0)">船票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_yacht_t">
+                                <a id="c_ph_yacht_t" target="_blank" rel="nofollow" href="javascript:void(0)">游艇帆船</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_daozy_t">
+                                <a id="c_ph_daozy_t" href="javascript:void(0)">到站游</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-bus"></i>汽车票订单
+                            &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_car">
+                    <a id="nav_car" class="cui_nav_has" href="javascript:void(0)">用车<span class="label-cn"
+                                                                                          id="ACT_Label_43"
+                                                                                          style="display:none"><em>抢五折</em><i
+                            class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_car" class="cui_sub_nav">
+                            <li id="ul_c_ph_car_c">
+                                <a id="c_ph_car_c" href="javascript:void(0)">用车首页</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_hwzj_c">
+                                <a id="c_ph_hwzj_c" href="javascript:void(0)">境外租车</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_hwdaijia_c">
+                                <a id="c_ph_hwdaijia_c" href="javascript:void(0)">境外接送机<span class="label-cn"
+                                                                                             id="ACT_Label_44"
+                                                                                             style="display:none"><em>暑期特价</em><i
+                                        class="triangle"></i></span></a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_hwrizu_c">
+                                <a id="c_ph_hwrizu_c" href="javascript:void(0)">境外包车</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_zj_c">
+                                <a id="c_ph_zj_c" href="javascript:void(0)">国内租车</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_daijia_c">
+                                <a id="c_ph_daijia_c" href="javascript:void(0)">国内接送机/火车</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_rizu_c">
+                                <a id="c_ph_rizu_c" href="javascript:void(0)">国内包车</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-car"></i>用车订单
+                            &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_ticket">
+                    <a id="nav_ticket" class="cui_nav_has" href="../piao/menPiaoIndex.html">门票<i
+                            class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_ticket" class="cui_sub_nav">
+                            <li id="ul_c_ph_piao_p">
+                                <a id="c_ph_piao_p" href="../piao/menPiaoIndex.html">境内门票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_piaooversea_p">
+                                <a id="c_ph_piaooversea_p" href="../piao/menPiaoIndex.html">出境&bull;港澳台门票</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_huodong_p">
+                                <a id="c_ph_huodong_p" href="../piao/menPiaoIndex.html">当地玩乐</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_wifi_p">
+                                <a id="c_ph_wifi_p" href="javascript:void(0)">出境WiFi&bull;电话卡</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_around_p">
+                                <a id="c_ph_around_p" href="javascript:void(0)">周末游</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_disney_p">
+                                <a id="c_ph_disney_p" href="javascript:void(0)">上海海昌</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow"
+                           href="https://my.ctrip.com/Home/Order/LocalUnionOrderList.aspx"><i
+                                class="cui-icon-ticket"></i>门票玩乐订单
+                            &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_c_ph_you">
+                    <a id="c_ph_you" class="cui_nav_non" href="../piao/gongLue_index.html">攻略</a>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_g">
+                    <a id="nav_g" class="cui_nav_has" href="javascript:void(0)">全球购<i class="cui_ico_triangle"></i><span
+                            class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_g" class="cui_sub_nav">
+                            <li id="ul_c_ph_mdg_g">
+                                <a id="c_ph_mdg_g" href="javascript:void(0)">名店购</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_cshop_g">
+                                <a id="c_ph_cshop_g" href="javascript:void(0)">旅游购物商城</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_ts_g">
+                                <a id="c_ph_ts_g" href="javascript:void(0)">退税</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_ylth_g">
+                                <a id="c_ph_ylth_g" href="javascript:void(0)">银联特惠</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_skjl_g">
+                                <a id="c_ph_skjl_g" href="javascript:void(0)">万千赏</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_forex_g">
+                                <a id="c_ph_forex_g" href="javascript:void(0)">外币兑换</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i
+                                class="cui-icon-foreign"></i>外币兑换订单 &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_lpk">
+                    <a id="nav_lpk" class="cui_nav_has" href="javascript:void(0)">礼品卡<i
+                            class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_lpk" class="cui_sub_nav">
+                            <li id="ul_c_ph_lipin_l">
+                                <a id="c_ph_lipin_l" href="javascript:void(0)">礼品卡首页</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_lipinholiday_l">
+                                <a id="c_ph_lipinholiday_l" href="javascript:void(0)">节日/主题购卡</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_xcb_l">
+                                <a id="c_ph_xcb_l" href="javascript:void(0)">礼品卡福袋</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_lipincorp_l">
+                                <a id="c_ph_lipincorp_l" href="javascript:void(0)">企业采购</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_dhq_l">
+                                <a id="c_ph_dhq_l" href="javascript:void(0)">兑换券</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_forexlipin_l">
+                                <a id="c_ph_forexlipin_l" href="javascript:void(0)">外币兑换</a>
+                            </li>
+                        </ul>
+                        <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-card"></i>礼品卡订单
+                            &gt;</a>
+                    </div>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_sl">
+                    <a id="nav_sl" class="cui_nav_has" href="javascript:void(0)">商旅<i class="cui_ico_triangle"></i><span
+                            class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_sl" class="cui_sub_nav">
+                            <li id="ul_c_ph_slsy_s">
+                                <a id="c_ph_slsy_s" href="javascript:void(0)">商旅首页</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_chl_s">
+                                <a id="c_ph_chl_s" href="javascript:void(0)">企业差旅平台</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_hj_s">
+                                <a id="c_ph_hj_s" href="javascript:void(0)">会议旅游</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="divider divider_spec"></li>
+                <li id="cui_nav_cruise">
+                    <a id="nav_cruise" class="cui_nav_non" DividerClass="divider_spec" href="javascript:void(0)">邮轮</a>
+                </li>
+                <li class="divider divider_spec"></li>
+                <li id="cui_nav_mudidi">
+                    <a id="nav_mudidi" class="cui_nav_non" DividerClass="divider_spec" href="javascript:void(0)">目的地</a>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_finance_pc">
+                    <a id="finance_pc" class="cui_nav_non" href="javascript:void(0)">金融</a>
+                </li>
+                <li class="divider "></li>
+                <li id="cui_nav_more">
+                    <a id="nav_more" class="cui_nav_has" rel="nofollow" href="javascript:void(0)">更多<i
+                            class="cui_ico_triangle"></i><span class="point"></span></a>
+                    <div class="cui_subnav_wrap">
+                        <ul id="ul_nav_more" class="cui_sub_nav">
+                            <li id="ul_c_ph_ypsc_m">
+                                <a id="c_ph_ypsc_m" href="javascript:void(0)">优品商城</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_sjhy_m">
+                                <a id="c_ph_sjhy_m" href="javascript:void(0)">超级会员</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_tuangou_m">
+                                <a id="c_ph_tuangou_m" href="javascript:void(0)">团购</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_cards_m">
+                                <a id="c_ph_cards_m" rel="nofollow" href="javascript:void(0)">合作卡</a>
+                            </li>
+                            <li class="divider "></li>
+                            <li id="ul_c_ph_xcyd_m">
+                                <a id="c_ph_xcyd_m" href="javascript:void(0)">携程运动</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="nav_bh" class="cui_nav_behind" style="display:none;height:0px;"></div>
+    </div>
+    <div id="ActConfig_ID" style="display:none">[{"id":"41","onlinetime":"2019/07/17 11:30:17$2019/08/04
+        23:55:14"},{"id":"40","onlinetime":"2019/07/17 11:30:26$2019/08/04
+        23:55:14"},{"id":"44","onlinetime":"2019/07/11 00:00:03$2019/07/25
+        23:55:01"},{"id":"43","onlinetime":"2019/07/11 00:00:03$2019/07/25
+        23:55:01"},{"id":"14","onlinetime":"2019/12/31 23:55:04$2200/08/08
+        16:19:09"},{"id":"15","onlinetime":"2018/12/13 08:23:32$2180/12/31 23:55:09"}]
+    </div>
+    <input type="hidden" id="popfloating_isshow" value="0"><input type="hidden" id="siteDomainHeadFloat"
+                                                                  value="ctrip"><input type="hidden" id="bsType"
+                                                                                       value="0"><input type="hidden"
+                                                                                                        id="formatTel"
+                                                                                                        value="[{'formatTelNum':'95010','prefix':'境内：','sortIndex':'1','standardTelNum':'SHMobile95010','suffix':''},{'formatTelNum':'400-830-6666','prefix':'（或）','sortIndex':'2','standardTelNum':'4008306666','suffix':''},{'formatTelNum':'+ 852-3008-3268','prefix':'香港（中国）：','sortIndex':'3','standardTelNum':'85230083268','suffix':''},{'formatTelNum':'+ 86-21-3406-4888','prefix':'境外：','sortIndex':'4','standardTelNum':'34064888','suffix':''}]">
+    <script> ;window.replace = function () {
+        return ''
+    };
+    window.replace = function () {
+        return ""
+    };
+    !function () {
+        window.replace = function () {
+            return ""
+        };
+        (function () {
+            var h = document, c = function (a) {
+                    return h.getElementById(a)
+                }, k = null, l = null, m = 0,
+                d = [c("cui_nav_hotel"), c("cui_nav_vac"), c("cui_nav_flight"), c("cui_nav_trains"), c("cui_nav_destination"), c("cui_nav_car"), c("cui_nav_ticket"), c("cui_nav_g"), c("cui_nav_lpk"), c("cui_nav_sl"), c("cui_nav_more")],
+                g = {
+                    onmouseenter: function (a, b) {
+                        (h.all ? a.onmouseenter = b : a.onmouseover = function (a) {
+                            (null == a.relatedTarget ? b() : this !== a.relatedTarget && 20 != this.compareDocumentPosition(a.relatedTarget) && b())
+                        })
+                    }, onmouseout: function (a, b) {
+                        (h.all ? a.onmouseleave = b : a.onmouseout = function (a) {
+                            (null == a.relatedTarget ? b() : this !== a.relatedTarget && 20 != this.compareDocumentPosition(a.relatedTarget) && b())
+                        })
+                    }, addEvent: function (a, b, f) {
+                        (a.addEventListener ? a.addEventListener(b, f, !1) : (a.attachEvent ? a.attachEvent("on" + b, f) : a["on" + b] = f))
+                    }
+                }, e = {
+                    setTime: function () {
+                        g.onmouseenter(c("cui_nav"), function () {
+                            setTimeout(function () {
+                                m = 150
+                            }, 30)
+                        });
+                        g.onmouseout(c("cui_nav"), function () {
+                            m = 0
+                        })
+                    }, initEvent: function () {
+                        for (var a = 0, b = d.length; b > a; a++) (function () {
+                            var b = a;
+                            g.onmouseenter(d[b], function () {
+                                e.interFn(d[b])
+                            });
+                            g.onmouseout(d[b], function () {
+                                e.outerFn(d[b])
+                            })
+                        })(a)
+                    }, reset: function () {
+                        for (var a = 0, b = d.length; b > a; a++) d[a].className = (-1 < d[a].className.indexOf("cui_nav_current") ? "cui_nav_current" : "")
+                    }, padReset: function (a) {
+                        for (var b = 0, f = d.length; f > b; b++) (-1 < d[b].className.indexOf("cui_nav_current") ? d[b].className = "cui_nav_current" : b !== a && (d[b].className = ""))
+                    }, interFn: function (a) {
+                        for (var b = document.getElementById("cui_nav").getElementsByTagName("li"), f = "", d = 0; d < b.length; d++) b[d].className.match((/cui_nav_current/)) && (f = b[d]);
+                        null != l && (clearTimeout(l), l = null);
+                        k = setTimeout(function () {
+                            e.reset();
+                            (-1 < a.className.indexOf("cui_nav_current") ? f.className = "cui_nav_current" : (a.className = "cui_nav_o", f.className = "cui_nav_current cui_nav_unhover"))
+                        }, m)
+                    }, outerFn: function (a) {
+                        for (var b = document.getElementById("cui_nav").getElementsByTagName("li"), d = "", c = 0; c < b.length; c++) b[c].className.match((/cui_nav_current/)) && (d = b[c]);
+                        null != k && (clearTimeout(k), k = null);
+                        l = setTimeout(function () {
+                            e.reset();
+                            (-1 < a.className.indexOf("cui_nav_current") ? d.className = "cui_nav_current" : (a.className = "", d.className = "cui_nav_current"))
+                        }, 250)
+                    }, initMobile: function () {
+                        for (var a = 0, b = d.length; b > a; a++) (function () {
+                            var b = a, c = d[b].getElementsByTagName("A")[0];
+                            c.href = "###";
+                            c.onmousedown = function () {
+                                e.padReset(b);
+                                -1 === d[b].className.indexOf("cui_nav_current") && ((-1 < d[b].className.indexOf("cui_nav_o") ? (d[b].className = "", document.getElementsByClassName("cui_nav_current")[0].className = "cui_nav_current", c.style.visibility = "hidden", setTimeout(function () {
+                                    c.style.visibility = "visible"
+                                }, 10)) : (d[b].className = "cui_nav_o", document.getElementsByClassName("cui_nav_current")[0].className = "cui_nav_current", document.getElementsByClassName("cui_nav_current")[0].className += " cui_nav_unhover")))
+                            }
+                        })(a)
+                    }, contains: function (a) {
+                        for (var b = 0, c = d.length; c > b; b++) if (0 < d[b].compareDocumentPosition(a) - 19) return !0;
+                        return !1
+                    }
+                };
+            c("headStyleId") && c("headStyleId").parentNode.removeChild(c("headStyleId"));
+            ((/ip(hone|od)|ipad/i).test(navigator.userAgent) ? (e.initMobile(), g.addEvent(h.body, "click", function (a) {
+                e.contains(a.target || a.srcElement) || e.reset()
+            })) : (e.setTime(), e.initEvent()))
+        })()
+    }(); </script>
+    <ul id="base_wrapper">
+
+        <li id="base_bd">
+
+
+            <script type="text/javascript" src="js/cookie.js"></script>
+            <script type="text/javascript" src="js/buleftmenuutf8.js"></script>
+            <div id="leftNavWrapper" menutype="0" menuid="common_passenger"></div>
+            <div class="main layoutfix">
+                <form id="myForm">
+
+                    <div class="mb10 bs08">
+                        <div class="hd03">
+                            <h3 class="fs16" style="font-family: Microsoft yahei;"><label id="lbl_Title"
+                                                                                          did="">新增</label>常用旅客信息<span
+                                    class="ml10 fs12 sc01 fwn">请填写如下常用旅客信息，<em class="sc03">*</em>为必选项。</span></h3>
+                            <div class="hd03_r">
+                                <a href="PassengerList.html">查看所有旅客信息</a>
+                            </div>
+                        </div>
+                        <div style="display:none" id="dv_mask"></div>
+                        <img id="img_loadgif" style="display:none;" alt="" src=""/>
+                        <div class="pd20">
+                            <div class="tips-warn" style="display:none;"><span class="ico_tips16"></span></div>
+                            <div class="info-box">
+                                <div class="queue"><span class="no">1</span>旅客信息</div>
+                                <ul class="mb20 account_form form2 fs14">
+                                    <li class="fields" style="position:relative;">
+                                        <p class="fields_required"><em>*</em><span id="leg_name">中文名与英文名两者必填一项</span>
+                                        </p>
+                                        <p><label class="tit">中文名</label><input name="name" class="m_input w11"
+                                                                                type="text" maxlength="50"
+                                                                                id="txt_namecn"/></p>
+                                        <p><label id="lbl_nameF" class="tit">英文名</label><input class="m_input w02"
+                                                                                               type="text"
+                                                                                               maxlength="50" name="englishName"
+                                                                                               id="txt_lastname"/></p>
+
+                                        <!-- 2015-8加？填写提示 -->
+                                        <div class="tooltip-passenger" id="tips"
+                                             style="display:none; left:295px; position: absolute; z-index: 1000; top:98px;">
+                                            <a href="javascript:hidden01();" class="close">×</a>
+                                            <ul class="simple_tab clearfix" id="clicktoclose_tab">
+                                                <li id='tooltipold01' class="active"><a
+                                                        href="javascript:old();">老版护照</a></li>
+                                                <li id='tooltipnew01'><a href="javascript:new01();">新版护照</a></li>
+                                            </ul>
+                                            <div class="tab_content">
+                                                <div id='tooltipold02' class="tab_pane active">
+                                                    <p>请严格按照登机时所用证件上的信息填写</p>
+                                                    <p>填写说明：（以中国大陆护照上的位置为例）</p>
+                                                    <img src="picture/passport_old.png" alt="老版护照">
+                                                </div>
+                                                <div id='tooltipnew02' class="tab_pane active">
+                                                    <p>请严格按照登机时所用证件上的信息填写</p>
+                                                    <p> 填写说明：（以中国大陆护照上的位置为例）</p>
+                                                    <img src="picture/passport_new.png" alt="新版护照">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 本尊 -->
+                                       <!-- <p><span class="tit">&nbsp;</span><label class="radio-title"> <input
+                                                id="chkIsSelf" type="checkbox" class="radio InvoiceType" value="设置为本人"
+                                                name="defult-contacts"><span>设置为本人</span></label></p>-->
+                                    </li>
+                                    <li>
+                                        <label class="tit" style="line-height:20px">国籍</p><span style="font-size:8px">(国家/地区)</span></label><input
+                                            class="m_input w11" type="text"  name="nationalityId" id="txt_country"/><input type="hidden"
+
+                                                                                                     id="txt_countryid"/>
+                                    </li>
+                                    <li class="li_sex">
+                                        <label class="tit">性别</label><label class="base_label"><input id="sexmale"
+                                                                                                      class="sex"
+                                                                                                      type="radio"
+                                                                                                      name="gender"
+                                                                                                      value="1"/>男</label><label
+                                            class="base_label"><input id="sexfemale" class="sex" type="radio" name="gender"
+                                                                      value="2"/>女</label><label
+                                            class="base_label"><input id="sexunknow" class="sex" type="radio" name="gender"
+                                                                      value="3" checked="checked"/>未知</label>
+                                    </li>
+                                    <li>
+                                        <label class="tit">生日</label><input class="m_input w11" type="text"
+                                                                            id="txt_birth" maxlength="10"
+                                                                            name="birthday"
+                                                                            placeholder="yyyy-MM-dd"/>
+                                    </li>
+                                    <li>
+                                        <label class="tit">出生地</label><input class="m_input w11" type="text"
+                                                                             name="birthPlace"
+                                                                             id="txt_address" maxlength="50"/>
+                                    </li>
+                                    <li style="position:relative;">
+                                        <label id="lbl_mobie" class="tit">手机号码</label><input class="m_input w11"
+                                                                                             name="phone"
+                                                                                             maxlength="11" type="text"
+                                                                                             id="txt_mobile"/>
+                                        <div id="cc_area" class="country-select"
+                                             style="left:136px; position: absolute; z-index: 1000; top:31px;display:none">
+                                            <a id="cc_close" href="javascript:void(0)" class="close">×</a>
+                                            <ul id="cc_tabbox" class="tab_box">
+                                                <li id="cc_tab_hot" class="hot_selected"><span>热门</span></li>
+                                                <li id="cc_tab_A" class=""><span>ABC</span></li>
+                                                <li id="cc_tab_D" class=""><span>DEFGH</span></li>
+                                                <li id="cc_tab_J" class=""><span>JKL</span></li>
+                                                <li id="cc_tab_M" class=""><span>MN</span></li>
+                                                <li id="cc_tab_P" class=""><span>PRST</span></li>
+                                                <li id="cc_tab_W" class=""><span>WXYZ</span></li>
+                                            </ul>
+                                            <ul id="cc_list_hot" class="item" style="display:block">
+                                            </ul>
+                                            <div id="cc_list_A" class="item" style="display:none">
+                                            </div>
+                                            <div id="cc_list_D" class="item" style="display:none">
+                                            </div>
+                                            <div id="cc_list_J" class="item" style="display:none">
+                                            </div>
+                                            <div id="cc_list_M" class="item" style="display:none">
+                                            </div>
+                                            <div id="cc_list_P" class="item" style="display:none">
+                                            </div>
+                                            <div id="cc_list_W" class="item" style="display:none">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="tit">联系电话</label><input class="m_input w12" type="text" name="telzoon"
+                                                                              id="txt_contel_zone" maxlength="6"/><input
+                                            class="m_input w05" type="text" maxlength="8" id="txt_contel_phone" name="telnum"/>
+                                    </li>
+                                    <li>
+                                        <label class="tit">传真号码</label><input class="m_input w12" type="text"
+                                                                              maxlength="6" id="txt_confax_zone" name="foxzoon"/><input
+                                            class="m_input w05" type="text" maxlength="8" id="txt_confax_phone" name="foxnum"/>
+                                    </li>
+                                    <li>
+                                        <label class="tit">Email</label><input class="m_input w11" type="text" name="email"
+                                                                               maxlength="50" id="txt_email"/>
+                                    </li>
+                                </ul>
+                                <hr class="divide"></hr>
+                                <div class="queue"><span class="no">2</span>证件信息</div>
+                                <input type = "text" id="passengerId" name="id" hidden/>
+                                <div id="dv_card_list">
+                                    <ul class="account_form travel_form">
+                                        <li><label class="tit">证件类型<em>*</em></label><select class="vam m_input w05"
+                                                                                             sv="1" name="certificateType">
+                                            <option value="0">请选择</option>
+                                            <option value="1">身份证</option>
+                                            <option value="2">护照</option>
+                                            <option value="3">学生证</option>
+                                            <option value="4">军人证</option>
+                                            <option value="6">驾驶证</option>
+                                            <option value="7">回乡证</option>
+                                            <option value="8">台胞证</option>
+                                            <option value="10">港澳通行证</option>
+                                            <option value="11">国际海员证</option>
+                                            <option value="20">外国人永久居留证</option>
+                                            <option value="21">旅行证</option>
+                                            <option value="22">台湾通行证</option>
+                                            <option value="23">士兵证</option>
+                                            <option value="24">临时身份证</option>
+                                            <option value="25">户口簿</option>
+                                            <option value="26">警官证</option>
+                                            <option value="27">出生证明</option>
+                                            <option value="28">外国人永久居留身份证</option>
+                                            <option value="29">美国驾照</option>
+                                            <option value="30">俄籍国内护照</option>
+                                            <option value="31">海外当地旅行证件</option>
+                                            <option value="32">港澳台居民居住证</option>
+                                            <option value="33">國民身份證</option>
+                                            <option value="99">其它</option>
+                                        </select><label class="tit">证件号码<em>*</em></label><input
+                                                class="m_input w05 ipt_card_no" value="" name="certificateNumber"
+                                                cardno="431102199306151048" maxlength="30" type="text"><label
+                                                class="tit">有效期</label><input class="m_input w07 upt_card_limtdate"
+                                                                              value="" placeholder="yyyy-MM-dd"
+                                                                              maxlength="30" type="text"><a href="###"
+                                                                                                            class="ico_del"
+                                                                                                            style="display:none">删除</a>
+                                        </li>
+                                        <li class="li_add" style="display:none"><a href="###" class="ico_add2">添加证件</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr class="divide"></hr>
+                                <ul id="travel_form" class="account_form travel_form">
+
+                                    <li class="li_add"><a href="###" onclick="javascript:addPassenger()" class="ico_add2">添加常旅客卡</a></li>
+                                </ul>
+                                <div id='dv_ffp_list'></div>
+                                <ul class="mb20 account_form form2 fs14">
+                                    <li class="li_btn">
+                                        <button id="bt_SaveAdd" class="btn" type="button">保存</button>
+                                        <button type="button" class="btn btn_cancel"
+                                                onclick="location.href='PassengerList.html'">取消
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div id="divOperateSuccess" class="base_pop" style=" width:570px;display:none;">
+                <div class="pop_hd">
+                    <a id="closeWinDivOperateSuccess" class="delete" href="###">&times;</a>
+                    <h3>温馨提示</h3>
+                </div>
+                <div class="pop_bd">
+                    <div class="warn_tips">
+                        <span class="ico_success"></span><span id="spanOperateSuccess"></span>
+                    </div>
+                    <div class="btn_box">
+                        <button class="btn_l3" id="btnOperateSuccess" type="button"><span><em>确定</em></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="divConfirmSave" class="base_pop" style="width:370px;display:none;">
+                <div class="pop_hd">
+                    <a href="###" class="delete">×</a>
+                    <h3>温馨提示</h3>
+                </div>
+                <div class="pop_bd">
+                    <div class="tip_box">
+                        <span class="ico_warn2" style="margin-top:4px;"></span>
+                        <p class="warn_text">此旅客曾使用现有信息成功出行，您的修改有可能影响其今后出行。确定保存？</p>
+                    </div>
+                    <div class="btn_box">
+                        <button class="btn btn_save_s" type="button" id="btnConfirmSaveYes">保存</button>
+                        <button class="btn_l3" type="button" id="btnConfirmSaveNo"><span><em>取消</em></span></button>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+        <input name="ctl00$MainContentPlaceHolder$hd_CountryList" type="hidden"
+               id="ctl00_MainContentPlaceHolder_hd_CountryList"
+               value="@Andorra|安道尔|AD@United Arab Emirates|阿联酋|AE@Afghanistan|阿富汗|AF@Antigua and barbuda|安提瓜和巴布达|AG@Anguilla|安圭拉|AI@Albania|阿尔巴尼亚|AL@Armenia|亚美尼亚|AM@Netherlands Antilles|荷属安的列斯|AN@Angola|安哥拉|AO@Argentina|阿根廷|AR@American Samoa|美属萨摩亚|AS@Austria|奥地利|AT@Australia|澳大利亚|AU@Aruba|阿鲁巴|AW@Azerbaijan|阿塞拜疆|AZ@Bosnia and Herzegovina|波黑|BA@Barbados|巴巴多斯|BB@Bangladesh|孟加拉国|BD@Belgium|比利时|BE@Burkina Faso|布基纳法索|BF@Bulgaria|保加利亚|BG@Bahrain|巴林|BH@Burundi|布隆迪|BI@Benin|贝宁|BJ@Bermuda|百慕大|BM@Brunei|文莱|BN@Bolivia|玻利维亚|BO@Brazil|巴西|BR@Bahamas|巴哈马|BS@Bhutan|不丹|BT@Bouvet Island|布维岛|BV@Botswana|博茨瓦纳|BW@Belarus|白俄罗斯|BY@Belize|伯利兹|BZ@Canada|加拿大|CA@Coccs(Keeling) Islands|科科斯（基林）群岛|CC@Congo, the democratic republic of the|刚果（金）|CD@Central Africa Republic|中非|CF@Congo|刚果（布）|CG@Switzerland|瑞士|CH@Cote dIvoire|科特迪瓦|CI@Cook Islands|库克群岛|CK@Chile|智利|CL@Cameroon|喀麦隆|CM@China|中国|CN@Columbia|哥伦比亚|CO@Costa Rica|哥斯达黎加|CR@Cuba|古巴|CU@Cape Verde|佛得角|CV@Christmas Island|圣诞岛|CX@Cyprus|塞浦路斯|CY@Czech Republic|捷克|CZ@Germany|德国|DE@Djibouti|吉布提|DJ@Denmark|丹麦|DK@Dominica|多米尼克|DM@Dominican Republic|多米尼加|DO@Algeria|阿尔及利亚|DZ@Ecuador|厄瓜多尔|EC@Estonia|爱沙尼亚|EE@Egypt|埃及|EG@Western Sahara|西撒哈拉|EH@Eritrea|厄立特里亚|ER@Spain|西班牙|ES@Ethiopia|埃塞俄比亚|ET@Finland|芬兰|FI@Fiji|斐济|FJ@Falkland Islands (Malvinas)|福克兰群岛（马尔维纳斯）|FK@Micronesia|密克罗尼西亚|FM@Faroe Islands|法罗群岛|FO@France|法国|FR@Gabon|加蓬|GA@United Kingdom|英国|GB@Grenada|格林纳达|GD@Georgia|格鲁吉亚|GE@French Guiana|法属圭亚那|GF@Ghana|加纳|GH@Gibraltar|直布罗陀|GI@Greenland|格陵兰|GL@Gambia|冈比亚|GM@Guinea|几内亚|GN@Guadeloupe|瓜德罗普|GP@Equatorial Guinea|赤道几内亚|GQ@Greece|希腊|GR@South Georgia and the SouthSandwich Islands|南乔治亚岛 和 南桑德韦奇岛|GS@Guatemala|危地马拉|GT@Guam|关岛|GU@Guinea-bissau|几内亚比绍|GW@Guyana|圭亚那|GY@Hong Kong|中国香港|HK@Heard Islands and McDonald Islands|赫德岛和麦克唐纳岛|HM@Honduras|洪都拉斯|HN@Croatia|克罗地亚|HR@Haiti|海地|HT@Hungary|匈牙利|HU@Indonesia|印度尼西亚|ID@Ireland|爱尔兰|IE@Israel|以色列|IL@India|印度|IN@British Indian Ocean Territory|英属印度洋领地|IO@Iraq|伊拉克|IQ@Iran|伊朗|IR@Iceland|冰岛|IS@Italy|意大利|IT@Jamaica|牙买加|JM@Jordan|约旦|JO@Japan|日本|JP@Kenya|肯尼亚|KE@Kyrgyzstan|吉尔吉斯斯坦|KG@Cambodia|柬埔寨|KH@Kiribati|基里巴斯|KI@Comoros|科摩罗|KM@Saint Kitts and Nevis|圣基茨和尼维斯|KN@Korea, Democratic Peoples Republic of|朝鲜|KP@Korea,Republic of|韩国|KR@Kuwait|科威特|KW@Cayman Islands|开曼群岛|KY@Kazakstan|哈萨克斯坦|KZ@Lao|老挝|LA@Lebanon|黎巴嫩|LB@Saint Lucia|圣卢西亚|LC@Liechtenstein|列支敦士登|LI@Sri Lanka|斯里兰卡|LK@Liberia|利比里亚|LR@Lesotho|莱索托|LS@Lithuania|立陶宛|LT@Luxembourg|卢森堡|LU@Latvia|拉脱维亚|LV@Libya|利比亚|LY@Morocco|摩洛哥|MA@Monaco|摩纳哥|MC@Moldova|摩尔多瓦|MD@Montenegro|黑山|ME@Madagascar|马达加斯加|MG@Marshall Islands|马绍尔群岛|MH@Macedonia|前南马其顿|MK@Mali|马里|ML@Myanmar|缅甸|MM@Mongolia|蒙古|MN@Macau|中国澳门|MO@Northern Marianas Islands|北马里亚纳|MP@Martinique|马提尼克|MQ@Mauritania|毛里塔尼亚|MR@Montserrat|蒙特塞拉特|MS@Malta|马耳他|MT@Mauritius|毛里求斯|MU@Maldives|马尔代夫|MV@Malawi|马拉维|MW@Mexico|墨西哥|MX@Malaysia|马来西亚|MY@Mozambique|莫桑比克|MZ@Namibia|纳米尼亚|NA@New Caledonia|新喀里多尼亚|NC@Niger|尼日尔|NE@Norfolk Island|诺福克岛|NF@Nigeria|尼日利亚|NG@Nicaragua|尼加拉瓜|NI@Netherlands|荷兰|NL@Norway|挪威|NO@Nepal|尼泊尔|NP@Nauru|瑙鲁|NR@Niue|纽埃|NU@New Zealand|新西兰|NZ@Oman|阿曼|OM@Panama|巴拿马|PA@Peru|秘鲁|PE@French Polynesia|法属波利尼西亚|PF@Papua New Guinea|巴布亚新几内亚|PG@Philippines|菲律宾|PH@Pakistan|巴基斯坦|PK@Poland|波兰|PL@Saint Pierre and Miquelon|圣皮埃尔和密克隆|PM@Pitcairn|皮特凯恩|PN@Puerto Rico|波多黎各|PR@Palestine|巴勒斯坦|PS@Portugal|葡萄牙|PT@Palau|帕劳|PW@Paraguay|巴拉圭|PY@Qatar|卡塔尔|QA@Reunion|留尼汪|RE@Romania|罗马尼亚|RO@Serbia|塞尔维亚|RS@Russia|俄罗斯|RU@Rwanda|卢旺达|RW@Saudi Arabia|沙特阿拉伯|SA@Solomon Islands|所罗门群岛|SB@Seychelles|塞舌尔|SC@Sudan|苏丹|SD@Sweden|瑞典|SE@Singapore|新加坡|SG@Saint Helena|圣赫勒拿|SH@Slovenia|斯洛文尼亚|SI@Svalbard and Jan Mayen|斯瓦尔巴岛和扬马延岛|SJ@Slovakia|斯洛伐克|SK@Sierra Leone|塞拉利昂|SL@San Marino|圣马力诺|SM@Senegal|塞内加尔|SN@Somalia|索马里|SO@Suriname|苏里南|SR@Sao Tome and Principe|圣多美和普林西比|ST@El Salvador|萨尔瓦多|SV@Syria|叙利亚|SY@Swaziland|斯威士兰|SZ@Turks and Caicos Islands|特克斯和凯科斯群岛|TC@Chad|乍得|TD@French Southern Territories|法属南部领土|TF@Togo|多哥|TG@Thailand|泰国|TH@Tajikistan|塔吉克斯坦|TJ@Tokelau|托克劳|TK@Turkmenstan|土库曼斯坦|TM@Tunisia|突尼斯|TN@Tonga|汤加|TO@East Timor|东帝汶|TP@Turkey|土耳其|TR@Trinidad and Tobago|特立尼达和多巴哥|TT@Tuvalu|图瓦卢|TV@Taiwan|中国台湾|TW@Tanzania|坦桑尼亚|TZ@Ukraine|乌克兰|UA@Uganda|乌干达|UG@United States Minor outlying Islands|美国本土外小岛屿|UM@United States|美国|US@Uruguay|乌拉圭|UY@Uzbekistan|乌兹别克斯坦|UZ@Vatican|梵蒂冈|VA@Saint Vincent and Grenadines|圣文森特和格林纳丁斯|VC@Venezuela|委内瑞拉|VE@Virgin Islands, British|英属维尔京群岛|VG@Virgin Islands, U.S.|美属维尔京群岛|VI@Viet Nam|越南|VN@Vanuatu|瓦努阿图|VU@Wallis and Futuna|瓦利斯和富图纳|WF@Samoa|萨摩亚|WS@Yemen|也门|YE@Mayotte|马约特|YT@Yugoslavia|南斯拉夫|YU@South Africa|南非|ZA@Zambia|赞比亚|ZM@Zimbabwe|津巴布韦|ZW@"/>
+        <input name="ctl00$MainContentPlaceHolder$hd_CardList" type="hidden"
+               id="ctl00_MainContentPlaceHolder_hd_CardList"
+               value="1|身份证@2|护照@3|学生证@4|军人证@6|驾驶证@7|回乡证@8|台胞证@10|港澳通行证@11|国际海员证@20|外国人永久居留证@21|旅行证@22|台湾通行证@23|士兵证@24|临时身份证@25|户口簿@26|警官证@27|出生证明@28|外国人永久居留身份证@29|美国驾照@30|俄籍国内护照@31|海外当地旅行证件@32|港澳台居民居住证@33|��民身份�C@99|其它"/>
+        <input type="hidden" id="page_id" value="100070"/>
+        <script type="text/javascript">
+            window.__uidc_init = new Date * 1;
+        </script>
+        <script src="js/lab.js" charset="utf-8" type="text/javascript"></script>
+        <script language="javascript" src="js/gbkloader.js"></script>
+        <script type="text/javascript" language="javascript">
+            var passenger_infoid = '0';
+            var passenger_CountryName = '';
+            var passenger_Save_Guid = '62cb4a57-b765-4e95-914d-43329ae6354c';
+            var passenger_Refer = '';
+            var passenger_AllFfps = '@aiqinhai|爱琴海航空|A3@gelujiya|格鲁吉亚航空|A9@meiguo|美国航空|AA@bolin|柏林航空|AB@jianada|加拿大航空|AC@baxiweilan|巴西蔚蓝航空|AD@huaxin|华信航空|AE@faguo|法国航空|AF@aerjiliya|阿尔及利亚航空|AH@yindu|印度航空|AI@malaixiyayahang|马来西亚亚航|AK@moxige|墨西哥航空|AM@baieluosi|白俄罗斯航空|B2@agenting|阿根廷航空|AR@alasijia|阿拉斯加航空|AS@moluogehuangjia|摩洛哥皇家航空|AT@meiguojielan|美国捷蓝航空|B6@gelunbiya|哥伦比亚航空|AV@lirong|立荣航空|B7@fenlan|芬兰航空|AY@yidali|意大利航空|AZ@yingguo|英国航空|BA@tianma|天马航空|BC@barong|巴戎航空|BD@fulaibi|弗莱比航空|BE@mengjiala|孟加拉航空|BG@wenlaihuangjia|汶莱皇家航空|BI@aokai|奥凯航空|BK@taipingyang|捷星太平洋|BL@meiguomidelan|英国米德兰地区航空|BM@bociwana|博茨瓦纳航空|BP@changrong|长荣航空|BR@boluodihailianhe|波罗地海联合航空|BT@lansequanjing|蓝色全景航空|BV@jialebi|加勒比航空|BW@fushan|釜山航空|BX@guohang|中国国航|CA@zhonghua|中华航空|CI@banama|巴拿马航空|CM@yahangchangtu|马来西亚亚航长途|D7@nuoweiguoji|挪威国际航空|D8@guotai|国泰航空|CX@nanfang|南方航空|CZ@taiguohuangque|泰国皇雀航空|DD@shenying|神鹰航空|DE@suao|宿翱航空|DG@yingguonuowei|英国挪威航空|DI@ribenyahang|日本亚航|DJ@damei|达美航空|DL@eluosishengli|俄罗斯胜利航空|DP@ruili|瑞丽航空|DR@taixinshidai|泰新时代航空|E3@angela|安哥拉航空|DT@nuowei|挪威航空|DY@donghai|东海航空|DZ@aierlan|爱尔兰航空|EI@alianqiu|阿联酋航空|EK@xila|希腊ELLIN|EL@yidali|意大利Dolomiti航空|EN@eguaduoer|厄瓜多尔航空|EQ@aisaiebiya|埃塞俄比亚航空|ET@meiguobianjiang|美国边疆航空|F9@atihade|阿提哈德|EY@safa|萨法航空|FA@baojialiya|保加利亚航空|FB@taiguoyahang|泰国亚航|FD@yuandong|远东航空|FE@bingdao|冰岛航空|FI@feiji|斐济航空|FJ@shanghai|上海航空|FM@tansangniya|坦桑尼亚Fast航空|FN@ruian|瑞安航空|FR@baxigeer|巴西戈尔航空|G3@meiguozhongshi|美国忠实航空|G4@huaxia|华夏航空|G5@yindu|印度GO AIR |G8@alabo|阿拉伯航空|G9@malaixiyafeiying|马来西亚飞萤航空|FY@dibai|迪拜航空|FZ@yinniyinghang|印尼鹰航航空|GA@fuxing|复兴航空|GE@haiwan|海湾航空|GF@changlong|长龙航空|GJ@jiexingriben|捷星日本 |GK@gelinglan|格陵兰航空|GL@haen|哈恩航空系统|H1@xila|希腊Sky Express|GQ@zhili|智利SKYLINE|H2@tianjin|天津航空|GS@xiaweiyi|夏威夷航空|HA@ketediwa|科特迪瓦航空|HF@saisheer|塞舌尔航空|HM@jixiang|吉祥航空|HO@haen|哈恩航空|HR@yinduyahang|印度亚航|I5@hainan|海南航空|HU@kuankong|贯空航空|HV@xianggang|香港航空|HX@wuzibiekesitan|乌兹别克斯坦航空|HY@sahalin|Aurora航空|HZ@xibanyayibiliya|西班牙国家航空|IB@yindunixiyabatike|PT印度尼西亚芭缇克航空|ID@yidaliziwuxian|意大利子午线航空|IG@chunqiuriben|春秋航空日本|IJ@yier|Iraero航空|IO@asaibaijiang|阿塞拜疆航空|J2@taiwanhuhang|台湾虎航|IT@yindukuaidi|印度快递航空|IX@bandao|半岛航空|J9@ribentongqin|日本通勒航空|JC@shoudu|首都航空|JD@mangguo|芒果航空|JE@fushimen|富士梦航空|JH@baxitianma|巴西天马航空|JJ@riben|日本航空|JL@yadeliya|亚德里亚航空|JP@jiexing|捷星航空|JQ@yinnishihang|印尼狮航|JT@saierweiya|塞尔维亚航空|JU@wuge|吴哥航空|K6@xiangcao|香草航空|JW@guotaiganglong|国泰港龙航空|KA@asitana|阿斯塔纳|KC@dahan|大韩航空|KE@atelasipenqi|阿特拉斯喷气航空|KK@helanhuangjia|荷兰皇家航空|KL@maerta|马耳他航空|KM@zhongguolianhang|中国联航|KN@duoge|多哥Asky航空|KP@kenniya|肯尼亚航空|KQ@jianpuzhai|柬埔寨航空|KR@keweite|科威特航空|KU@kunming|昆明航空|KY@zhiliguojia|南美航空|LA@lusenbao|卢森堡航空|LG@hansha|汉莎航空|LH@beifeng|背风群岛航空|LI@zhen|真航空|LJ@luogen|洛根航空|LM@bolan|波兰航空|LO@lanmei|澜湄航空|LQ@ruishiguoji|瑞士国际航空|LX@yilelie|以色列航空|LY@madajiasijia|马达加斯加|MD@zhongdong|中东航空|ME@xiamen|厦门航空|MF@malaixiya|马来西亚航空|MH@xinjiaposhengan|新加坡胜安航空|MI@xilan|锡兰航空|MJ@maoliqiusi|毛里求斯航空|MK@letao|日本乐桃航空|MM@nanfei|南非kulula航空|MN@xiongnu|匈奴航空|MR@aiji|埃及航空|MS@beiningkuayue|Nord Wind航空|N4@tuomasikuke|托马斯库克航空|MT@dongfang|东方航空|MU@wanvatu|瓦努阿图航空|NF@quanrikong|全日空航空|NH@jingshen|精神航空|NK@shaxin|沙欣航空|NL@yidalileaosi|意大利勒奥斯航空|NO@niluohe|尼罗河航空|NP@hebei|河北航空|NS@ribenkuayang|日本跨洋航空|NU@baxi|巴西Avianca Brasil|O6@aomen|澳门航空|NX@xinxilan|新西兰航空|NZ@aolinpiya|奥林匹亚航空|OA@boliweiya|玻利维亚航空|OB@mayin|马印航空|OD@jieke|捷克航空|OK@menggu|蒙古航空|OM@aodili|奥地利航空|OS@keluodiya|克罗地亚航空|OU@aman|阿曼SALAM航空|OV@bilu|秘鲁Peruvian|P9@hanya|韩亚航空|OZ@tuerqifeima|土耳其飞马航空|PC@bote|波特航空|PD@xijiasikandinaweiya|西甲斯堪的纳维亚航空|PF@mangu|曼谷航空|PG@bajisitan|巴基斯坦航空|PK@xibu|西部航空|PN@feilvbin|菲律宾航空|PR@wukelanguoji|乌克兰国际航空|PS@tansangniya|坦桑尼亚Precision航空|PW@xinjineiya|巴布亚新几内亚航空|PX@sulinan|苏里南航空|PY@jianpuzhai|柬埔寨JC航空|QD@aozhou|澳洲航空|QF@liancheng|连城航空|QG@kataer|卡塔尔航空|QR@eluosiyakute|俄罗斯雅库特航空|R3@laowo|老挝航空|QV@yinniyahang|印尼亚航|QZ@niboerhuangjia|尼泊尔皇家航空|RA@daxiyang|大西洋航空|RC@huangjiayuedan|皇家约旦航空|RJ@luomaniya|罗马尼亚航空|RO@kamu|卡姆航空|RQ@shouer|首尔航空|RS@nanfei|南非航空|SA@shandong|山东航空|SC@faguo|法国XL航空|SE@yinduxiangliao|印度香料航空|SG@sulaweijiaya|苏拉维加亚|SJ@beiou|北欧航空|SK@shihang|泰国狮航|SL@bulusaier|布鲁塞尔航空|SN@xinjiapo|新加坡航空|SQ@riermanniya|日耳曼尼亚航空|ST@eluosi|俄罗斯航空|SU@shate|沙特航空|SV@namibiya|纳米比亚航空&nbsp; |SW@ruishi|瑞士skywork|SX@taiyangcheng|太阳城航空|SY@bilishi|比利时Jetair|TB@maermo|马尔默航空|TF@taiguoguoji|泰国国际航空|TG@tuerqi|土耳其航空|TK@mosangbike|莫桑比克航空|TM@daxidi|大溪地|TN@faguoguankong|法国贯空航空|TO@putaoya|葡萄牙航空|TP@yijie|易捷航空|U2@kuhang|酷航|TR@jianadayueyang|加拿大越洋航空|TS@aodaliyahuhang|澳大利亚虎航|TT@tunisi|突尼斯航空|TU@wulaer|乌拉尔航空|U6@xizang|西藏航空|TV@hanguodewei|韩国德威航空|TW@kalabeisi|卡拉贝斯航空|TX@xinjiapokuhang|Tsaradia航空|TZ@meiguolianhe|美国联合航空|UA@miandianguojia|缅甸国家航空|UB@aiji|Almasria 航空|UJ@sililanka|斯里兰卡航空|UL@xianggangkuaiyun|香港快运航空|UO@bahama|巴哈马航空|UP@liuniwang|留尼旺Austral航空|UU@xibanya|西班牙Volotea|V7@ouluoba|欧罗巴航空|UX@aozhouweizhen|澳洲维珍航空|VA@moxige|墨西哥Vivaaerobus航空|VB@yuejie|越南越捷航空股份|VJ@yuenan|越南航空|VN@weiermu|维尔姆航空|VO@weizhen|维珍航空|VS@taxiti|塔希提航空|VT@mahan|马汉航空|W5@jiaweisi|加威斯航空|W6@moxige|墨西哥Aeromar航空|VW@weizhenmeiguo|维珍美国航空|VX@xibanyafulin|西班牙伏林航空|VY@taiguoyuejie|泰国越捷航空|VZ@luwangda|卢旺达航空|WB@weixiao|泰国微笑航空|WE@weideluo|威德罗航空|WF@meiguoxinan|美国西南航空|WN@tuyifei|途易飞|X3@jianada|加拿大WESTJET|WS@bingdao|冰岛Wow air|WW@chengjie|城捷航空|WX@aman|阿曼航空|WY@yahangchangtu|泰国亚航长途|XJ@eguaduoer|厄瓜多尔LAN|XL@tuerqi|土耳其SunExpress|XQ@moxige|墨西哥VOLARIS|Y4@yinniyahangchangtu|印尼亚航长途|XT@jinmiandian|金缅甸航空|Y5@eluosi|NordStar航空|Y7@taiguokuniao|泰国酷鸟航空|XW@shate|沙特FLYNAS航空|XY@heishan|黑山航空|YM@feilvbinyahang|菲律宾亚航|Z2@boliweiya|玻利维亚Amaszonas|Z8@jianpuzhaitiankongwuge|柬埔寨天空吴哥航空|ZA@junzhu|君主航空|ZB@yisida|韩国易斯达航空|ZE@shenzhen|深圳航空|ZH@faguolanying|法国蓝鹰航空|ZI@diqukuaiyun|地区快运航空|ZL@manasi|玛纳斯航空|ZM@lanse|蓝色航空|0B@ruidian|瑞典Nextjet|2N@jiexingyazhou|捷星亚洲航空|3K@meiguoyinse|美国银色航空|3M@mokuogealabo|摩洛哥阿拉伯航空|3O@sichuan|四川航空|3U@moxige|墨西哥Interjet航空|4O@deguozhiyi|德国之翼航空|4U@baishan|百善航空|5B@kenniya|肯尼亚FLY540|5H@suwu|宿雾航空|5J@eluosibeifang|俄罗斯北方航空|5N@yindigao|印地高航空|6E@jizhou|济州航空|7C@xingyue|星悦航空|7G@eluosi|俄罗斯RusLine航空|7R@miandian|缅甸Mann Yadanarpon航空|7Y@xiangpeng|祥鹏航空|8L@miandianguoji|缅甸国际航空|8M@taipingyanghaian|太平洋海岸航空|8P@tuerqi|土耳其Onur航空|8Q@fantaipingyang|泛太平洋航空|8Y@lianyun|联运铁路|9B@chunqiu|春秋航空|9C@moerduowa|摩尔多瓦国家航空|9U@yindujiete|印度捷特|9W@';
+
+            function loadAddress() {
+                $.mod.load('address', '1.0', function () {
+                });
+            }
+
+            function getServerDate() {
+                return {
+                    're100y': '1919-08-04',
+                    'now': '2019-08-04',
+                    'add100y': '2119-08-04'
+                };
+            }
+
+            function getCountryData() {
+                return $('#ctl00_MainContentPlaceHolder_hd_CountryList').value();
+            }
+
+            function getCardsData() {
+                return $('#ctl00_MainContentPlaceHolder_hd_CardList').value();
+            }
+
+            function initValidate() {
+                C.Validate.init();
+            }
+
+            $LAB
+            /* .script({ src: "//webresource.c-ctrip.com/code/cquery/cQuery_110421.js", charset: "utf-8" }).wait()
+             .script({ src: "//webresource.c-ctrip.com/code/cquery/mod/calendar-6.0.js", charset: "utf-8" }).wait()*/
+
+        </script>
+        <script src="js/passengerInfoEdit.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/information.css"/>
+
+    </ul>
+    <script type="text/javascript" src="js/allsearch_1.js" charset="utf-8"></script>
+    <div id="base_ft">
+        <p>
+            <a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a
+                href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a
+                href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank"
+                title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a
+                href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引"
+                                                                                                       href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a
+                rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a
+                rel="nofollow" target="_blank"
+                href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a
+                rel="nofollow" target="_blank" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;<a
+                rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp; |&nbsp;<a
+                rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a
+                rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a
+                target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank"
+                                                                                                href="http://ct.ctrip.com/crptravel/default/landing"
+                                                                                                title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a
+                rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm"
+                title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank"
+                                                     href="http://pages.ctrip.com/public/contact.htm"
+                                                     title="联系我们">联系我们</a>
+        </p>
+        <p>
+            <a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop"
+               target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow"
+                                                       href="http://join.easytrip.com/jiameng/#ctm_ref=ctr_def_btm_hsu_n_1"
+                                                       target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a
+                rel="nofollow" href="http://dst.ctrip.com/">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow"
+                                                                                        href="http://pages.ctrip.com/public/serve%20guideline.htm"
+                                                                                        target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a
+                rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="隐私政策">隐私政策</a>&nbsp;|&nbsp;<a
+                rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a
+                rel="nofollow" target="_blank" href="http://m.ctrip.com/webapp/vacations/tour/supplier" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a
+                rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a
+                target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a
+                rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright&copy;</a>,&nbsp;<a
+                href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow"
+                                                                                                target="_blank"
+                                                                                                href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a>
+        </p>
+        <p class="gns">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002731"><i
+                    class="icon-gns"></i>沪公网备31010502002731号</a>
+        </p>
+        <div class="honour_wrap">
+            <a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021"
+               class="honour1" target="_blank" rel="nofollow">信用评级</a><a
+                href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415"
+                title="工商亮照标识" class="honour2" target="_blank" rel="nofollow">上海工商</a><a
+                href="https://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3"
+                target="_blank" rel="nofollow">诚信网站</a><a href="http://www.zx110.org/" class="honour4" target="_blank"
+                                                          rel="nofollow" title="征信网">网络社会征信网</a><a
+                href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心">信息举报中心</a><a
+                href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank"
+                rel="nofollow" title="可信网站">可信网站</a><a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心"
+                                                       target="_blank" rel="nofollow">违法和不良信息举报中心</a>
+        </div>
+    </div>
+    <config id="timespan" value="20160329"></config><!--InstanceEnd name="position"-->
+    <script type="text/javascript">var globalConfig = {
+        H1: 'https',
+        AjaxUrl: 'accounts.ctrip.com',
+        H3: 'my.ctrip.com',
+        PassportUrl: 'passport.ctrip.com',
+        Lang: 'UTF8'
+    };</script>
+    <!--<script type="text/javascript" src="js/activitycontroller_v2.min_1.js" charset="utf-8"></script>-->
+<script type="text/javascript">
+
+    var club_Interval = setInterval(function () {
+        var clubInfo = {"IsSnateClub": false, "IsPkgClub": false, "IsCorpMileage": false};
+        if (typeof clubInfo != 'undefined') {
+            if (document.getElementById("pagemenu_cyjlb") && document.getElementById("pagemenu_djcmlt")) {
+                if (clubInfo.IsSnateClub) {
+                    document.getElementById("pagemenu_cyjlb").style.display = "block";
+                } else {
+                    document.getElementById("pagemenu_cyjlb").style.display = "none";
+                }
+                if (clubInfo.IsPkgClub) {
+                    document.getElementById("pagemenu_djcmlt").style.display = "block";
+                } else {
+                    document.getElementById("pagemenu_djcmlt").style.display = "none";
+                }
+            }
+            clearInterval(club_Interval);
+        }
+    }, 100);
+
+    var sidebarURL = document.location.href.toLocaleLowerCase();
+
+    var liveChartUrlMap = [
+        {
+            key: 'qicheorderlist',
+            value: 'http://bus.ctrip.com/BusBooking/kefu.html?opt=orderListB '
+        },
+        {
+            key: 'passengerlist',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100015&isPresale=1'
+        },
+        {
+            key: 'passengerinfoshow',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100069&isPresale=1'
+        },
+        {
+            key: 'passengerinfoedit',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100070&isPresale=1'
+        },
+        {
+            key: 'addresslist',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100016&isPresale=1'
+        },
+        {
+            key: 'addressinfoshow',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100071&isPresale=1'
+        },
+        {
+            key: 'addressinfoedit',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100072&isPresale=1'
+        },
+        {
+            key: 'invoicelist',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100073&isPresale=1'
+        },
+        {
+            key: 'invoiceinfoedit',
+            value: '//servicechat.ctrip.com/?bizType=1110&pageCode=100074&isPresale=1'
+        }
+    ];
+
+    if (sidebarURL.indexOf("passengerlist.aspx") > 0 || sidebarURL.indexOf("passengerinfoshow.aspx") > 0 || sidebarURL.indexOf("passengerinfoedit.aspx") > 0 ||
+        sidebarURL.indexOf("addresslist.aspx") > 0 || sidebarURL.indexOf("addressinfoshow.aspx") > 0 || sidebarURL.indexOf("addressinfoedit.aspx") > 0
+        || sidebarURL.indexOf("invoicelist.aspx") > 0 || sidebarURL.indexOf("invoiceinfoedit.aspx") > 0
+        || sidebarURL.indexOf("qicheorderlist.aspx") > 0) {
+        var sidebar_TimeOut = setInterval(function () {
+
+            if (typeof $ != 'undefined') {
+                cQuery.mod.load('sideBar', '2.0', function () {
+                    //var liveChatURL='http://livechat.ctrip.com/livechat/Login3.aspx?GroupCode=CustomerService&amp;AsFrom=1|客户服务部|我的携程';
+                    //if(sidebarURL.indexOf("railwayorderlist.aspx")>0){
+                    //    liveChatURL='http://trains.ctrip.com/TrainBooking/kefu.aspx';
+                    //}
+                    //else if(sidebarURL.indexOf("qicheorderlist.aspx")>0){
+                    //    liveChatURL='http://bus.ctrip.com/BusBooking/kefu.html?opt=orderListB ';
+                    //}
+
+                    // 0811班车，不同来源页面跳转在线客服的链接中参数不同
+                    for (var i = 0; i < liveChartUrlMap.length; i++) {
+                        var obj = liveChartUrlMap[i];
+
+                        if (sidebarURL.indexOf(obj.key) > 0) {
+                            liveChatURL = obj.value;
+                        }
+                    }
+
+                    var sidebar = cQuery(document).regMod('sideBar', '2.0', {
+                        threshold_px: 0,
+                        url: {
+                            feedBackURL: "",
+                            liveChatURL: liveChatURL
+                        },
+                        title: {
+                            backTop: '回到顶端',
+                            feedBack: '建议反馈',
+                            liveChat: '在线客服'
+                        }
+                    });
+                    $(".c_sidebar:eq(0)").css("display", "none");
+
+                });
+                clearInterval(sidebar_TimeOut);
+            }
+        }, 100);
+    }
+</script>
+</body>
+
+</html>
+<script src="../../statics/js_myt/layui/layui.all.js"></script>
+<script src="../../statics/js_myt/common.js"></script>
+
+<script src="js_three/passengerInfoEdit.js"></script>

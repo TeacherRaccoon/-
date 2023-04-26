@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kgc.finance.dao.TimeIineDao">
+
+
+    <!--通过操作员id在时间线中获取处理的订单数据-->
+    <select id="getIdfinInfoEntry" parameterType="integer" resultType="integer">
+        SELECT COUNT(1) FROM timeiine WHERE operatorId LIKE CONCAT(#{operatorId},'%')
+        GROUP BY orderId
+    </select>
+
+
+
+    <!--获取订单的时间线数据-->
+    <select id="getOrderIdFindAll" parameterType="integer" resultType="com.kgc.finance.pojo.TimeIine">
+        SELECT statusName,operatorId,returnReson,modeifyDate FROM timeiine WHERE orderId=#{orderId}
+        ORDER BY modeifyDate
+    </select>
+
+    <insert id="insertTimeIine" parameterType="com.kgc.finance.pojo.TimeIine">
+           INSERT INTO `houseloan`.`timeiine` ( `statusName`, `operatorId`, `returnReson`, `modeifyDate`, `orderId`)
+           VALUES ( #{statusName}, #{operatorId}, #{returnReson}, NOW(),#{orderId});
+    </insert>
+
+    <!--判断财务初审是否通过-->
+    <select id="getBooleans" parameterType="integer" resultType="integer">
+          SELECT COUNT(1) FROM timeiine where orderId=#{orderId} AND statusName LIKE '财务初审不通过（驳回）'
+
+    </select>
+
+
+    <!--上传凭证，获取时间-->
+    <select id="getPing" parameterType="integer" resultType="map">
+         SELECT statusName,modeifyDate FROM timeiine WHERE orderId=#{orderId}  ORDER BY modeifyDate DESC LIMIT 1
+    </select>
+
+
+    <!--根据时间，获得结单数量-->
+    <select id="getTime" parameterType="string" resultType="integer">
+         SELECT COUNT(1) FROM timeiine  WHERE modeifyDate like CONCAT('%',#{modeifyDate},'%') and statusName = '财务结单'
+
+    </select>
+</mapper>

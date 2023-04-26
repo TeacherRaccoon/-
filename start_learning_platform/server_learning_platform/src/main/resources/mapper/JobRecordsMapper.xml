@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.performance.mapper.JobRecordsMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.performance.bean.JobRecords">
+        <id property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="jobInfoId" column="job_info_id" jdbcType="VARCHAR"/>
+        <result property="userInfoId" column="user_info_id" jdbcType="VARCHAR"/>
+        <result property="score" column="score" jdbcType="DOUBLE"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,job_info_id,user_info_id,
+        score,create_time
+    </sql>
+
+    <select id="selectJobRecordsList" resultType="map" parameterType="map">
+        select
+        t1.id as id,
+        t1.job_info_id as jobInfoId,
+        t1.user_info_id as userInfoId,
+        t1.score as score,
+        t1.job_files as jobFiles,
+        t1.job_notes as jobNotes,
+        t2.nick_name as nickName,
+               t2.code,
+        t3.title as title,
+        DATE_FORMAT(t1.create_time, '%Y-%c-%d %h:%i:%s') as createTime,
+        t5.class_name as className
+        from job_records t1,
+        job_info t3,
+        user_info t2
+        left join student_info t4 on t2.id = t4.user_info_id
+        left join class_info t5 on t4.class_info_id=t5.id
+        where t1.user_info_id = t2.id
+        and t1.job_info_id = t3.id
+        <if test="param.userInfoId !=null and param.userInfoId!=''">
+            and t1.user_info_id=#{param.userInfoId}
+        </if>
+        <if test="param.nickName !=null and param.nickName!=''">
+            and t2.nick_name like CONCAT('%',#{param.nickName},'%')
+        </if>
+        order by t1.id desc
+    </select>
+</mapper>

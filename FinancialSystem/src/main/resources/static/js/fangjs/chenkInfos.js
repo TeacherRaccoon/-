@@ -1,0 +1,251 @@
+//获取传过来的值
+function getParams(key) {
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+}
+
+
+$(function () {
+    inquire();
+    panduanBut(getParams("status"), getParams("orderId"), getParams("salesmanId"));
+});
+
+//发送请求到后台拿数据
+function inquire() {
+    var orderId = getParams("orderId");//订单号id
+    //获取订单信息
+    $.ajax({
+        url: "http://localhost:8090/getInfoEntryByOrderId?orderId=" + orderId,
+        type: 'get',
+        contentType: 'json',
+        success: function (data) {
+            if (data.result) {
+                showOrder(data.data);
+                showOutAmount(data.data);
+                without(data.data);
+                rendPage(data.data);
+            } else {
+                //alert("订单查询失败")
+            }
+        },
+        error: function (result) {
+        }
+    });
+
+}
+
+//渲染图片数据
+function rendPage(data) {
+    //循环取出返回的imgUrl 根据图片类型 往与之对应的div的追加
+    var imgUrls = data.imgUp;
+    for (var i = 0; i < imgUrls.length; i++) {
+        console.log(imgUrls[i]);
+        var index = Number(imgUrls[i].imageType) - 1;
+
+        $("#document div:eq(" + index + ")").append("<section style='display:inline-block;weight:170px' class='up-section fl' attrname='customer' attr-index='4'><span class='up-span'></span>" +
+            "<img class='up-img' src='http://106.52.92.57/img/5afd6e7a-ccbf-44de-8d25-030445e08f5c'>" +
+            "<p class='img-name-p'>"+imgUrls[i].imgUrl+"</p><input  name='taglocation' value='' type='hidden'>" +
+            "</section>");
+
+    }
+
+
+}
+
+
+//订单信息的数据渲染
+function showOrder(data) {
+    $("span[name='orderId']").html(data.userName)//借款人姓名
+    $("span[name='identity']").html(data.identity)//身份证
+    $("span[name='phone']").html(data.phone)//手机号码
+    var maritalStatus = "";
+    if ((data.maritalStatus) == 1) {
+        maritalStatus = "已婚"
+    } else if ((data.maritalStatus) == 2) {
+        maritalStatus = "未婚"
+    } else if ((data.maritalStatus) == 3) {
+        maritalStatus = "离异"
+    }
+    $("span[name='maritalStatus']").html(maritalStatus)//婚姻状态1.已婚2.未婚3.离异
+    $("span[name='spouseNname']").html(data.spouseNname)//配偶姓名
+    $("span[name='spouseIdentity']").html(data.spouseIdentity)//配偶身份证号码
+    $("span[name='privateLending']").html(data.privateLending == "" ? "无" : data.privateLending)//民间借贷情况
+    $("span[name='lawsuitCase']").html(data.lawsuitCase == "" ? "无" : data.privateLending)//诉讼情况
+    $("span[name='totalAmount']").html((data.totalAmount) + "万人民币")//总负债金额
+    $("span[name='foreclosure']").html((data.foreclosure) + "%")//赎楼成数
+    $("span[name='houseName']").html(data.houseName)//房产名称
+    $("span[name='area']").html(data.area)//面积
+    $("span[name='address']").html(data.address)//房产所在地
+    $("span[name='assessment']").html(data.assessment) + "万人民币"//房产评估
+    $("span[name='ownerName']").html(data.ownerName)//产权人姓名
+    $("span[name='originalBank']").html(data.originalBank)//原贷款银行
+    $("span[name='originalAmount']").html((data.originalAmount) + "万人民币")//原贷款金额
+    $("span[name='amountBlance']").html((data.amountBlance) + "万人民币")//原贷款余额
+    $("span[name='newBank']").html(data.newBank == "" ? "无" : data.newBank)//新贷款银行
+    $("span[name='newAmount']").html(data.newAmount == "" ? "无" : (data.newAmount) + "万人民币")//新贷款金额
+    $("span[name='managerName']").html(data.managerName)//客户经理姓名
+    $("span[name='managerPhone']").html(data.managerPhone)//客户经理手机号码
+    $("span[name='amount']").html((data.amount) + "万人民币")//借款金额
+    $("span[name='amountDays']").html(data.amountDays)//借款天数
+    $("span[name='rate']").html((data.rate) + "%")//费率
+    $("span[name='brokerage']").html((data.brokerage) + "人民币")//收费金额
+    $("span[name='feeWay']").html(data.feeWay == 0 ? "费用前置" : "费用后置")//0.费用前置1.费用后置
+    $("span[name='paragraphTime']").html(data.paragraphTime)//预计出款时间（筛选时间）
+    $("span[name='dealPrice']").html(data.dealPrice)//成交价格
+    $("span[name='orderAmount']").html(data.orderAmount)//定金金额
+    $("span[name='superviseAmount']").html(data.superviseAmount)//监管金额
+    $("span[name='buyerName']").html(data.buyerName)//买家姓名
+    $("span[name='buyerIdentity']").html(data.buyerIdentity)//买家身份证号码
+    $("#status").val(data.status);
+    var payType = "";
+    if ((data.payType) == 1) {
+        payType = "非交易类型"
+    } else if ((data.payType) == 2) {
+        payType = "交易类型"
+    } else if ((data.payType) == 3) {
+        payType = "过桥类型"
+    }
+    $("span[name='payType']").html(payType)//交易类型（1.非交易 2.交易类 3.过桥）
+    if (data.status == 1) {
+        $("#reject").children().attr("style", "display:none;");//隐藏div
+    }
+}
+
+//出款信息的数据渲染
+function showOutAmount(data) {
+    $("span[name='amountNo']").html(data.amountNo == "" ? "无" : data.amountNo)//出款账户
+    $("span[name='amountName']").html(data.amountName == "" ? "无" : data.amountName)//户主姓名
+    $("span[name='amountBank']").html(data.amountBank == "" ? "无" : data.amountBank)//开户银行
+    $("span[name='returnedName']").html(data.returnedName == "" ? "无" : data.returnedName)//回款户名
+    $("span[name='returnedBank']").html(data.returnedBank == "" ? "无" : data.returnedBank)//回款银行
+    $("span[name='returnedAmount']").html(data.returnedAmount == "" ? "无" : data.returnedAmount)//回款账号
+}
+
+function without(data) {
+    $("span[name='amountNo']").html("无")//出款账户
+    $("span[name='amountName']").html("无")//户主姓名
+    $("span[name='amountBank']").html("无")//开户银行
+    $("span[name='returnedName']").html("无")//回款户名
+    $("span[name='returnedBank']").html("无")//回款银行
+    $("span[name='returnedAmount']").html("无")//回款账号
+}
+
+function imgshow(data) {
+    $(".layui-input-block img").remove();
+    //订单id和资料类型
+    for (var i = 0; i < data.length; i++) {
+        //创建一个图片
+        var img = ("<img src=" + data[i].imgUrl + ">")
+        // 图片类型（1.客户资料，2.房产资料，3.银行资料，4.账户资料，5.面签资料，6.其他）
+        if (data[i].imageType == 1) {
+            $("#client").append(img);
+        } else if (data[i].imageType == 2) {
+            $("#house").append(img);
+        } else if (data[i].imageType == 3) {
+            $("#bank").append(img);
+        } else if (data[i].imageType == 4) {
+            $("#account").append(img);
+        } else if (data[i].imageType == 5) {
+            $("#interview").append(img);
+        } else if (data[i].imageType == 6) {
+            $("#rest").append(img);
+        }
+    }
+
+
+}
+
+//判断出订单状态，给出按钮
+function panduanBut(status, orderId, salesmanId) {
+    var tixian;
+    if (status != 1) {
+        tixian = "<button onclick='tuanBut(" + orderId + "," + salesmanId + "," + status + ")' type=\"button\" class=\"layui-btn layui-btn-lg\"\n" +
+            "style=\"margin-left: 150px;margin-top: -40px\">\n" +
+            "    提交\n" +
+            "    </button>";
+    } else {
+        tixian = "<button onclick='tuanBut(" + orderId + "," + salesmanId + "," + status + ")' type=\"button\" class=\"layui-btn layui-btn-lg\"\n" +
+            "style=\"margin-left: 150px;margin-top: -40px\">\n" +
+            "    提案\n" +
+            "    </button>";
+    }
+
+    var shixiao = "  <button onclick='shixiaoBut(" + orderId + "," + salesmanId + ")' type=\"button\" class=\"layui-btn layui-btn-danger\" style=\"margin-left: 150px ;margin-top: -40px\"\n" +
+        "                           >订单失效</button>";
+
+    var xiugai = "<button onclick='xiugaiBut(" + orderId + "," + salesmanId + ")' type=\"button\" class=\"layui-btn layui-btn-lg\"\n" +
+        "style=\"margin-left: 150px;margin-top: -40px\">\n" +
+        "    修改\n" +
+        "    </button>";
+
+
+    if (status == 1 || status == 5 || status == 8) {
+        $("#bb1").prepend(shixiao);
+        $("#bb1").prepend(xiugai);
+        $("#bb1").prepend(tixian);
+    } else {
+        $("#bb1").prepend(shixiao);
+        layer.msg("无权限操作！！");
+    }
+}
+
+//业务员提案
+function tuanBut(orderId, salesmanId, status) {
+    if (status == 1) {
+        status = 2;
+    } else if (status == 5 || status == 8) {
+        status = 4;
+    }
+    layer.confirm('是否进行提交？', function () {
+        requestAjax("/view/alterState.htm", {
+            orderId: orderId,
+            status: status,
+            salesmanId: salesmanId
+        }, function (data) {
+            if (data.result) {
+                //发异步，把数据提交给php
+                layer.alert("成功", {
+                        icon: 1
+                    },
+                    function () {
+                        //关闭当前frame
+                        xadmin.close();
+                        // 可以对父窗口进行刷新
+                        xadmin.father_reload();
+                    });
+            } else {
+                layer.msg('失败!', {icon: 2, time: 1000});
+            }
+        });
+    });
+}
+
+
+function shixiaoBut(orderId, salesmanId) {
+    layer.confirm('是否让订单失效？', function () {
+        requestAjax("/view/alterState.htm", {orderId: orderId, status: 12, salesmanId: salesmanId}, function (data) {
+            if (data.result) {
+                //发异步，把数据提交给php
+                layer.alert("已失效", {
+                        icon: 1
+                    },
+                    function () {
+                        //关闭当前frame
+                        xadmin.close();
+                        // 可以对父窗口进行刷新
+                        xadmin.father_reload();
+                    });
+            } else {
+                layer.msg('失败!', {icon: 2, time: 1000});
+            }
+        });
+    });
+}
+
+function xiugaiBut(orderId, salesmanId) {
+    location.href = 'order-edit.html?orderId=' + orderId;
+}

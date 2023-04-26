@@ -1,0 +1,980 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description"/>
+    <meta name="keywords"/>
+    <meta name="location"/>
+    <meta name="FrontBaseUrl" content="//webresource.c-ctrip.com/ResVacationOnline/R8/js/vacation"
+          data-tourexpansion="FrontBaseUrl"/>
+    <meta name="FrontVer" content="2017050301" data-tourexpansion="FrontVer"/>
+    <link rel="shortcut icon" href="http://www.ctrip.com/favicon.ico"/>
+    <title>旅游度假 - 国内国际度假服务 - 携程旅行网</title>
+    <link href="../../statics/css/public_vacation130620_2.css" rel="stylesheet" type="text/css"/>
+    <link href="../../statics/css/public_flights_logo.css" rel="stylesheet" type="text/css"/>
+    <link href="../../statics/css/book.css" rel="stylesheet" type="text/css"/>
+    <link href="../../statics/js_myt/layui/css/layui.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        .book_jmpinfo {
+            margin: 20px;
+            color: #666;
+            font: 12px/2 Arial, Tahoma, simsun;
+            -webkit-text-size-adjust: none;
+        }
+
+    .book_jmpinfo ul, li {
+        list-style: none;
+    }
+
+    .book_jmpinfo a {
+        color: #00c;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .book_jmpinfo a:hover {
+        color: #f00;
+        text-decoration: underline;
+    }
+
+    .book_jmpinfo .font16 {
+        font-size: 16px;
+    }
+
+    .book_jmpinfo .jmp_hd {
+        height: 30px;
+        padding-left: 10px;
+        background: url(../../statics/images/un_base_btn.png) repeat-x 0 -390px;
+        font-size: 12px;
+        line-height: 30px;
+        color: #333;
+    }
+
+    .book_jmpinfo .jmp_hd h3 {
+        font-size: 12px;
+    }
+
+    .book_jmpinfo .jmp_bd {
+        padding: 2px 3px !important;
+    }
+
+    .book_jmpinfo .jmp_alert {
+        border: 1px solid #ffb533;
+        background: #fff5d1;
+    }
+
+    .book_jmpinfo .base_jmp b {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url(../../statics/images/un_jmp_tri.png);
+        left: 10px;
+        top: 24px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .book_jmpinfo .base_jmp_t {
+        margin-top: 8px;
+    }
+
+    .book_jmpinfo .base_jmp_r {
+        margin-right: 8px;
+    }
+
+    .book_jmpinfo .base_jmp_b {
+        margin-bottom: 7px;
+    }
+
+    .book_jmpinfo .base_jmp_l {
+        margin-left: 8px;
+    }
+
+    .book_jmpinfo .base_jmp_t b {
+        margin-top: -7px;
+    }
+
+    .book_jmpinfo .base_jmp_r b {
+        margin-top: 10px;
+        right: 0;
+    }
+
+    .book_jmpinfo .base_jmp_b b {
+        bottom: -8px;
+    }
+
+    .book_jmpinfo .base_jmp_l b {
+        margin-top: 10px;
+        left: 9px;
+    }
+
+    .book_jmpinfo .jmp_title .tri_b {
+        background-position: -32px -32px;
+    }
+
+    .book_jmpinfo .jmp_alert .tri_t {
+        background-position: -16px 0;
+    }
+
+    .book_jmpinfo .jmp_alert .tri_r {
+        background-position: -16px -16px;
+    }
+
+    .book_jmpinfo .jmp_alert .tri_b {
+        background-position: -16px -32px;
+    }
+
+    .book_jmpinfo .jmp_alert .tri_l {
+        background-position: -16px -48px;
+    }
+
+    .book_jmpinfo .jmp_table .tri_t {
+        background-position: -32px 0;
+    }
+
+    .f_error {
+        background-color: #FFF7D9 !important;
+        border-color: #D80000 #E50000 #E50000 #D80000 !important;
+        border-style: solid;
+        border-width: 1px;
+    }</style>
+    <!--<script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?859112bb3c1c4be58e7e0e59a966879f";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>-->
+</head>
+<body>
+    <iframe frameborder="0" id="jmp-iframe-type-group" style="position: absolute; width: 531px; height: 101px; top: 380px; left: 764px; z-index: 1000; display: none;"></iframe>
+    <div class="cui_hd_cont">
+        <div id="cui_hd" class="cui_hd">
+            <div class="ctriplogo">
+                <a target="_blank" href="http://www.ctrip.com" alt="携程旅行网">携程旅行网</a>
+                <div id="cui_provider_logo" class="supplier_logo"></div>
+            </div>
+            <div class="cui_toolkit">
+                <span class="cui_username">尊敬的会员</span>|
+                <a target="_blank" href="http://kefu.ctrip.com" class="cui_kefu">客服中心</a>
+            </div>
+        </div>
+    </div>
+    <container style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; z-index: 100;">
+        <div id="uid_15649396141948410019337" style="border: 1px solid rgb(204, 204, 204); position: absolute; background-color: rgb(255, 255, 255); min-width: 178px; visibility: hidden; top: 434.621px; left: 422.39px;">
+            <style>
+                #uid_15649396141948410019337 .emailPrompt{padding:1px;}
+                #uid_15649396141948410019337 .emailPrompt .hover {background-color:#ccc;}
+                #uid_15649396141948410019337 .emailPrompt li {line-height:1.6; cursor:pointer; padding:3px}
+            </style>
+            <ul class="emailPrompt"></ul>
+        </div>
+    </container>
+    <div id="J_bestoneHeader" style="display:none"></div>
+    <div id="base_bd" class="bg_miancolor">
+        <input type="hidden" id="page_id" value="103730">
+        <input type="hidden" id="HideIsNoneLogin" name="HideIsNoneLogin" value="T">
+        <input type="hidden" id="TrackProductId" value="2495545">
+        <input type="hidden" id="bf_ubt_product" value="2495545">
+        <script type="text/javascript">
+            (function() {
+            var url = location.protocol + '//' + location.host + '/tour/static/loginprocxy.html'
+            document.write('<input type="hidden" id="sso_loginprocxyPath" name="sso_loginprocxyPath" value="' + url + '" />')
+            })()
+        </script>
+        <input type="hidden" id="sso_loginprocxyPath" name="sso_loginprocxyPath" value="https://vacations.ctrip.com/tour/static/loginprocxy.html"/>
+    <div id="root">
+        <div class="bg_gray ">
+            <link href="../../statics/css/comp.css?v=20181227" rel="stylesheet" type="text/css">
+            <div class="main">
+                <ol class="progress_bar">
+                    <li class="complete">
+                        <i></i>选择产品
+                    </li>
+                    <li class="complete">
+                        <i></i>填写与核对
+                    </li>
+                    <li>
+                        <i></i>成功提交
+                    </li>
+                </ol>
+                <div class="basefix">
+                    <div class="book_main_box">
+                        <div class="book_product">
+                            <h2>珠海4日自由行·【轩逸·幸福假期】·『万人出游』·亲子优选·|3晚珠海长隆主题酒店|·海洋动物亲密接触·动物剧场表演·动感游乐设施·与珍稀的鲸鲨、白鲸、北极熊见面</h2>
+                            <p class="depart_detail">
+                            </p>
+                            <div style="display: block;">
+                                <div>
+                                    <div class="book_product_content basefix">
+                                        <div class="book_product_name">行程</div>
+                                        <table class="book_table_list book_width_radio">
+                                            <colgroup><col class="width01">
+                                                <col class="width02">
+                                                <col class="width03"></colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <span>2日游套餐</span>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" class="book_detail">隐藏明细<i class="close"></i></a>
+                        </div>
+                        <div class="input_info" id="J_promotion">
+                            <h3>优惠信息</h3>
+                            <div class="product_input layoutfix">
+                                <h4>优惠券</h4>
+                            </div>
+                            <div class="product_input promotion_code promotion_hack layoutfix">
+                                <h4 class="except_tit">如果您有优惠代码，请输入</h4>
+                                <ul class="input_box coupons except_list">
+                                    <li>
+                                        <input type="text" class="input_sale" id="J_input_sale">
+                                        <input type="button" class="btn_submit" value="确定">
+                                        <p class="tips_txt">如果您有优惠代码，请输入</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input_info">
+                            <h3>联系人信息<span class="linkman_tips">为方便携程及时与您联系，请准确填写联系人信息（手机号码Email）</span></h3>
+                            <div class="product_input layoutfix">
+                                <ul class="input_box linkman_info">
+                                    <li><label class="product_label">姓名</label>
+                                        <span class="frm_required">*</span>
+                                        <input type="text" name="ContactName" placeholder="请输入联系人姓名" class="input_m" data-valid="false" data-message="" data-container="uid-0" value=>
+                                    </li>
+                                    <li>
+                                        <label class="product_label">手机号码</label>
+                                        <span class="frm_required">*</span>
+                                        <select>
+                                            <option value="86" selected="" style="display: none;">中国86</option>
+                                        </select>
+                                        <input type="text" placeholder="境内11位号码" name="Mobile" class="input_m" data-valid="false" data-message="" data-container="uid-1" data-index="0" value>
+                                    </li>
+                                    <li>
+                                        <label class="product_label">Email</label>
+                                        <input type="text" placeholder="非必填，用于接收订单确认信息" name="Email" class="input_m" data-valid="false" data-message="请填写电子邮箱" data-container="uid-2" value="" autocomplete="off">
+                                        <span class="hrs">如不填写，也可至订单详情中查看相关信息。</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input_info">
+                            <h3><span class="title">旅客信息</span>
+                                <span class="tips_txt">为了您能顺利出行，请务必确认所填姓名、性别与所持证件一致</span>
+                                <input type="text" style="font-size:12px;font-weight:normal" placeholder="查找常用旅客" class="isValid ticket_search fl_r" data-valid="false" data-message="" data-container="uid-3" value=""></h3>
+                            <div class="book_info" style="display:none">
+                                <div class="product_scroll_wrap" style="height: 60px;">
+                                    <div class="basefix info_write">
+                                        <ul class="person_choose">
+                                            <li class="">
+                                                <div class="per_choosebox">
+                                                    <a href="javascript:;">
+                                                        <span class="ch">卢智伟</span>
+                                                        <span class="en"></span>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_input layoutfix">
+                                <h4><div>旅客1</div><div><span class="adult">成人</span></div></h4>
+                                <ul class="input_box" data-pass="0">
+                                    <li>
+                                        <label class="product_label">中文姓名</label>
+                                        <span class="frm_required">*</span>
+                                        <input type="text" placeholder="与证件姓名一致" data-role="nameCN" class="input_m" data-valid="false" data-message="请填写中文姓名" data-container="uid-4" value="">
+                                       <!-- <a class="explain" href="javascript:;">填写说明</a>-->
+                                    </li>
+                                    <li>
+                                        <label class="product_label">证件类型</label>
+                                        <span class="frm_required">*</span>
+                                        <select data-valid="false">
+                                            <option value="1">身份证</option>
+                                            <option value="2">护照</option>
+                                        </select>
+                                        <input type="text" placeholder="证件号码" class="input_s" data-valid="false" data-message="请填写身份证号码" data-container="uid-6" value="">
+                                    </li>
+                                    <li>
+                                        <label class="product_label">手机号码</label>
+                                        <span class="frm_required">*</span>
+                                        <select>
+                                            <option value="86" selected="" style="display: none;">中国86</option>
+                                        </select>
+                                        <input type="tel" placeholder="境内11位号码" class="input_m" data-valid="false" data-message="请至少输入一位出行旅客的手机号码" data-container="uid-10" value="">
+                                        <span class="hrs">请至少输入一位出行旅客的手机号码</span>
+                                    </li>
+                                </ul>
+                                <div class="save_wrap">
+                                    <a href="javascript:void(0);" class="save selected">
+                                        <i></i>保存</a>
+                                    <a href="javascript:void(0);" class="clear">清空</a>
+                                </div>
+                            </div>
+                            <div class="reserve_limited"><h4>因服务能力有限，请您核实以下情况，以免造成出行不便。</h4>
+                                <p>★ "您选择的航班仅支持12-80周岁（不含）乘客预订"</p>
+                                <p>★ 18岁以下未成年人需要至少一名家长或成年旅客全程陪同</p>
+                                <p>★ 本产品不接受儿童按成人提交订单，敬请谅解。</p>
+                                <p>★ 该产品仅提供税收商品分类名称为旅游服务项下的增值税发票作为报销凭证。</p>
+                                <p>★ 订单一经提交，我们将立即操作扣款。如机票或酒店无位，我们将联系您更改订单或解除信用卡预授权。</p>
+                            </div>
+                        </div>
+                        <noscript></noscript>
+                        <div></div>
+                        <div class="input_info"><h3>预订信息</h3>
+                            <div class="product_input layoutfix">
+                                <h4>发票信息</h4>
+                                <div class="input_box">
+                                    <ul class="input_box">
+                                        <li class="point">礼品卡等消费券支付的金额不提供报销凭证</li>
+                                        <li class="default">
+                                            <a href="#" class="revise">【修改】</a>
+                                            <span>不需要发票</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <noscript></noscript>
+                        </div>
+                        <div class="tips-list">
+                            <p><span class="ico_warning"></span>订单一经提交，我们将立即操作扣款。如套餐内机票或酒店无位，我们将联系您更改订单或解除信用卡预授权。</p>
+                            <p><span class="ico_warning"></span>若现在完成预订，订单预计会在2019年08月05日 01:56确认结果</p>
+                        </div>
+                        <div class="defray_box layoutfix">
+                            <div class="defray_shop_box">
+                                <a class="prev_stop" href="javascript:void(0)">
+                                    <b></b>上一步</a>
+                                <a href="javascript:;" class="temporary_order">
+                                    <b></b>暂存订单</a>
+                            </div>
+                            <a href="javascript:void(0)" class="btn_proess_big">同意以下条款，去支付</a>
+                        </div>
+                        <div class="input_info mt0">
+                            <h3>预订须知</h3>
+                            <div class="content_box">
+                                <div>
+                                    <p class="strong">出行指南及法规</p>
+                                    <p>* 为了您人身、财产的安全，请您避免在公开场合暴露贵重物品及大量现金。上街时需时刻看管好首饰、相机等随身物品。</p>
+                                    <p>* <span style="color:#ff4646">游泳、漂流、潜水、滑雪、溜冰、戏雪、冲浪、探险、热气球、高山索道等活动项目，均存在危险。参与前请根据自身条件，并充分参考当地相关部门及其它专业机构的相关公告和建议后量力而行。</span></p>
+                                    <p>* <span style="color:#ff4646">携程从出行常识、旅游活动（风险性项目）和特殊人群三方面为您提供旅游安全指南，请您仔细阅读,</span>
+                                        <a href="http://vacations.ctrip.com/notes/4939.html" target="_blank"> 安全指南及警示</a>。</p>
+                                    <p>* 温泉水含有多种矿物元素，可强身健体，但一般不宜长时间浸泡；患心脏病、高血压等或体弱多病者以及酗酒者切勿浸浴；请留意浴区相关温泉告示，正确浸浴。详见
+                                        <a href="http://pages.ctrip.com/tour/znz/pdfxmgl/17.pdf" target="_blank"> 泡温泉注意事项</a>。</p>
+                                    <p>* 为普及旅游安全知识及旅游文明公约，使您的旅程顺利圆满完成，特制定<a href="http://pages.ctrip.com/tour/pdf3/20130930.pdf" target="_blank"> 《携程旅游告游客注意事项》</a>，请您认真阅读并切实遵守。</p>
+                                    <p>* 为确保锂电池的安全运输，避免发生不安全事件，我们友情提醒您，民航局将对旅客携带锂电池乘机进行严格检查。详情请参考<a href="http://vacations.ctrip.com/notes/4926.html" target="_blank"> 民航局关于旅客行李中携带“锂电池、充电宝”乘机规定的公告</a>。</p>
+                                    <p>* 乘坐国内航班的旅客，居民身份证过期不能继续使用。若有效期满的，可以凭临时居民身份证或公安机关出具的贴有本人近期免冠证件照、并加盖户籍专用章、注明有效期的《申领居民身份证回执》作为有效乘机身份证件替代使用。同时中华人民共和国护照可以作为有效乘机身份证件，办理国内航班购票、值机、安检手续；旅客乘坐国内航班，办理购票、值机、安检手续时，应当使用同一个有效乘机身份证件。中国大陆地区居民使用往来港澳通行证、往来台湾通行证乘坐国内航班的旅客，必须同时提供居民身份证或者民用机场公安机关签发的《乘坐民航飞机临时身份证明》才可办理登机手续。 特别提醒：凡是乘机的16周岁以下中国大陆地区居民（包含婴儿），务必出示包括出生证明、户口薄或户口所在地公安机关出具的身份证明（16周岁以下的人需在户籍所在地派出所出具身份证明，机场派出所无法开具临时证明）才可办理登机手续。 具体实施细则以机场相关部门指导意见为准。</p>
+                                    <p class="strong">出行须知</p>
+                                    <p>* 为了不耽误您的行程，请您在航班起飞前90分钟到达机场办理登机手续！</p>
+                                </div>
+                                <div class="person_tips">
+                                    <h5 class="package_title"><span>机票特别提示</span></h5>
+                                    <div>&nbsp;
+                                        <dfn>*</dfn>&nbsp;预订机票时，请充分查阅您所选客票的退改签及购票说明，并仔细核对您的航班信息，以免忽视信息影响客票使用。</div>
+                                    <div>&nbsp;
+                                        <dfn>*</dfn>&nbsp;您预订上海-珠海的航班含中转，如遇不可抗力因素导致第一程航班调整，您需自动办理第二程退改事宜并承担相应费用</div>
+                                    <div>&nbsp;
+                                        <dfn>*</dfn>&nbsp;您预订珠海-上海的航班含中转，如遇不可抗力因素导致第一程航班调整，您需自动办理第二程退改事宜并承担相应费用</div>
+                                </div>
+                                <div class="person_tips">
+                                    <h5 class="package_title">
+                                        <span>酒店特别提示</span>
+                                    </h5>
+                                    <dt>长隆横琴湾酒店(珠海海洋王国店)</dt>
+                                    <dd>&nbsp;
+                                        <dfn>*</dfn>&nbsp;预定5间以上（含5间）的 客人到店后必须统一办理入住手续/退房手续。</dd>
+                                    <dd>&nbsp;
+                                        <dfn>*</dfn>&nbsp;港澳客人必须出示香港/澳门居民身份证及回乡证才能办理入住，其它证件需补款入住</dd>
+                                    <dd>&nbsp;
+                                        <dfn>*</dfn>&nbsp;酒店入住时间为15：00，如提前到店可到前台办理手续：入住登记-换取/购买门票-寄存行李-入园游玩。</dd>
+                                    <dd>&nbsp;
+                                        <dfn>*</dfn>&nbsp;入住姓名必须与订单姓名一致。</dd>
+                                    <dt>长隆横琴湾酒店(珠海海洋王国店)</dt>
+                                    <dd>&nbsp;
+                                        <dfn>*</dfn>&nbsp;预定5间以上（含5间）的 客人到店后必须统一办理入住手续/退房手续。</dd>
+                                    <dd>&nbsp;
+                                        <dfn>*</dfn>&nbsp;港澳客人必须出示香港/澳门居民身份证及回乡证才能办理入住，其它证件需补款入住</dd>
+                                    <dd>
+                                        &nbsp;<dfn>*</dfn>&nbsp;酒店入住时间为15：00，如提前到店可到前台办理手续：入住登记-换取/购买门票-寄存行李-入园游玩。</dd>
+                                    <dd>&nbsp;
+                                        <dfn>*</dfn>&nbsp;入住姓名必须与订单姓名一致。</dd>
+                                </div>
+                                <div class="travel_contract"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price_bar">
+                        <div class="price_box_wrap">
+                            <div class="price_wrap_content">
+                                <h3>
+                                    <a href="javascript:;" class="price_detail_box">收起明细<i class="close"></i></a>费用明细
+                                </h3>
+                                <div>
+                                    <ul class="price_box scroll_y">
+                                        <li>
+                                            <div class="box_show">
+                                                <span class="price_item">基本团费</span>
+                                                <span class="price_detail"><dfn>¥</dfn>1530</span>
+                                            </div>
+                                            <dl class="box_hidden hidden_width">
+                                                <dd class="price_item_d_wrap">
+                                                    <div class="price_item_d_tit">费用包括：</div>
+                                                    <p>·&nbsp;往返火车票</p>
+                                                    <p>·&nbsp;行程所列酒店住宿费用</p>
+                                                    <p>·&nbsp;酒店标准2人间</p>
+                                                    <p>·&nbsp;行程内所列餐食，具体情况请见行程推荐/安排</p>
+                                                    <p>·&nbsp;当地中文司机兼导游服务</p>
+                                                    <p>·&nbsp;跟团游期间用车费用300元/人</p>
+                                                    <p>·&nbsp;安排当地专属用车(除部分特殊路段因当地规定及安全考量，则依规定派遣小型车)</p>
+                                                    <p>·&nbsp;目的地专车接送机（站）服务</p>
+                                                    <p>·&nbsp;行程中所列景点首道大门票鸽子窝公园、碧螺塔酒吧公园、帆船出海、山海关登城</p>
+                                                    <p>·&nbsp;儿童价特殊说明：1.2米以下儿童收费标准：只含旅游车位、正餐的半餐及导游服务,不含床位及早餐；
+                                                        <br>1.2m以上的儿童请按照成人价报名，报名时备注儿童身高、出半价票，联系客服退半价高铁票差价；
+                                                        <br>按照成人价报名的儿童，产生的半价门票费用会根据景区的实际情况由导游现场退款
+                                                        <br>【提示】根据交通法规定怀抱婴儿必须占座，请您为您的孩子报名占座
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                    <div class="price_rental_box">
+                                        <span class="price_rental">总额</span>
+                                        <div class="price_number">
+                                            <strong><dfn>¥</dfn>1530</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="side_function"></ul>
+        </div>
+    </div>
+        <div id="extra"></div>
+    </div>
+    <div id="footerCorp" style="display:none"></div>
+    <div id="jmp_bill" style="display:none">
+        <p class="jmp_bill_box">电子发票是指在购销商品、提供或者接受服务以及从事其他经营活动中，开具、收取的以电子方式存储的收付款凭证，携程开具的电子发票均为真实有效的合法发票，与传统纸质发票具有同等法律效力，可作为用户维权、保修的有效凭据。</p>
+    </div>
+    <div id="jmp_bill_invoice" style="display:none">
+        <p class="jmp_bill_box">
+            <img src="//pic.c-ctrip.com/VacationH5Pic/group_travel/process/electronic_invoice.png" width="550" height="398"></p>
+    </div>
+<script>
+    (function() {
+        window.__APP_SETTINGS__ = {"type":"createHistory","basename":"/tour","context":{"basename":"/tour","publicPath":"//webresource.c-ctrip.com/ares2/vacation/tour-booking/8.8.3/default","restapi":"/tour/restapi","env":"prod","appId":"100007656","h5Version":"8.8.3","locationOrigin":"//vacations.ctrip.com","serverLocationOrigin":"//localhost:8080","wirelessOrigin":"//m.ctrip.com/webapp/vacations","preload":{}}}
+        window.__PUBLIC_PATH__ = '//webresource.c-ctrip.com/ares2/vacation/tour-booking/8.8.3/default'
+    })()
+</script>
+    <script src="../../statics/js/vendor-8cd0d6.js"></script>
+    <script type="text/javascript" src="../../statics/js/cquery_110421.js?releaseno=2017050301" charset="utf-8"></script><link href="//webresource.c-ctrip.com/ares2/basebiz/accountsresource/~0.0.36/default/css/maskComponent.css?expires=1d" rel="stylesheet" type="text/css"><script type="text/javascript">
+    //初始化验证权限状态
+    // function loadCheckLogin() {
+    //     __SSO_booking_1('loadCheckLogin', '1');
+    //     $('body').css('overflow', 'hidden');
+    // }
+
+    // function __SSO_submit(a, t) {
+    //     window.location.reload();
+    // }
+
+    // function stdLogin(){
+    //     __SSO_loginShow_1("stdLogin",true,"0",true);
+    // }
+    function loginSDKLoaded(){
+        window.loginJSSDKLoaded=true
+        if(typeof window.loginSDKLoadCallback!=='undefined'){
+            window.loginSDKLoadCallback()
+        }
+    }
+</script>
+    <div>
+    <script src="../../statics/js/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
+    <!--[if lte IE 9]>
+    <script>
+        function getOrderBrowerVer(){
+            return true
+        }
+    </script>
+    <![endif]-->
+    <script src="../../statics/js/captcha.min.js?expires=1d" type="text/javascript" charset="utf-8"></script>
+    <script id="cloginsdk" src="../../statics/js/clogin_seed.js?expires=1d" cloginsecetkey="TVGLJQTETE10CAIQ7NF9XGAP8S19RP15" scene="mask" callbackurl="/tour/user/logincallback" loadcallback="loginSDKLoaded()"></script>
+    </div>
+    <script src="../../statics/js/index-8cd0d6.js"></script>
+    <script type="text/javascript">
+    (function () {
+        var url = '../../static/js/rms.js', timeout = 10;
+        var now = new Date();
+        setTimeout(function () {
+            var f = document.createElement('script')
+            f.type = 'text/javascript';
+            f.id = 'scrmsd__script';
+            f.async = true;
+            f.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + url + "?v=" + now.getYear() + now.getMonth() + "-" + now.getDate();
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(f, s);
+        }, timeout);
+        window.scrmsd__startScriptLoad = 1 * new Date();
+    })();
+</script>
+    <script src="../../statics/js/simpleheaderjs.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../statics/js/mask_v1.min.js?20150915" charset="utf-8"></script>
+    <div class="login_popup" id="sso_maskDIv" style="display:none">
+        <div class="lg_main" id="sso_memberlogin">
+            <div class="lg_hd">
+                <div class="lg_sale">
+                    <i class="lg_ico_sale"></i>登录可享：积分换礼、预订返现、更快速的预订</div>
+            </div>
+            <div class="lg_switch">
+                <label class="lg_label" id="sso_domUser">
+                    <input type="radio" name="1" checked="checked" id="sso_memberRadio">普通登录</label>
+                <label class="lg_label" id="sso_phonePwd">
+                    <input type="radio" name="1" id="sso_cardRadio">手机动态密码登录</label>
+            </div>
+            <ul class="lg_form" id="sso_domUserUl">
+                <li>
+                    <label class="lg_form_label">登 录 名</label>
+                    <input type="text" id="sso_txtUid" value="用户名/卡号/手机/邮箱" class="lg_input_text lg_input_unfocus">
+                </li>
+                <li>
+                    <label class="lg_form_label">密&nbsp; &nbsp;码</label>
+                    <input type="password" class="lg_input_text" id="sso_txtPwd" maxlength="20" onpaste="return false;" onkeydown="sso_member_enter();" oncontextmenu="return false;" oncopy="return false;" oncut="return false;">
+                    &nbsp;<a href="https://accounts.ctrip.com/member/PassWord/VerifyUserInfo.aspx" id="sso_forgetPwd" target="_blank">忘记密码？</a>
+                </li>
+                <li id="sso_divVerifyCode" style="display: none;">
+                    <label class="lg_form_label">验 证 码</label>
+                    <input type="text" class="lg_input_text lg_input_small lg_input_unfocus" maxlength="6" name="verifyCode" id="sso_verifyCode" autocomplete="off" value="不区分大小写" onkeydown="sso_member_enter();">
+                    <img width="88" height="32" alt="" id="sso_imgCode">
+                </li>
+                <li id="sso_domErrorli" style="display: none;">
+                    <div class="lg_form_wrap">
+                        <div class="base_error" id="sso_membererror" style="visibility: hidden;">
+                            <i class="lg_ico_alert"></i>登录名或密码错误
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="lg_form_wrap">
+                        <label class="lg_label">
+                            <input type="checkbox" name="" checked="checked" id="sso_chkAutoLogin">30天内自动登录</label>
+                    </div>
+                </li>
+                <li class="lg_form_btn">
+                    <div class="lg_form_wrap">
+                        <input type="button" value="登 录" class="lg_btn" id="sso_btnSubmit">&nbsp;
+                        <a href="javascript:;" id="sso_register">免费注册</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="lg_form" style="display: none;" id="sso_phonePwdUl">
+                <li>
+                    <label class="lg_form_label">手 机 号</label>
+                    <input type="text" class="lg_input_text lg_input_unfocus" id="sso_mobilePhone" value="请输入注册手机号">
+                </li>
+                <li id="sso_phoneCodeLi" style="display:none">
+                    <label class="lg_form_label">验 证 码</label>
+                    <input type="text" class="lg_input_text lg_input_small lg_input_unfocus" maxlength="6" id="sso_txtCodePwd" value="不区分大小写">&nbsp;
+                    <img width="88" height="32" alt="" id="sso_imgCodePhone">
+                </li>
+                <li>
+                    <label class="lg_form_label">密&nbsp; &nbsp;码</label>
+                    <input type="password" id="sso_dyPwdFirst" onkeydown="sso_phone_enter();" class="lg_input_text lg_input_small lg_input_unfocus">&nbsp;<a href="javascript:;" class="lg_btn3" id="sso_reSend">发送动态密码</a>
+                </li>
+                <li id="sso_phoneLoginErr" style="display: none">
+                    <div class="lg_form_wrap" style="display: ;">
+                        <div class="base_error" id="sso_dymembererror"><i class="lg_ico_alert"></i>登录名或密码错误
+                        </div>
+                    </div>
+                </li>
+                <li id="sso_phoneLoginTip" style="display: none">
+                    <div class="lg_form_wrap" style="display: ;">
+                        <div class="base_success">
+                            <i class="lg_ico_success"></i>动态密码已发送至您的手机，请注意查收。
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="lg_form_wrap">
+                        <label class="lg_label">
+                            <input type="checkbox" name="" checked="checked" id="sso_chkAutoLoginDy">30天内自动登录</label>
+                    </div>
+                </li>
+                <li class="lg_form_btn">
+                    <div class="lg_form_wrap">
+                        <input type="button" value="登 录" class="lg_btn" id="sso_btnSubmitLogin">&nbsp;
+                        <a href="javascript:;" id="sso_register2">免费注册</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="lg_others">其他登录：
+                <a href="javascript:;" id="sso_clogin">合作卡</a>
+                | <a href="http://ct.ctrip.com/crpTravel/zh-cn" target="_parent" id="sso_corpLogin">公司客户</a> |
+                <a href="javascript:;" id="sso_tlogin">第三方帐号</a>
+            </div>
+        </div>
+        <div class="lg_main" id="sso_commonlogin" style="display: none">
+            <div class="lg_hd">
+                <strong>合作卡登录</strong>
+            </div>
+            <input type="hidden" id="sso_hidSourceId" name="sso_hidSourceId" value="1">
+            <ul class="lg_form">
+                <li>
+                    <label class="lg_form_label">合 作 卡</label>
+                    <input type="text" id="sso_cardName" class="lg_input_text lg_input_unfocus" value="中文/拼音">
+                </li>
+                <li>
+                    <label class="lg_form_label">登 录 名</label>
+                    <input type="text" id="sso_txtCUid" value="用户名/卡号/手机/邮箱" class="lg_input_text lg_input_unfocus">
+                </li>
+                <li>
+                    <label class="lg_form_label">密&nbsp; &nbsp;码</label>
+                    <input type="password" class="lg_input_text" maxlength="20" id="sso_txtcPwd" onpaste="return false;" oncontextmenu="return false;" oncopy="return false;" onkeydown="sso_card_enter();" oncut="return false;">&nbsp;
+                    <a href="javascript:;" id="sso_lkbtnGetPwd">忘记密码？</a>
+                </li>
+                <li id="sso_cardError" style="display: none">
+                    <div class="lg_form_wrap" style="display: ;">
+                        <div class="base_error" id="sso_commonerror">
+                            <i class="lg_ico_alert"></i>登录名或密码错误
+                        </div>
+                    </div>
+                </li>
+                <li class="lg_form_btn">
+                    <div class="lg_form_wrap">
+                        <input type="button" value="登 录" class="lg_btn" id="sso_btnCSubmit">&nbsp;
+                    </div>
+                </li>
+            </ul>
+            <div class="lg_others">
+                <a href="javascript:;" class="lg_goback" id="sso_mlogin">&lt; 返回普通会员登录</a>
+            </div>
+        </div>
+        <div class="lg_main" id="sso_thirdlogin" style="display: none">
+            <div class="lg_hd"><strong>第三方账号登录</strong></div>
+            <ul class="lg_account_list"><li><a href="javascript:;"><span><i class="lg_ico_sina" id="sso_sina"></i></span>新浪微博</a></li><li><a href="javascript:;"><span><i class="lg_ico_qq" id="sso_qq"></i></span><p>QQ</p></a></li><li><a href="javascript:;"><span><i class="lg_ico_renren" id="sso_renren"></i></span><p>人人网</p></a></li><li><a href="javascript:;"><span><i class="lg_ico_baidu" id="sso_baidu"></i></span><p>百度</p></a></li><li><a href="javascript:;"><span><i class="lg_ico_wangyi" id="sso_nete"></i></span><p>网易</p></a></li></ul><div class="lg_others"><a href="###" class="lg_goback" id="sso_mlogin2">&lt; 返回普通会员登录</a></div></div><div class="lg_side" id="sso_lg_side"><p>非会员预订</p><p><a href="javascript:;" class="lg_btn2" id="sso_btnDirectBook">不登录，直接预订 &gt;</a></p></div><a href="javascript:;" class="lg_close" id="sso_divClose">×</a></div><iframe id="sso_ifrprocxy" style="display: none;"></iframe>
+        <!--<script type="text/javascript" src="../../statics/js/mkt_setUnionrecord.js" charset="utf-8"></script>-->
+    <script src="//webresource.c-ctrip.com/ResUnionOnline/R1/remarketing/js/remarketing.js" type="text/javascript" charset="utf-8" defer="" async=""></script>
+    <div id="divmask" class="login-mask" style="display: none;"></div>
+    <div id="maskloginbox" style="position: absolute; border: none; width: 100%; visibility: visible; z-index: 1002; left: 0px; top: 0px; display: none;"><div class="lg_loginwrap loginwrap_pasv" id="loginwrap" style="position: fixed; float: none; margin: 0px auto; left: 619px;">
+    <!-- 个性化登录 -->
+    <div class="lg_loginbox lg_loginbox_pasv" id="lg_loginbox">
+        <a href="javascript:;" class="close-loginbox">×</a>
+        <h2 class="lg_loginbox_title" id="logintitle">{title}</h2>
+        <div class="form_wrap" id="normalview" style="display:none">
+            <dl>
+                <dd><input class="r_input" type="text" id="nloginname" placeholder="国内手机号/用户名/邮箱/卡号"></dd>
+            </dl>
+            <dl>
+                <dd class="r_input input_auth-code"><input type="password" id="npwd" placeholder="登录密码"><a href="https://passport.ctrip.com/user/resetpwd/verifyIdentity" class="forgotpwd" target="_black">忘记密码</a></dd>
+            </dl>
+            <dl>
+                <dd id="sliderddnormal" style="dlsplay:none"></dd>
+            </dl>
+            <div class="base_error" style="display:none" id="nerr"></div>
+            <dl>
+                <div class="login-set">
+                    <label class="auto-login"><input type="checkbox" checked="checked" id="normal30day">30天内自动登录</label>
+                    <a href="javascript:;" class="login-entry-dynamic">手机动态密码登录 <i class="icon-arrowr"></i></a>
+                </div>
+
+                <dd>
+                    <input class="form_btn form_btn--block" id="nsubmit" type="submit" value="登   录">
+                </dd>
+            </dl>
+            <p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+        </div><div class="form_wrap" id="personview" style="display:none">
+        <div class="avatar-box">
+					<span class="avatar-img">
+						<img id="beforeHeadPic" src="" alt="">
+					</span>
+            <p class="user-name"></p>
+            <p class="change-user"><a href="javascript:;" id="changeaccount">更换账号</a></p>
+        </div>
+        <dl>
+            <dd class="r_input input_auth-code"><input type="password" placeholder="登录密码" id="personpwd"><a href="https://passport.ctrip.com/user/resetpwd/verifyIdentity" class="forgotpwd" target="_black">忘记密码</a></dd>
+        </dl>
+        <div class="base_error" style="display:none" id="personErr"></div>
+        <div class="login-set">
+            <label class="auto-login"><input type="checkbox" checked="checked" id="person30day">30天内自动登录</label>
+            <a href="javascript:;" class="login-entry-dynamic">手机动态密码登录 <i class="icon-arrowr"></i></a>
+        </div>
+
+        <dl>
+            <dd>
+                <input class="form_btn form_btn--block" type="submit" id="personSubmit" value="登   录">
+            </dd>
+        </dl>
+        <p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+    </div><div class="form_wrap" id="dynamicview" style="display:none">
+        <dl>
+            <dd class="r_input input_country-code" id="dyCcode" code="86">
+                中国大陆 86 <a href="javascript:;" class="link_code"></a>
+            </dd>
+        </dl>
+        <dl>
+            <dd><input class="r_input" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="15" id="dyphone" placeholder="注册或绑定手机号"></dd>
+        </dl>
+        <dl>
+            <dd id="sliderdddynamic" style="dlsplay:none"></dd>
+        </dl>
+        <dl>
+            <dd class="r_input input_auth-code dynamic"><input type="text" id="dypwd" maxlength="8" placeholder="短信动态码"><a href="javascript:;" id="sdy">发送动态码</a></dd>
+        </dl>
+        <div class="base_error" style="display:none" id="dyerr"></div>
+        <div class="login-set">
+            <label class="auto-login"><input type="checkbox" id="dynamic30d" checked="checked">30天内自动登录</label>
+        </div>
+
+        <dl>
+            <dd>
+                <input class="form_btn form_btn--block" id="dylogin" type="submit" value="登   录">
+            </dd>
+        </dl>
+        <p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+        <a href="javascript:;" class="go_prev-step"><i>&lt;</i>携程账号登录</a>
+    </div><div class="form_wrap" id="overseasview" style="display:none">
+        <dl>
+            <dd class="r_input input_country-code" id="overcode" code="86">
+                中国大陆 86 <a href="javascript:;" class="link_code"></a>
+            </dd>
+        </dl>
+        <dl>
+            <dd><input class="r_input" type="text" id="overphone" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="15" placeholder="注册或绑定手机号"></dd>
+        </dl>
+        <dl>
+            <dd class="r_input input_auth-code"><input type="password" id="overpwd" placeholder="登录密码"><a href="https://passport.ctrip.com/user/resetpwd/verifyIdentity" class="forgotpwd" target="_black">忘记密码</a></dd>
+        </dl>
+        <dl>
+            <dd id="slideroverseas" style="dlsplay:none"></dd>
+        </dl>
+        <div class="base_error" style="display:none" id="overerr"></div>
+        <div class="login-set">
+            <label class="auto-login"><input type="checkbox" id="overseas30day" checked="checked">30天内自动登录</label>
+            <a href="javascript:;" class="login-entry-dynamic">手机动态密码登录 <i class="icon-arrowr"></i></a>
+        </div>
+        <dl>
+            <dd>
+                <input class="form_btn form_btn--block" id="oversubmit" type="submit" value="登   录">
+            </dd>
+        </dl>
+        <p class="agreement-list">登录即代表您同意我们的<a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" class="serviceAgreement" target="_black">服务协议</a>和<a href="http://pages.ctrip.com/public/serve%20guideline.htm?2" class="privacyPolicy" target="_black">隐私政策</a></p>
+        <a href="javascript:;" class="go_prev-step"><i>&lt;</i>携程账号登录</a>
+    </div>        <div class="lg_weblogin" id="loginbanner">
+        <div class="login-about">
+            <a href="javascript:;" id="overseas_login">境外手机</a><span class="sep">|</span><a href="http://ct.ctrip.com/crpTravel/zh-cn" class="companylogin">公司客户</a><span class="sep">|</span><a class="cardlogin" target="_self" href="javascript:;">合作卡</a><span class="sep">|</span><a class="fuli" target="_self" href="https://b.ctrip.com/welfarelogin/login/">携程通</a><a href="https://passport.ctrip.com/user/reg/home" class="free-regist" target="_black">免费注册</a>
+        </div>
+        <div class="login-other">
+            <a href="javascript:;" class="icon-alipay" url="/member/alipayLogin/AlipayAuthorize.aspx">支付宝</a><a href="javascript:;" class="icon-qq" url="/member/QQLogin/QQAuthorize.aspx">QQ</a><a href="javascript:;" class="icon-baidu" url="/member/BaiduLogin/BauiduAuthorize.aspx">百度</a><a href="javascript:;" class="icon-sina" url="/member/SinaLogin/SinaAuthorize2.aspx">新浪微博</a><a href="javascript:;" class="icon-wechat" url="/member/WeChatLogin/Authorize.aspx">微信</a><a href="javascript:;" style="display:none" class="icon-163" url="/member/neteLogin/NeteAuthorize.aspx">网易</a><a href="javascript:;" class="icon-renren" url="/member/RenrenLogin/Authorize.aspx">人人网</a>
+        </div>
+    </div>
+        <div class="login-code" id="changeScanLogin">
+            <a href="javascript:;" title="扫码登录更安全" id="scanLogin" logintype="scan">扫码登录<i class="icon-ercode"></i></a>
+            <!-- <i class="icon-ercode"></i> -->
+        </div>
+        <div class="form_wrap" id="scanloginview" style="display:none">
+            <!-- 单独二维码 -->
+            <div id="qrcode">
+                <div class="er_scan_wrap er_code" id="qrcode_main">
+                    <img id="qrcode_img" alt="">
+                    <img src="../../statics/picture/app_scan.png" alt="" id="appScan">
+                    <div class="er_void" style="display:none;" id="erCodeExpire">
+                        <p class="void_text" id="qrcodeError">二维码已失效</p>
+                        <a href="javascript:;" class="btn-refresh" id="refresh">刷 新</a>
+
+                    </div>
+                </div>
+
+                <p class="er_text">打开<a href="javascript:;" target="_blank" id="downloadApp">携程APP</a>扫描二维码登录</p>
+            </div>
+
+            <div class="er_success" id="scansuccess" style="display:none">
+                <i class="icon-ok-bg"></i>
+                <p class="success_text">扫码成功</p>
+                <p class="success_desc">请在手机上确认登录</p>
+                <p class="success_info"><a href="javascript:;" id="rescan">重新扫描</a></p>
+            </div>
+        </div>
+
+        <div class="nologin" id="nologin">
+            <a href="javascript:;" id="btn_nologin">不登录，直接预订<i>&gt;</i></a>
+        </div>
+        <input type="hidden" id="sliderResult">
+    </div>
+    <div class="lg_loginbox lg_loginbox_pasv" id="tostalloading" style="display:none; z-index:1003;text-align: center;  background-position:center;background-repeat: no-repeat;top:10px;opacity:0.5;background-color:#999;background-image:url('data:image/gif;base64,R0lGODlhgACAAKIAAP///93d3bu7u5mZmQAA/wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBQAEACwCAAIAfAB8AAAD/0i63P4wygYqmDjrzbtflvWNZGliYXiubKuloivPLlzReD7al+7/Eh5wSFQIi8hHYBkwHUmD6CD5YTJLz49USuVYraRsZ7vtar7XnQ1Kjpoz6LRHvGlz35O4nEPP2O94EnpNc2sef1OBGIOFMId/inB6jSmPdpGScR19EoiYmZobnBCIiZ95k6KGGp6ni4wvqxilrqBfqo6skLW2YBmjDa28r6Eosp27w8Rov8ekycqoqUHODrTRvXsQwArC2NLF29UM19/LtxO5yJd4Au4CK7DUNxPebG4e7+8n8iv2WmQ66BtoYpo/dvfacBjIkITBE9DGlMvAsOIIZjIUAixliv9ixYZVtLUos5GjwI8gzc3iCGghypQqrbFsme8lwZgLZtIcYfNmTJ34WPTUZw5oRxdD9w0z6iOpO15MgTh1BTTJUKos39jE+o/KS64IFVmsFfYT0aU7capdy7at27dw48qdS7eu3bt480I02vUbX2F/JxYNDImw4GiGE/P9qbhxVpWOI/eFKtlNZbWXuzlmG1mv58+gQ4seTbq06dOoU6vGQZJy0FNlMcV+czhQ7SQmYd8eMhPs5BxVdfcGEtV3buDBXQ+fURxx8oM6MT9P+Fh6dOrH2zavc13u9JXVJb520Vp8dvC76wXMuN5Sepm/1WtkEZHDefnzR9Qvsd9+/wi8+en3X0ntYVcSdAE+UN4zs7ln24CaLagghIxBaGF8kFGoIYV+Ybghh841GIyI5ICIFoklJsigihmimJOLEbLYIYwxSgigiZ+8l2KB+Ml4oo/w8dijjcrouCORKwIpnJIjMnkkksalNeR4fuBIm5UEYImhIlsGCeWNNJphpJdSTlkml1jWeOY6TnaRpppUctcmFW9mGSaZceYopH9zkjnjUe59iR5pdapWaGqHopboaYua1qije67GJ6CuJAAAIfkEBQUABAAsCgACAFcAMAAAA/9Iutz+ML5Ag7w46z0r5WAoSp43nihXVmnrdusrv+s332dt4Tyo9yOBUJD6oQBIQGs4RBlHySSKyczVTtHoidocPUNZaZAr9F5FYbGI3PWdQWn1mi36buLKFJvojsHjLnshdhl4L4IqbxqGh4gahBJ4eY1kiX6LgDN7fBmQEJI4jhieD4yhdJ2KkZk8oiSqEaatqBekDLKztBG2CqBACq4wJRi4PZu1sA2+v8C6EJexrBAD1AOBzsLE0g/V1UvYR9sN3eR6lTLi4+TlY1wz6Qzr8u1t6FkY8vNzZTxaGfn6mAkEGFDgL4LrDDJDyE4hEIbdHB6ESE1iD4oVLfLAqPETIsOODwmCDJlv5MSGJklaS6khAQAh+QQFBQAEACwfAAIAVwAwAAAD/0i63P5LSAGrvTjrNuf+YKh1nWieIumhbFupkivPBEzR+GnnfLj3ooFwwPqdAshAazhEGUXJJIrJ1MGOUamJ2jQ9QVltkCv0XqFh5IncBX01afGYnDqD40u2z76JK/N0bnxweC5sRB9vF34zh4gjg4uMjXobihWTlJUZlw9+fzSHlpGYhTminKSepqebF50NmTyor6qxrLO0L7YLn0ALuhCwCrJAjrUqkrjGrsIkGMW/BMEPJcphLgDaABjUKNEh29vdgTLLIOLpF80s5xrp8ORVONgi8PcZ8zlRJvf40tL8/QPYQ+BAgjgMxkPIQ6E6hgkdjoNIQ+JEijMsasNY0RQix4gKP+YIKXKkwJIFF6JMudFEAgAh+QQFBQAEACw8AAIAQgBCAAAD/kg0PPowykmrna3dzXvNmSeOFqiRaGoyaTuujitv8Gx/661HtSv8gt2jlwIChYtc0XjcEUnMpu4pikpv1I71astytkGh9wJGJk3QrXlcKa+VWjeSPZHP4Rtw+I2OW81DeBZ2fCB+UYCBfWRqiQp0CnqOj4J1jZOQkpOUIYx/m4oxg5cuAaYBO4Qop6c6pKusrDevIrG2rkwptrupXB67vKAbwMHCFcTFxhLIt8oUzLHOE9Cy0hHUrdbX2KjaENzey9Dh08jkz8Tnx83q66bt8PHy8/T19vf4+fr6AP3+/wADAjQmsKDBf6AOKjS4aaHDgZMeSgTQcKLDhBYPEswoA1BBAgAh+QQFBQAEACxOAAoAMABXAAAD7Ei6vPOjyUkrhdDqfXHm4OZ9YSmNpKmiqVqykbuysgvX5o2HcLxzup8oKLQQix0UcqhcVo5ORi+aHFEn02sDeuWqBGCBkbYLh5/NmnldxajX7LbPBK+PH7K6narfO/t+SIBwfINmUYaHf4lghYyOhlqJWgqDlAuAlwyBmpVnnaChoqOkpaanqKmqKgGtrq+wsbA1srW2ry63urasu764Jr/CAb3Du7nGt7TJsqvOz9DR0tPU1TIA2ACl2dyi3N/aneDf4uPklObj6OngWuzt7u/d8fLY9PXr9eFX+vv8+PnYlUsXiqC3c6PmUUgAACH5BAUFAAQALE4AHwAwAFcAAAPpSLrc/m7IAau9bU7MO9GgJ0ZgOI5leoqpumKt+1axPJO1dtO5vuM9yi8TlAyBvSMxqES2mo8cFFKb8kzWqzDL7Xq/4LB4TC6bz1yBes1uu9uzt3zOXtHv8xN+Dx/x/wJ6gHt2g3Rxhm9oi4yNjo+QkZKTCgGWAWaXmmOanZhgnp2goaJdpKGmp55cqqusrZuvsJays6mzn1m4uRAAvgAvuBW/v8GwvcTFxqfIycA3zA/OytCl0tPPO7HD2GLYvt7dYd/ZX99j5+Pi6tPh6+bvXuTuzujxXens9fr7YPn+7egRI9PPHrgpCQAAIfkEBQUABAAsPAA8AEIAQgAAA/lIutz+UI1Jq7026h2x/xUncmD5jehjrlnqSmz8vrE8u7V5z/m5/8CgcEgsGo/IpHLJbDqf0Kh0ShBYBdTXdZsdbb/Yrgb8FUfIYLMDTVYz2G13FV6Wz+lX+x0fdvPzdn9WeoJGAYcBN39EiIiKeEONjTt0kZKHQGyWl4mZdREAoQAcnJhBXBqioqSlT6qqG6WmTK+rsa1NtaGsuEu6o7yXubojsrTEIsa+yMm9SL8osp3PzM2cStDRykfZ2tfUtS/bRd3ewtzV5pLo4eLjQuUp70Hx8t9E9eqO5Oku5/ztdkxi90qPg3x2EMpR6IahGocPCxp8AGtigwQAIfkEBQUABAAsHwBOAFcAMAAAA/9Iutz+MMo36pg4682J/V0ojs1nXmSqSqe5vrDXunEdzq2ta3i+/5DeCUh0CGnF5BGULC4tTeUTFQVONYAs4CfoCkZPjFar83rBx8l4XDObSUL1Ott2d1U4yZwcs5/xSBB7dBMBhgEYfncrTBGDW4WHhomKUY+QEZKSE4qLRY8YmoeUfkmXoaKInJ2fgxmpqqulQKCvqRqsP7WooriVO7u8mhu5NacasMTFMMHCm8qzzM2RvdDRK9PUwxzLKdnaz9y/Kt8SyR3dIuXmtyHpHMcd5+jvWK4i8/TXHff47SLjQvQLkU+fG29rUhQ06IkEG4X/Rryp4mwUxSgLL/7IqFETB8eONT6ChCFy5ItqJomES6kgAQAh+QQFBQAEACwKAE4AVwAwAAAD/0i63A4QuEmrvTi3yLX/4MeNUmieITmibEuppCu3sDrfYG3jPKbHveDktxIaF8TOcZmMLI9NyBPanFKJp4A2IBx4B5lkdqvtfb8+HYpMxp3Pl1qLvXW/vWkli16/3dFxTi58ZRcChwIYf3hWBIRchoiHiotWj5AVkpIXi4xLjxiaiJR/T5ehoomcnZ+EGamqq6VGoK+pGqxCtaiiuJVBu7yaHrk4pxqwxMUzwcKbyrPMzZG90NGDrh/JH8t72dq3IN1jfCHb3L/e5ebh4ukmxyDn6O8g08jt7tf26ybz+m/W9GNXzUQ9fm1Q/APoSWAhhfkMAmpEbRhFKwsvCsmosRIHx444PoKcIXKkjIImjTzjkQAAIfkEBQUABAAsAgA8AEIAQgAAA/VIBNz+8KlJq72Yxs1d/uDVjVxogmQqnaylvkArT7A63/V47/m2/8CgcEgsGo/IpHLJbDqf0Kh0Sj0FroGqDMvVmrjgrDcTBo8v5fCZki6vCW33Oq4+0832O/at3+f7fICBdzsChgJGeoWHhkV0P4yMRG1BkYeOeECWl5hXQ5uNIAOjA1KgiKKko1CnqBmqqk+nIbCkTq20taVNs7m1vKAnurtLvb6wTMbHsUq4wrrFwSzDzcrLtknW16tI2tvERt6pv0fi48jh5h/U6Zs77EXSN/BE8jP09ZFA+PmhP/xvJgAMSGBgQINvEK5ReIZhQ3QEMTBLAAAh+QQFBQAEACwCAB8AMABXAAAD50i6DA4syklre87qTbHn4OaNYSmNqKmiqVqyrcvBsazRpH3jmC7yD98OCBF2iEXjBKmsAJsWHDQKmw571l8my+16v+CweEwum8+hgHrNbrvbtrd8znbR73MVfg838f8BeoB7doN0cYZvaIuMjY6PkJGSk2gClgJml5pjmp2YYJ6dX6GeXaShWaeoVqqlU62ir7CXqbOWrLafsrNctjIDwAMWvC7BwRWtNsbGFKc+y8fNsTrQ0dK3QtXAYtrCYd3eYN3c49/a5NVj5eLn5u3s6e7x8NDo9fbL+Mzy9/T5+tvUzdN3Zp+GBAAh+QQJBQAEACwCAAIAfAB8AAAD/0i63P4wykmrvTjrzbv/YCiOZGmeaKqubOu+cCzPdArcQK2TOL7/nl4PSMwIfcUk5YhUOh3M5nNKiOaoWCuWqt1Ou16l9RpOgsvEMdocXbOZ7nQ7DjzTaeq7zq6P5fszfIASAYUBIYKDDoaGIImKC4ySH3OQEJKYHZWWi5iZG0ecEZ6eHEOio6SfqCaqpaytrpOwJLKztCO2jLi1uoW8Ir6/wCHCxMG2x7muysukzb230M6H09bX2Nna29zd3t/g4cAC5OXm5+jn3Ons7eba7vHt2fL16tj2+QL0+vXw/e7WAUwnrqDBgwgTKlzIsKHDh2gGSBwAccHEixAvaqTYcFCjRoYeNyoM6REhyZIHT4o0qPIjy5YTTcKUmHImx5cwE85cmJPnSYckK66sSAAj0aNIkypdyrSp06dQo0qdSrWq1atYs2rdyrWr169gwxZJAAA7')">
+    </div>
+
+
+    <input type="button" style="display:none;" id="freshQQ">
+    <input type="button" style="display:none;" id="freshBaidu">
+    <input type="button" style="display:none;" id="freshZFB">
+    <input type="button" style="display:none;" id="freshNete">
+    <input type="button" style="display:none;" id="freshThirdPart">
+    <input type="button" style="display:none;" id="freshSina">
+</div></div><div id="base_ft"><a href="http://pages.ctrip.com/public/copyright.htm">Copyright©</a> 1999-2019, <a href="http://www.ctrip.com">ctrip.com</a>. All rights reserved. | <a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a></div><div></div><div></div><div id="jmp_pkg_title" style="display:none;">
+    <div class="jmp_bd flt_jmp">
+        <div>${txt0}</div>
+        <div>${txt1}</div>
+        <div>${txt2}</div>
+        <div>${txt3}</div>
+    </div>
+</div>
+    <script src="../../statics/js/calendar-6.0.js" charset="utf-8"></script>
+    <div id="J_cardanCnt"></div>
+    <div id="uid-0"></div>
+    <div id="uid-1"></div>
+    <div id="uid-2"></div>
+    <script src="../../statics/js/emailprompt-1.0.js" charset="utf-8"></script>
+    <div id="jmp_popup_name" style="display: none;">
+        <div class="surname_select" data-tips="名多个多音字,单个和多个只能有一个">
+            <div class="surname_item" data-bind="refresh:chars">
+                <span class="tags_name" data-bind="text:sinogram"></span>
+                <a href="javascript:;" class="input_radio" data-bind="refresh:spellList;isSelected:selected">
+                    <i></i>
+                    <span class="name_english" data-bind="text:spell"></span>
+                </a>
+            </div>
+            <div class="surname_acions" data-bind="checkMultiple:isMultiple">
+                <a href="javascript:;" class="btn_link">确定</a>
+                <span class="tips_txt" data-tips="显示隐藏控制切换hidden" data-bind="addpolyphone:polyphone">
+                    <i class="ico"></i>请选择多音字：
+                    <span class="high" data-bind="text:cnChars"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="jmp_popup_family_name" style="display: none;"><div class="surname_select">
+        <div class="surname_item">
+            <a href="javascript:;" class="input_radio" data-bind="refresh:lastNames;isSelected:selected;addTag:compound"><i></i>
+                <span class="name_zh" data-bind="text:cnLastName"></span>
+                <span class="name_english" data-bind="text:enLastName"></span>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="mod_pop_tips" id="J_mod_pop_tips" style="display: none; margin-top: 8px;">
+        <span class="arrow">
+            <i class="arrow_b"></i>
+            <i class="arrow_t"></i>
+        </span>
+        <div class="pop_tips">请先选择/填写“姓”</div>
+    </div>
+    <div style="display: none; position: absolute; z-index: 9999;">
+        <div class="person_content">
+            <p>常用联系人</p>
+            <div class="layoutfix">
+                <a href="javascript:;">lu zhi<span>13432111242</span></a>
+            </div>
+        </div>
+    </div>
+    <div id="uid-3"></div>
+    <div id="uid-4"></div>
+    <div id="uid-5"></div>
+    <div id="uid-6"></div>
+    <div id="uid-10"></div>
+    <div id="uid-11"></div>
+    <div id="uid-12"></div>
+    <div id="uid-13"></div>
+    <div id="uid-17"></div>
+    <div id="jmp-tip-uid_15649396191505321067449" class="tuna_jmpinfo" group="group" style="visibility: hidden; display: block; z-index: 1001; margin: 0px; left: -9999px; top: -9999px; position: absolute; max-width: 530px; min-width: 50px; width: 531px;">
+        <div class="base_jmp jmp_title base_jmp_c">
+            <b class="tri_t" style="display: none; margin-top: -7px; left: 0px;"></b>
+            <div class="jmp_loading" style="display: none;">loading...</div>
+            <div class="jmp_content" style="display: block; width: 100%;">
+    <div class="jmp_bd flt_jmp">
+        <div>
+            <div id="jmp_table01">
+                <table class="data_form">
+                    <tbody>
+                    <tr>
+                        <th style="width:60px;">计划机型</th>
+                        <th style="width:140px;">机型名称</th>
+                        <th style="width:40px;">类型</th>
+                        <th style="width:80px;">最少座位数</th>
+                        <th style="width:80px;">最多座位数</th>
+                        <th style="width:80px;">餐食</th>
+                    </tr>
+                    <tr>
+                        <td>738</td>
+                        <td>波音 737-800</td>
+                        <td>窄体</td>
+                        <td>144</td>
+                        <td>189</td>
+                        <td>小食</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+</div>
+    </div>
+    <div id="jmp-tip-uid_15649396479911970018948" class="tuna_jmpinfo" group="group" style="visibility:hidden;display:block;z-index:99;margin:0;left:-9999px;top:-9999px;position:absolute;max-width:1000px;min-width:240px;_width:1000px;">
+        <div class="base_jmp jmp_title base_jmp_t">
+            <b class="tri_t"></b>
+            <div class="jmp_loading">loading...</div>
+            <div class="jmp_content"></div>
+        </div>
+    </div>
+    <div id="jmp-tip-uid_15649396481402416288717" class="tuna_jmpinfo" group="group" style="visibility:hidden;display:block;z-index:99;margin:0;left:-9999px;top:-9999px;position:absolute;max-width:1000px;min-width:240px;_width:1000px;">
+        <div class="base_jmp jmp_title base_jmp_t">
+            <b class="tri_t"></b>
+            <div class="jmp_loading">loading...</div>
+            <div class="jmp_content"></div>
+        </div>
+    </div>
+    <div style="display: none" id="test01">
+        <div class="certify_mould" style="width: 735px; z-index: 999; border: 1px solid rgb(103, 161, 226); background: rgb(255, 255, 255); position: absolute; top: 967.438px; left: 537px;">
+            <div class="tabs">
+                <a href="javascript:;" class="cur">填写说明</a>
+                <a href="javascript:;" class="">老版护照</a>
+                <a href="javascript:;" class="">新版护照</a>
+                <a href="javascript:;" class="">港澳通行证</a>
+                <a href="javascript:;" class="">台湾通行证</a>
+                <a href="javascript:;" class="">台胞证</a>
+            </div>
+            <div class="tabs_con basefix">
+                <div class="mould_item">
+                    <div class="tips_info">
+                        <dl>
+                            <dt>填写说明：</dt>
+                            <dd>1.乘客姓名需与所选证件上的名字一致。</dd>
+                            <dd><em>2.中文姓名：</em>
+                                <p>·若持护照登机，必须确认护照上有中文姓名。</p>
+                            </dd>
+                            <dd>
+                                <em>3.英文姓名：</em>
+                                <p>·若持护照登机，必须按照护照顺序区分姓与名。中国籍乘客的英文名即为中文名对应拼音。外籍乘客，如乘客姓名为Loise Smith St. Paul ，则在“Last Name”栏中输入StPaul(注：Last Name中无空格和特殊符号)；在“First Name”栏中输入Loise Smith(注：有中间名按firstname middlename的格式填写)。不区分大小写。</p>
+                                <p>·名字长度≤26个字符，若过长请使用缩写。</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../statics/jquery-2.1.4/jquery.js"></script>
+<!--<script src="../../statics/js_myt/layui/layui.js"></script>-->
+<script src="../../statics/js_myt/layui/layui.all.js"></script>
+<script src="js_three/html_cookies.js"></script>
+<script src="js_three/common.js"></script>
+<script src="js_three/common_modify.js"></script>
+<script src="js_three/vacation_bill.js"></script>

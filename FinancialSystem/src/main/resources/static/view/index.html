@@ -1,0 +1,199 @@
+<!doctype html>
+<html class="x-admin-sm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>金融后台管理系统</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <!-- <link rel="stylesheet" href="./css/theme5.css"> -->
+    <script src="../js/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/xadmin.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        // 是否开启刷新记忆tab功能
+        // var is_remember = false;
+    </script>
+</head>
+
+<body class="index">
+<!-- 顶部开始 -->
+<div class="container">
+    <div class="logo">
+        <a href="index.html">金融后台管理系统</a>
+    </div>
+    <div class="left_open">
+        <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
+    </div>
+    <ul class="layui-nav right" lay-filter="">
+        <li class="layui-nav-item">
+            <a href="javascript:;" id="name">登录</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd>
+                    <a onclick="xadmin.open('个人信息','admin-updataPass.html',500,300)">修改密码</a>
+                </dd>
+                <dd>
+                    <a href="javascript:void (0)" onclick="logout()">退出</a>
+                </dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item to-index">
+            <a onclick="xadmin.open('个人信息','admin-info.html',800,390)">个人信息</a>
+        </li>
+    </ul>
+</div>
+<!-- 顶部结束 -->
+<!-- 中部开始 -->
+<!-- 左侧菜单开始 -->
+<div class="left-nav">
+    <div id="side-nav">
+        <ul id="nav">
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="首页">&#xe6b8;</i>
+                    <cite>首页</cite>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="业务管理">&#xe723;</i>
+                    <cite>业务管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('业务管理','order-list.html')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>业务管理</cite></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="风控管理">&#xe723;</i>
+                    <cite>风控管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('风控列表','wind-list.html')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>风控列表</cite></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="财务管理">&#xe723;</i>
+                    <cite>财务管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('财务列表','finance-list.html')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>财务列表</cite></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="管理员管理">&#xe726;</i>
+                    <cite>管理员管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('管理员列表','admin-list.html')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>管理员列表</cite></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- <div class="x-slide_left"></div> -->
+<!-- 左侧菜单结束 -->
+<!-- 右侧主体开始 -->
+<div class="page-content">
+    <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+        <ul class="layui-tab-title">
+            <li class="home">
+                <i class="layui-icon">&#xe68e;</i>我的桌面
+            </li>
+        </ul>
+        <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
+            <dl>
+                <dd data-type="this">关闭当前</dd>
+                <dd data-type="other">关闭其它</dd>
+                <dd data-type="all">关闭全部</dd>
+            </dl>
+        </div>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <iframe src='welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+            </div>
+        </div>
+        <div id="tab_show"></div>
+    </div>
+</div>
+<div class="page-content-bg"></div>
+<style id="theme_style"></style>
+
+</body>
+
+<script src="../js/common/ajaxcommon.js"></script>
+<script>
+    //拿到浏览器存入的cookie
+    var token=getCookie("token");
+    requestAjax("/background/login/getLoginInfo",{token:token},function (data) {
+        if (data.result)  {     //数据渲染
+            sessionStorage.setItem("id",data.data.id);
+            $("#name").text(data.data.name);
+            if (data.data.role===1){
+                power(2);power(3);power(4);
+            }else if (data.data.role===2){
+                power(1);power(3);power(4);
+            }else if (data.data.role===3){
+                power(1);power(2);power(4);
+            }
+        }
+    });
+
+
+    /**
+     * 权限锁定
+     * @param a
+     */
+    function power(a) {
+        $("#nav>li").eq(a).find("a").attr("onclick","layer.msg('无权限')");
+        $("#nav>li").eq(a).find("ul").removeAttr("class");
+        $("#nav>li").eq(a).find("ul").attr("style","display: none");
+    }
+
+    /**
+     * 退出
+     */
+    function logout() {
+        requestAjax("/background/login/logout",{token:token},function (data) {
+            if (data.result){
+                sessionStorage.removeItem("id");
+                window.location.href="../login.html";
+            }else {
+                layer.msg(data.msg)
+            }
+        });
+    }
+
+</script>
+</html>

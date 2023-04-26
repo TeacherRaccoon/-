@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ctrip.Dao.ScenicSpotMapper">
+    <select id="getScenicSpotById" resultType="com.example.ctrip.Pojo.ScenicSpot">
+        select id,scenicSpotName,cityId,address,description,special,histories,hasGroupPurchase,openTime,commitment,sore
+        from travel_scenic_spot
+        where id=#{id}
+    </select>
+    <select id="getCount" resultType="integer">
+        select count(1) from travel_scenic_spot
+    </select>
+    <select id="getScenicSpotListByPage" parameterType="map" resultType="com.example.ctrip.Pojo.ScenicSpot">
+        select id,scenicSpotName,cityId,address,description,special,histories,hasGroupPurchase,openTime,commitment,sore
+        from travel_scenic_spot
+        limit #{start},#{length}
+    </select>
+    <insert id="addScenicSpot"  parameterType="com.example.ctrip.Pojo.ScenicSpot" >
+        insert into travel_scenic_spot(scenicSpotName,cityId,address,description,special,histories,hasGroupPurchase,creationDate,openTime,commitment,sore)
+        value(
+            #{scenicSpotName},
+            #{cityId},
+            #{address},
+            #{description},
+            #{special},
+            #{histories},
+            #{hasGroupPurchase},
+            NOW(),
+            #{openTime},
+            #{commitment},
+            #{sore}
+        )
+    </insert>
+    <update id="updateScenicSpot" parameterType="com.example.ctrip.Pojo.ScenicSpot">
+        update from travel_scenic_spot set
+            scenicSpotName=#{scenicSpotName},
+            cityId=#{cityId},
+            address=#{address},
+            description=#{description},
+            special=#{special},
+            histories=#{histories},
+            hasGroupPurchase=#{hasGroupPurchase},
+            modifyDate=NOW(),
+            openTime=#{openTime},
+            commitment=#{commitment},
+            sore=#{sore}
+        where id=#{id}
+    </update>
+    <delete id="delScenicSpotById" >
+        delete travel_scenic_spot where id=#{id}
+    </delete>
+</mapper>

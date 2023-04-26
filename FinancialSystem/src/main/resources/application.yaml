@@ -1,0 +1,57 @@
+server:
+  port: 8090
+  #解决控制台中文乱码
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  #数据源
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    #数据库地址
+    url: jdbc:mysql://101.132.39.8:3306/houseloan?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+   # url: jdbc:mysql://127.0.0.1:3306/houseloan?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    #数据库用户名密码
+    #username: root
+    #password: JHkawa321!
+    username: root
+    password: 123456
+  #redis配置
+  redis:
+    port: 6379
+    database: 0
+    host: 39.105.15.0
+    jedis:
+      pool:
+        max-active: 200
+        min-idle: 0
+        max-idle: 10
+        max-wait: -1ms
+    # 连接超时时间（毫秒）
+    lettuce:
+      shutdown-timeout: 1000ms
+    password: redis2019666
+
+
+  #解决控制台中文乱码
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+mybatis:
+  #Mybatis.xml路径
+  mapper-locations: classpath:mapper/**.xml
+  #取别名
+  type-aliases-package: com.kgc.finance.pojo
+  #logback日志输出
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#logback配置
+logging:
+  #logback路径
+  config: classpath:config/logback-spring.xml
+
+
+

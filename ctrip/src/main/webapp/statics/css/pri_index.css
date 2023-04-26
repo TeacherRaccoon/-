@@ -1,0 +1,3934 @@
+﻿@charset "utf-8";
+/*
+* desc: 07列表页成人儿童选择交互优化
+* updated:by txji@Ctrip.com at 2017/05/09
+*/
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #FFF;
+}
+
+body {
+    background-color: #FFF;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: Tahoma, Simsun, sans-serif;
+    color: #333;
+}
+
+img, fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+input, textarea {
+    font-size: 12px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    color: #06C;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Arial, Simsun, sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+dfn {
+    margin-right: 2px;
+    font-style: normal;
+    font-size: 12px;
+    font-family: Arial !important;
+}
+
+section {
+    display: block;
+}
+
+select {
+    font-family: Arial, Simsun, sans-serif;
+}
+
+select option {
+    padding: 3px 0;
+}
+
+.layoutfix {
+    display: inline-block;
+}
+
+.layoutfix {
+    display: block;
+    overflow: hidden;
+}
+
+.basefix {
+    *zoom: 1;
+}
+
+.basefix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.base_warning {
+    color: #F00;
+    font: normal 12px Simsun;
+}
+
+.float_left {
+    float: left !important;
+}
+
+.float_right {
+    float: right !important;
+}
+
+.base_txtsilver {
+    color: #999;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.base_txtdiv {
+    cursor: pointer;
+}
+
+.border_none {
+    border: 0 none !important;
+}
+
+/* Structure Begin */
+.cui_nav_wrap {
+    margin-bottom: 12px;
+    min-width: 1200px;
+}
+
+.cui_hd, .cui_nav {
+    width: 1180px;
+}
+
+#base_bd {
+    width: 1180px;
+    padding: 0 10px;
+    margin: 0 auto;
+    *zoom: 1;
+}
+
+#base_bd:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+/*footer*/
+.base_ft_wrap {
+    border-top: 1px dashed #9ECCF5;
+    padding-top: 18px;
+}
+
+p.copyright {
+    font-family: Verdana, simsun, sans-serif;
+}
+
+.index_side {
+    float: left;
+    width: 380px;
+    margin-right: 20px;
+}
+
+.index_main {
+    float: left;
+    width: 780px;
+    zoom: 1;
+}
+
+/* Structure End */
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06,
+.hotel_halfdiamond01,
+.hotel_halfdiamond02,
+.hotel_halfdiamond03,
+.hotel_halfdiamond04,
+.hotel_halfdiamond05,
+.hotel_halfdiamond06,
+.hot_city span,
+.sider_other_info dt,
+.price_tip,
+.service_info_world, .service_info_thumb, .service_info_review, .service_info_house, .service_info_prof, .service_info_callcenter,
+.icon_fb01, .icon_fb02, .icon_fb03,
+.icon_his01, .icon_his02, .icon_his03 {
+    background-image: url(../images/un_index.png);
+    background-repeat: no-repeat;
+}
+
+.icons-collect {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    background-image: url(../images/icon_hotel.png);
+    background-repeat: no-repeat;
+}
+
+/* =S 收藏icons */
+
+/*
+ * 容器+icon的形式实现对比
+ * icons-collect-wrap容器
+ * icons-collect-added已加收藏，hover上去后，会出现"-"号
+ */
+.icons-collect-wrap {
+    color: #06c;
+    text-decoration: none;
+    cursor: default;
+}
+
+.icons-collect-wrap:hover {
+    text-decoration: none;
+}
+
+.icons-collect {
+    width: 18px;
+    height: 14px;
+    margin-right: 5px;
+    background-position: -128px 0; /* 收藏系列 */
+}
+
+.icons-collect-wrap:hover .icons-collect {
+    background-position: -128px -25px;
+}
+
+.icons-collect-added .icons-collect {
+    background-position: -128px -49px;
+}
+
+.icons-collect-added:hover .icons-collect {
+    background-position: -128px -73px;
+}
+
+.icons-address {
+    width: 16px;
+    height: 14px;
+    margin-right: 5px;
+    background-position: -48px -82px; /* 地址 */
+}
+
+.icons-chinaman {
+    width: 24px;
+    height: 24px;
+    background-position: -20px -82px; /* 华人 */
+}
+
+.icons-chinaman-bigger {
+    width: 40px;
+    height: 40px;
+    background-position: 0 -111px; /* 华人(大) */
+}
+
+.icons-gift {
+    width: 19px;
+    height: 15px;
+    background-position: 0 -54px;
+}
+
+.icons-affiliate {
+    width: 22px;
+    height: 18px;
+    margin-right: 5px;
+    background-position: -124px -97px; /* 申请加盟 */
+}
+
+.icons-info-correction {
+    width: 16px;
+    height: 15px;
+    margin-right: 5px;
+    background-position: -94px -100px;
+}
+
+.icons-print {
+    width: 16px;
+    height: 13px;
+    margin-right: 5px;
+    background-position: -94px -82px;
+}
+
+/* =E 收藏icons */
+/* =S buttons */
+.btns-emphasis, .btns-primary, .btns-secondary {
+    display: inline-block;
+    padding: 7px 10px;
+    border-width: 1px;
+    border-style: solid;
+    font: bold 12px/1 Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", simsun, "\9ed1\4f53", "STHeiti", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle; /*box-shadow:0 1px 0 rgba(95,50,0,0.7);*/
+    border-radius: 3px;
+    *filter: chroma(color=#000000);
+}
+
+.btns-disabled, .btns-disabled:hover {
+    border-color: #ddd !important;
+    background-color: #ddd !important;
+    color: #aaa !important;
+    cursor: not-allowed !important;
+}
+
+.btns-emphasis {
+    color: #fff;
+    background-color: #ffb000;
+    border-color: #e77c00;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
+}
+
+.btns-emphasis:hover {
+    background-color: #f79700;
+    border-color: #de7800;
+    text-decoration: none;
+}
+
+.btns-primary {
+    color: #fff;
+    background-color: #27c;
+    border-color: #05a;
+    text-decoration: none;
+}
+
+.btns-primary:hover {
+    background-color: #29f;
+    border-color: #07d;
+    text-decoration: none;
+}
+
+.btns-secondary {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.btns-secondary:hover {
+    color: #fff;
+    background-color: #29f;
+    border-color: #07d;
+    text-decoration: none;
+}
+
+/* =E buttons */
+
+/*=s sales icon */
+.label_onsale_txt {
+    display: inline-block;
+    height: 14px;
+    border: 1px solid #fba62c;
+    color: #fba62c;
+    padding-right: 3px;
+    white-space: nowrap;
+    word-break: keep-all;
+    font-size: 12px;
+    line-height: 14px !important;
+    background-color: #fff;
+}
+
+.label_onsale_txt i {
+    float: left;
+    height: 14px;
+    overflow: hidden;
+    padding: 0 1px;
+    margin-right: 3px;
+    background-color: #fba62c;
+    color: #fff;
+    font-style: normal;
+}
+
+.label_onsale_blue, .label_onsale_orange, .label_onsale_green {
+    padding: 1px 2px;
+    _padding: 3px 2px 1px;
+    font-size: 12px;
+    color: #fff;
+    white-space: nowrap;
+    word-break: keep-all;
+    line-height: 1 !important;
+    font-family: Arial !important;
+}
+
+.label_onsale_blue {
+    background-color: #84c1ff;
+}
+
+.label_onsale_orange {
+    background-color: #fba62c;
+}
+
+.label_onsale_green {
+    background-color: #5fc400;
+}
+
+/*=s stars & diamonds */
+
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06,
+.hotel_halfdiamond01,
+.hotel_halfdiamond02,
+.hotel_halfdiamond03,
+.hotel_halfdiamond04,
+.hotel_halfdiamond05,
+.hotel_halfdiamond06 {
+    display: inline-block;
+    height: 12px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.hotel_diamond01, .hotel_halfdiamond01 {
+    width: 11px;
+}
+
+.hotel_diamond02, .hotel_halfdiamond02 {
+    width: 23px;
+}
+
+.hotel_diamond03, .hotel_halfdiamond03 {
+    width: 35px;
+}
+
+.hotel_diamond04, .hotel_halfdiamond04 {
+    width: 47px;
+}
+
+.hotel_diamond05, .hotel_halfdiamond05 {
+    width: 59px;
+}
+
+.hotel_diamond06, .hotel_halfdiamond06 {
+    width: 71px;
+}
+
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06 {
+    background-position: 0 3px;
+}
+
+.hotel_halfdiamond01 {
+    background-position: -72px 3px;
+}
+
+.hotel_halfdiamond02 {
+    background-position: -60px 3px;
+}
+
+.hotel_halfdiamond03 {
+    background-position: -48px 3px;
+}
+
+.hotel_halfdiamond04 {
+    background-position: -36px 3px;
+}
+
+.hotel_halfdiamond05 {
+    background-position: -24px 3px;
+}
+
+.hotel_halfdiamond06 {
+    background-position: -12px 3px;
+}
+
+/*=e stars & diamonds */
+
+/*=s medals */
+.hotel_goldmedal,
+.hotel_silvermedal,
+.hotel_bluemedal,
+.hotel_strategymedal, .hotel_goldmedal_su, .hotel_silvermedal_su, .hotel_strategymedal_su, .hotel_bluemedal_su {
+    vertical-align: middle;
+}
+
+/*=e medals */
+/* =S 颜色 */
+.text-green {
+    color: #10A200 !important;
+}
+
+.text-red {
+    color: #b00 !important;
+}
+
+.text-orange {
+    color: #f60 !important;
+}
+
+.text-gray {
+    color: #999 !important;
+}
+
+.text-blue {
+    color: #06c !important;
+}
+
+/* =E 颜色 */
+/* =S 每间住客数 */
+.n_gst {
+    display: inline-block;
+    width: 112px;
+    height: 26px;
+    position: relative;
+    z-index: 8;
+    cursor: default;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #333;
+    line-height: 2;
+    *display: inline;
+    *zoom: 1;
+}
+
+.n_gst_x {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    font: bold 16px/1 simsun;
+}
+
+.n_gst_x:hover {
+    color: #06c;
+}
+
+.n_gst_v {
+    display: inline-block;
+    padding-left: 3px;
+    width: 106px;
+    height: 24px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    line-height: 24px;
+    cursor: default;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+}
+
+.n_gst_tri {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 6px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 5px 5px 0;
+    border-color: #666 transparent transparent;
+    border-style: solid dashed dashed;
+}
+
+.n_gst:hover .n_gst_v, .n_gst_active .n_gst_v {
+    border-color: #39f;
+}
+
+.n_gst_active .n_gst_p {
+    display: block;
+}
+
+.n_gst_p {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 26px;
+    *top: 27px;
+    width: 338px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.n_gst_txt {
+    padding: 3px 0 3px 10px;
+    color: #999;
+}
+
+.n_gst_list {
+    padding-bottom: 3px;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.n_gst_list_opt {
+    padding-left: 10px;
+    background-color: #fff;
+    transition: all .2s ease 0s;
+}
+
+.n_gst_list_opt:hover, .n_gst_list .current {
+    background-color: #2577e3;
+    color: #fff;
+}
+
+.n_gst_person {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    *zoom: 1;
+}
+
+.n_gst_person:after {
+    display: block;
+    clear: both;
+    content: '\20';
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.n_gst_dl {
+    float: left;
+    width: 159px;
+    padding-left: 10px;
+}
+
+.n_gst .n_gst_p select {
+    width: 54px;
+    vertical-align: middle;
+}
+
+.n_gst_childs {
+    border-top: 1px dashed #ccc;
+    margin: 0 10px;
+    padding: 8px 0;
+}
+
+.n_gst_childs_dl {
+    position: relative;
+    z-index: 1;
+    padding-left: 102px;
+    *zoom: 1;
+}
+
+.n_gst_childs dt {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.n_gst_childs dd {
+    margin-bottom: 2px;
+}
+
+.n_gst_child_label {
+    display: inline-block;
+    width: 63px;
+    color: #666;
+}
+
+.n_gst_ft {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.n_gst_btn {
+    height: 28px;
+    padding: 0 20px;
+    border: 1px solid #1b6bd3;
+    background: #2577e3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* =E 每间住客数 */
+/* =S CR38578 每间住客数 */
+.n_gst38578 {
+    display: inline-block;
+    width: 112px;
+    height: 26px;
+    position: relative;
+    z-index: 8;
+    cursor: default;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #333;
+    line-height: 2;
+    *display: inline;
+    *zoom: 1;
+}
+
+.n_gst38578_v {
+    display: inline-block;
+    padding-left: 3px;
+    width: 106px;
+    height: 24px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    line-height: 24px;
+    cursor: default;
+    vertical-align: top;
+    font-size: 12px;
+    *display: inline;
+    *zoom: 1;
+}
+
+.n_gst38578_tri {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 6px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 5px 5px 0;
+    border-color: #666 transparent transparent;
+    border-style: solid dashed dashed;
+}
+
+.n_gst38578:hover .n_gst38578_v, .n_gst38578_active .n_gst38578_v {
+    border-color: #39f;
+}
+
+.n_gst38578_active .n_gst38578_p {
+    display: block;
+}
+
+.n_gst38578_p {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 26px;
+    *top: 27px;
+    width: 248px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.n_gst38578_list {
+    padding: 10px;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.n_gst38578_list_opt {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+
+.n_gst38578_age {
+    margin-left: 14px;
+    color: #999;
+}
+
+.n_gst38578 .n_gst38578_p select {
+    width: 70px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.n_gst38578_childs {
+    border-top: 1px dashed #ccc;
+    margin: 0 10px;
+    padding: 8px 0;
+    width: 228px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1; /* 儿童年龄选择 */
+}
+
+.n_gst38578_childs_dl {
+    position: relative;
+    z-index: 1;
+    width: 110%;
+}
+
+.n_gst38578_childs_dl:after {
+    display: block;
+    clear: both;
+    content: '\20';
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.n_gst38578_childs_dl dt {
+    margin-bottom: 6px;
+}
+
+.n_gst38578_childs dd {
+    float: left;
+    width: 79px;
+    margin-bottom: 5px;
+    vertical-align: top;
+}
+
+.n_gst38578_childs_tips {
+    padding-top: 3px;
+    color: #f00f0f;
+    line-height: 1.3;
+}
+
+.n_gst38578_ft {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.n_gst38578_btn {
+    height: 28px;
+    width: 110px;
+    border: 1px solid #1b6bd3;
+    background: #2577e3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.n_gst38578_btncancel {
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    background: none;
+    color: #39f;
+    font-size: 12px;
+}
+
+.n_gst38578_quantity {
+    z-index: 9;
+}
+
+.n_gst_num {
+    width: 109px;
+    display: block;
+}
+
+.n_gst_num li {
+    padding-left: 3px;
+}
+
+.n_gst_num li:hover {
+    color: #fff;
+    background-color: #2577e3;
+}
+
+.number_control {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 24px;
+}
+
+.number_plus, .number_reduce {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    transition: background-color .2s ease 0s;
+}
+
+.number_reduce {
+    left: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+.number_plus {
+    right: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.number_plus:hover, .number_reduce:hover {
+    border-color: #67A1E2;
+}
+
+.number_control .number_input {
+    position: absolute;
+    z-index: 1;
+    left: 23px;
+    top: 0;
+    width: 22px;
+    height: 16px;
+    line-height: 18px \9;
+    margin: 0;
+    padding: 3px 0;
+    border: 1px solid #bbb;
+    background: #fff;
+    text-align: center;
+}
+
+.number_control .number_input:focus {
+    z-index: 3;
+}
+
+.icon_numplus, .icon_numreduce {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.icon_numplus {
+    width: 10px;
+    height: 10px;
+    margin-top: 6px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABhSURBVEhL7c1RCoBACARQ7+Rpu4jXM4SxyFbcaIM+fDAfAzJSxJuqBXWaiKgFNdcPUE8+WAXnBx+s8v2DKBuspINRP0Btf8bMakFdrx/c+GAVnD83GhsF5+8tH4z6wRXRDmUrDnxueI8rAAAAAElFTkSuQmCC) 0 -14px no-repeat;
+}
+
+.number_plus:hover .icon_numplus {
+    background-position: 0 0;
+}
+
+.icon_numreduce {
+    width: 10px;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #333;
+}
+
+.number_reduce:hover .icon_numreduce {
+    background-color: #39f;
+}
+
+.number_disable,
+.number_disable:hover {
+    cursor: default;
+    background-color: #dedede;
+    border-color: #bbb;
+}
+
+.number_disable .icon_numreduce,
+.number_disable:hover .icon_numreduce {
+    background-color: #b6b6b6;
+}
+
+.number_disable .icon_numplus,
+.number_disable:hover .icon_numplus {
+    background-position: -14px 0;
+}
+
+/* =E CR38578 每间住客数 */
+/*=s choice_classification */
+.choice_classification {
+    padding: 6px 10px 10px;
+    width: 476px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.choice_classification .close {
+    float: right;
+    margin-right: -5px;
+    width: 20px;
+    height: 20px;
+    color: #666;
+    text-align: center;
+    font: bold 16px/20px Simsun;
+}
+
+.choice_classification .close:hover {
+    text-decoration: none;
+    color: #FFA800;
+}
+
+.choice_classification .title {
+    color: #999;
+}
+
+.choice_classification .choice_item_title {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.choice_classification .choice_item_list {
+    *zoom: 1;
+}
+
+.choice_classification .choice_item_list:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.choice_classification .choice_item_list a {
+    float: left;
+    width: 100px;
+    height: 24px;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 24px;
+    color: #333;
+}
+
+.choice_classification .choice_item_list a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #2577e3;
+    padding-left: 5px
+}
+
+/*=e choice_classification */
+
+/*= ad box*/
+.ads_banner {
+    overflow: hidden;
+}
+
+.ads_banner .jmkt-picsroller-pics {
+    height: 359px;
+    overflow: hidden;
+}
+
+.ads_banner .jmkt-picsroller-pics a {
+    position: absolute;
+    z-index: 6;
+    width: 1600px;
+    margin-left: -800px;
+    left: 50%;
+    text-align: center;
+}
+
+.ads_banner .jmkt-picsroller-pics a img {
+    width: 1600px;
+    height: 359px;
+    margin: 0 auto;
+}
+
+.ads_banner .jmkt-picsroller-num {
+    text-align: left;
+    left: 50%;
+    margin: -25px 0 0 120px;
+    position: absolute;
+}
+
+.hotel_pic_list .jmkt-picsroller {
+    position: static;
+    min-width: 0;
+}
+
+.hotel_pic_list .jmkt-picsroller-pics a img {
+    width: 160px;
+    height: 70px;
+    overflow: hidden;
+}
+
+/*=s search box */
+.base_top {
+    position: relative;
+    z-index: 10;
+    min-width: 1000px;
+    height: 359px;
+    margin-bottom: 20px;
+}
+
+.s_box {
+    width: 1180px;
+    height: 0;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.search_box {
+    position: absolute;
+    top: 5px;
+    width: 378px;
+    border: 1px solid #3983e5;
+    border-radius: 6px;
+    background-color: #3983E5;
+    z-index: 10;
+}
+
+.search_form {
+    background: #fff;
+}
+
+.search_form {
+    position: relative;
+    z-index: 3;
+    height: 294px;
+    margin: 0 5px 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.s_form_tabs {
+    position: relative;
+    z-index: 2;
+    height: 40px;
+    padding: 5px 5px 0;
+    margin-bottom: -7px;
+    *zoom: 1; /* 负bottom为了遮盖下方的圆角 */
+}
+
+.s_form_tabs:after {
+    display: block;
+    clear: both;
+    content: '\20';
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.s_form_tabs li {
+    float: left;
+    height: 40px;
+    font: 18px/33px "Microsoft Yahei";
+    color: #fff;
+    text-align: center;
+    cursor: default;
+    border-radius: 5px 5px 0 0;
+}
+
+.s_form_tabs li:hover .s_form_txt {
+    background: #3f92ff;
+}
+
+.s_form_tabs .current, .s_form_tabs .current:hover .s_form_txt {
+    background: #fff;
+    color: #3983e5;
+}
+
+.s_form_intlhtl {
+    width: 134px;
+}
+
+.s_form_apartment {
+    width: 150px;
+}
+
+.s_form_flthtl {
+    width: 84px;
+}
+
+.s_form_txt {
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+}
+
+.search_blabel {
+    margin-right: 30px;
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+}
+
+.search_blabel input {
+    margin: -4px 3px 0 0;
+    *margin-top: -2px;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    border: none;
+    font-family: Arial;
+    vertical-align: middle;
+}
+
+.searchbox {
+    width: 100%;
+}
+
+.searchbox th {
+    width: 93px;
+    padding: 5px 5px 8px;
+    text-align: right;
+    vertical-align: middle;
+    font: normal 14px "Microsoft Yahei";
+}
+
+.searchbox tr {
+    line-height: 25px;
+    _line-height: 22px;
+}
+
+.searchbox td {
+    padding: 4px 0 4px 5px;
+}
+
+.searchbox .input_text, .searchbox .input_text2 {
+    width: 220px;
+    height: 22px;
+    padding: 3px;
+    border: 1px solid #bbb;
+    border-color: #bbb #ddd #ddd #bbb;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #ddd inset;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.searchbox .input_text,
+.searchbox .input_text2 {
+    font: normal 14px/22px Tahoma, Simsun, sans-serif;
+}
+
+.searchbox .input_text:focus, .searchbox .input_text2:focus {
+    border: 1px solid #67A1E2;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+.searchbox .input_text.disabled, .searchbox .input_text2.disabled, .searchbox .input_text[disabled], .searchbox .input_text2[disabled] {
+    background: #efefef;
+    cursor: not-allowed;
+}
+
+.searchbox select {
+    width: 114px;
+    height: 22px;
+    font-size: 12px;
+}
+
+.searchbox .error, .searchbox .f_error {
+    border: 1px solid #E50000 !important;
+    background-color: #FFF7D9 !important;
+}
+
+.searchbox .num_select .n {
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+.search_box .btn_box {
+    margin: 20px 0 0 108px;
+}
+
+.search_box .btn_search, .search_box .btn_search_disable {
+    width: 228px;
+    height: 33px;
+    border: 1px solid #E77C00;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(95, 50, 0, 0.7);
+    vertical-align: middle;
+    font: bold 16px/32px "Microsoft Yahei";
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    *filter: chroma(color=#000000);
+}
+
+.search_box .btn_search {
+    text-shadow: 1px 1px 0 #CF7000;
+    background-color: #ffb000;
+    border: 1px solid #E77C00;
+}
+
+.search_box .btn_search_disable {
+    color: #999;
+    background-color: #efefef;
+    border: solid 1px #ccc;
+    cursor: not-allowed;
+}
+
+
+.search_box .btn_search:hover {
+    border: 1px solid #DE7800;
+    background-color: #F79700;
+}
+
+.pkg_search_form select {
+    width: 65px;
+    margin-right: 10px;
+}
+
+.pkg_search_form .search_btn {
+    margin: 20px 0 0 108px;
+}
+
+.search_box .sta_disable select {
+    cursor: default;
+    border-color: #ddd;
+    background: #f5f5f5;
+    color: #ccc;
+}
+
+
+/* search history */
+.searchbox .input-des {
+    width: 135px;
+    margin-right: 5px;
+}
+
+.searchbox .search-history-select {
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    padding-right: 12px;
+    cursor: pointer;
+    line-height: 28px;
+    border: 1px solid #fff;
+    height: 28px;
+    padding: 0 17px 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.searchbox .select-expanded {
+    border-color: #ccc #ccc #fff;
+}
+
+.searchbox .search-history-select .icon-arrow {
+    position: absolute;
+    right: 3px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid #333;
+    border-left: 6px dashed transparent;
+    border-right: 6px dashed transparent;
+}
+
+.searchbox .select-expanded .icon-arrow {
+    border-bottom: 6px solid #333;
+    border-left: 6px dashed transparent;
+    border-right: 6px dashed transparent;
+    border-top: none;
+}
+
+.pop-select-list {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: 72px;
+    right: 32px;
+}
+
+.pop-select-list li {
+    position: relative;
+    line-height: 26px;
+    clear: both;
+    text-align: right;
+}
+
+.pop-select-list li a {
+    display: block;
+    color: #333;
+    padding: 0 170px 0 10px;
+}
+
+.pop-select-list li a:hover {
+    background-color: #2577E3;
+    color: #fff;
+    text-decoration: none;
+}
+
+.pop-select-list li .search-name {
+    display: block;
+    max-width: 120px;
+    *width: 120px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: right;
+}
+
+.pop-select-list li .search-time {
+    position: absolute;
+    color: #999;
+    right: 10px;
+    top: 0;
+}
+
+.pop-select-list li a:hover .search-time {
+    color: #fff;
+}
+
+/*=e search box */
+
+/*=s Sider Advertise */
+.sider_ads {
+    display: block;
+    width: 370px;
+    min-width: 0px;
+    margin-bottom: 10px;
+    height: 166px;
+    border: 5px solid #ffd33a;
+}
+
+.sider_ads:hover {
+    border-color: #FFA800;
+}
+
+.sider_ads2 {
+    display: block;
+    width: 370px;
+    min-width: 0px;
+    margin-bottom: 10px;
+    height: 155px;
+    border: 5px solid #FFA800;
+}
+
+/*=e Sider Advertise */
+
+/* index side Begin */
+.s_title {
+    height: 34px;
+    margin-bottom: 3px;
+    font: 22px/34px "Microsoft Yahei";
+}
+
+.s_title_more {
+    float: right;
+    font-size: 14px;
+    font-family: Tahoma, Simsun, sans-serif;
+}
+
+.hotel_viewed {
+    margin-bottom: 20px;
+    padding: 0 12px;
+    border: 1px solid #E8E8E8;
+    background-color: #F5F5F5;
+    overflow: hidden;
+    _zoom: 1;
+}
+
+.hotel_viewed .item {
+    display: inline-block;
+    height: 64px;
+    margin-bottom: -1px;
+    padding: 10px 20px 10px 74px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.hotel_viewed .item {
+    display: block;
+    overflow: hidden;
+}
+
+.hotel_viewed .close {
+    float: right;
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin-right: -20px;
+    color: #666;
+    font: bold 14px/16px Simsun;
+    text-align: center;
+}
+
+.hotel_viewed .item:hover .close, .viewed_hover .close {
+    display: inline;
+}
+
+.hotel_viewed .close:hover {
+    text-decoration: none;
+}
+
+.hotel_viewed .pic {
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin: 0 0 0 -74px;
+}
+
+.hotel_viewed .pic img {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+}
+
+.hotel_viewed .r {
+    float: right;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hotel_viewed .nanme {
+    padding-right: 20px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.hotel_viewed .nanme a {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.hotel_viewed .level {
+    height: 16px;
+    overflow: hidden;
+}
+
+.hotel_viewed .level span {
+    vertical-align: top;
+}
+
+.hotel_viewed .com {
+    color: #666;
+}
+
+.hotel_viewed .com span {
+    font-weight: bold;
+}
+
+/*=s hotel_found*/
+.find_box {
+    padding: 5px 10px 0;
+    margin-bottom: 20px;
+    border: 1px solid #e4e4e4;
+}
+
+.hotel_found {
+    position: relative;
+    width: 358px;
+    height: 142px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.hotel_found a {
+    display: block;
+}
+
+.hotel_found a:hover {
+    text-decoration: none;
+}
+
+.hotel_found .txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    color: #fff;
+    font-family: "Microsoft Yahei";
+    cursor: pointer;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    *background-color: #000;
+    filter: Alpha(opacity=70);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 50%);
+    background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 50%);
+    background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 50%);
+    background: -o-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 50%);
+}
+
+.hotel_found span {
+    display: block;
+    padding-right: 20px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.hotel_found .txt_1 {
+    font-size: 24px;
+    height: 36px;
+}
+
+.hotel_found .txt_2 {
+    font-size: 16px;
+    height: 24px;
+}
+
+.hotel_found .img {
+    overflow: hidden;
+}
+
+.find_box .found_list li {
+    display: block;
+    padding-left: 130px;
+    margin-bottom: 10px;
+    height: 70px;
+}
+
+.find_box .found_list a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.find_box .found_list .pic {
+    float: left;
+    display: inline;
+    margin-left: -130px;
+    width: 120px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.find_box .found_list .pic img {
+    display: block;
+    width: 175px;
+    height: 70px;
+    margin: 0 -27px;
+}
+
+.find_box .found_list .title {
+    padding-top: 10px;
+    width: 210px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-family: 'microsoft yahei', simsun, sans-serif;
+    color: #333;
+}
+
+.find_box .found_list .info {
+    width: 210px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-family: 'microsoft yahei', simsun, sans-serif;
+    color: #666;
+}
+
+.find_box .mroe_theme {
+    display: block;
+    margin: 0 -10px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #f3f3f3;
+    border-top: 1px solid #e4e4e4;
+}
+
+.find_box .mroe_theme:hover {
+    text-decoration: none;
+    background-color: #e8f4ff;
+}
+
+/*=e hotel_found*/
+
+/*=s 旗舰店入口 */
+.storeEnter-hd .logo,
+.storeEnter-bd,
+.storeEnter-bd .ico i {
+    background-image: url(../images/un_index_hyatt_v1.png);
+    background-repeat: no-repeat;
+}
+
+.storeEnter {
+    margin-bottom: 20px;
+    font-family: "Microsoft Yahei", Simsun, sans-serif;
+    background-color: #fff;
+}
+
+.storeEnter-hd {
+    padding: 10px 95px 10px 85px;
+    min-height: 62px;
+    border: 1px solid #E5E5E5;
+    border-bottom: 0 none;
+    border-radius: 5px 5px 0 0;
+}
+
+.storeEnter-hd .logo {
+    float: left;
+    margin-left: -75px;
+    width: 62px;
+    height: 62px;
+    background-position: 0 -160px;
+}
+
+.storeEnter-hd .name {
+    padding-top: 4px;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.storeEnter-hd .name .tag {
+    display: inline-block;
+    *display: inline;
+    *vertical-align: middle;
+    padding: 0 4px;
+    height: 18px;
+    line-height: 18px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #7be;
+    border-radius: 3px;
+}
+
+.storeEnter-hd .btn {
+    float: right;
+    margin: 16px -85px 0 0;
+    width: 72px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #2676e3;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.storeEnter-hd .btn:hover {
+    text-decoration: none;
+    background-color: #4faeff;
+}
+
+.storeEnter-bd {
+    width: 380px;
+    height: 150px;
+    border-radius: 0 0 5px 5px;
+}
+
+.storeEnter-bd .adv {
+    display: block;
+    padding-top: 70px;
+    font-size: 14px;
+}
+
+.storeEnter-bd .adv li {
+    float: left;
+    width: 33%;
+    text-align: center;
+    color: #fff;
+}
+
+.storeEnter-bd .adv .ico {
+    height: 40px;
+    line-height: 40px;
+}
+
+.storeEnter-bd .adv .ico i {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    *zoom: 1;
+}
+
+.storeEnter-bd .adv .ico-discount {
+    width: 32px;
+    height: 26px;
+    background-position: -80px -160px;
+}
+
+.storeEnter-bd .adv .ico-points {
+    width: 31px;
+    height: 26px;
+    background-position: -120px -160px;
+}
+
+.storeEnter-bd .adv .ico-exchange {
+    width: 26px;
+    height: 26px;
+    background-position: -160px -160px;
+}
+
+/*=e 旗舰店入口 */
+
+.side_sales {
+    padding-bottom: 10px;
+}
+
+.side_sales a {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 378px;
+    height: 63px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: solid 1px #dedede;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.side_sales a:hover {
+    border-color: #ffba14;
+    box-shadow: 0 0 1px #FF9900;
+}
+
+.side_sales a img {
+    width: 378px;
+    height: 63px;
+}
+
+.hot_city {
+    margin-bottom: 20px;
+}
+
+.hot_city .hot_item {
+    display: block;
+    height: 80px;
+    padding: 8px 0;
+    overflow: hidden;
+}
+
+.hot_city .hot_item:hover {
+    background-color: #E8F4FF;
+    text-decoration: none;
+}
+
+.hot_city .pic {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+    overflow: hidden;
+}
+
+.hot_city .pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+.hot_city .name {
+    color: #333;
+    font: 18px/30px "Microsoft Yahei";
+}
+
+.hot_city .num {
+    color: #666;
+    font-size: 18px;
+}
+
+.hot_city .all_country {
+    display: block;
+    height: 96px;
+    color: #666;
+    font-size: 18px;
+    line-height: 96px;
+    overflow: hidden;
+}
+
+.hot_city .all_country:hover {
+    background-color: #E8F4FF;
+    text-decoration: none;
+}
+
+.hot_city span {
+    height: 96px;
+    width: 92px;
+    float: left;
+    background-position: -26px -58px;
+}
+
+.sider_other_info {
+    margin-bottom: 24px;
+}
+
+.sider_other_info dt {
+    display: block;
+    height: 27px;
+    padding-bottom: 11px;
+    padding-left: 36px;
+    background-position: -79px -21px;
+    font: 18px/32px "Microsoft Yahei";
+    color: #528C01;
+}
+
+.sider_other_info dd {
+    display: block;
+    margin: -6px 0 10px 0;
+    padding-left: 36px;
+    color: #888;
+}
+
+/* index side End */
+
+/* index main Begin */
+.city_type {
+    margin-bottom: 10px;
+    border-bottom: 3px solid #3983E6;
+    font: 22px/34px "Microsoft Yahei";
+    white-space: nowrap;
+    _width: 780px;
+    _overflow-x: hidden;
+}
+
+.city_type a {
+    display: inline-block;
+    height: 44px;
+    margin: 0 36px -3px 0;
+    color: #333;
+}
+
+.city_type a:hover {
+    text-decoration: none;
+}
+
+.city_type a i, .city_type a b {
+    position: absolute;
+    display: none;
+    left: 50%;
+    width: 24px;
+    height: 30px;
+    margin-left: -11px;
+    font-size: 26px;
+    line-height: 24px;
+    font-family: simsun;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    overflow: hidden;
+}
+
+.city_type a b {
+    top: 31px;
+    color: #3983E4;
+}
+
+.city_type a i {
+    top: 35px;
+    color: #fff;
+}
+
+.city_type .c {
+    position: relative;
+    color: #06c;
+    cursor: default;
+}
+
+.city_type .c i, .city_type .c b {
+    display: block;
+}
+
+.city_list {
+    padding-bottom: 10px;
+    *zoom: 1;
+}
+
+.city_list:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.city_list .city_item {
+    position: relative;
+    float: left;
+    margin: 0 4px 4px 0;
+    overflow: hidden;
+}
+
+.city_list .city_item:hover {
+    text-decoration: none;
+}
+
+.city_list img {
+    display: block;
+    background-color: #FFFAF0;
+}
+
+.city_list .pri {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    padding-right: 8px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    *background-color: #000;
+    line-height: 30px;
+    color: #fff;
+    text-align: right;
+}
+
+.city_list .pri dfn {
+    vertical-align: 4px;
+}
+
+.city_list .pri .n {
+    font-size: 18px;
+}
+
+.city_item:hover {
+    border: none;
+}
+
+.city_item:hover .pri {
+    margin-top: -30px;
+}
+
+.city_list .name {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width:;
+    color: #fff;
+    text-shadow: 2px 2px 1px #333333;
+    z-index: 3;
+}
+
+.city_list .name span {
+    font: 22px/34px "Microsoft Yahei";
+}
+
+.city_list .city2 .name, .city_list .city5 .name, .city_list .city10 .name, .city_list .city12 .name {
+    left: auto;
+    right: 8px;
+    text-align: right;
+}
+
+.city_list .city1, .city_list .city1 img {
+    width: 256px;
+    height: 256px;
+}
+
+.city_list .city2, .city_list .city3, .city_list .city6, .city_list .city2 img, .city_list .city3 img, .city_list .city6 img {
+    width: 258px;
+    height: 126px;
+}
+
+.city_list .city4, .city_list .city5, .city_list .city9, .city_list .city10, .city_list .city11, .city_list .city12, .city_list .city4 img, .city_list .city5 img, .city_list .city9 img, .city_list .city10 img, .city_list .city11 img, .city_list .city12 img {
+    width: 127px;
+    height: 126px;
+}
+
+.city_list .city7, .city_list .city8 {
+    width: 126px;
+    height: 126px;
+}
+
+.city_list .city7 img, .city_list .city8 img {
+    width: 127px;
+    height: 126px;
+}
+
+.city_list .city3, .city_list .city6, .city_list .city12 {
+    margin-right: 0;
+}
+
+.city_list .city7 {
+    clear: left;
+}
+
+.hot_sold_title {
+    height: 50px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #5599dd;
+    font: 28px/58px "Microsoft Yahei";
+    color: #5599dd;
+    overflow: hidden;
+}
+
+.hotsold_city_list {
+    height: 24px;
+    margin: -37px 0 14px 128px;
+    display: inline-block;
+}
+
+.hotsold_city_list {
+    display: block;
+    overflow: hidden;
+}
+
+.hotsold_city_list li {
+    position: relative;
+    float: left;
+}
+
+.hotsold_city_list a {
+    display: inline-block;
+    padding: 2px 9px;
+}
+
+.hotsold_city_list a.more {
+    padding-right: 20px;
+}
+
+.hotsold_city_list a:hover {
+    background-color: #74A2DE;
+    color: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hotsold_city_list b {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 8px 0 0 4px;
+    *margin-top: 5px;
+    border-width: 4px;
+    border-style: solid dashed dashed dashed;
+    border-color: #06C transparent transparent transparent;
+    vertical-align: middle;
+    overflow: hidden
+}
+
+.hotsold_city_list a:hover b {
+    border-top-color: #FFF;
+}
+
+.hotsold_city_list li.current i {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #5599DD transparent;
+    overflow: hidden;
+}
+
+.hot_list {
+    zoom: 1;
+}
+
+.searchresult_info {
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #DDD;
+    *zoom: 1;
+}
+
+.searchresult_info:after, .hot_list:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.searchresult_info li {
+    float: left;
+    padding-top: 10px;
+}
+
+.searchresult_info:hover, .searchresult_info_hover {
+    background-color: #E8F4FF;
+}
+
+.hotel_pic {
+    position: relative;
+    width: 130px;
+    margin-right: 10px;
+    z-index: 5;
+}
+
+.hotel_abbrpic img {
+    display: block;
+}
+
+.hotel_pic_big {
+    display: none;
+    position: absolute;
+    top: -1px;
+    left: 135px;
+    width: 300px;
+    height: 225px;
+    padding: 2px;
+    border: 2px solid #CCC;
+    box-shadow: 2px 2px 4px #CCC;
+    z-index: 5;
+    background: url(../images/loading_50.gif) no-repeat center center #FFF;
+}
+
+.hotel_abbrpic {
+    display: block;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.hotel_abbrpic:hover {
+    overflow: visible;
+}
+
+.hotel_abbrpic:hover .hotel_pic_big {
+    display: block;
+}
+
+.hotel_abbrpic img {
+    border-radius: 5px;
+}
+
+.hotel_abbrpic img.s {
+    width: 130px;
+    height: 130px;
+}
+
+.hotel_abbrpic .hotel_pic_big:hover {
+    visibility: hidden;
+}
+
+.hotel_pic_hover {
+    position: absolute;
+    z-index: 5;
+    width: 300px;
+    height: 225px;
+    border-radius: 5px;
+    padding: 2px;
+    border: 2px solid #ccc;
+    z-index: 5;
+    background: #FFF url(../images/loading_50.gif) no-repeat center center;
+}
+
+.hotel_pic_hover img {
+    width: 299px;
+    height: 224px;
+}
+
+.hotel_price_icon {
+    width: 184px;
+    text-align: right;
+}
+
+.price_box {
+    text-align: right;
+}
+
+.price_box_sec {
+    display: inline-block;
+    vertical-align: 3px;
+    line-height: 1;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.price_box_sec span {
+    font-size: 14px;
+    vertical-align: -1px;
+}
+
+.price_box_sec dfn {
+    margin-right: 0;
+}
+
+.price_box_main {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 1;
+}
+
+.price_tip {
+    float: right;
+    width: 44px;
+    height: 38px;
+    margin-right: 5px;
+    padding: 8px 20px 0 5px;
+    background-position: 0 -13px;
+    text-align: center;
+    line-height: 1;
+}
+
+.price_amount {
+    color: #F60;
+    font: 12px Tahoma;
+}
+
+.price {
+    float: right;
+    color: #F60;
+}
+
+.price dfn {
+    color: #333;
+    font: 12px Arial;
+    vertical-align: 4px;
+}
+
+.price b {
+    vertical-align: -3px;
+    margin-right: 5px;
+    font: normal 24px Tahoma;
+}
+
+.vip_price b {
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
+}
+
+.ico_gift {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 5px;
+    background-position: -256px -192px;
+}
+
+.htl_promotion {
+    float: right;
+    clear: both;
+    width: 128px;
+    color: #10A200;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.hlist_item_price_labels {
+    height: 19px;
+    overflow: hidden;
+    text-align: right;
+    clear: both;
+}
+
+.searchresult_info_name {
+    width: 446px;
+    margin-right: 10px;
+}
+
+.hotel_price_icon {
+    width: 184px;
+}
+
+.searchresult_name {
+    display: inline;
+    vertical-align: middle;
+    font: bold 14px Tahoma;
+}
+
+.searchresult_info .hotel_goldmedal, .searchresult_info .hotel_silvermedal, .searchresult_info .hotel_bluemedal, .searchresult_info .hotel_strategymedal, .searchresult_info .hotel_goldmedal_su, .searchresult_info .hotel_silvermedal_su, .searchresult_info .hotel_strategymedal_su, .searchresult_info .hotel_bluemedal_su {
+    margin-right: 5px;
+}
+
+.searchresult_info .hotel_level {
+    height: 18px;
+    overflow: hidden;
+}
+
+.searchresult_info .brief_comment {
+    max-height: 66px;
+    _height: 66px;
+    color: #999;
+    line-height: 22px;
+    overflow: hidden;
+}
+
+.searchresult_info .hotel_comment .score {
+    padding-right: 2px;
+    font-size: 20px;
+}
+
+.searchresult_info .hotel_comment .total {
+    font-weight: bold;
+}
+
+.searchresult_info .hotel_comment .break {
+    padding: 0 10px;
+}
+
+.more_hotel {
+    height: 22px;
+    overflow: hidden;
+}
+
+.more_hotel a {
+    float: right;
+    font-size: 14px;
+}
+
+/* index main End */
+
+/* Pox Box Begin */
+.pop_box_city {
+    width: 352px;
+    padding: 10px 10px 10px 0;
+    border: 1px solid #4692CC;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 10;
+    margin: 48px 0 0 298px;
+}
+
+.pop_box_city a {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin-left: 10px;
+    padding: 0 10px;
+    line-height: 22px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pop_box_city a:hover {
+    background-color: #74A2DE;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.pop_box_city .p_num {
+    padding-top: 5px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.pop_box_city .p_num span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #aaa;
+    color: #06c;
+    cursor: pointer;
+}
+
+.pop_box_city .p_num .current {
+    border: 1px solid #1157aa;
+    background-color: #06c;
+    color: #fff;
+    cursor: default;
+}
+
+/* Pox Box End */
+
+/* Hotel Ads Begin */
+.adv_wrap {
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hotel_b_pic_list {
+    margin-left: -20px;
+}
+
+.hotel_b_pic_list li {
+    float: left;
+    width: 580px;
+    height: 90px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.hotel_b_pic_list li img {
+    width: 580px;
+    height: 90px;
+}
+
+/* Hotel Ads End */
+
+/* seo country city brand */
+.seo_hot_item {
+    margin: 0 auto 10px;
+    padding: 0 10px 10px;
+    border: 1px solid #F0F0F0;
+    white-space: nowrap;
+    color: #999;
+    clear: both;
+}
+
+.seo_hot_item h3 {
+    float: left;
+    display: inline;
+    width: 90px;
+    height: 24px;
+    margin-left: -90px;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+}
+
+.seo_hot_item h3 span {
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.seo_hot_item .item {
+    margin-top: -1px;
+    padding: 4px 0 4px 90px;
+    border-top: 1px dotted #ccc;
+}
+
+.seo_hot_item a, .seo_hot_item .new_book .book_item {
+    float: left;
+    width: 78px;
+    margin-right: 4px;
+    _margin-right: 3px;
+    color: #999;
+    line-height: 22px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.seo_hot_item .more {
+    width: auto;
+    color: #333;
+}
+
+.seo_hot_item .new_book .book_item {
+    width: 32.7%;
+}
+
+/* Pox Box Begin */
+.pop_hot_city .c_address_box {
+    width: 425px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+.pop_hot_city .c_address_box a {
+    text-decoration: none;
+}
+
+.pop_hot_city .c_address_hd {
+    height: 24px;
+    padding-left: 10px;
+    border-color: #2C7ECF;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    background-color: #67A1E2;
+    color: #CEE3FC;
+    line-height: 24px;
+}
+
+.pop_hot_city .c_address_hd strong {
+    color: #fff;
+}
+
+.pop_hot_city .c_address_bd {
+    padding: 10px;
+    border-color: #999999;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    overflow: hidden;
+}
+
+.pop_hot_city .c_address_ol {
+    margin: 0;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #5DA9E2;
+}
+
+.pop_hot_city .c_address_ol li {
+    float: left;
+    height: 20px;
+    color: #005DAA;
+    cursor: pointer;
+    line-height: 20px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.pop_hot_city .c_address_ol li span {
+    display: block;
+    padding: 0 8px;
+    white-space: nowrap;
+}
+
+.pop_hot_city .c_address_ol li .hot_selected {
+    display: block;
+    padding: 0 7px;
+    border-color: #5DA9E2;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: bold;
+}
+
+.pop_hot_city .c_address_ul {
+    width: 100%;
+    margin: 0;
+    padding: 4px 0 0;
+}
+
+.pop_hot_city .c_address_ul li {
+    float: left;
+    width: 67px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.pop_hot_city .c_address_ul li a {
+    display: block;
+    height: 22px;
+    padding-left: 5px;
+    border: 1px solid #FFFFFF;
+    color: #1148A8;
+    line-height: 22px;
+}
+
+.pop_hot_city .c_address_ul li a: hover {
+    background-color: #E8F4FF;
+    border: 1px solid #ACCCEF;
+    text-decoration: none;
+}
+
+.pop_hot_city #union li {
+    float: none;
+    width: auto;
+    height: 14px;
+}
+
+
+/*affiliation*/
+.hotel_affili {
+    margin-bottom: 20px;
+}
+
+.hotel_affili a {
+    display: block;
+    height: 65px;
+    margin-bottom: 15px;
+    border: 1px solid #b9ddec;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hotel_affili a:hover {
+    border-color: #3683d3;
+}
+
+.hotel_affili img {
+    width: 378px;
+    height: 65px;
+}
+
+/*=s pop */
+.base_pop {
+    border: 1px solid #67A1E2;
+    background: #fff;
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+.base_pop .pop_hd, .jmp_hd {
+    height: 29px;
+    padding-left: 10px;
+    background: #D6E9F9;
+    font-size: 12px;
+    line-height: 29px;
+    color: #333;
+}
+
+.base_pop .pop_hd h3, .jmp_hd h3 {
+    font-size: 12px;
+}
+
+.base_pop .pop_hd .delete, .jmp_hd .delete {
+    float: right;
+    width: 29px;
+    height: 29px;
+    font-size: 14px;
+    color: #176FB7;
+    font-weight: bold;
+    font-family: Simsun;
+    text-align: center;
+    text-decoration: none;
+}
+
+.base_pop .pop_bd, .jmp_bd {
+    padding: 8px 10px;
+}
+
+.pop_hd .delete:hover, .jmp_hd .delete:hover {
+    background-color: #F2F8FF;
+    color: #EB8C05;
+    text-decoration: none;
+}
+
+/*=e pop */
+
+/*=s jmps */
+#tuna_jmpinfo .jmp_hd {
+    height: 30px;
+    padding-left: 10px;
+    background: url(../images/un_jmp_tri120220.png) repeat-x 0 -80px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #333;
+}
+
+#tuna_jmpinfo .jmp_hd h3 {
+    font-size: 12px;
+}
+
+#tuna_jmpinfo .jmp_bd {
+    padding: 8px 10px;
+    font-family: Arial;
+}
+
+.jmp_title, .jmp_table {
+    border: 1px solid #67a1e2;
+    background: #fff;
+}
+
+.jmp_alert {
+    border: 1px solid #ffb533;
+    background: #fff5d1;
+}
+
+.jmp_text {
+    border: 1px solid #67a1e2;
+    background: #e8f4ff;
+}
+
+.base_jmp b {
+    position: absolute;
+    width: 16px;
+    height: 7px;
+    background-image: url(../images/un_jmp_tri120220.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#tuna_jmpinfo .base_jmp_t {
+    margin-top: 6px;
+}
+
+#tuna_jmpinfo .base_jmp_r {
+    margin-right: 8px;
+}
+
+#tuna_jmpinfo .base_jmp_b {
+    margin-bottom: 6px;
+}
+
+#tuna_jmpinfo .base_jmp_l {
+    margin-left: 8px;
+}
+
+#tuna_jmpinfo .base_jmp_t b {
+    margin-top: -7px;
+}
+
+#tuna_jmpinfo .base_jmp_r b {
+    margin-top: 4px;
+    right: -7px;
+    height: 12px;
+}
+
+#tuna_jmpinfo .base_jmp_b b {
+    height: 7px;
+    bottom: 0;
+}
+
+#tuna_jmpinfo .base_jmp_l b {
+    margin-top: 4px;
+    left: 2px;
+    width: 7px;
+    height: 12px;
+}
+
+.jmp_title .tri_t, .jmp_text .tri_t {
+    background-position: -6px -24px;
+}
+
+.jmp_title .tri_r, .jmp_text .tri_r {
+    background-position: -16px -30px;
+}
+
+.jmp_title .tri_b {
+    background-position: -6px -16px;
+}
+
+.jmp_title .tri_l, .jmp_text .tri_l {
+    background-position: 0 -30px;
+}
+
+.jmp_text .tri_b {
+    background-position: -6px -40px
+}
+
+.jmp_alert .tri_t {
+    background-position: -6px -48px;
+}
+
+.jmp_alert .tri_r {
+    background-position: -16px -54px;
+}
+
+.jmp_alert .tri_b {
+    background-position: -6px -64px;
+}
+
+.jmp_alert .tri_l {
+    background-position: 0 -54px;
+}
+
+.jmp_table .tri_t {
+    background-position: -6px 0;
+}
+
+.jmp_table .tri_r {
+    background-position: -16px -6px;
+}
+
+.jmp_table .tri_b {
+    background-position: -6px -16px;
+}
+
+.jmp_table .tri_l {
+    background-position: 0 -6px;
+}
+
+.jmp_tab_list {
+    position: relative;
+    padding: 10px 10px 0;
+    overflow: hidden;
+    z-index: 99;
+    zoom: 1;
+}
+
+.jmp_tab_list li {
+    float: left;
+}
+
+.jmp_tab_list li.current {
+    border: 1px solid #67A1E2;
+    border-bottom: 1px solid #E8F4FF;
+}
+
+.jmp_tab_list li a {
+    display: inline-block;
+    padding: 4px 10px 3px;
+}
+
+.jmp_tab_list li.current a {
+    border-top: 1px solid #fff;
+    color: #333;
+    font-weight: bold;
+}
+
+.jmp_tab_bd {
+    margin: -1px 10px 10px;
+    padding-top: 10px;
+    border-top: 1px solid #67A1E2;
+    background: #E8F4FF;
+    zoom: 1;
+}
+
+/*-- choice S --*/
+.choice {
+    width: 200px;
+    border: 1px solid #7F9DB9;
+    background: #FFF;
+    padding: 4px;
+    margin: 0px;
+    text-align: left;
+    position: absolute;
+    z-index: 120;
+}
+
+.choice a {
+    padding: 1px 5px 0px 5px;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    cursor: pointer;
+    line-height: 20px;
+    color: #05a;
+    display: block;
+    text-decoration: none;
+    min-height: 20px
+}
+
+* html .choice a {
+    height: 20px
+}
+
+.choice a:hover, .choice .checked {
+    background: #E7F1FD;
+    border-top: 1px solid #7F9DB9;
+    border-bottom: 1px solid #7F9DB9;
+    text-decoration: none;
+}
+
+.choice .close {
+    display: none;
+}
+
+/*-- choice E --*/
+
+/*=e jmps */
+
+/*user number */
+.search_box .num_select select {
+    vertical-align: middle;
+}
+
+.ui-tips-help {
+    background: url(../images/ico_help.png) no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    z-index: 8;
+    vertical-align: middle;
+    cursor: help;
+    margin: 0 5px;
+}
+
+.ui-tips-help:hover {
+    text-decoration: none;
+}
+
+.ui-tips-help .ui-text {
+    background-color: #fff;
+    width: 240px;
+    padding: 10px 8px;
+    color: #666;
+    border: 1px solid #0066cc;
+    position: absolute;
+    top: 20px;
+    left: -24px;
+    line-height: 1.5;
+    display: none;
+    margin-left: 5px;
+    text-indent: 0;
+    text-align: left;
+    white-space: normal;
+    font-size: 12px;
+}
+
+.ui-tips-help:hover .ui-text, .ui-tips-help.sta-hover .ui-text {
+    display: block;
+}
+
+.ui-tips-help .ui-close {
+    display: none;
+}
+
+.pop-num-selectmore {
+    background-color: #fff;
+    width: 390px;
+    padding: 0 15px 10px;
+    border: 9px solid #dcdcdc;
+    position: relative;
+}
+
+.pop-num-selectmore .ui-header {
+    border-bottom: 1px solid #e1e1e1;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.pop-num-selectmore .ui-cont:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pop-num-selectmore .ui-cont {
+    border-bottom: 1px solid #e6ebf2;
+    margin-bottom: 10px;
+    *zoom: 1;
+}
+
+.pop-num-selectmore .ui-cont li {
+    width: 43.5%;
+    float: left;
+    padding: 5px 0;
+}
+
+.pop-num-selectmore .ui-title {
+    color: #666;
+    font-weight: bolder;
+}
+
+.pop-num-selectmore .ui-cont .ui-title {
+    margin-bottom: 3px;
+}
+
+.pop-num-selectmore .ui-cont .ui-term {
+    color: #999;
+}
+
+.pop-num-selectmore .ui-cont select {
+    width: 62px;
+}
+
+.pop-num-selectmore .ui-age {
+    padding-left: 135px;
+    line-height: 30px;
+}
+
+.pop-num-selectmore .ui-age .ui-title {
+    width: 135px;
+    float: left;
+    margin-left: -135px;
+    display: inline;
+    font-size: 12px;
+}
+
+.pop-num-selectmore .ui-age-list li {
+    color: #666;
+}
+
+.pop-num-selectmore .ui-age-list select {
+    margin: 0 5px;
+    width: 62px;
+}
+
+.pop-num-selectmore .ui-age .btn-sure {
+    margin: 10px 0;
+    width: 110px;
+}
+
+.pop-num-selectmore .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font: bold 16px/20px Simsun;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #ccc;
+}
+
+.pop-num-selectmore .btn-close:hover {
+    text-decoration: none;
+    color: #666;
+}
+
+.c-btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    background-color: #FCFCFC;
+    border: 1px solid #D1D1D1;
+    padding: 0 16px;
+    line-height: 26px;
+}
+
+.c-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #2577e3;
+    border-color: #2577e3;
+}
+
+input.c-btn, button.c-btn {
+    line-height: normal;
+    height: 28px;
+    *overflow: visible;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #2577e3;
+    border-color: #1b6bd3;
+}
+
+.btn-primary:hover {
+    background-color: #1964c6;
+    border-color: #1758af;
+    color: #ffffff;
+}
+
+/* service_info begin */
+.service_info_new:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.service_info_new {
+    clear: both;
+    display: block;
+    position: relative;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    border: 2px solid rgb(222, 222, 222);
+    border-radius: 2px;
+    *zoom: 1;
+}
+
+.service_info_new:hover {
+    border-color: rgb(119, 187, 238);
+}
+
+.service_info_new_why {
+    float: left;
+    padding-bottom: 8px;
+    width: 800px;
+    font: 20px "Microsoft YaHei", Tahoma, Arial, "\5fae\8f6f\96c5\9ed1", simsun, "\9ed1\4f53", "STHeiti", sans-serif;
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+}
+
+.service_info_new_item {
+    float: left;
+    width: 195px;
+    margin-bottom: 5px;
+}
+
+.service_info_new_item p {
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(124, 133, 142);
+    font: 14px "Microsoft YaHei", Tahoma, Arial, "\5fae\8f6f\96c5\9ed1", simsun, "\9ed1\4f53", "STHeiti", sans-serif;
+}
+
+.service_info_new_icon {
+    height: 40px;
+    margin: 16px 77px 11px 78px;
+}
+
+.service_info_world {
+    background-position: 0px -353px;
+}
+
+.service_info_thumb {
+    background-position: -41px -353px;
+}
+
+.service_info_review {
+    background-position: -86px -353px;
+}
+
+.service_info_house {
+    background-position: -129px -353px;
+}
+
+.service_info_prof {
+    background-position: -177px -353px;
+}
+
+.service_info_callcenter {
+    background-position: -217px -353px;
+}
+
+/* service_info end */
+/* =S 蓝边白底浮层
+ * pops-hovertips：主要应用于一些文字、icon鼠标hover后出现的一些提示性内容。宽度、定位、z-index由js开发人员进行设置
+ * 默认宽度：300
+ * pops-hovertips-tit：标题，可选
+ */
+.pops-hovertips {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #67a1e2;
+    background: #fff;
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+.pops-hovertips-tit {
+    margin-bottom: 5px;
+    font-weight: bold; /* 标题 */
+}
+
+.pops-hovertips p {
+    margin: 0;
+    padding: 0;
+}
+
+/* =E 蓝边白底浮层 */
+/* =S 弹出手型 */
+.fix_his_item {
+    cursor: context-menu \0 !important;
+    cursor: url(//pic.c-ctrip.com/htlpic/common/cursor/c_4.cur), context-menu;
+}
+
+/* =E 弹出手型 */
+/* =S 最终预订、用户收藏、我的浏览 */
+.fix_sidebar {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 36px;
+    min-height: 9px;
+    padding-top: 159px;
+    background: #e4eaf0;
+    font-size: 12px;
+}
+
+.fix_sidebar_fold {
+    top: auto;
+}
+
+.fix_sidebar_fold .fix_his {
+    display: none;
+}
+
+.fix_sidebar_toggle {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 30px;
+    color: #fff;
+    background-color: #91abcd;
+    text-align: center;
+    cursor: default;
+    -webkit-transition: background-color .2s ease 0s;
+    transition: background-color .2s ease 0s;
+}
+
+.fix_sidebar_toggle:hover {
+    background-color: #2577e3;
+}
+
+.fix_fb {
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    left: 0;
+    width: 100%; /* 回到顶部、在线客服、意见反馈 */
+}
+
+.fix_fb_item {
+    display: block;
+    position: relative;
+    z-index: 1;
+    height: 24px;
+    padding: 6px 0;
+    margin-bottom: 10px;
+}
+
+.fix_fb_item:hover {
+    background-color: #2577e3;
+    text-decoration: none;
+}
+
+.icon_fb01, .icon_fb02, .icon_fb03 {
+    display: block;
+    width: 21px;
+    height: 24px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.icon_fb01 {
+    background-position: 0 -284px;
+}
+
+.icon_fb02 {
+    background-position: -24px -284px;
+}
+
+.icon_fb03 {
+    background-position: -48px -284px;
+}
+
+.fix_fb_item:hover .icon_fb01 {
+    background-position: -72px -284px;
+}
+
+.fix_fb_item:hover .icon_fb02 {
+    background-position: -96px -284px;
+}
+
+.fix_fb_item:hover .icon_fb03 {
+    background-position: -120px -284px;
+}
+
+.fix_sidebar_tri {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 5px 0 5px 5px;
+    border-style: dashed none dashed solid;
+    border-color: transparent transparent transparent #e4eaf0;
+    margin-top: -5px;
+}
+
+.fix_sidebar_txt {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: 36px;
+    top: 0;
+    min-width: 4em;
+    height: 36px;
+    padding: 0 6px;
+    line-height: 36px;
+    text-align: center;
+    color: #333;
+    background-color: #e4eaf0;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.fix_fb_item:hover .fix_sidebar_txt, .fix_fb_item:hover .fix_sidebar_tri {
+    display: block;
+}
+
+.fix_his { /* 收藏、记录 */
+}
+
+.fix_his_item {
+    position: relative;
+    z-index: 1;
+    padding: 10px 0 3px;
+}
+
+.fix_his_item:hover, .fix_his_item_current {
+    background-color: #2577e3;
+}
+
+.icon_his01, .icon_his02, .icon_his03 {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.icon_his01 {
+    width: 18px;
+    height: 18px;
+    background-position: -44px -310px;
+}
+
+.icon_his02 {
+    width: 18px;
+    height: 15px;
+    background-position: -24px -310px;
+}
+
+.icon_his03 {
+    width: 21px;
+    height: 19px;
+    background-position: 0 -310px;
+}
+
+.fix_his_item:hover .icon_his01, .fix_his_item_current .icon_his01 {
+    background-position: -44px -332px;
+}
+
+.fix_his_item:hover .icon_his02, .fix_his_item_current .icon_his02 {
+    background-position: -24px -332px;
+}
+
+.fix_his_item:hover .icon_his03, .fix_his_item_current .icon_his03 {
+    background-position: 0 -332px;
+}
+
+.fix_his_txt {
+    width: 28px;
+    padding: 5px 4px;
+    color: #6e8fba;
+    text-align: center;
+    line-height: 16px;
+}
+
+.fix_his_item:hover .fix_his_txt, .fix_his_item_current .fix_his_txt {
+    color: #fff;
+}
+
+.fix_his_line {
+    width: 24px;
+    height: 1px;
+    margin: 8px auto;
+    background-color: #6e8fba;
+}
+
+.fix_his_layer {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 38px;
+    width: 304px;
+}
+
+.fix_records_box {
+    width: 280px;
+    min-height: 227px;
+    border: 2px solid #39f;
+    padding: 10px 10px 9px;
+    background: #fff;
+}
+
+.fix_records_tit {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fix_records_box .icon_arrow_r {
+    margin-left: 6px;
+}
+
+.fix_records_box .fr {
+    float: right;
+    cursor: default;
+}
+
+.fix_records_none {
+    padding-top: 90px;
+    color: #999;
+    text-align: center;
+    font-size: 14px; /* 没有收藏 */
+}
+
+.fix_records_nologin {
+    padding-top: 54px;
+    text-align: center;
+    font-size: 14px;
+    color: #999; /* 未登录 */
+}
+
+.fix_records_nologin_tit {
+    padding-bottom: 5px;
+    font: 18px/1.5 Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", simsun, "\9ed1\4f53", "STHeiti", sans-serif;
+}
+
+.fix_records_nologin_btnwrap {
+    padding: 10px 0 3px;
+}
+
+.fix_records_nologin_btnwrap .btns-emphasis {
+    padding: 7px 15px;
+    font-size: 14px;
+}
+
+.fix_records_list {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden; /* 收藏及浏览记录列表 */
+}
+
+.fix_records_list li {
+    border-top: 1px dotted #ccc;
+    margin-top: -1px;
+}
+
+.fix_records_hotel {
+    position: relative;
+    z-index: 1;
+    padding: 8px 0 5px 60px;
+    min-height: 55px;
+}
+
+.fix_records_list_tit {
+    height: 36px;
+    overflow: hidden;
+}
+
+.fix_records_list_pic {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 8px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background-color: #999;
+    border-radius: 2px;
+}
+
+.fix_records_list_pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.fix_records_list_pic:hover {
+    text-decoration: none;
+}
+
+.fix_records_rate {
+    padding-top: 8px;
+    color: #666;
+}
+
+.fix_records_rate strong {
+    margin-right: 3px;
+}
+
+.fix_records_fav .fix_records_hotel {
+    padding-right: 30px; /* 用户收藏 */
+}
+
+.fix_records_fav .icons-collect-wrap {
+    position: absolute;
+    z-index: 1;
+    top: 9px;
+    right: 0;
+}
+
+.fix_records_fav .icons-collect {
+    margin-right: 0;
+}
+
+.fix_records_others .fix_records_hotel {
+    padding-left: 80px;
+    min-height: 70px; /* 他人购买 */
+}
+
+.fix_records_others .fix_records_list_pic {
+    width: 70px;
+    height: 70px;
+}
+
+.fix_records_grade {
+    padding: 3px 0 2px;
+    color: #999;
+}
+
+.fix_records_grade_txt {
+    margin-right: 10px;
+    color: #666;
+}
+
+.fix_records_grade a {
+    color: #999;
+}
+
+.fix_records_price {
+    position: absolute;
+    z-index: 1;
+    bottom: 3px;
+    right: 0;
+    color: #666;
+}
+
+.fix_records_price_num {
+    padding: 0 3px;
+    color: #f60;
+    font-size: 16px;
+}
+
+.fix_records_can_deleted .fix_records_hotel {
+    padding-right: 30px;
+}
+
+.fix_records_icodeleted {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 0;
+    padding: 5px;
+    color: #999;
+    font: bold 16px/18px simsun;
+    cursor: default;
+}
+
+.fix_records_icodeleted:hover {
+    color: #06c;
+}
+
+/* =E 最终预订、用户收藏、我的浏览 */
+/* ie8 & <l200 add class="ie8w980" to body or html label,ie6/7 use 1180 version directly */
+.ie8w980 #base_bd {
+    width: 980px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.ie8w980 .cui_hd, .ie8w980 .cui_nav {
+    width: 980px;
+}
+
+.ie8w980 .cui_nav_wrap {
+    min-width: 1000px;
+}
+
+.ie8w980 .index_side {
+    width: 340px;
+    overflow: hidden;
+}
+
+.ie8w980 .index_main {
+    width: 620px;
+    overflow: hidden;
+}
+
+.ie8w980 #base_ft {
+    width: 980px;
+}
+
+.ie8w980 .s_box {
+    width: 980px;
+}
+
+.ie8w980 .search_box {
+    width: 340px;
+}
+
+.ie8w980 .s_form_intlhtl {
+    width: 120px;
+}
+
+.ie8w980 .s_form_apartment {
+    width: 134px;
+}
+
+.ie8w980 .s_form_flthtl {
+    width: 76px;
+}
+
+.ie8w980 .searchbox th {
+    width: 60px;
+}
+
+.ie8w980 .search_box .btn_box {
+    margin-left: 100px;
+}
+
+.ie8w980 .city_list {
+    width: 620px;
+}
+
+.ie8w980 .city_list .city1, .ie8w980 .city_list .city1 img {
+    width: 204px;
+    height: 204px;
+}
+
+.ie8w980 .city_list .city2, .ie8w980 .city_list .city3, .ie8w980 .city_list .city6, .ie8w980 .city_list .city2 img, .ie8w980 .city_list .city3 img, .ie8w980 .city_list .city6 img {
+    width: 204px;
+    height: 100px;
+}
+
+.ie8w980 .city_list .city4, .ie8w980 .city_list .city5, .ie8w980 .city_list .city9, .ie8w980 .city_list .city10, .ie8w980 .city_list .city11, .ie8w980 .city_list .city12, .ie8w980 .city_list .city4 img, .ie8w980 .city_list .city5 img, .ie8w980 .city_list .city9 img, .ie8w980 .city_list .city10 img, .ie8w980 .city_list .city11 img, .ie8w980 .city_list .city12 img {
+    width: 100px;
+    height: 100px;
+}
+
+.ie8w980 .city_list .city7, .ie8w980 .city_list .city8, .ie8w980 .city_list .city7 img, .ie8w980 .city_list .city8 img {
+    width: 100px;
+    height: 100px;
+}
+
+.ie8w980 .side_sales a {
+    width: 338px;
+}
+
+.ie8w980 .side_sales a img {
+    margin-left: -20px;
+}
+
+.ie8w980 .searchresult_info_name {
+    width: 286px;
+}
+
+.ie8w980 .searchbox th {
+    width: 85px;
+}
+
+.ie8w980 .searchbox .input_text, .ie8w980 .searchbox .input_text2 {
+    width: 200px;
+}
+
+.ie8w980 .searchbox .input-des {
+    width: 115px;
+}
+
+.ie8w980 .search_box .btn_search {
+    width: 208px;
+}
+
+.ie8w980 .hotel_found {
+    width: 318px;
+}
+
+.ie8w980 .find_box .found_list .title, .ie8w980 .find_box .found_list .info {
+    width: 185px;
+}
+
+.ie8w980 .hotel_found img {
+    margin-left: -20px;
+}
+
+.ie8w980 .hotel_b_pic_list {
+    margin-left: -10px;
+}
+
+.ie8w980 .hotel_b_pic_list li {
+    width: 485px;
+    margin-left: 10px;
+}
+
+.ie8w980 .hotel_b_pic_list li img {
+    margin-left: -47px;
+}
+
+.ie8w980 .sider_ads, .ie8w980 .sider_ads2 {
+    overflow: hidden;
+    width: 330px;
+}
+
+.ie8w980 .sider_ads img, .ie8w980 .sider_ads2 img {
+    margin-left: -20px;
+}
+
+.ie8w980 .service_info_s {
+    width: 592px;
+    height: auto;
+}
+
+.ie8w980 .service_info_s dd {
+    padding-top: 0;
+    margin-right: 14px;
+}
+
+.ie8w980 .hotsold_city_list a {
+    padding: 2px 5px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #base_bd {
+        width: 980px;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+
+    .cui_hd, .cui_nav {
+        width: 980px;
+    }
+
+    .cui_nav_wrap {
+        min-width: 1000px;
+    }
+
+    .index_side {
+        width: 340px;
+        overflow: hidden;
+    }
+
+    .index_main {
+        width: 620px;
+    }
+
+    #base_ft {
+        width: 980px;
+    }
+
+    .s_box {
+        width: 980px;
+    }
+
+    .search_box {
+        width: 340px;
+    }
+
+    .s_form_intlhtl {
+        width: 120px;
+    }
+
+    .s_form_apartment {
+        width: 134px;
+    }
+
+    .s_form_flthtl {
+        width: 76px;
+    }
+
+    .search_box .title {
+        font-size: 16px;
+    }
+
+    .searchbox th {
+        width: 85px;
+    }
+
+    .search_box .btn_box {
+        margin-left: 100px;
+    }
+
+    .searchbox .input_text, .searchbox .input_text2 {
+        width: 200px;
+    }
+
+    .search_box .btn_search {
+        width: 208px;
+    }
+
+    .search_box .input-des {
+        width: 115px;
+    }
+
+    .city_list {
+        width: 620px;
+    }
+
+    .city_list .city1, .city_list .city1 img {
+        width: 204px;
+        height: 204px;
+    }
+
+    .city_list .city2, .city_list .city3, .city_list .city6, .city_list .city2 img, .city_list .city3 img, .city_list .city6 img {
+        width: 204px;
+        height: 100px;
+    }
+
+    .city_list .city4, .city_list .city5, .city_list .city9, .city_list .city10, .city_list .city11, .city_list .city12, .city_list .city4 img, .city_list .city5 img, .city_list .city9 img, .city_list .city10 img, .city_list .city11 img, .city_list .city12 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .city_list .city7, .city_list .city8, .city_list .city7 img, .city_list .city8 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .side_sales a {
+        width: 338px;
+    }
+
+    .side_sales a img {
+        margin-left: -20px;
+    }
+
+    .sider_ads, .sider_ads2 {
+        overflow: hidden;
+        width: 330px
+    }
+
+    .sider_ads img, .sider_ads2 img {
+        margin-left: -20px;
+    }
+
+    .searchresult_info_name {
+        width: 286px;
+    }
+
+    .hotel_found {
+        width: 320px;
+    }
+
+    .hotel_found img {
+        margin-left: -20px;
+    }
+
+    .find_box .found_list .title, .find_box .found_list .title .info {
+        width: 190px;
+    }
+
+    .hotel_b_pic_list {
+        margin-left: -10px;
+    }
+
+    .hotel_b_pic_list li {
+        width: 485px;
+        margin-left: 10px;
+    }
+
+    .hotel_b_pic_list li img {
+        margin-left: -47px;
+    }
+
+    .service_info_s {
+        width: 592px;
+        height: auto;
+    }
+
+    .service_info_s dd {
+        padding-top: 0;
+        margin-right: 14px;
+    }
+
+    .hotsold_city_list a {
+        padding: 2px 5px;
+    }
+
+    .service_info_new_item {
+        float: left;
+        width: 160px;
+        margin-bottom: 5px;
+    }
+
+    .service_info_new_icon {
+        height: 40px;
+        margin: 16px 60px 11px 60px;
+    }
+}
+
+@media all and (max-height: 640px) {
+    /* 针对sidebar，此时显示icon，不显示文字，hover到icon上时，显示提示文字 */
+    .fix_his_txt {
+        display: none;
+    }
+
+    .fix_his_line {
+        visibility: hidden;
+    }
+
+    .fix_his_item {
+        padding: 8px 0;
+    }
+
+    .fix_his_item:hover .fix_sidebar_txt, .fix_his_item:hover .fix_sidebar_tri {
+        display: block;
+    }
+}
+
+@media all and (max-height: 500px) {
+    /* 针对sidebar，不足以显示所有icon，隐藏部分，只保留返回顶部、意见反馈、在线客服 */
+    .fix_sidebar {
+        top: auto;
+    }
+
+    .fix_his {
+        display: none;
+    }
+}
+
+@media all and (max-height: 200px) {
+    /* 针对sidebar，此时显示不下侧边栏，全部隐藏 */
+    .fix_sidebar {
+        display: none;
+    }
+}

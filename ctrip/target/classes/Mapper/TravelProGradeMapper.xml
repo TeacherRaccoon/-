@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ctrip.Dao.TravelProGradeMapper">
+    <!--获取指定id的产品等级-->
+    <select id="getTravelProGrade" resultType="com.example.ctrip.Pojo.TravelProGrade">
+        select id,tripProductId,productAvgGrade,favorableRate,`count` from travel_product_grade where id=#{id}
+    </select>
+    <!--获取产品等级的总数-->
+    <select id="getCount" resultType="integer">
+       select count(1) from travel_product_grade;
+   </select>
+    <!--分页查询-->
+    <select id="getTravelProGradeListByPage" resultType="com.example.ctrip.Pojo.TravelProGrade">
+        select id,tripProductId,productAvgGrade,favorableRate,`count` from travel_product_grade
+        limit #{start},#{length}
+    </select>
+    <!--添加新的产品等级-->
+    <insert id="addTravelProGrade" >
+        insert into travel_product_grade(tripProductId,productAvgGrade,favorableRate,`count`)
+        value(
+            #{tripProductId},
+            #{productAvgGrade},
+            #{favorableRate},
+            #{count}
+        )
+    </insert>
+    <!--更新指定id的产品等级-->
+    <update id="updateTravelProGrade">
+        update into travel_product_grade set
+            tripProductId=#{tripProductId},
+            productAvgGrade=#{productAvgGrade},
+            favorableRate=#{favorableRate},
+            `count`=#{count}
+        where id=#{id}
+    </update>
+    <!--删除指定id的产品等级-->
+    <delete id="delTravelProGrade">
+        delete from travel_product_grade where id=#{id}
+    </delete>
+</mapper>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--TravelProviderMapper的sql映射文件-->
+<mapper namespace="com.example.ctrip.Dao.TravelProductMapper">
+    <!--img的地址-->
+    <resultMap id="img" type="com.example.ctrip.Pojo.Img">
+        <result property="imgUrl" column="imgUrl"/>
+    </resultMap>
+    <!--供应商-->
+    <resultMap id="provider" type="com.example.ctrip.Pojo.TravelProvider">
+        <result property="providerName" column="providerName"/>
+        <result property="providerAbb" column="providerAbb"/>
+        <result property="licenseNo" column="licenseNo"/>
+        <association property="img" resultMap="img"></association>
+    </resultMap>
+    <resultMap id="travelProductGrade" type="com.example.ctrip.Pojo.TravelProGrade">
+        <id property="id" column="id"/>
+        <result property="count" column="count"/>
+        <result property="productAvgGrade" column="productAvgGrade"/>
+        <result property="favorableRate" column="favorableRate"/>
+    </resultMap>
+    <!--手动映射的product，用于旅游首页展示推荐-->
+    <resultMap id="productShouYe" type="com.example.ctrip.Pojo.TravelProduct">
+        <id column="id" property="id"></id>
+        <result property="proName" column="proName"/>
+        <result property="subHead" column="subHead"/>
+        <result property="totalPrice" column="totalPrice"/>
+        <result property="hasDiscounts" column="hasDiscounts"/>
+        <result property="productLevel" column="productLevel"/>
+        <association property="provider" resultMap="provider"></association>
+        <collection  property="imgList"  resultMap="img" >
+        </collection>
+    </resultMap>
+    <!--旅游产品的详细信息-->
+    <resultMap id="productInfo" type="com.example.ctrip.Pojo.TravelProduct">
+        <id property="id" column="id"/>
+        <result property="proName" column="proName"/>
+        <result property="subHead" column="subHead"/>
+        <result property="departCityName" column="departCityName"/>
+        <result property="distinationName" column="distinationName"/>
+        <result property="travelProductType" column="travelProductType"/>
+        <result property="providerId" column="providerId"/>
+        <result property="isHot" column="isHot"/>
+        <result property="totalPrice" column="totalPrice"/>
+        <result property="travelCount"  column="travelCount"/>
+        <result property="productDetail" column="productDetail"/>
+        <result property="sellingPoints" column="sellingPoints"/>
+        <result property="hasServiceAss" column="hasServiceAss"/>
+        <result property="hasFeature" column="hasFeature"/>
+        <result property="productLevel" column="productLevel"/>
+        <association property="provider" resultMap="provider"/>
+        <association property="travelProGrade" resultMap="travelProductGrade"/>
+        <collection property="imgList" resultMap="img"/>
+    </resultMap>
+    <!--查询指定id产品的基本信息-->
+    <select id="getProductById" resultMap="productInfo">
+        select t.*,i.imgUrl,temp.providerName,temp.providerAbb,temp.licenseNo,temp.imgUrl from travel_product as t
+            inner join ctrip_img as i on t.id=i.travelProId
+            inner join (select p.id,p.providerName,p.providerAbb,p.licenseNo,i2.imgUrl from travel_provider as p
+                            inner join ctrip_img as i2 on p.id=i2.providerId) as temp on temp.id=t.providerId
+                where i.imgType=4 and t.id=#{id}
+    </select>
+
+
+<!--旅游首页查询的sql语句-->
+    <!--根据产品主题查询产品-->
+    <select id="getProductListByTheme" parameterType="string" resultMap="productInfo">
+        select * from travel_product where travelProductType like  concat('%',#{travelProductType},'%')
+    </select>
+
+    <!--根据景点查询相关产品-->
+    <select id="getProductListBySciSpot" resultMap="productInfo">
+        select * from travel_product where id in(
+            select distinct tps.travelProductId from travel_product_scenic tps where tps.scenicSpotId in (
+                select tss.id from travel_scenic_spot tss where tss.scenicSpotName like concat('%',#{sciSpotName},'%') ))
+    </select>
+
+    <!--根据目的地名称查询,这里和上面的景点查询有歧义，后面注意下，是否需要修改，是根据产品名模糊匹配，还是根据目的地字段匹配？-->
+    <select id="getProductListByCity" resultMap="productInfo">
+        select t.id,t.subHead,t.totalPrice,t.hasDiscounts,t.productLevel,i.imgUrl from travel_product as t
+            inner join ctrip_img as i on t.id=i.travelProId
+            <where>
+                <if test="id !=null">
+                    t.distinationCityId=#{id}
+                </if>
+                <if test="cityName !=null and cityName!=''">
+                    or t.proName like concat('%',#{cityName},'%')
+                </if>
+                and i.imgType=4
+                and t.id>(round(rand()*(select max(id) from travel_product)))
+                and t.departCityName like(#{departCityName})
+            </where>
+            order by t.id
+            limit 9
+    </select>
+    <!--根据供应商名查询相关产品-->
+    <select id="getProductListByProvider" resultType="com.example.ctrip.Pojo.TravelProduct">
+        select * from travel_product where providerId in(
+             select id from travel_provider tr where providerName like concat('%',#{providerName},'%')
+             )
+    </select>
+
+    <!--根据产品日程（即旅游天数）查询相关产品-->
+    <select id="getProductListByDaysTrip" resultMap="productInfo">
+        select id,proName,subHead,departCityName,distinationName,suitable,travelProductType,providerId,
+        isHot,totalPrice,travelCount,productDetail,sellingPoints,hasServiceAss,hasFeature,productLevel
+         from travel_product
+         where proName like concat('%',#{daysTrip},'%')
+         limit 5
+
+           <!-- or daysTrip like concat('%',#{daysTrip},'%')-->
+    </select>
+
+    <!--根据产品钻级查询相关产品-->
+    <select id="getProductListByLevel" resultMap="productInfo">
+        select * from travel_product  where proName like concat('%',#{productLevel},'%')
+    </select>
+
+    <!--根据产品特色查询相关产品；特卖汇等-->
+    <select id="getProductListByProductFeature" resultMap="productInfo">
+        select * from travel_product  where hasFeature like concat('%',#{productFeature},'%')
+    </select>
+
+    <!--根据产品服务保障相关产品；无购物等-->
+    <select id="getProductListByServiceAss" resultMap="productInfo">
+        select * from travel_product  where  id in (
+            select travelProductId from travel_product_service where serviceAssId=(
+                select id from travel_service_ass where assName =#{serviceAssName}))
+
+    </select>
+
+    <!--搜索或高级搜索；条件包括：（出发地\主题\目的地\通用匹配）、出发日期会查询在指定日期内，有库存的产品）、价格范围、天数等-->
+    <select id="getProductListByAdvanceSearch" resultMap="productInfo">
+        select * from travel_product
+        <trim prefix="where" prefixOverrides="and | or">
+            <!--包含很多信息，例如：线路，产品名、日程或产品名包含的关键字等-->
+            <if test="proName !=null and proName!=''">
+                proName like concat('%',#{proName},'%')
+            </if>
+            <!--目的地-->
+            <if test="distinationName !=null and distinationName !''">
+                distinationName like #{distinationName}
+            </if>
+            <!--出发地-->
+            <if test="departCityName !=null and departCityName !=''">
+                and departCityName like #{departCityName}
+            </if>
+            <!--适用人群：亲子游，爸妈放心游-->
+            <if test="suitable !=null and suitable !=''">
+                and suitable like concat('%',#{departCityName},'%')
+            </if>
+            <!--钻级-->
+            <if test="productLevel !=null and productLevel !=''">
+                and productLevel like #{productLevel}
+            </if>
+            <!--产品特色-->
+            <if test="productFeature !=null and productFeature !=''">
+                and hasFeature like contact('%',#{productFeature},'%')
+            </if>
+            <!--服务保障-->
+            <if test="hasServiceAss !=null and hasServiceAss !=''">
+                and hasServiceAss like contact('%',#{hasServiceAss},'%')
+            </if>
+            <!--供应商名-->
+            <if test="providerName !=null and providerName@=''">
+                and providerId= (select id from travel_provider where providerName like concat('%',#{providerName},'%'))
+            </if>
+        </trim>
+    </select>
+
+
+
+    <!--多条件查询满足条件的产品：条件：主题，目的地，关键字，景点，游玩线路，行程天数，出发日期，出发城市，供应商，产品销量，
+        排序(综合、价格、销量、点评)方式-->
+    <!--未完成-->
+    <select id="getProductListByCondition" parameterType="map" resultMap="productInfo">
+        select  * from travel_product
+        <trim prefix="where" prefixOverrides="and | or">
+            <!--目的地-->
+            <if test="distinationName !=null and distinationName !''">
+                distinationName like #{distinationName}
+            </if>
+            <!--出发地-->
+            <if test="departCityName !=null and departCityName !=''">
+                and departCityName like #{departCityName}
+            </if>
+            <!--旅游线路，多选，选择的结果装在list集合里-->
+            <if test="travelRouteList !=null">
+                <!--遍历list集合,细化下逻辑-->
+                and proName like
+                <foreach collection="list" item="travelRoute" open="(" separator="," close=")">
+                  concat('%',#{travelRoute},'%')
+                </foreach>
+            </if>
+
+            <!--行程天数，多选，选择的结果装在list集合里-->
+            <if test="daysTripList !=null">
+                <!--遍历list集合-->
+                and daysTrip in
+                <foreach collection="list" item="daysTrip" open="(" separator="," close=")">
+                    #{daysTrip}
+                </foreach>
+            </if>
+
+            <!--出发日期，多选，选择的结果装在list集合里,暂时放弃实现-->
+
+            <!--出发城市-->
+            <if test="departCityName != null and departCityName!=''">
+                and departCityName =#{departCityName}
+            </if>
+
+            <!--供应商，多选，选择的结果装在list集合里-->
+            <if test="providerList !=null">
+                <!--遍历list集合-->
+                and providerId in
+                <foreach collection="list" item="providerId" open="(" separator="," close=")">
+                    #{providerId}
+                </foreach>
+            </if>
+
+            <!--价格区间-->
+            <if test="minPrice !=null">
+                and totalPrice &gt;=#{minPrice}
+            </if>
+            <if test="maxPrice !=null">
+                and totalPrice &lt;= #{maxPrice}
+            </if>
+
+        </trim>
+
+        <if test="">
+            order by
+        </if>
+        <if test="">
+            order by
+        </if>
+        <if test="">
+            order by
+        </if>
+    </select>
+    <!--多条件分页查询-->
+    <select id="getProductListByPage" parameterType="map" resultMap="productInfo">
+        select * from travel_product
+        <where>
+            <!--后面补充条件-->
+        </where>
+        limit #{start},#{length}
+    </select>
+
+
+
+
+
+
+
+    <!--新产品添加-->
+    <insert id="addProduct" parameterType="map">
+        insert into travel_provider
+         productTitle,
+         subHead,
+         travelProductTheme,
+         travelProductType,
+         providerId,
+         isHot,
+         daysTrip,
+         totalPrice,
+         travelRoute,
+         productDetail,
+         sellingPoints,
+         hasFeature,
+         routing,
+         productLevel,
+         isDiscounts,
+         creationDate
+         value(
+            #{productTitle},
+            #{subHead},
+            #{travelProductTheme},
+            #{providerId},
+            #{isHot},
+            #{daysTrip},
+            #{totalPrice},
+            #{travelRoute},
+            #{productDetail},
+            #{sellingPoints},
+            #{productFeature},
+            #{routing},
+            #{productLevel},
+            #{isDiscount},
+            NOW()
+        )
+    </insert>
+    <!--更新指定id的产品-->
+    <update id="updateProduct" parameterType="map" >
+        update from travel_provider
+        <trim suffixOverrides=",">
+            <if test="productTitle !=null and productTitle!=''">
+                productTitle=#{productTitle},
+            </if>
+            <if test="travelProductTheme !=null and travelProductTheme !=''">
+                travelProductTheme=#{travelProductTheme},
+            </if>
+            <if test="travelProductTypeId !=null">
+                travelProductTypeId=#{travelProductTypeId},
+            </if>
+            <if test="travelProductType !=null and travelProductType!=''">
+                travelProductType=#{travelProductType},
+            </if>
+            <if test="isHot !=null and isHot!=''">
+                isHot=#{isHot},
+            </if>
+            <if test="daysTrip !=null and daysTrip!=''">
+                daysTrip=#{daysTrip},
+            </if>
+            <if test="totalPrice !=null">
+                totalPrice=#{totalPrice},
+            </if>
+            <if test="travelRoute !=null and daysTrip!=''" >
+                travelRoute=#{travelRoute},
+            </if>
+            <if test="productDetail !=null and daysTrip!=''">
+                productDetail=#{productDetail},
+            </if>
+            <if test="sellingPoints!=null and daysTrip!=''">
+                sellingPoints=#{sellingPoints},
+            </if>
+            <if test="productFeature !=null and productFeature!=''">
+                hasFeature=#{productFeature},
+            </if>
+            <if test="routing !=null and routing!=''">
+                routing=#{routing},
+            </if>
+             <if test="productLevel !=null">
+                 productClass=#{productLevel},
+            </if>
+            <if test="isDiscount !=null ">
+                isDiscount=#{isDiscount},
+            </if>
+        </trim>
+        modifyDate=NOW()
+        where id=#{id}
+    </update>
+    <!--删除指定id的供应商-->
+    <delete id="delProductById">
+        delete from travel_product where id=#{id}
+    </delete>
+
+    <select id="getCity" resultType="com.example.ctrip.Pojo.City">
+        select * from ctrip_city
+    </select>
+    <select id="getTravelProductToShouYe" resultMap="productShouYe">
+        select t.id,t.subHead,t.totalPrice,t.hasDiscounts,t.productLevel,i.imgUrl from travel_product
+            as t inner join ctrip_img as i on i.travelProId = t.id
+                where departCityName=#{departCityName}
+                    and distinationName =#{distinationName}
+                        and i.imgType=4
+                            order by travelCount desc
+                                limit num
+    </select>
+    <select id="getRandomCity" parameterType="list" resultType="com.example.ctrip.Pojo.City">
+        select * from ctrip_city where id in
+            <foreach collection="cityIdList" item="cityId" open="(" separator="," close=")">
+                #{cityId}
+            </foreach>
+            limit #{num}
+    </select>
+    <select id="getImgList" resultMap="img">
+        select id,imgUrl from ctrip_img where imgType=#{imgType}
+    </select>
+    <select id="getProductInventoryByMap" statementType="CALLABLE" parameterType="map" resultType="com.example.ctrip.Pojo.TravelProductInventory">
+           <![CDATA[
+            {
+                call pre_flush_travel_store(#{startTime,mode=IN} ,#{endTime,mode=IN},#{productId,mode=IN})
+            }
+            ]]>
+    </select>
+</mapper>

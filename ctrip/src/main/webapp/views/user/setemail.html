@@ -1,0 +1,166 @@
+﻿
+
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../statics/css/private_user_1.css" type="text/css" rel="stylesheet"/>
+    <title>携程旅行网-账户安全</title>
+    <script src="js/jquery-1.12.4.min_6.js"></script>
+    <!--[if lte IE 9]>
+    <script src='js/jquery.xdomainrequest.min_6.js'></script>
+    <script src="js/json2.min_5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        ;
+        (function () {
+            if (!(window.$_bf && window.$_bf.loaded || window.$LAB || window.CtripJsLoader)) {
+                var a = new Date, b = !1, c = "?v=" + a.getFullYear() + a.getMonth() + "_" + a.getDate(), a = document.createElement("script");
+                a.type = "text/javascript";
+                a.charset = "utf-8";
+                a.async = !0;
+                try {
+                    b = "https:" == location.protocol
+                } catch (d) {
+                }
+                a.src = ((b ? "https:" : "http:")) + "//webresource.c-ctrip.com/code/ubt/_bfa.min.js" + c;
+                b = document.getElementsByTagName("script")[0];
+                b.parentNode.insertBefore(a, b)
+            }
+        })();
+    </script>
+
+    <script src="js/captcha.min_6.js"></script>
+
+    <script>
+        $ = window.jQuery ? window.jQuery : {};
+    </script>
+
+    <style type="text/css" media="screen">
+        .cui_hd,
+        .cui_nav {
+            max-width: 1004px !important;
+            min-width: 1004px !important;
+            width: 1004px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<input id="page_id" type="hidden" value="10320670290" />
+<div class="cui_bd cui_bd_bdt">
+  <div class="page_wrap">
+    <div class="reg_form">
+      <dl>
+        <dt class="label">邮箱</dt>
+        <dd><input class="r_input" type="text" id="email" placeholder="常用邮箱地址" /></dd>
+      </dl>
+      <div class="base_error" style="display: none" id="erremailtips"></div>
+
+     <!-- <dl id="dlslideCode">
+        <dt class="label">滑块验证</dt>
+        <dd>
+          <div id="slideCode">
+          </div>
+          <input type="hidden" id="slidetoken" value="">
+          <input type="hidden" id="slideversion" value="">
+        </dd>
+      </dl>-->
+      <div class="base_error" style="display: none" id="errslider"></div>
+
+      <dl>
+        <dt class="label">邮箱验证码</dt>
+        <dd><div class="r_input input_auth-code"><input class="" maxlength="6" type="text" id="emailvcode" placeholder="6位数字"><a href="javascript:;" id="sendemailvcode">发送验证码</a></div></dd>
+      </dl>
+      <!--
+      <div class="base_success"><i></i>验证码已发送至注册手机号，请注意查收</div>
+      -->
+      <div class="base_error" style="display: none" id="valcodetips"></div>
+
+      <dl class="form_space">
+        <dt class="label">&nbsp;</dt>
+        <dd><input class="reg_btn" type="submit" id="btnBindEmail" value="完成" /></dd>
+        <!-- <dd><input class="reg_btn_disabled" type="submit" value="完成" /></dd> -->
+      </dl>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  $(document).ready(function () {
+
+    //清除后退时的缓存数据
+    clearInput();
+    setEmailBindFocusEvent();
+    $("#page_id").val("10320670290");
+    //加载滑块验证码
+    var slidObj;
+    loadSlider($("#dlslideCode"), $("#slidetoken"), $("#slideversion"), "slideCode", slideBizSite["sendEmail"]);
+      //slidObj.refresh();
+    //console.log(slidObj);
+    //发送邮箱验证码
+    $("#sendemailvcode").bind("click", function () {
+      setEmailSendVCode();
+    });
+    //绑定手机提交按钮
+    $("#btnBindEmail").bind("click",function(){
+      setEmailSubmit();
+    });
+
+  });
+
+    function setEmailBindFocusEvent(){
+        $("#email").bind("focus",function(){
+            errShow($("#erremailtips"),false,"");
+        });
+        $("#emailvcode").bind("focus",function(){
+            errShow($("#valcodetips"),false,"");
+        });
+    }
+
+</script>
+
+
+
+</body>
+
+<script src="js/simpleheaderjs.js" charset="utf-8"
+        type="text/javascript"></script>
+<script src="js/commoncomponent_5.js"
+        charset="utf-8"></script>
+<script src="js/base64_5.js"
+charset="utf-8"></script>
+<script src="js/paramconfig_5.js"
+        charset="utf-8"></script>
+<script id="cusersdk" src="js/caccount_seed.95df3734.js"></script>
+<script type="text/javascript" src="js/asterisk_5.js"></script>
+
+
+<script src="js/accountsecurity.ca8a92fe.js" charset="utf-8"></script>
+
+<script src="js/safecentermsg.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    (function () {
+        var url = '//webresource.c-ctrip.com/resaresonline/risk/ubtrms/latest/default/rms.js', timeout = 10;
+        var now = new Date();
+        setTimeout(function () {
+            var f = document.createElement('script')
+            f.type = 'text/javascript';
+            f.id = 'scrmsd__script';
+            f.async = true;
+            f.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + url + "?v=" + now.getYear() + now.getMonth() + "-" + now.getDate();
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(f, s);
+        }, timeout);
+        window.scrmsd__startScriptLoad = 1 * new Date();
+    })();
+</script>
+
+
+</html>
+

@@ -1,0 +1,2698 @@
+
+<!DOCTYPE html>
+<html>
+<head id="ctl00_Head1"><title>
+    酒店预订 - 国内海外酒店预订服务 - 携程旅行网
+</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF8" /><meta name="description" content="携程旅行网向超过2000万用户提供国内酒店查询及预订服务，海外酒店查询及预订服务。携程旅行网拥有国内外近30000家会员酒店可供预订，是中国领先的酒店预订服务中心。免费咨询电话8008206666" /><meta name="keywords" content="酒店预定酒店预订酒店" /></head>
+    <style>
+        .btn_H{
+            position: relative;
+            width: 140px;
+            text-align: center;
+            margin-bottom: 10px;
+            line-height: 25px;
+            padding: 0;
+            font-weight: bold;
+            background-color: #27C;
+            border-color: #05A;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+<body>
+
+<link href="../user/css/base101103.css" type="text/css" rel="stylesheet" />
+<link href="../user/css/book_detail.css" rel="stylesheet" type="text/css" />
+<link href="../../statics/js_myt/layui/css/layui.css">
+<!-- 顺丰快递浮层 -->
+<div id="jmpTempCacnel" style="display:none;">
+    <div class="jmp_bd">
+        <div>${txt}
+        </div>
+    </div>
+</div>
+<!-- 顺丰快递浮层 -->
+<!-- 上面是旧IE 下面是新浏览器-->
+<!--[if lt IE 9]>
+<script src="js/json2.js"></script>
+<script src="../user/js/jquery-1.12.4.src.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="../user/js/jquery-3.2.1.src.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 9]>
+<script src="//webresource.c-ctrip.com/ResHotelBookingOnline/R6/js/jquery.xdomainrequest.min.js?Releaseno=2019_08_04>"  ></script>
+<![endif]-->
+<script src="../user/js/country.online.js" charset="utf-8" type="text/javascript"></script>
+<script src="../user/js/lab.js" charset="utf-8" type="text/javascript"></script>
+<script src="../../statics/jquery-2.1.4/jquery.js"></script>
+<script src="../../statics/js_myt/layui/layui.js"></script>
+<script src="../../statics/js_myt/common.js"></script>
+
+<script>
+    $(function () {
+        let orderId;
+        sendAjax("/hotel/getOrderList",{id:getUrlParams("id")},"post","json",function (data) {
+            console.log(data);
+            jQuery("#order").text(data.data[0].orderCode);
+            jQuery("#ctrateDate").text(new Date(Date.parse(data.data[0].creationDate)).format("yyyy-MM-dd"));
+            jQuery("#orderStatus").text(orderStatus(data.data[0].orderStatus));
+            jQuery("#J_totalprice").text(data.data[0].totalPrice);
+            jQuery("#reduce").text("已减"+(data.data[0].beforePrice-data.data[0].totalPrice));
+            jQuery(".hotel_name").text(data.data[0].hotelName).attr("href","/views/ctrip/hotels_Info.html?id="+data.data[0].hotelId);
+            jQuery("#level").attr("class","hotel_diamond0"+data.data[0].level);
+            jQuery("#address").text(data.data[0].address);
+            $(".room-name").text(data.data[0].roomType);
+            console.log(data.data[0].inTime);
+            $("#outTime .date-ym").text(new Date(Date.parse(data.data[0].outTime)).format("yyyy-MM"));
+            $("#outTime .big-num").text(new Date(Date.parse(data.data[0].outTime)).format("dd").toString().substring(1));
+            $("#outTime .date-w").text("星期"+getMyDay(new Date(Date.parse(data.data[0].outTime))));
+            $("#inTime .date-ym").text(new Date(Date.parse(data.data[0].outTime)).format("yyyy-MM"));
+            $("#inTime .big-num").text(new Date(Date.parse(data.data[0].inTime)).format("dd").toString().substring(1));
+            $("#inTime .date-w").text("星期"+getMyDay(new Date(Date.parse(data.data[0].inTime))));
+            $(".room-num .big-num").text(data.data[0].roomNum);
+            $("#inTime_H").text(new Date(Date.parse(data.data[0].inTime)).format("MM-dd")+"("+getMyDay(new Date(Date.parse(data.data[0].inTime)))+")");
+            $("#outTime_H").text(new Date(Date.parse(data.data[0].outTime)).format("MM-dd")+"("+getMyDay(new Date(Date.parse(data.data[0].outTime)))+")");
+            jQuery("p[class='hotel_everyday_price']").prop("lastChild").nodeValue=data.data[0].totalPrice+"/间";
+            $("#guests").text(data.data[0].userName);
+            $("#estimatedTime").text(data.data[0].estimatedTime);
+            $("#phone").text("+86- "+getTel(data.data[0].mobilePhone));
+            $(".text-list").find("li").text("・北京时间"+new Date(Date.parse(data.data[0].inTime)).format("yyyy-MM-dd")+" 00:00前可免费取消修改。");
+            $(".num").text(DateMinus(new Date(Date.parse(data.data[0].inTime)),new Date(Date.parse(data.data[0].outTime))));
+            $("#J_BookAgain").attr("href","/views/ctrip/hotels_Info.html?id="+data.data[0].hotelId);
+            orderId=data.data[0].id;
+            $("#specialReqs").text(data.data[0].enteringHobby);
+            $("#txtContactMobilePhone").val(data.data[0].mobilePhone)
+        });
+        jQuery("#cencal").on("click",function () {
+            sendAjax("/hotel/updateOrderStatus",{id:orderId,StatusCode:3},"post","json",function (data) {
+                if (data.result){
+                    layui.use('layer',function () {
+                        let layer = layui.layer;
+                        layer.msg("订单取消成功!");
+                    })
+                }
+                setTimeout(function (){location.reload()},1500);
+            })
+        });
+        jQuery("#J_submit").on("click",function () {
+            let contAll;
+            let cont = jQuery("select[name='RemarkSZNonsmoking']").val();
+            switch (cont) {
+                case "2":
+                    cont = "尽量安排无烟房间;";
+                    break;
+                case "11":
+                    cont = "尽量安排吸烟房;";
+                    break;
+                default :
+                    cont ="";
+            }
+            if (jQuery("input[name='RemarkOZQuietRoomZ16']").is(":checked")){
+                cont+="尽量安排安静房间;"
+            }
+            if (jQuery("input[name='RemarkOZHighbuildingZ12']").is(":checked")){
+                cont+="尽量高楼层;"
+            }
+            cont+=jQuery("#J_HandRemark").val();
+            console.log(cont);
+            sendAjax("/hotel/EnteringHobby",{id:parseInt(orderId),content:cont},"post","json",function (data) {
+                console.log(data);
+                if (data.result){
+                    layui.use('layer',function () {
+                        let layer = layui.layer;
+                        layer.msg(data.msg);
+                        setTimeout(function () {
+                            location.reload()
+                        },1300);
+                        return false;
+                    })
+                }else {
+                    layui.use('layer', function () {
+                        let layer = layui.layer;
+                        layer.msg("请重新发送请求" + data.msg);
+                        jQuery(".btn .btn-primary .disabled").attr("class", "btn btn-primary");
+                    })
+                }
+            });
+            jQuery("#EstimatedTime_H").on("click",function () {
+                console.log(1);
+            })
+        });
+
+        jQuery("#J_saveupdate").on("click",function () {
+            sendAjax("/hotel/Contacts",{
+                id:orderId,
+                phone:jQuery("#txtContactMobilePhone").val(),
+                email:jQuery("#txtContactEmail").val()
+            },"post","json",function (data) {
+                jQuery("#J_wrongRecentContact_hxl").append("<p class=\"success\"><i class=\"icon-success\"></i>修改联系人成功</p>");
+                setTimeout(function () {
+                    location.reload()
+                },800)
+            })
+        })
+    })
+</script>
+<script src="../user/js/cquery_110421.js" charset="utf-8" type="text/javascript"></script>
+
+<form id="aspnetForm" method="post" name="aspnetForm">
+    <input type="hidden" id="CorrelationId" name="CorrelationId" value="19271501494465800"/><link href="../user/css/pageheader_v4_4.css" rel="stylesheet" /> <div class="cui-nav-bar">
+    <div class="nav-bar-cont">
+        <div class="slogan">让旅行更幸福</div>
+        <ul class="language">
+            <li>
+                <a rel="nofollow" style="cursor:default" class="selected" onmouseover="this.className='selected language_current';this.nextElementSibling.style.display='block';" onmouseout="this.className= 'selected';this.nextElementSibling.style.display='none';"><span><em class="ico-global"></em> Language <b class="n-arrow"></b></span></a>
+                <div class="language_wrap drowndrop" style="display: none;" onmouseover="this.style.display='block';this.previousElementSibling.className='selected language_current';" onmouseout="this.style.display='none';this.previousElementSibling.className='selected';">
+                    <ul class="language_list" id="cui_lang_list">
+                        <li>
+                            <a id="ctrip_cn" class="language_big5" href="//www.ctrip.com">简体中文</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_eng" class="language_en" href="https://www.trip.com/?locale=en_US">English (United States)</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_uk" class="language_gb" href="https://uk.trip.com/?locale=en_gb">English (United Kingdom)</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_hk" class="language_hk" href="http://hk.trip.com/?locale=zh_hk">繁&#39636;中文 (香港)</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_hk_en" class="language_hk" href="https://hk.trip.com/?locale=en_hk">English(Hong Kong)</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_korea" class="language_korea" href="https://kr.trip.com/?locale=ko_KR">韩语版</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_jap" class="language_jap" href="https://jp.trip.com/?locale=ja_JP">日语版</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_sg" class="language_sg" href="https://sg.trip.com/?locale=en_SG">English (Singapore)</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_au" class="language_au" href="https://au.trip.com/?locale=en_au">English (Australia)</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_de" class="language_de" href="https://de.trip.com/?locale=de_DE">Deutsch</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_fr" class="language_fr" href="https://fr.trip.com/?locale=fr_FR">Fran&ccedil;ais</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_es" class="language_es" href="https://es.trip.com/?locale=es_ES">Espa&ntilde;ol</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_it" class="language_it" href="https://it.trip.com/?locale=it_IT">Italiano</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_ru" class="language_ru" href="https://ru.trip.com/?locale=ru_RU">Русский</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_th" class="language_th" href="https://th.trip.com/?locale=th_TH">泰国站</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_id" class="language_id" href="https://id.trip.com/?locale=id_ID">Bahasa Indonesia</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_my" class="language_my" href="https://my.trip.com/?locale=ms_MY">Bahasa Malaysia</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_my_en" class="language_my" href="https://my.trip.com/?locale=en_my">English (Malaysia)</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_vn" class="language_vn" href="https://vn.trip.com/?locale=vi_VN">越南语</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_nl" class="language_nl" href="https://nl.trip.com/?locale=nl_NL">荷兰语</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_pl" class="language_pl" href="https://pl.trip.com/?locale=pl_PL">波兰语&gt;</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_gr" class="language_gr" href="https://gr.trip.com/?locale=el_GR">希腊语</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_tr" class="language_tr" href="https://tr.trip.com/?locale=tr_TR">土耳其语</a>
+                        </li>
+                        <li>
+                            <a id="ctrip_pt" class="language_pt" href="https://br.trip.com/?locale=pt_BR">巴西葡萄牙语</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav-bar-set">
+            <li class="set-list set-logIn" id="nav-bar-set-login" style="display:none">
+                <a class="person-text" onclick="DoLogin()" style="cursor:pointer;"><span class="set-text"><span class="member-name" name="nav-bar-mname">您好</span>，请登录 </span></a>
+            </li>
+            <li class="set-list" id="nav-bar-set-reg" style="display:none">
+                <a class="person-text nav-per" href="https://passport.ctrip.com/user/reg/home "><span class="set-text"> 免费注册 </span></a>
+            </li>
+            <li class="set-list myctrip-name" name="cui-nav-bar-set-list" id="nav-bar-set-myctrip-name" style="display:none">
+                <a href="../user/userCenter_index.html" class="person-text nav-myctrip"><span class="set-text"><span class="member-name" name="nav-bar-d-info">普通会员</span><b class="n-arrow"></b></span></a>
+                <ul class="per-drowndrop" style="display: none;" id="nav-bar-set-my-info">
+                    <li class="my-img">
+                        <a rel="nofollow" href="https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx"><img name="nav-bar-d-info" src="../user/picture/ico_deafult_1.png"></a>
+                    </li>
+                    <li class="my-data">
+                        <p class="integral" name="nav-bar-d-info" rel="nofollow">积分：<a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/MineMileage.aspx ">0</a>
+                        </p>
+                        <p class="member-grade" name="nav-bar-d-info">普通会员<a style="display:none">领福利</a>
+                        </p>
+                    </li>
+                    <li class="sign-out">
+                        <a rel="nofollow" href="https://passport.ctrip.com/user/logout ">退出</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="set-list set-infor">
+                <i class="infor-notice"></i><a class="infor-num" id="nav-bar-set-msgnum" rel="nofollow">消息<span>0</span></a>
+            </li>
+            <li class="set-list set-myctrip-list" name="cui-nav-bar-set-list">
+                <a class="person-text nav-myctrip" href="../user/userCenter_index.html "><span class="set-text"> 我的携程 <b class="n-arrow"></b></span></a>
+                <ul class="nav-drowndrop" style="display: none;">
+                    <li>
+                        <a rel="nofollow" href="https://my.ctrip.com/favorite/myfav#ctm_ref=ssc_hp_myctrip_collect_a ">我的收藏 </a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="https://smarket.ctrip.com/Promocode/zh-cn/Promocode.aspx#ctm_ref=ssc_hp_myctrip_integral_a ">我的优惠券 </a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="https://my.ctrip.com/Home/Passenger/PassengerList.aspx#ctm_ref=ssc_hp_myctrip_info_a ">常用信息 </a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="https://secure.ctrip.com/webwallet/index#ctm_ref=ssc_hp_myctrip_wallet_a ">我的钱包 </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="set-list set-myorder-list" name="cui-nav-bar-set-list">
+                <a class="person-text nav-myctrip" rel="nofollow" href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a "><span class="set-text"> 我的订单 <b class="n-arrow"></b></span></a>
+                <ul class="nav-drowndrop drowndrop-order" style="display: none;">
+                    <li>
+                        <a rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx#ctm_ref=ssc_hp_myctrip_flightorders_a ">机票+相关订单 </a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx#ctm_ref=ssc_hp_myctrip_hotelorders_a ">酒店订单 </a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx#ctm_ref=ssc_hp_myctrip_tourorders_a ">旅游订单 </a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx#ctm_ref=ssc_hp_myctrip_trainorders_a ">火车票订单 </a>
+                    </li>
+                    <li>
+                        <a href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a ">全部订单 </a>
+                    </li>
+                    <li>
+                        <a class="phone-line" href="https://passport.ctrip.com/user/member/fastOrder#ctm_ref=ssc_hp_myctrip_phoneorders_a ">手机号查订单 </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="set-list">
+                <a target="_blank" class="person-text nav-per" href="http://kefu.ctrip.com"><span class="set-text"> 客服中心 </span></a>
+            </li>
+            <li class="set-list set-phone" name="cui-nav-bar-set-list">
+                <a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_app"></i></span></a>
+                <ul class="phone-drowndrop" style="display: none;">
+                    <li class="ico_code">
+                        <img src="../user/picture/er_ctrip_app_1.jpg" alt=""><p>手机扫码快速下载</p>
+                    </li>
+                    <li class="ctrip-app">
+                        <a href="http://app.ctrip.com">携程旅行手机版</a><i class="arrow-right"></i>
+                    </li>
+                </ul>
+            </li>
+            <li class="set-list set-wechat" name="cui-nav-bar-set-list">
+                <a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_wechat"></i></span></a>
+                <ul class="wechat-drowndrop" style="display: none;">
+                    <li class="ico_code">
+                        <img src="../user/picture/er_ctrip_wechat_1.jpg" alt=""><p>携程订阅号：helloctrip</p>
+                        <p class="nth2">扫一扫，<span>领旅行福利</span>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div><div class="cui_hd_cont">
+    <div class="cui_hd">
+        <input type="hidden" id="_searchboxNo_" value="ws_www20140409"><input type="hidden" id="_newHeaderFlag_" value="true">
+        <div class="ctriplogo">
+            <a title="携程旅行网" href="http://www.ctrip.com">携程旅行网 </a>
+        </div>
+        <div class="nav-tel">
+            <ul class="nav-tel-list" id="cui-nav-tel-list">
+                <li> 境内：95010</li>
+                <li>（或）400-830-6666</li>
+                <li class="tel-list-more">香港(中国)：+852-3069-9966</li>
+                <li class="tel-list-more">境外：+86-21-3406-4888</li>
+            </ul>
+        </div>
+    </div>
+</div><div id="cui_nav">
+    <div class="base_nav">
+        <ul id="cui_nav_ul" class="cui_nav cui_content">
+            <li id="cui_c_ph_hp">
+                <a id="c_ph_hp" class="cui_nav_non" href="ctrip_index.html">首页</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_hotel">
+                <a id="nav_hotel" class="cui_nav_has" href="hotel_index.html">酒店<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_hotel" class="cui_sub_nav">
+                        <li id="ul_c_ph_hotel_h">
+                            <a id="c_ph_hotel_h" href="hotel_index.html">国内酒店</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hoteli_h">
+                            <a id="c_ph_hoteli_h" href="javascript:void(0)">海外酒店</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_inn_h">
+                            <a id="c_ph_inn_h" href="javascript:void(0)">民宿客栈</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_apartment_h">
+                            <a id="c_ph_apartment_h" href="javascript:void(0)">海外民宿</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_tuan_h">
+                            <a id="c_ph_tuan_h" href="javascript:void(0)">团购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocanj_h">
+                            <a id="c_ph_taocanj_h" href="javascript:void(0)">酒店+景点</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_meetingroom_h">
+                            <a id="c_ph_meetingroom_h" href="javascript:void(0)">团队房&bull;长住房</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_meeting_h">
+                            <a id="c_ph_meeting_h" href="javascript:void(0)">会议<span class="label-cn" id="ACT_Label_14" style="display:none"><em>会员日</em><i
+                                    class="triangle"></i></span></a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-hotel"></i>酒店订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_vac">
+                <a id="nav_vac" class="cui_nav_has" href="../vacation/vacation.html">旅游<span class="label-cn" id="ACT_Label_40" style="display:none"><em>嗨暑价
+</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_vac" class="cui_sub_nav">
+                        <li id="ul_c_ph_vacations_v">
+                            <a id="c_ph_vacations_v" href="../vacation/vacation.html">旅游首页<span class="label-cn" id="ACT_Label_41" style="display:none"><em>678月节</em><i
+                                    class="triangle"></i></span></a>
+                        </li>
+                        <li class="divider " style="display:none"></li>
+                        <li id="ul_c_ph_around_v">
+                            <a id="c_ph_around_v" href="javascript:void(0)">周末游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_vacationsd_v">
+                            <a id="c_ph_vacationsd_v" href="../vacation/vacation.html">跟团游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocan_v">
+                            <a id="c_ph_taocan_v" href="../vacation/vacation.html">自由行</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_sijiatuan">
+                            <a id="c_ph_sijiatuan" href="javascript:void(0)">私家团</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_cruise_v">
+                            <a id="c_ph_cruise_v" href="javascript:void(0)">邮轮</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocanj_v">
+                            <a id="c_ph_taocanj_v" href="https://vacations.ctrip.com/diysh">酒店+景点</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_huodong_v">
+                            <a id="c_ph_huodong_v" href="https://huodong.ctrip.com/">当地玩乐</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_zhutiyou_v">
+                            <a id="c_ph_zhutiyou_v" href="javascript:void(0)">主题游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_baotuan_v">
+                            <a id="c_ph_baotuan_v" href="javascript:void(0)">定制旅行</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_youxue_v">
+                            <a id="c_ph_youxue_v" href="javascript:void(0)">游学</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_visa_v">
+                            <a id="c_ph_visa_v" href="javascript:void(0)">签证</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_mice_v">
+                            <a id="c_ph_mice_v" href="javascript:void(0)">企业会奖</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hh_v">
+                            <a id="c_ph_hh_v" target="_blank" rel="nofollow" href="javascript:void(0)">高端游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_golf_v">
+                            <a id="c_ph_golf_v" href="javascript:void(0)">爱玩户外</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_insurance_v">
+                            <a id="c_ph_insurance_v" href="javascript:void(0)">保险</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_deals_v">
+                            <a id="c_ph_deals_v" href="javascript:void(0)">特卖汇</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)x"><i class="cui-icon-vacations"></i>旅游订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_gentuan">
+                <a id="nav_gentuan" class="cui_nav_non" DividerClass="divider_spec" href="https://vacations.ctrip.com/grouptravel">跟团游</a>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_ziyouxing">
+                <a id="nav_ziyouxing" class="cui_nav_non" DividerClass="divider_spec" href="https://vacations.ctrip.com/idiytour">自由行</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_flight">
+                <a id="nav_flight" class="cui_nav_has" href="javascript:void(0)">机票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_flight" class="cui_sub_nav">
+                        <li id="ul_c_ph_flights_f">
+                            <a id="c_ph_flights_f" href="javascript:void(0)">国内机票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightsi_f">
+                            <a id="c_ph_flightsi_f" href="javascript:void(0)">国际&bull;港澳台机票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_fuzzy_f">
+                            <a id="c_ph_fuzzy_f" href="javascript:void(0)">特价机票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocan_f">
+                            <a id="c_ph_taocan_f" href="https://taocan.ctrip.com">机+酒</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightstoolbox_f">
+                            <a id="c_ph_flightstoolbox_f" href="javascript:void(0)">航班动态</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_bookseat_f">
+                            <a id="c_ph_bookseat_f" rel="nofollow" href="javascript:void(0)">值机选座</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightorderlist_f">
+                            <a id="c_ph_flightorderlist_f" rel="nofollow" href="javascript:void(0)">退票改签</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_airportguides_f">
+                            <a id="c_ph_airportguides_f" rel="nofollow" href="javascript:void(0)">机场攻略</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightdingzhi_f">
+                            <a id="c_ph_flightdingzhi_f" href="javascript:void(0)">定制包机</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-flight"></i>机票订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_trains">
+                <a id="nav_trains" class="cui_nav_has" href="javascript:void(0)">火车<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_trains" class="cui_sub_nav">
+                        <li id="ul_c_ph_train_t">
+                            <a id="c_ph_train_t" href="javascript:void(0)">国内火车票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_traino_t">
+                            <a id="c_ph_traino_t" href="javascript:void(0)">国际&bull;港台火车票</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-train"></i>火车票订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_destination">
+                <a id="nav_destination" class="cui_nav_has" href="javascript:void(0)">汽车 &middot; 船<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_destination" class="cui_sub_nav">
+                        <li id="ul_c_ph_bus_t">
+                            <a id="c_ph_bus_t" href="javascript:void(0)">汽车票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_ship_t">
+                            <a id="c_ph_ship_t" href="javascript:void(0)">船票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_yacht_t">
+                            <a id="c_ph_yacht_t" target="_blank" rel="nofollow" href="javascript:void(0)">游艇帆船</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_daozy_t">
+                            <a id="c_ph_daozy_t" href="javascript:void(0)">到站游</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-bus"></i>汽车票订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_car">
+                <a id="nav_car" class="cui_nav_has" href="javascript:void(0)">用车<span class="label-cn" id="ACT_Label_43" style="display:none"><em>抢五折</em><i
+                        class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_car" class="cui_sub_nav">
+                        <li id="ul_c_ph_car_c">
+                            <a id="c_ph_car_c" href="javascript:void(0)">用车首页</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hwzj_c">
+                            <a id="c_ph_hwzj_c" href="javascript:void(0)">境外租车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hwdaijia_c">
+                            <a id="c_ph_hwdaijia_c" href="javascript:void(0)">境外接送机<span class="label-cn" id="ACT_Label_44" style="display:none"><em>暑期特价</em><i
+                                    class="triangle"></i></span></a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hwrizu_c">
+                            <a id="c_ph_hwrizu_c" href="javascript:void(0)">境外包车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_zj_c">
+                            <a id="c_ph_zj_c" href="javascript:void(0)">国内租车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_daijia_c">
+                            <a id="c_ph_daijia_c" href="javascript:void(0)">国内接送机/火车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_rizu_c">
+                            <a id="c_ph_rizu_c" href="javascript:void(0)">国内包车</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-car"></i>用车订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_ticket">
+                <a id="nav_ticket" class="cui_nav_has" href="../piao/menPiaoIndex.html">门票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_ticket" class="cui_sub_nav">
+                        <li id="ul_c_ph_piao_p">
+                            <a id="c_ph_piao_p" href="../piao/menPiaoIndex.html">境内门票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_piaooversea_p">
+                            <a id="c_ph_piaooversea_p" href="../piao/menPiaoIndex.html">出境&bull;港澳台门票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_huodong_p">
+                            <a id="c_ph_huodong_p" href="../piao/menPiaoIndex.html">当地玩乐</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_wifi_p">
+                            <a id="c_ph_wifi_p" href="javascript:void(0)">出境WiFi&bull;电话卡</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_around_p">
+                            <a id="c_ph_around_p" href="javascript:void(0)">周末游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_disney_p">
+                            <a id="c_ph_disney_p" href="javascript:void(0)">上海海昌</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/LocalUnionOrderList.aspx"><i class="cui-icon-ticket"></i>门票玩乐订单
+                        &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_c_ph_you">
+                <a id="c_ph_you" class="cui_nav_non" href="../piao/gongLue_index.html">攻略</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_g">
+                <a id="nav_g" class="cui_nav_has" href="javascript:void(0)">全球购<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_g" class="cui_sub_nav">
+                        <li id="ul_c_ph_mdg_g">
+                            <a id="c_ph_mdg_g" href="javascript:void(0)">名店购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_cshop_g">
+                            <a id="c_ph_cshop_g" href="javascript:void(0)l">旅游购物商城</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_ts_g">
+                            <a id="c_ph_ts_g" href="javascript:void(0)">退税</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_ylth_g">
+                            <a id="c_ph_ylth_g" href="javascript:void(0)">银联特惠</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_skjl_g">
+                            <a id="c_ph_skjl_g" href="javascript:void(0)">万千赏</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_forex_g">
+                            <a id="c_ph_forex_g" href="javascript:void(0)">外币兑换</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-foreign"></i>外币兑换订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_lpk">
+                <a id="nav_lpk" class="cui_nav_has" href="javascript:void(0)">礼品卡<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_lpk" class="cui_sub_nav">
+                        <li id="ul_c_ph_lipin_l">
+                            <a id="c_ph_lipin_l" href="javascript:void(0)">礼品卡首页</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_lipinholiday_l">
+                            <a id="c_ph_lipinholiday_l" href="javascript:void(0)">节日/主题购卡</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_xcb_l">
+                            <a id="c_ph_xcb_l" href="javascript:void(0)">礼品卡福袋</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_lipincorp_l">
+                            <a id="c_ph_lipincorp_l" href="javascript:void(0)">企业采购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_dhq_l">
+                            <a id="c_ph_dhq_l" href="javascript:void(0)">兑换券</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_forexlipin_l">
+                            <a id="c_ph_forexlipin_l" href="javascript:void(0)">外币兑换</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="javascript:void(0)"><i class="cui-icon-card"></i>礼品卡订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_sl">
+                <a id="nav_sl" class="cui_nav_has" href="javascript:void(0)">商旅<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_sl" class="cui_sub_nav">
+                        <li id="ul_c_ph_slsy_s">
+                            <a id="c_ph_slsy_s" href="javascript:void(0)">商旅首页</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_chl_s">
+                            <a id="c_ph_chl_s" href="javascript:void(0)">企业差旅平台</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hj_s">
+                            <a id="c_ph_hj_s" href="javascript:void(0)">会议旅游</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_cruise">
+                <a id="nav_cruise" class="cui_nav_non" DividerClass="divider_spec" href="javascript:void(0)">邮轮</a>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_mudidi">
+                <a id="nav_mudidi" class="cui_nav_non" DividerClass="divider_spec" href="javascript:void(0)">目的地</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_finance_pc">
+                <a id="finance_pc" class="cui_nav_non" href="javascript:void(0)">金融</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_more">
+                <a id="nav_more" class="cui_nav_has" rel="nofollow" href="javascript:void(0)">更多<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_more" class="cui_sub_nav">
+                        <li id="ul_c_ph_ypsc_m">
+                            <a id="c_ph_ypsc_m" href="javascript:void(0)">优品商城</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_sjhy_m">
+                            <a id="c_ph_sjhy_m" href="javascript:void(0)">超级会员</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_tuangou_m">
+                            <a id="c_ph_tuangou_m" href="javascript:void(0)">团购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_cards_m">
+                            <a id="c_ph_cards_m" rel="nofollow" href="javascript:void(0)">合作卡</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_xcyd_m">
+                            <a id="c_ph_xcyd_m" href="javascript:void(0)">携程运动</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="nav_bh" class="cui_nav_behind" style="display:none;height:0px;"></div>
+</div><div id="ActConfig_ID" style="display:none">[{"id":"41","onlinetime":"2019/07/17 11:30:17$2019/08/04 23:55:14"},{"id":"40","onlinetime":"2019/07/17 11:30:26$2019/08/04 23:55:14"},{"id":"44","onlinetime":"2019/07/11 00:00:03$2019/07/25 23:55:01"},{"id":"43","onlinetime":"2019/07/11 00:00:03$2019/07/25 23:55:01"},{"id":"14","onlinetime":"2019/12/31 23:55:04$2200/08/08 16:19:09"},{"id":"15","onlinetime":"2018/12/13 08:23:32$2180/12/31 23:55:09"}]</div><input type="hidden" id="popfloating_isshow" value="0"><input type="hidden" id="siteDomainHeadFloat" value="ctrip"><input type="hidden" id="bsType" value="0"><input type="hidden" id="formatTel" value="[{'formatTelNum':'95010','prefix':'境内：','sortIndex':'1','standardTelNum':'SHMobile95010','suffix':''},{'formatTelNum':'400-830-6666','prefix':'（或）','sortIndex':'2','standardTelNum':'4008306666','suffix':''},{'formatTelNum':'+ 852-3008-3268','prefix':'香港（中国）：','sortIndex':'3','standardTelNum':'85230083268','suffix':''},{'formatTelNum':'+ 86-21-3406-4888','prefix':'境外：','sortIndex':'4','standardTelNum':'34064888','suffix':''}]">
+    <script> ;window.replace=function(){return ''};window.replace=function(){return""}; !function(){window.replace=function(){return""};(function(){var h=document,c=function(a){return h.getElementById(a)},k=null,l=null,m=0,d=[c("cui_nav_hotel"),c("cui_nav_vac"),c("cui_nav_flight"),c("cui_nav_trains"),c("cui_nav_destination"),c("cui_nav_car"),c("cui_nav_ticket"),c("cui_nav_g"),c("cui_nav_lpk"),c("cui_nav_sl"),c("cui_nav_more")],g={onmouseenter:function(a,b){(h.all?a.onmouseenter=b:a.onmouseover=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&& b())})},onmouseout:function(a,b){(h.all?a.onmouseleave=b:a.onmouseout=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&&b())})},addEvent:function(a,b,f){(a.addEventListener?a.addEventListener(b,f,!1):(a.attachEvent?a.attachEvent("on"+b,f):a["on"+b]=f))}},e={setTime:function(){g.onmouseenter(c("cui_nav"),function(){setTimeout(function(){m=150},30)});g.onmouseout(c("cui_nav"),function(){m=0})},initEvent:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b= a;g.onmouseenter(d[b],function(){e.interFn(d[b])});g.onmouseout(d[b],function(){e.outerFn(d[b])})})(a)},reset:function(){for(var a=0,b=d.length;b>a;a++)d[a].className=(-1<d[a].className.indexOf("cui_nav_current")?"cui_nav_current":"")},padReset:function(a){for(var b=0,f=d.length;f>b;b++)(-1<d[b].className.indexOf("cui_nav_current")?d[b].className="cui_nav_current":b!==a&&(d[b].className=""))},interFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),f="",d=0;d<b.length;d++)b[d].className.match((/cui_nav_current/))&& (f=b[d]);null!=l&&(clearTimeout(l),l=null);k=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")?f.className="cui_nav_current":(a.className="cui_nav_o",f.className="cui_nav_current cui_nav_unhover"))},m)},outerFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),d="",c=0;c<b.length;c++)b[c].className.match((/cui_nav_current/))&&(d=b[c]);null!=k&&(clearTimeout(k),k=null);l=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")? d.className="cui_nav_current":(a.className="",d.className="cui_nav_current"))},250)},initMobile:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b=a,c=d[b].getElementsByTagName("A")[0];c.href="###";c.onmousedown=function(){e.padReset(b);-1===d[b].className.indexOf("cui_nav_current")&&((-1<d[b].className.indexOf("cui_nav_o")?(d[b].className="",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",c.style.visibility="hidden",setTimeout(function(){c.style.visibility= "visible"},10)):(d[b].className="cui_nav_o",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",document.getElementsByClassName("cui_nav_current")[0].className+=" cui_nav_unhover")))}})(a)},contains:function(a){for(var b=0,c=d.length;c>b;b++)if(0<d[b].compareDocumentPosition(a)-19)return!0;return!1}};c("headStyleId")&&c("headStyleId").parentNode.removeChild(c("headStyleId"));((/ip(hone|od)|ipad/i).test(navigator.userAgent)?(e.initMobile(),g.addEvent(h.body,"click",function(a){e.contains(a.target|| a.srcElement)||e.reset()})):(e.setTime(),e.initEvent()))})()}(); </script>
+
+    <style>
+        stylebold { font-weight:bold; }
+        .InvoiceTab {
+            padding-top: 10px;
+        }
+        .InvoiceTab ul,li{ padding:0;margin:0;list-style:none}
+        .InvoiceTab .blueline {
+            width: 160px;
+            height: 2px;
+            background: #2178cd;
+
+            float: left;
+        }
+        .InvoiceTab .blueline2 {
+            width: 160px;
+            height: 2px;
+            background: #2178cd;
+            margin-left: 235px;
+            float: left;
+        }
+
+        .InvoiceTab .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid #2178cd;
+        }
+
+        .InvoiceTab ul {
+            padding: 0;
+            color: #2178cd;
+            margin-left: 0;
+        }
+
+        .InvoiceTab li {
+            float: left;
+            list-style: none;
+            display: list-item;
+            position : relative;
+        }
+
+        .InvoiceTab a {
+            text-decoration: none;
+            color: #666666;
+            font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';
+            font-size: 16px;
+            font-weight: 650;
+            font-style: normal;
+            top: 307px;
+        }
+
+        .InvoiceTab a.current {
+            color: #2178cd;
+        }
+
+        .pop-box-depart-invoice dt {
+            width: 75px;
+        }
+
+        .InvoiceTab .flag_orange {
+            position: absolute;
+            right: -21px;
+            top: -18px;
+            background-color: #ff6913;
+            color: #fff;
+            font-size: 12px;
+            height: 18px;
+            line-height: 16px;
+            padding: 0 4px;
+            text-align: center;
+            z-index: 1;
+            border-radius: 2px;
+        }
+
+        .InvoiceTab .flag_orange .arr {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAWpJREFUOBGVUzFOw0AQnDUuwYWhJB+goeINNPzASBQBEfgGPIAyIqE0FCAaGigoECg/QHQQIVpskhRIAWfZO3PS6RLH9ha+u/HOenZuTZDgKAywhCcQx8hwQafpu8LrBKlk3g/X4NGzJjKzrI8gxBj/XtHZMNF4ySMv1Ao3QXQ7lcs8BhQuSj+TG7rE91TOP2AUNUVRtyhJ44yRFLzGBOdIk3spmtn5nj4QGjY4c0/iItEOFugOK8sf3ApPeC/YMLm5ooNQ1FDTgPVWfgGyLV+TGKtibv1g7kuDu9QZvOatoUJr7mdYvBphnTpJT73KFZEoqhw8BPMhtdPYpvh6GEGBDRbvuYefbJu6gzc3x8diBTXM6qqPZZaO3Gs3BX0xef7V54ZGxgtDdFcP6saKguU3sQwtSlN4gaLZhpYVchSJoTyJqP3Vn0d03/m6NTWMFQx1yfZZzVFDiqgJLTXUJrp7mWx6qGqoS7bPf6NKiL9/vB2tAAAAAElFTkSuQmCC);
+            z-index: -1;
+            left: 2px;
+            top: 7px;
+        }
+
+        .integral-wrap{ padding: 10px 0;}
+        .integral-wrap .o-table{ display:block; width:100%;}
+        .red{ color:#BB0000;}
+        .integral-wrap .o-table{ display: block;}
+        .integral-wrap .o-table td,.integral-wrap .o-table th{ padding: 5px; border:1px solid #ddd; text-align:center;}
+        .integral-wrap .o-table th{ padding:8px 5px; font-weight:bold;}
+        .integral-rule p{ padding-left:20px;}
+        .integral-rule .t{ float:left; margin-left:-20px; width:20px;}
+        .counterState {
+            display: inline-block;
+            padding: 1px 5px;
+            display: inline-block;
+            border-radius: 2px;
+            margin-right: 14px;
+        }
+        .cancel {
+            color: #f60;
+            background-color: #feedd5;
+        }
+        .cancelPart {
+            color: #f60;
+            background-color: #feedd5;
+        }
+        .confirming {
+            background-color:#2EB000;
+            color:#fff;
+        }
+        .rejected {
+            background-color:#ffc2b1;
+            color:#ff704a;
+        }
+        .confirmed {
+            background-color:#2EB000;
+            color:#fff;
+        }
+        .topmargincounter {
+            margin-top: 20px;
+        }
+    </style>
+    <div id="base_bd" class="basefix">
+        <input id="confirmType" type="hidden" value="MobileMSG" />
+        <input name="orderId" id="orderId" type="hidden" value="10403683475" />
+        <input type="hidden" id="page_id" value="102134" />
+        <input type="hidden" id="qb_o" value="" />
+        <input type="hidden" id="printArea" name="printArea"/>
+        <input type='hidden' id="ab_testing_tracker" value="140103_hod_order:B" />
+        <input type="hidden" name="OperationAction" value=""/>
+        <input type="hidden" name="CurrentCancelPolicyAmount" value="" />
+        <input type="hidden" name="cancelRefund" value=""/>
+        <input type="hidden" name="reason" value=""/>
+        <input type="hidden" name="detailta" value=""/>
+        <input type="hidden" name="ladderTablePrice" value=""/>
+        <!--
+        51cbce84-53f5-4f90-bc59-1aa9c02aa635;
+        2019-08-04 18:22:11;
+
+        -->
+
+        <div class="path_bar"><a href="../user/userCenter_index.html">我的携程</a> &gt;
+            <a href="//my.ctrip.com/Home/Order/HotelOrderList.aspx">酒店订单</a> &gt; 订单详情</div>
+        <div class="order-content">
+            <div class="anchor-nav" id="J_nav">
+                <a class="current" href="#orderinfo">订单信息</a>
+                <a href="#hotelinfo">入住信息</a>
+
+                <a href="#J_contactinfo">联系信息</a>
+                <a href="#hoteltip">酒店提示</a>
+            </div>
+            <div class="anchor-section section-orderinfo" id="orderinfo">
+                <h2 class="anchor-hd">订单信息</h2>
+                <div class="anchor-bd clearfix">
+
+                    <div class="bd-left" >
+                        <div class="clearfix">
+                            <div class="order-amount">
+                                <div class="amount-line price_total">
+                                    <span class="label">总金额</span>
+                                    <p class="staring-price"><dfn>&#165;</dfn><span class="price J_hoverCfg" id="J_totalprice" data-hover="#J_roomPriceBreakFast" style="cursor: default;border-bottom:none;">398.00</span></p>
+                                </div>
+                                <span id="reduce">已减100</span>
+
+
+                                <p class="gray">
+
+                                    已包含税费服务费<br>
+                                    不包含城市建设费
+                                </p>
+
+                            </div>
+                            <table class="table-col-th table-order-info">
+                                <tbody>
+                                <tr>
+                                    <th>订单号</th>
+                                    <td id="order">10403683475</td>
+                                </tr>
+
+                                <tr>
+                                    <th>预订日期</th>
+                                    <td id="ctrateDate">2019-08-04</td>
+                                </tr>
+                                <tr>
+                                    <th>预订方式</th>
+                                    <td>网上预订</td>
+                                </tr>
+                                <tr>	<th>支付方式</th>	<td>支付宝支付</td></tr>
+
+                                <tr>
+                                    <th>订单状态</th>
+                                    <td id="orderStatus">已确认</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class='process-steps-n'><ul><li class='status-first status-ok'>    <p class='step-text'>订单提交</p>    <i class='step-icon'>1</i>    <b class='step-border'></b>    <div class='step-desc'>    </div></li><li class=' status-ok'>    <p class='step-text'>酒店确认</p>    <i class='step-icon'>2</i>    <b class='step-border'></b>    <div class='step-desc'><a id='J_sendnotificate' href='#'>重发确认信息</a>    </div></li><li class=' '>    <p class='step-text'>入住</p>    <i class='step-icon'>3</i>    <b class='step-border'></b>    <div class='step-desc'>    </div></li><li class=' '>    <p class='step-text'>未成交</p>    <i class='step-icon'>4</i>    <b class='step-border'></b>    <div class='step-desc'>    </div></li></ul></div>
+
+                        <div class="list-tracking"style="display: none">
+                            <ul id="J_trackList">
+
+                                <li class='cur'>
+                                    <i class="icon-status"></i>
+
+                                    <p class="time">2019-08-04 18:18</p>
+                                    <p class="status">预订已成功，您可安心入住</p>
+                                </li>
+
+                                <li >
+                                    <i class="icon-status"></i>
+
+                                    <p class="time">2019-08-04 18:17</p>
+                                    <p class="status">您的入住信息正发送至酒店，请等待酒店确认</p>
+                                </li>
+
+                                <li >
+                                    <i class="icon-status"></i>
+
+                                    <p class="time">2019-08-04 18:17</p>
+                                    <p class="status">订单提交已成功</p>
+                                </li>
+
+                                <li >
+                                    <i class="icon-status"></i>
+
+                                    <p class="time">2019-08-04 18:17</p>
+                                    <p class="status">订单已创建</p>
+                                </li>
+
+                            </ul>
+
+                            <div class="act">
+                                <a id="J_listTrack" class="show_unfold" href="javascript:">查看更多<i></i></a>
+                            </div>
+
+
+                        </div>
+
+                        <a class="download-app">
+                            <div class="download-app-hd">
+                                <i class="sign"></i>
+                                <i class="arrow"></i>
+                                关注微信，酒店预订通知随时收，订单查询与修改分分钟搞定！
+                            </div>
+                            <div class="download-app-bd">
+                                <i class="qr"></i>
+                                <p class="title">关注携程旅行网</p>
+                                <p class="info">快速订酒店、查询或修改订单<br>
+                                    实时了解酒店预订动态<br>
+                                    预订、个人专享、微服务伴您一路旅程！</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bd-right">
+                        <p class="oper-guide">您可以</p>
+                        <div class="oper-btns">
+
+
+
+                            <a href="//hotels.ctrip.com/hotel/638257.html?startdate=2019-08-04&depdate=2019-08-05" class="btn btn-primary" id="J_BookAgain">再次预订</a>
+
+                            <a href="Voucher.aspx?OrderID=10403683475" target="_blank" class="btn btn-primary">打印订单</a>
+                            <a href="javascript:;" class="btn btn-primary" id="J_PrintOrder" style="display:none"></a>
+
+                            <a href="#" class="btn btn-primary" id="J_cancelthisorder">取消订单</a><i class="icon-info J_jmp" data-tip="#J_cancel_tips"></i>
+                            <div class="hover-tips hover-tips-cancel" id="J_cancel_tips" style="display:none;"><div style="margin:10px">北京时间2019-08-05 00:00前可免费取消修改。</div></div>
+
+                        </div>
+
+                        <div class="qrcodes-down" id="J_qrcodes">
+                            <img class="qr-icon" id="J_qrcodes_img" src="../user/picture/qr_c101.png" />
+                            <p class="qr-tit">扫一扫&nbsp;或&nbsp;<a href="//app.ctrip.com/">点此下载APP</a></p>
+                            <p class="qr-desc">随时随地管理订单</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor-section section-hotel" id="hotelinfo">
+                <h2 class="anchor-hd">入住信息</h2>
+                <div class="hotel-info">
+                    <h3 class="hotel-name"><a class='hotel_name' target='_blank' href='/Domestic/ShowHotelInformation.aspx?hotel=638257'>成都海洋莱普敦酒店</a></h3><span id="level" class='hotel_diamond04' title='高档型'></span>
+                    <p class="hotel-address"><span id="address">天府大道中段天府三街91号</span>&nbsp;<a href='//hotels.ctrip.com/map/638257.html#traffic' target='_blank'>查看酒店地图</a></p>
+                    <div class="blank-bottom"></div>
+                </div>
+                <div class="anchor-bd clearfix">
+                    <div class="bd-left">
+                        <table class="table-col-th">
+                            <tbody>
+                            <tr>
+                                <th>房型</th>
+                                <td><h4 class="room-name">豪华大床公寓(空气清新房携程专享)</h4></td>
+                            </tr>
+                            <tr>
+                                <th>床型</th>
+                                <td>大床</td>
+                            </tr>
+
+                            <tr>
+                                <th>入离日期</th>
+                                <td>
+                                    <div class="room-date" id="inTime">
+                                        <span class="date-d big-num">4</span>
+                                        <span class="date-ym">2019-08</span>
+                                        <span class="date-w">星期天</span>
+                                    </div>
+                                    <span class="connect">-</span>
+                                    <div class="room-date" id="outTime">
+                                        <span class="date-d big-num">5</span>
+                                        <span class="date-ym">2019-08</span>
+                                        <span class="date-w">星期一</span>
+                                    </div>
+                                    <span class="date-total">共<span class="num">1</span>晚</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>间数</th>
+                                <td>
+                                    <div class="room-num"><span class="big-num">1</span>间</div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>房费/早餐</th>
+                                <td>
+                                    <table cellspacing="0" cellpadding="0" class="hotel_everyday_list2">
+                                        <tbody>
+                                        <tr>
+                                            <th id="inTime_H">08-04(日)</th>
+                                            <th id="outTime_H">08-05(一)</th>
+                                        </tr>
+                                        <tr>
+                                            <td><p class="hotel_everyday_price"><dfn>&yen</dfn>498.00/间</p>无餐食</td>
+                                            <td><p class="hotel_everyday_price">&nbsp;</p><p class='txt_green'>2份早餐</p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                <span class="breakfast_tips"></span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>住客信息</th>
+                                <td id="guests">
+                                    卢智伟
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>到店时间</th>
+                                <td id="estimatedTime">
+                                    2019-08-04 19:00-2019-08-04 20:00<br />
+
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <th>住宿偏好</th>
+                                <td>
+                                    <div class="multi-text" id="specialReqs">无</div>
+
+                                    <div><p class="gray" id="remark-change" style="display:none"><i class="icon-info"></i>您提交的住宿偏好修改已提交至供应商，如无问题，将不再打搅您。</p>
+
+                                </td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bd-right">
+                        <div class="oper-btns">
+
+<!--                            <a href="InputNewOrder.aspx?OriOrderID=10403683475&operationType=CHANGEORDER&cityId=28" class="btn btn-primary J_modifyOrderLink" id="J_updateorder2" >修改入住信息</a>-->
+
+<!--                            <a href='###' class="btn btn-primary" id="J_delayArrivelLink">延迟到店</a>-->
+
+                            <a href='###' class="btn btn-primary" id="J_modifyRemarkLink">修改住宿偏好</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor-section" id="J_contactinfo">
+                <h2 class="anchor-hd">联系信息</h2>
+                <div class="anchor-bd clearfix view">
+                    <div class="bd-left">
+                        <table class="table-col-th">
+                            <tbody>
+
+                            <tr>
+                                <th>联系手机</th>
+                                <td id="phone">+86-134****1242</td>
+                            </tr>
+                            <tr style='display:none;'><th></th><td></td></tr><tr style='display:none;'><th></th><td></td></tr><tr style='display:none;'><th></th><td></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bd-right">
+                        <div class="oper-btns"><a href="javascript:;" class="btn btn-primary" id="J_updatecontact">修改联系信息</a></div>
+                    </div>
+
+                </div>
+                <div class="anchor-bd clearfix edit" style="display:none;" id="J_contactEdit">
+                    <div class="bd-left">
+                        <div class="form form-horizontal">
+                            <div class="form-item">
+                                <label for="mobile" class="form-label">手机号码</label>
+                                <div class="form-field">
+                                    <div class="phone-box">
+                                        <input class="form-text phone-box-area" type="text" placeholder="区号" id="txtContactMobilePhoneArea" name='MobilePhoneArea' value='中国(+86)' data-area='{"Cn":"中国","Code":86,"Country":"CN","CountryId":"1","En":"China","Heat":100,"Open":1,"ProvinceId":null,"Py":"ZHONG GUO DA LU"}'>
+                                        <input class="form-text phone-box-num" type="text" id="txtContactMobilePhone" name='MobilePhone' value='13432111242' data-bind="value: mobile">
+                                        <input class="hidden" value="9894502" name="MobilePhoneRPH" id="MobilePhoneRPH"/>
+                                        <div class="tips-info"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="form-field">
+                                    <input id="txtContactEmail" class="form-text" name="email" type="text"  maxlength="50" value='' data-bind="value: email"/>
+                                    <span class="form-des"></span>
+                                    <div class="tips-info">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label">固定电话</label>
+                                <div class="form-field">
+                                    <input id="txtContactTelArea" class="form-text text-small inline-ele input_contact_area" type="text" name="ContactTelArea" maxlength="10" value='' data-bind="value: telArea"/>
+                                    <input id="txtContactTelNum" class="form-text text-medium inline-ele input_contact_num" type="text" name="ContactTelNum" maxlength="30" value='' data-bind="value: telNum"/>
+                                    <input id="txtContactTelExt" class="form-text text-small input_contact_ext" type="text" name="ContactTelExt" maxlength="10" value='' data-bind="value: telExt"/>
+                                    <input class="hidden" name="ContactTelRPH" value="" />
+                                    <div class="tips-info"><span class="form-des">选填</span></div>
+                                </div>
+                            </div>
+                            <div id="J_wrongRecentContact_hxl" class="tips-info form"></div>
+                        </div>
+
+                    </div>
+                    <div class="bd-right">
+                        <div class="oper-btns"><a href="javascript:;" class="btn btn-primary" id="J_saveupdate">保存修改</a><a href="javascript:;" class="btn" id="J_cancelupdate">取消</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--积分抵扣订单不展示发票信息模块-->
+
+        <div class="anchor-section section-cuxiaoyouhui" style="display:none;">
+            <h2 class="anchor-hd">促销优惠</h2>
+            <div class="anchor-bd clearfix">
+                <div class="bd-left clearfix"><div class="promote-left">已立减<dfn>&#165;</dfn>100.00元</div><div class='J_promoteContent promote-right'><em class='bld_title'>世警会特惠</em><span>立减<dfn>&yen;</dfn>100元</span><div class='J_promotePop promote_pop'>燃爆今夏世警会，活动房型每间每晚最高可减{0}元</div><a class="rule-info show_unfold J_rule_fold" href="javascript:">详情<b></b></a><div class="rule-context J_rule_context" style="display: none;">1、活动时间：2019-07-11~2019-08-31；
+
+                    2、仅适用于活动期间且带有“世警会特惠”活动标签的酒店产品；
+
+                    3、如订单修改时优惠政策发生变动，则以最新的优惠政策为准；
+
+                    4、如出现恶意下单、利用程序漏洞等作弊行为，携程有权取消您本次活动订单；
+
+                    5、携程旅行网在法律允许范围内对本活动拥有最终解释权。</div></div></div>
+            </div>
+        </div>
+
+        <div class="anchor-section" id="hoteltip">
+            <h2 class="anchor-hd">酒店提示</h2>
+            <div class="anchor-bd clearfix">
+                <div class="bd-left">
+                    <ul class="text-list">
+                        <li>・北京时间2019-08-05 00:00前可免费取消修改。</li>
+                    </ul>
+                </div>
+                <div class="bd-right"></div>
+            </div>
+        </div>
+
+        <div class="nps-section" id="J_NPSPanel">
+            <div class="nps-hd">您愿意推荐他人使用携程预订酒店吗？</div>
+            <dl class="nps-score clearfix">
+                <dt class="clearfix">
+                    <span class="dt-l">完全不可能</span>
+                    <span class="dt-r">很有可能</span>
+                </dt>
+                <dd class="clearfix" id="J_ScoreListNPS">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </dd>
+            </dl>
+            <dl class="nps-reason clearfix" style="display:none;">
+                <dt>请说明您选择<strong id="J_ScoreChoosed"></strong>分的原因</dt>
+                <dd class="clearfix" id="J_NPSLow" style="display:none;">
+                    <span>客服服务差</span>
+                    <span>不够优惠</span>
+                    <span>返现不便</span>
+                    <span>退改不方便</span>
+                    <span>订单确认慢</span>
+                    <span>订不上房</span>
+                    <span>酒店不好</span>
+                    <span>酒店信息缺失或有误</span>
+                    <span>房源不够多</span>
+                    <span>预订操作不便</span>
+                    <span>点评不准</span>
+                    <span>额外消费</span>
+                </dd>
+                <dd class="clearfix" id="J_NPSMiddle" style="display:none;">
+                    <span>售后服务</span>
+                    <span>酒店质量</span>
+                    <span>品牌</span>
+                    <span>酒店房源</span>
+                    <span>预订操作</span>
+                    <span>酒店点评</span>
+                </dd>
+                <dd class="clearfix" id="J_NPSHigh" style="display:none;">
+                    <span>客服服务好</span>
+                    <span>性价比高</span>
+                    <span>有返现</span>
+                    <span>订单退改方便</span>
+                    <span>订单确认快</span>
+                    <span>能订到房</span>
+                    <span>酒店质量好</span>
+                    <span>酒店信息全而准确</span>
+                    <span>房源多</span>
+                    <span>比较专业，安全可靠</span>
+                    <span>预订操作简单易上手</span>
+                    <span>点评参考性高</span>
+                </dd>
+            </dl>
+            <textarea id="J_NPS_Reason" class="nps-textarea" style="display:none;" maxlength="500" placeholder="其他原因请说明（最多500字）"></textarea>
+            <div class="nps-err" style="display:none;"></div>
+            <div class="nps-btn"><a style="display:none;" href="javascript:void(0)" class="btn btn-primary" id="J_NPSSubmit">提交反馈</a></div>
+        </div>
+        <div class="nps-section" style="display:none;" id="J_NPSOver">
+            <div class="nps-success"><i class="nps-success-i"></i>您的反馈已收到。感谢！</div>
+        </div>
+
+        <div id="recommendContent" class="cross_ad">
+            <div class="J_crossAd cross_ad">
+                <h4 class="cross_ad_hd">更多优选产品为您推荐</h4>
+                <ul class="cross_ad_list clearfix basefix">
+                    <li class="cross_ad_list_01"><div id="cross_ad_list_01"></div></li>
+                    <li class="cross_ad_list_02"><div id="cross_ad_list_02"></div></li>
+                    <li class="cross_ad_list_03"><div id="cross_ad_list_03"></div></li>
+                    <li class="last cross_ad_list_04"><div id="cross_ad_list_04"></div></li>
+                </ul>
+            </div>
+        </div>
+        <input type="hidden" name="hotel" value="638257" />
+        <input type="hidden" id="bf_ubt_cityid" value="28" />
+
+        <input type='hidden' id="bf_ubt_orderid" value="10403683475" />
+
+        <div class="hotel_b_pic_list layoutfix">
+            <div class="hbpl_b_item" data-adpos-id="1"><div id="hbpl_b_item"></div></div>
+            <div class="hbpl_s_items">
+                <div class="hbpl_s_item" data-adpos-id="9"><div id="hbpl_s_item_01"></div></div>
+                <div class="hbpl_s_item" data-adpos-id="4"><div id="hbpl_s_item_02"></div></div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            window.cAd = {};
+            window.cAd.channelid = 4;
+            window.cAd.moduleid = 'hod_cpl_ad_def';
+        </script>
+
+    </div>
+    <script type="text/javascript" src="../user/js/aslide.iife.min.js"></script>
+    <script type="text/javascript">
+        var widthOld = document.getElementsByClassName('hotel_b_pic_list')[0].clientWidth;
+        function loadAd(isFirstLoad) {
+            var widthCurrent = document.getElementsByClassName('hotel_b_pic_list')[0].clientWidth;
+            if (!isFirstLoad) {
+                if (widthOld == widthCurrent) return;
+            }
+            widthOld = widthCurrent;
+            var crossAdListTagId = ['cross_ad_list_01', 'cross_ad_list_02', 'cross_ad_list_03', 'cross_ad_list_04'],
+                footButtonTagId = ['hbpl_b_item', 'hbpl_s_item_01', 'hbpl_s_item_02'];
+            new AdSlider().load({
+                mediaCode: 'JDAWSH',
+                pageCode: '0312JDVJMW',
+                siteType: 'HTLCITY',
+                useCache: false,
+                heightResizeFixed: false,
+                adList: [
+                    {
+                        impId: '03JDAWSH0312JDVJMW1144', // 上方小button1
+                        tagId: crossAdListTagId[0],
+                        width: document.getElementsByClassName(crossAdListTagId[0])[0].clientWidth,
+                        height: 120,
+                        jumpType: {
+                            bySelf: true,
+                            handleItemClick: function(url) {
+                                window.open(url);
+                            }
+                        }
+                    },
+                    {
+                        impId: '03JDAWSH0312JDVJMW1145', // 上方小button2
+                        tagId: crossAdListTagId[1],
+                        width: document.getElementsByClassName(crossAdListTagId[1])[0].clientWidth,
+                        height: 120,
+                        jumpType: {
+                            bySelf: true,
+                            handleItemClick: function(url) {
+                                window.open(url);
+                            }
+                        }
+                    },
+                    {
+                        impId: '03JDAWSH0312JDVJMW1146', // 上方小button3
+                        tagId: crossAdListTagId[2],
+                        width: document.getElementsByClassName(crossAdListTagId[2])[0].clientWidth,
+                        height: 120,
+                        jumpType: {
+                            bySelf: true,
+                            handleItemClick: function(url) {
+                                window.open(url);
+                            }
+                        }
+                    },
+                    {
+                        impId: '03JDAWSH0312JDVJMW1147', // 上方小button4
+                        tagId: crossAdListTagId[3],
+                        width: document.getElementsByClassName(crossAdListTagId[3])[0].clientWidth,
+                        height: 120,
+                        jumpType: {
+                            bySelf: true,
+                            handleItemClick: function(url) {
+                                window.open(url);
+                            }
+                        }
+                    },
+                    {
+                        impId: '03JDAWSH0312JDVJMW1141', // 底部按钮1
+                        tagId: footButtonTagId[0],
+                        width: document.getElementsByClassName('hbpl_b_item')[0].clientWidth,
+                        height: 280,
+                        jumpType: {
+                            bySelf: true,
+                            handleItemClick: function(url) {
+                                window.open(url);
+                            }
+                        }
+                    },
+                    {
+                        impId: '03JDAWSH0312JDVJMW1142', // 底部按钮2
+                        tagId: footButtonTagId[1],
+                        width: document.getElementsByClassName('hbpl_s_items')[0].clientWidth,
+                        height: 136,
+                        jumpType: {
+                            bySelf: true,
+                            handleItemClick: function(url) {
+                                window.open(url);
+                            }
+                        }
+                    },
+                    {
+                        impId: '03JDAWSH0312JDVJMW1143', // 底部按钮3
+                        tagId: footButtonTagId[2],
+                        width: document.getElementsByClassName('hbpl_s_items')[0].clientWidth,
+                        height: 136,
+                        jumpType: {
+                            bySelf: true,
+                            handleItemClick: function(url) {
+                                window.open(url);
+                            }
+                        }
+                    },
+                ],
+                adCallback: function(data, length) {
+                    var footButtonShowTagId = [];
+                    var showTag = [];
+                    if (data && data.length) {
+                        data.forEach(function(item) {
+                            showTag.push(item.contentId);
+                            if (crossAdListTagId.indexOf(item.contentId) > -1) {
+                                footButtonShowTagId.push(item.contentId);
+                            }
+                        });
+                    }
+                    if (footButtonShowTagId.length === 0) {
+                        document.getElementsByClassName('cross_ad')[0].style.display = 'none';
+                    }
+                    if (showTag.length && showTag.indexOf('hbpl_b_item') == -1) {
+                        document.getElementsByClassName('hbpl_s_item')[0].style.marginLeft = 0;
+                        document.getElementsByClassName('hbpl_s_item')[1].style.marginLeft = 0;
+                    }
+                }
+            })
+        }
+
+        loadAd(true);
+
+        window.onresize = function () {
+            loadAd(false);
+        }
+    </script>
+    <script id="J_tpl_roomPrice" type="text/ctrip-tpl">
+<div class="pop_box" style="border:none;">
+	<div class="jmp_breakfast">
+		<div class="hotel_everyday_data">
+			<p><strong class="t1">房费/早餐</strong>以下价格是每日每间的房价</p>
+			{{ if everydayprice.summary }}
+				<p>
+					{{each(i,item) everydayprice.summary}}
+						${item}
+					{{/each}}
+				</p>
+			{{ /if }}
+		</div>
+		<div class="everyday_main">
+			<span class="btn_prev"><i></i></span>
+			<span class="btn_next"><i></i></span>
+			<div class="everyday_scroll">
+				<ul style="width:2000px;" class="everyday_item">
+					{{each(i,page) everydayprice.pages}}
+					<li class="lis" {{if i>0 }}style="display:none;"{{/if}}>
+						<table cellspacing="0" cellpadding="0" class="hotel_everyday_list2">
+							<tbody>
+								{{each(j,line) page}}
+								<tr>
+									{{each(k,item) line}}
+									<th>${item.date}</th>
+									{{/each}}
+								</tr>
+								<tr>
+									{{each(k,item) line}}
+									<td>
+										<p class="hotel_everyday_price">${item.CnyPrice}</p>
+										{{ if item.OriPrice }}<p>${item.OriPrice}</p>{{ /if }}
+										${item.breakfast}
+									</td>
+									{{/each}}
+								</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		{{ if everydayprice.exchangeInfo }}
+		<div class="hotel_currency"><strong>货币换算</strong> <span class="base_price"> ${everydayprice.exchangeInfo} <span class="hotel_currency_tips">人民币价格仅供参考</span></div>
+		{{ /if }}
+	</div>
+</div>
+</script>
+
+    <script id="J_tpl_roomPriceBreakFast2" type="text/ctrip-tpl">
+<div class="pop_box" style="border:none;">
+	<div class="jmp_breakfast">
+		<div class="hotel_everyday_data">
+			<p><strong class="t1">房费/早餐</strong>以下价格是每日每间的房价</p>
+			{{ if everydayprice.summary }}
+				<p>
+					{{each(i,item) everydayprice.summary}}
+						${item}
+					{{/each}}
+				</p>
+			{{ /if }}
+		</div>
+		<div class="everyday_main">
+			<span class="btn_prev"><i></i></span>
+			<span class="btn_next"><i></i></span>
+			<div class="everyday_scroll">
+				<ul style="width:2000px;" class="everyday_item">
+					{{each(i,page) everydayprice.pages}}
+					<li class="lis" {{if i>0 }}style="display:none;"{{/if}}>
+						<table cellspacing="0" cellpadding="0" class="hotel_everyday_list2">
+							<tbody>
+								{{each(j,line) page}}
+								<tr>
+									{{each(k,item) line}}
+									<th>${item.date}</th>
+									{{/each}}
+								</tr>
+								<tr>
+									{{each(k,item) line}}
+									<td>
+										<p class="hotel_everyday_price">${item.CnyPrice}</p>
+										{{ if item.OriPrice }}<p>${item.OriPrice}</p>{{ /if }}
+										${item.breakfast}
+									</td>
+									{{/each}}
+								</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					</li>
+					{{/each}}
+				</ul>
+                <span class="breakfast_tips">${everydayprice.mealExplain}</span>
+			</div>
+		</div>
+		<table cellspacing="0" cellpadding="0" class="hotel_add_list">
+			<tbody>
+             {{ if everydayprice.firstRoomFee  }}
+				<tr>
+					<th>积分兑换首晚房费</th>
+					<td>
+						<p class="clearfix">
+							<span class="l1">${everydayprice.firstRoomFee}</span>
+						</p>
+					</td>
+				</tr>
+				{{ /if }}
+				{{ if everydayprice.addoption && everydayprice.addoption.length>0 }}
+				<tr>
+					<th>附加服务费</th>
+					<td>
+						{{each(i,item) everydayprice.addoption}}
+						<p class="clearfix">
+							<span class="l1">${item.price}</span>
+						</p>
+						{{/each}}
+					</td>
+				</tr>
+				{{ /if }}
+				{{ if everydayprice.travalInsure || everydayprice.cancelInsure }}
+				<tr>
+					<th>保险费</th>
+					<td>
+						{{ if everydayprice.cancelInsure }}
+						<p class="clearfix">
+							<span class="l1">携程酒店预订取消险费</span><span class="l2">${everydayprice.cancelInsure}</span>
+						</p>
+						{{ /if }}
+						{{ if everydayprice.travalInsure }}
+						<p class="clearfix">
+							<span class="l1">携程酒店出行意外险费</span><span class="l2">${everydayprice.travalInsure}</span>
+						</p>
+						{{ /if }}
+					</td>
+				</tr>
+				{{ /if }}
+				{{ if everydayprice.InvoiceInfo }}
+				<tr>
+					<th>配送费</th>
+					<td>
+						<p class="clearfix">
+							<span class="l1">发票配送费</span><span class="l2">${everydayprice.InvoiceInfo}</span>
+						</p>
+					</td>
+				</tr>
+				{{ /if }}
+				{{ if everydayprice.Dopsit }}
+				<tr>
+					<th>押金金额</th>
+					<td>
+						<p class="clearfix">
+							<span class="l1">押金金额</span><span class="l2">${everydayprice.Dopsit}</span>
+						</p>
+					</td>
+				</tr>
+				{{ /if }}
+				{{ if everydayprice.OtherCost }}
+				<tr>
+					<th>杂费</th>
+					<td>
+						<p class="clearfix">
+							<span class="l1">杂费</span><span class="l2">${everydayprice.OtherCost}</span>
+						</p>
+					</td>
+				</tr>
+				{{ /if }}
+                {{ if everydayprice.creditDeduct }}
+				<tr>
+					<th>积分抵扣</th>
+					<td>
+						<p class="clearfix">
+							<span class="l1">积分抵扣</span><span class="l2">${everydayprice.creditDeduct}</span>
+						</p>
+					</td>
+				</tr>
+				{{ /if }}
+			</tbody>
+		</table>
+		{{ if everydayprice.exchangeInfo }}
+		<div class="hotel_currency"><strong>货币换算</strong> <span class="base_price"> ${everydayprice.exchangeInfo} <span class="hotel_currency_tips">人民币价格仅供参考</span></div>
+		{{ /if }}
+	</div>
+</div>
+</script>
+
+    <div class="data-tips data-tips-contact" id="recentContactPop" style="display: none">
+        <h3 class="tips-hd title">
+            入住人联系方式</h3>
+        <ul class="layoutfix guest_box" id="checkInPeople">
+        </ul>
+        <h3 class="tips-hd title">
+            常用联系方式</h3>
+        <ul class="layoutfix" id="contactPeople">
+        </ul>
+        <div class="c_page_mini">
+        </div>
+        <iframe style="display: none; position: absolute; visibility: inherit; top: 0; left: 0px;
+			width: 100%; height: 500px; z-index: -1; filter: alpha(opacity=0); -moz-opacity: 0;"
+                frameborder="0"></iframe>
+    </div>
+
+    <div class="data-tips data-tips-receipt hidden" id="J_recentReceiptTitle">
+        <a href="javascript:void(0)" class="c_close">&times;</a>
+        <p class="tips-hd">
+            选择常用发票抬头</p>
+        <ul class="layoutfix  J_root">
+        </ul>
+        <div class="c_page_mini  J_pager">
+        </div>
+        <iframe style="position: absolute; visibility: inherit; top: 0; left: 0px; width: 100%;
+			height: 100%; height: _500px; z-index: -1; filter: alpha(opacity=0); -moz-opacity: 0;"
+                frameborder="0"></iframe>
+    </div>
+
+    <div class="data-tips data-tips-receipt hidden" id="J_AutoFillReceiptTitle">
+        <a href="javascript:void(0)" class="c_close">&times;</a>
+        <p class="tips-hd">&nbsp;</p>
+        <ul class="layoutfix  J_root">
+        </ul>
+        <div class="c_page_mini  J_pager">
+        </div>
+        <iframe style="position: absolute; visibility: inherit; top: 0; left: 0px; width: 100%;
+			height: 100%; height: _500px; z-index: -1; filter: alpha(opacity=0); -moz-opacity: 0;"
+                frameborder="0"></iframe>
+    </div>
+
+    <div class="data-tips data-tips-post hidden" id="J_recentReceiverList">
+        <div class="tips-hd layoutfix">
+            <span class="name">收件人</span>
+            <span class="phone">手机号码</span>
+            <span class="address">收件地址</span>
+        </div>
+        <div class="tips-bd J_root">
+        </div>
+        <div class="c_page_mini J_pager">
+        </div>
+    </div>
+
+    <div class="pop-box pop-send-mail hidden" id="J_Pop_SendInvoiceEmail">
+        <div class="pop-hd"><a href="###" class="c_close J_Close">×</a>发送至邮箱：</div>
+        <div class="pop-bd J_ResendInvoiceSuc">
+            <div class="send-success"><i class="icon-success-48"></i>已经成功重新发送至邮箱，请查收！</div>
+        </div>
+        <div class="pop-bd J_ResendInvoiceFail">
+            <div class="send-fail"><i class="icon-fail-48"></i>发送失败，请重新发送。<br>或检查订单联系人邮箱是否正确。</div>
+        </div>
+        <div class="pop-ft J_ResendInvoiceFail"><a href="###" class="btn btn-primary" id="J_ResendInvoiceEmail">重新发送</a></div>
+        <div class="pop-ft J_ResendInvoiceSuc"><a href="###" class="btn btn-primary J_Close">确定</a></div>
+    </div>
+    <div class="pop-box pop-send-message" style="display:none;">
+        <div class="pop-hd"><a href="###" class="c_close">×</a>发送通知</div>
+        <div class="pop-bd form form-horizontal">
+            <div class='send-message-box'>
+                <div class='form-item'>
+                    <label class='form-label label-b'>订单号</label>
+                    <div class='form-field'>
+                        <a href=''>10403683475</a>
+                    </div>
+                </div>
+                <div class='form-item form-item-line'>
+                    <label class='form-label label-b'>卢智伟</label>
+                    <div class='form-field'>
+                        <div class='sm-contacts-list'>
+                            <div class='sms'>
+                                <label class='form-label-rc'><input value='sms' class='form-checkbox' name='noticeType' type='checkbox' checked='checked'><span>短信</span></label>
+                                <div class='form-field'>
+                                    <input class='form-text text-small phone-box-area' name='area' placeholder='+86' type='text' value='中国大陆(+86)'><input name='number' class='form-text' placeholder='请输入手机号码' type='text'></input><div class='tips-info'></div>
+                                </div>
+                            </div>
+                            <div class='email'>
+                                <label class='form-label-rc'><input value='email' class='form-checkbox' name='noticeType' type='checkbox'><span>Email</span></label>
+                                <div class='form-field'>
+                                    <input class='form-text text-large' placeholder='含中英文确认邮件，请输入邮箱' type='text'></input><div class='tips-info'></div>
+                                </div>
+                            </div>
+                            <div class='txt_tips hidden'>*为防止境外手机收取短信不及时，请同时填写Email</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='form-item hidden' id='J_ajaxFail'>
+                    <div class='tips-info'><p class='error'><i class='icon-error'></i>发送失败!</p></div>
+                </div>
+                <div class='form-action'>
+                    <a href='javascript:;' class='btn btn-primary'>发送</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-box pop-box-success J-notificate-success" style="display:none;">
+        <div class="pop-hd">
+            <a href="###" class="c_close">&times;</a>发送通知：</div>
+        <div class="pop-bd">
+            <div class="text-success">
+                <i class="icon-success"></i>发送成功</div>
+        </div>
+        <div class="pop-ft">
+            <a href="###" class="btn btn-primary">确定</a></div>
+    </div>
+
+    <div class='pop-box pop-box-check-in' style='display:none;'>
+        <div class='pop-hd'><a href='###' class='c_close'>&times;</a>入住信息确认：</div>
+        <div class='pop-bd form form-horizontal'>
+            <p class='info'>
+                请填写以下信息，有助于携程尽快为您确认返现</p>
+
+            <div class='form-action  action-left'>
+                <a href='javascript:;' class='btn btn-primary'>提交</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pop-box pop-box-success J-checkin-success" style="display:none;">
+        <div class="pop-hd"><a href="###" class="c_close">&times;</a>发送通知：</div>
+        <div class="pop-bd">
+            <div class="text-success"><i class="icon-success"></i>已提交，携程会尽快为您确认信息。</div>
+        </div>
+        <div class="pop-ft"><a href="###" class="btn btn-primary">确定</a></div>
+    </div>
+
+
+    <div class="pop-box J-pop-modify" style="display:none;">
+        <div class="pop-hd"><a href="###" class="c_close">&times;</a>友情提醒：</div>
+        <div class="pop-bd">
+
+        </div>
+        <div class="pop-ft"><a href="###" class="btn btn-primary">继续修改</a><a href="###" class="btn J_close">关闭</a></div>
+    </div>
+
+    <div class="pop-box pop-box-tips" id="editOrder" style="display:none;">
+        <div class="pop-hd">
+            <a class="c_close" href="javascript:maskShow(null);">×</a>
+            友情提醒：
+        </div>
+        <div class="pop-bd">
+            <p>因订单信息被修改，携程将为您重新预订并取消原订单，已付担保金额将在3个工作日内退至您的原账户。</p>
+            <p>如新订单仍为担保房型，需要您另行提供担保。</p>
+        </div>
+        <div class="pop-ft">
+            <a class="btn btn-primary"  onclick="EditOrder();">继续修改</a>
+            <a class="btn" onclick="maskShow(null);">关闭</a>
+        </div>
+    </div>
+
+
+    <div class="pop-box pop-box-cancel-order-ot" id="cancelmask_ot" style="display:none;">
+        <div class="pop-hd"><a href="###" class="c_close">&times;</a>过时取消：</div>
+        <div class="pop-bd">
+            <table>
+                <tr><td valign="top" style="padding:3px 13px"><i class="icon-info"></i></td>
+                    <td>
+                        <p class="info"><strong>订单已过最晚取消时间，不可取消退款。</strong></p>
+                        <p class="info">携程可代您与酒店协商减少损失，但您可能至少需承担在线支付金额或担保金的20%作为取消费。</p>
+                        <p>您可致电95010联系携程客服。</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="pop-ft">
+            <a class="btn btn-primary J_close" href="javascript:;">确定</a>
+            <a class="btn J_close" href="javascript:;">取消</a>
+        </div>
+    </div>
+
+    <div class="pop-box pop-box-cancel-order" id="cancelmask" style="display:none;">
+        <div class="pop-hd"><a href="###" class="c_close">&times;</a>取消订单：</div>
+        <div class="pop-bd form">
+
+            <p class="info">您是否真的需要取消此次行程？<br /><br />如果您只是想修改订单，请使用“修改入住信息”功能。<br /></p>
+
+
+        </div>
+        <div class="pop-ft">
+            <a href="###" id="cencal" class="btn btn-primary">取消订单</a>
+            <script>
+                function PerformCancel()
+                {
+                    document.aspnetForm.action = "ShowOrderDetail.aspx";
+                    document.aspnetForm.OperationAction.value="PerformCancel";
+                    document.aspnetForm.cancelRefund.value =  $('input:radio[name=cancelRefund]:checked').value();
+                    document.aspnetForm.reason.value =  $('input:radio[name=reason]:checked').value();
+                    document.aspnetForm.detailta.value =  $('#detailta').value();
+                    document.aspnetForm.CurrentCancelPolicyAmount.value = $("input[name=CurrentCancelPolicyAmount]").value();
+                    document.aspnetForm.submit();
+                }
+            </script>
+            <a class="btn J_close" href="javascript:;">返回</a>
+        </div>
+    </div>
+
+    <!-- 返现确认 -->
+    <div class="pop-box pop-box-confirm-email form" style="display:none;">
+        <div class="pop-hd"><a class="c_close" href="###">×</a>重新发送确认邮件</div>
+        <div class="pop-bd">
+            <p class="info">为了您能及时获得返现，请填写正确的Email地址</p>
+            <div><label class="form-label">Email</label><input class="form-text" type="text"/><div class="tips-info"></div></div>
+        </div>
+        <div class="pop-ft">
+            <a class="btn btn-primary" href="javascript:;">提交</a>
+        </div>
+        <div id="mailFail" class="form-item hidden">
+            <div class="tips-info"><p class="error"><i class="icon-error"></i>邮件发送失败!</p></div>
+        </div>
+    </div>
+
+    <div class="regular_guest_pop hidden" id="J_contactPop">
+        <div class="title"><a href="###" class="delete J_close">&times;</a>常用联系人</div>
+        <div class="bd">
+            <ul class="guest_box" id="J_contactUl">
+            </ul>
+            <div id="J_contactNav" class="c_page_mini">
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-box" id="supplyInvoiceErr" style="display:none;">
+        <div class=""><a class="c_close" href="###">×</a></div>
+        <div class="pop-bd">
+            <br/><br/><p class="info" align="center"></p><br/>
+        </div>
+        <div class="pop-ft">
+            <a class="btn btn-primary J_close" href="javascript:;">确定</a>
+        </div>
+    </div>
+
+
+
+    <div id='J_EInvoiceSamplePop' class="pop_box" style="position: absolute;display:none;">
+        <div class="electronic_temp"></div>
+    </div>
+
+    <div id="J_EMStracking" style="position:relative;display: none;" class="hover-tips hover-tips-logistics">
+
+
+        <div id="noEMStrackingInfo">
+            <span style="font-family:'PingFangSC-Regular', 'PingFang SC';">离店后3天内开始寄送</span>
+        </div>
+
+        <div id="EMStrackingInfo">
+
+        </div>
+    </div>
+
+
+    <div class="pop-box pop-delay" id="J_delayArrive" style="display: none;">
+        <div class="pop-hd"><a class="c_close" href="###">×</a>延迟到店</div>
+        <div class="pop-bd">
+            <div class="mb20">延迟到店：<select name='TimeSpanLateArrivalTime' class='J_delayTimes'><option selected value='01930'>19:30　2019年08月04日</option><option  value='02000'>20:00　2019年08月04日</option><option  value='02030'>20:30　2019年08月04日</option><option  value='02100'>21:00　2019年08月04日</option><option  value='02130'>21:30　2019年08月04日</option><option  value='02200'>22:00　2019年08月04日</option><option  value='02230'>22:30　2019年08月04日</option><option  value='02300'>23:00　2019年08月04日</option><option  value='02330'>23:30　2019年08月04日</option><option  value='02359'>23:59　2019年08月04日</option><option  value='10100'>01:00　2019年08月05日</option><option  value='10200'>02:00　2019年08月05日</option><option  value='10300'>03:00　2019年08月05日</option><option  value='10400'>04:00　2019年08月05日</option><option  value='10500'>05:00　2019年08月05日</option><option  value='10600'>06:00　2019年08月05日</option></select></div>
+            <div class="clearfix mb20" id="J_overTimeTip" style="display: none;">
+            </div>
+            <div class="pop-ft">
+                <a class="btn btn-primary" id="EstimatedTime_H" onclick="return false" href="javascript:;">确定</a>
+                <a class="btn J_close" href="javascript:;">取消</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-box pop-delay" id="J_delayArriveOk" style="display: none;">
+        <div class="pop-hd"><a class="c_close" onclick="window.location.reload()">×</a>延迟到店</div>
+        <div class="pop-bd">
+            <div class="J_delayMsg">
+                <div class="delay-suc">
+                    <i class="layout_ib"></i>延迟到店需求已通知酒店，如酒店无法接受，我们会电话通知您，敬请留意。
+                </div>
+            </div>
+            <div class="pop-ft">
+                <a class="btn btn-primary" onclick="window.location.reload()">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-box pop-remark" id="J_modifyRemark" style="display: none;">
+        <div class="pop-hd"><a class="c_close" href="###">×</a>修改住宿偏好</div>
+        <p class="gray"><i class="icon-info"></i>如果您对房型有特殊要求，携程客服需要与酒店电话联系，确认时间会较长，请您耐心等待。</p>
+        <div class="pop-bd">
+            <div><label>无烟房 <select  name='RemarkSZNonsmoking'>
+                <option value='-1'>无要求</option>
+                <option value='2' >尽量安排无烟房</option>
+                <option value='11' >尽量安排吸烟房</option>
+            </select></label>
+                <br/><label><input type='checkbox'  name='RemarkOZQuietRoomZ16'  value='16' />尽量安排安静房间</label>
+                <label><input type='checkbox'  name='RemarkOZHighbuildingZ12'  value='12' />尽量高楼层</label>
+
+
+                <br/><label><input type='checkbox' id='J_chkHandRemark' name='chkHandRemark'  />其他需求</label>
+                <textarea style="display:none;" cols="82" rows="7" name="HandRemark" id="J_HandRemark" placeholder="其它需求（您的需求会尽量转达给酒店，但不保证一定实现）"></textarea>
+
+            </div>
+            <div style="display:none">
+                <textarea id='J_oriHandRemark'></textarea>
+            </div>
+            <div class="pop-ft">
+                <a class="btn disabled" id="J_submitf" href="javascript:void(0);">确定</a>
+                <a class="btn btn-primary" style="display: none;" id="J_submit" href="javascript:;">确定</a>
+                <a class="btn J_close" href="javascript:;">返回</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-box pop-remark" id="J_modifyRemarkBed" style="display: none;">
+        <div class="pop-hd"><a class="c_close" href="###">×</a>修改床型偏好</div>
+        <p class="gray"><i class="icon-info"></i>选择床型偏好，需与酒店确认，时间会较长，请耐心等待。</p>
+        <div class="pop-bd">
+            <div>
+
+            </div>
+            <div class="pop-ft">
+                <a class="btn disabled J_fake" href="javascript:void(0);">确定</a>
+                <a class="btn btn-primary" style="display: none;" href="javascript:;">确定</a>
+                <a class="btn J_close" href="javascript:;">返回</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-box pop-remark" id="J_modifyRemarkOk" style="display: none;">
+        <div class="pop-hd"><a class="c_close" href="javascript:;">×</a>修改住宿偏好</div>
+        <div class="pop-bd">
+            <div class="J_modifyRmkMsg">
+
+                <div class="remark-suc"><i class="layout_ib"></i>您提交的住宿偏好修改已提交至供应商，如无问题，将不再打搅您。</div>
+
+                <div class="remark-fail" style="display:none"><i class="layout_ib"></i>系统繁忙，提交失败，请重试。</div>
+            </div>
+            <div class="pop-ft">
+                <a class="btn btn-primary remark-suc remark-close" href="javascript:;">确定</a>
+                <a class="btn btn-retry remark-fail" id="remark-retry" style="display:none" href="javascript:;">再次重试</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-box pop-remark" id="J_modifyRemarkOkBed" style="display: none;">
+        <div class="pop-hd"><a class="c_close" href="javascript:;">×</a>修改床型偏好</div>
+        <div class="pop-bd">
+            <div class="J_modifyRmkMsg">
+
+                <div class="remark-suc"><i class="layout_ib"></i>您提交的床型偏好修改已提交至供应商，如无问题，将不再打搅您。</div>
+
+                <div class="remark-fail" style="display:none"><i class="layout_ib"></i>系统繁忙，提交失败，请重试。</div>
+            </div>
+            <div class="pop-ft">
+                <a class="btn btn-primary remark-suc remark-close" href="javascript:;">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-box pop-order-change" id="J_modifyOrder" style="display: none;">
+        <div class="pop-hd"><a class="c_close" href="###">×</a>修改入住信息</div>
+        <div class="pop-bd">
+            <p></p>
+        </div>
+        <div class="pop-ft">
+            <a class="btn btn-primary" href="javascript:;">修改入住信息</a>
+            <a class="btn J_close" href="javascript:;">返回</a>
+        </div>
+    </div>
+
+    <div class="pop-box pop-box-tracking" id="J_fakeRemindPop" style="display: none;">
+        <div class="pop-hd"><a class="c_close J_close" href="###">×</a>催单</div>
+        <div class="pop-bd">
+            <div class="wrap-message">
+                <div class="message-ok message-naked">
+                    <p class="desc"></p>
+                </div>
+            </div>
+        </div>
+        <div class="pop-ft">
+            <a class="btn btn-primary J_close" href="###">确定</a>
+        </div>
+    </div>
+    <div class="pop-box pop-invoice-rule" style="display: none;position: fixed;z-index:999;" id="J_Invoice_Rule">
+        <div class="pop-hd"><a href="###" class="c_close J_close">×</a>你知道吗？</div>
+        <div class="pop-bd">
+            <p><strong>电子发票是真实有效合法的发票</strong>，与纸质发票具有<strong>同等法律效力</strong>。</p>
+            <div class="invoice-rule-table">
+                <div class="frame-box"><i class="i-rec"></i></div>
+                <table cellspacing="0" cellpadding="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <th class="col1"></th>
+                        <th>电子发票</th>
+                        <th>纸质发票</th>
+                        <th>增值税专用发票</th>
+                    </tr>
+                    <tr>
+                        <td class="col1">发票形式</td>
+                        <td>电子版（邮箱）</td>
+                        <td>纸质</td>
+                        <td>纸质</td>
+                    </tr>
+                    <tr>
+                        <td class="col1">纳税人识别号</td>
+                        <td>部分需要</td>
+                        <td>部分需要</td>
+                        <td>需要</td>
+                    </tr>
+                    <tr>
+                        <td class="col1">公司信息</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>需要</td>
+                    </tr>
+                    <tr>
+                        <td class="col1">发票收到时间</td>
+                        <td>离店后 <strong>1</strong> 日</td>
+                        <td>离店后 <strong>3-7</strong> 日</td>
+                        <td>离店后 <strong>10</strong> 日</td>
+                    </tr>
+                    <tr>
+                        <td class="col1">快递费</td>
+                        <td><span class="txt_green">免费</span></td>
+                        <td>收费</td>
+                        <td>收费</td>
+                    </tr>
+                    <tr>
+                        <td class="col1">更换发票</td>
+                        <td>立即更新</td>
+                        <td>必须寄回才能换开</td>
+                        <td>必须寄回才能换开</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="txt-1">根据《关于推行通过增值税电子发票系统开具的增值税电子普通发票有关问题的公告》（国家税务总局公告2015年第84号）,增值税电子普通发票的开票方和受票方需要纸质发票的，可以<strong>自行打印增值税电子普通发票的版式文件，其法律效力、基本用途、基本使用规定等与税务机关监制的增值税普通发票相同</strong>。</p>
+            <p class="txt-2">您可凭借电子发票上所标示的发票代码、发票号码、防伪码在国家税务局指定平台进行查验。<br>国家税务总局全国增值税发票查验平台 <a href="https://inv-veri.chinatax.gov.cn" target="_blank">https://inv-veri.chinatax.gov.cn</a></p>
+        </div>
+        <div class="pop-ft"><a class="c-btn J_close" href="javascript:;">知道了</a></div>
+    </div>
+    <div class="pop-box pop-box-tracking" id="J_remindPop" style="display: none;">
+        <div class="pop-hd"><a class="c_close J_close" href="###">×</a>催单</div>
+        <div class="pop-bd">
+            <div class="wrap-message">
+                <div class="message-ok">
+                    <i class="icon-msg"></i>
+                    <p class="desc" id="J_remindPop_message_desc"></p>
+                </div>
+            </div>
+        </div>
+        <div class="pop-ft">
+            <a class="btn btn-primary J_close" id="J_remindPop_Close" href="###">知道了</a>
+        </div>
+    </div>
+
+    <div style="position: static; display:none;" class="hover-tips hover-tips-payment" id="J_xyzPop" >
+        您的信用记录良好，可享受由<i class="i_xyz"></i>入住通提供的尊贵权益：入住免押金、离店免查房、离店自动通过绑定的信用卡结账。<br>
+        <i class="i_xyz"></i>入住通为客人提供“信用住、即时服务、自助选房、智能门锁”等全流程到店尊享服务
+    </div>
+
+    <div id="J_ChooseRoomPop" class="pop-online-rooms" style="position:absolute;z-index:999;display:none;">
+        <iframe scrolling="no" frameborder="none" src="" id="J_IframeChooseRoom"></iframe>
+    </div>
+
+    <script id="J_areaSuggestTpl" type="text/ctrip-tpl">
+		<div class="hot-area-pop">
+			<div class="pop-hd"><a class="delete" href="###">×</a><span>支持输入国家名(中文/拼音)，区号(数字)</span></div>
+		{{enum(title, val) data}}
+			<div class="pop-bd">
+			 {{if val && val.length !== 0}}
+				<p class="title">${title}</p>
+					{{each (key, item) val}}
+						<a href="javascript:void(0);" data="${item.data}">${item.display}</a>
+					{{/each}}
+			{{/if}}
+			</div>
+		{{/enum}}
+		</div>
+	</script>
+    <script id="J_areaFilterTpl" type="text/ctrip-tpl">
+		<div class="hot-area-pop">
+		{{if $data.hasResult}}
+			<div class="pop-hd"><a class="delete" href="###">×</a><span>${$data.val}, 若需缩小范围,请输入更多的条件</span></div>
+			<div class="pop-bd">
+				{{enum (k, v) $data.list}}
+				   <div class="pop-bd">
+					 {{if v && v.data}}
+						
+							<a href="javascript:void(0);" data="${v.data}">
+								${v.display}
+							</a>
+					{{/if}}
+					</div> 
+				{{/enum}}
+			</div>
+			{{if $data.page.max>1}}
+				<div class="c_page_mini" style="display: block;">
+					{{if $data.page.current>0}}
+						<a href="javascript:void(0);" page="${$data.page.current-1}">&lt;-</a>
+					{{/if}}
+					{{if $data.page.current<2}}
+						{{loop(index) Math.min(5,$data.page.max+1)}}
+							<a href="javascript:void(0);"{{if $data.page.current==index}} class="address_current"{{/if}} page="${index}">${index+1}</a>
+						{{/loop}}
+					{{else $data.page.current>$data.page.max-2}}
+						{{loop(index) Math.max(0,$data.page.max-4),$data.page.max+1}}
+							<a href="javascript:void(0);"{{if $data.page.current==index}} class="address_current"{{/if}} page="${index}">${index+1}</a>
+						{{/loop}}
+					{{else}}
+						{{loop(index) Math.max(0,$data.page.current-2),Math.min($data.page.current+3,$data.page.max+1)}}
+							<a href="javascript:void(0);"{{if $data.page.current==index}} class="address_current"{{/if}} page="${index}">${index+1}</a>
+						{{/loop}}
+					{{/if}}
+				   {{if $data.page.current<$data.page.max}}
+						<a href="javascript:void(0);" page="${$data.page.current+1}">-&gt;</a>
+					{{/if}}
+				</div>
+			{{/if}}
+		{{else}}
+		<div class="pop-bd">
+			<div class="pop-hd"><a href="###" class="delete">&times;</a><span>对不起，找不到：${$data.val}</span></div>
+		</div>
+		{{/if}}
+		</div>
+	</script>
+
+    <script id="J_mergeInvoiceListTpl" type="text/ctrip-tpl">
+     <li class="hidden"><label><input type="checkbox" class="J_all">全选</label></li>
+    {{each (key, item) orderList}}
+    <li>
+		<label><input type="checkbox" class="J_child" data-orderId="${OrderId}" data-price="${Amount}">订单号：${OrderId}</label>
+		<span class="book_info">
+			<span class="h-name">${HotelName}</span>
+		</span>
+		<span class="c_black">
+			<span class="se-time">${Date}</span>
+		</span>
+	</li>
+    {{/each}}
+    </script>
+    <script id="J_splitInvoiceHeaderTpl" type="text/ctrip-tpl">
+    <table class="border_gray J_invoiceHeader form">
+		<tbody><tr>
+			<th class="border_gray">发票顶部信息</th>
+			<td class="border_gray">
+				<p>出票金额<input type="text" class="iv-money txt J_orderPrice"></p>
+				<p>发票明细
+                <select class="iv-detail txt select_box J_invoiceDetail" name="invoiceDetail" disabled>
+                    <option value="代订住宿费" selected>代订住宿费</option>
+				    <option value="旅游服务费" >旅游服务费</option>
+                </select>
+                </p>
+                <p>发票选项
+                    <span class="txt">
+                        <label class="mr_10"><input checked="checked" name="invoice_splite_item_${id}" data-index="${id}" class="J_splite_item" type="radio" value="1">企业</label>
+                        <label class="mr_10"><input name="invoice_splite_item_${id}" data-index="${id}" class="J_splite_item" type="radio" value="2">非企业性单位</label>
+                        <label class="mr_10"><input name="invoice_splite_item_${id}" data-index="${id}" class="J_splite_item" type="radio" value="0">个人</label>
+                    </span>
+                </p>
+                <p>
+				发票抬头
+				<input type="text" class="iv-head txt J_receiptTitle" placeholder="客户姓名/公司名称" data-illegal="个人|公司|单位|客户">
+				<div class="tips-info J_wrongRecepitTitle" style="display:none;"></div>
+				</p>
+                <p id="J_PanelTaxNumber_${id}">
+				纳税人识别号
+				<input class="form-text J_Invoice_TaxpayerNumber" id="J_NewInvoiceTaxpayerNumber_${id}" data-index="${id}" type="text" value="" maxlength="100"/>
+				<div class="base_txtgray">税务登记证上唯一识别企业的税号(通常由15位、17位、18位或20位码组成)</div>
+				<div class="tips-info J_ErrorDiv" data-parentid="J_NewInvoiceTaxpayerNumber_${id}"></div>
+				</p>
+			</td>
+		</tr>
+	    </tbody>
+    </table>
+    </script>
+
+    <!-- 选择携程消费券 E -->
+    <!-- JS加载 -->
+    <script type="text/javascript">
+        $.BizData = {
+            maxInvoiceOrder : 10,
+            //常用住客信息
+            residentList:[{id:91789828,name:'卢智伟',cardtype:'id',cardvalue:'431123199209170011',passportvalue:'',gender:'M',birth:'1992-09-17'},{id:91789836,name:'dapao/Zhai',cardtype:'',cardvalue:'',passportvalue:'',gender:'',birth:''},{id:91789835,name:'zhiWei/lu',cardtype:'',cardvalue:'',passportvalue:'',gender:'',birth:''}],
+
+            //contactInfo: ,
+
+            //常用收件人
+            receiverInfo:['卢智伟|425001|永州市|13432111242|湖南|永州|双牌|+86'],
+
+            invoiceInfo: [],
+
+            invoiceCurrentOrderInfo :{
+                HotelName:'成都海洋莱普敦酒店',
+                invoiceStartdate:'2019-08-04',
+                invoiceDepdate:'2019-08-05',
+                invoiceRoomPrice:'398',
+                Country:'1',
+                ProvinceID:'22'
+            },
+            contactViewModel:
+                {
+                    mobileArea:"86",
+                    mobile:"13432111242",
+                    email:"",
+                    telArea:"",
+                    telNum:"",
+                    telExt:""
+                },
+
+            invoiceViewModel:
+                {
+                    invoiceDetail: '',
+                    receiptTitle:'',
+                    invoiceDeliveryType:"",
+                    areaCode:'86',
+                    fullName:'',
+                    telPhone:'',
+                    province:'',
+                    city:'',
+                    canton:'',
+                    address:'',
+                    //postCode:'',
+                    isContainOrderDetail:false,
+                    taxpayerNumber: '',
+                    CompanyName : '',
+                    CompanyAddress : '',
+                    CompanyTel : '',
+                    BankName : '',
+                    BankAccount : '',
+                    PostNo: '',
+                    IsSpecialMunicipality:false
+                },
+            isInvoiceBySupplier: false,
+
+            ChangeDateParam: {
+                hotel:638257,
+                city:0,
+                room:50900527,
+                startdate:'2019-08-04 00:00:00',
+                depdate:'2019-08-05 00:00:00',
+
+                paymentterm:'FG',
+                UseFG:'',
+                operationType:'CHANGEORDER',
+                oriOrderID:'10403683475',
+                channeltype:''
+            },
+
+            roomInfo: {
+                IsOnCancel:false,
+                isBig5: false,
+                IsNeedEmail: false,
+                totalPrice: 0,
+                orderid:10403683475,
+                splitedInvoicePrice:0,
+                //用户是否已登录
+                isLogin: true,
+                IsShowChangeMessage:false,
+                Holddeadline:'2000',
+                everydayprice:{"Dopsit":null,"InvoiceInfo":null,"OtherCost":null,"addoption":null,"cancelInsure":null,"creditDeduct":null,"exchangeInfo":null,"extInfo":null,"firstRoomFee":null,"mealExplain":null,"pages":[[[{"CnyPrice":"<dfn>&yen<\/dfn>498.00\/间","OriPrice":null,"breakfast":"无餐食","date":"08-04(日)"},{"CnyPrice":"&nbsp;","OriPrice":null,"breakfast":"<p class='txt_green'>2份早餐<\/p>","date":"08-05(一)"},{"CnyPrice":"&nbsp;","OriPrice":null,"breakfast":"&nbsp;","date":"&nbsp;"},{"CnyPrice":"&nbsp;","OriPrice":null,"breakfast":"&nbsp;","date":"&nbsp;"},{"CnyPrice":"&nbsp;","OriPrice":null,"breakfast":"&nbsp;","date":"&nbsp;"},{"CnyPrice":"&nbsp;","OriPrice":null,"breakfast":"&nbsp;","date":"&nbsp;"},{"CnyPrice":"&nbsp;","OriPrice":null,"breakfast":"&nbsp;","date":"&nbsp;"}]]],"travalInsure":null},
+                endofdata:""
+            },
+            AllianceID:'4901',
+            SID:'123474',
+            infomationData:{
+                orderid:'10403683475',
+                hotelid:'638257',
+                roomid:'50900527'
+            },
+            SplitOrderTrace : ''
+        };
+
+        var rWanHaoVIP = /^[1-9][0-9]{8,8}$/,
+            rValidName = /^([\u4E00-\u9FA5\.\u2022+]{2,20}|[a-zA-Z\.\u2022+\-+\s+]+\/[a-zA-Z\.\u2022+\-+\s+]+\s?([a-zA-Z\.\u2022+\-+\s+]+)?)$/,
+            rValidNameHK = /^([a-zA-Z\.\u2022+\-+\s+]+\/[a-zA-Z\.\u2022+\-+\s+]+\s?([a-zA-Z\.\u2022+\-+\s+]+)?)$/,
+            rMobile = /^1\d{10}$/,
+            // 香港， 澳门手机
+            rHKMacaoMobile = /^\d{8}$/,
+            rTaiwanMobile = /^\d{10}$/,
+            rOverseaMobile = /^\d{6,12}$/,
+            rMail = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/,
+            rNumber = /^([0-9]\d*|0)$/,
+            rPost = /^[0-9]\d{5}(?!\d)$/,
+            rChinese = /^[\u0391-\uFFE5]+$/,
+            rIDCard = /^\d{15}(\d{2}[A-Za-z0-9])?$/,
+            rDate = /^(\d{4})-(\d{1,2})-(\d{1,2})$/,
+            rInteger = /^[1-9]\d*$/;
+
+        var pageMsg = {
+            receiptOffMsg: '',
+            receiptOnMsg: '（发票金额不包含优惠券或礼品卡支付的部分）',
+            rightSideRoomInfoMsg: '详情： 入住${checkInDays}晚，${selectedRoomCount}间客房，最多可入住${maxGuest}人。',
+            ensureMsg: '需提供信用卡担保<span class="i_strong"><dfn>&yen;</dfn>${ensure}</span>',
+            creditMsg: '需提供<span class="i_strong">${credit}</span>积分担保',
+            ensureMsgWithCredit: '需提供信用卡担保<span class="i_strong"><dfn>&yen;</dfn>${ensure}</span>或<span class="i_strong">${credit}</span>积分担保',
+            ensureCancelMsg: '如需取消或修改订单请于${cancelTime}前通知携程',
+            ensureNotCancelMsg: '该订单一经确认后不可被取消或修改',
+            guestInputPlaceholder: '住客${index}（中文/英文）',
+            guestInputPlaceholderMust: '（必填）',
+            guestNameNull: '<i></i>请填写住客姓名。',
+            guestNameNotEnough: '<i></i>请至少填写${selectedRoomCount}名住客姓名',
+            minRoomCountRequired: '<i></i>请至少选择${minRoomCount}间房',
+            contactNameEmpty: '<p class="error"><i class="icon-error"></i>请填写联系人姓名。</p>',
+            contactNameError: '<p class="error"><i class="icon-error"></i>请填写正确的联系人姓名（中文/拼音/英文）。</p>',
+            contactPhoneNotLogIn: '<span class="form-des">预订成功后会向您发送短信通知。</span><span id="slogin">您已是携程会员,登录后可获得积分并便于您管理订单。</span>',
+            contactPhoneSuccess: '<span class="form-des">预订成功后会向您发送短信通知。</span>',
+            contactPhoneError: '<p class="error"><i class="icon-error"></i>请填写正确的手机号码。无效手机号可能会导致订单取消。</p>',
+            contactPhoneEmpty: '<p class="error"><i class="icon-error"></i>请填写手机号码，方便您接收短信通知。</p>',
+            contactPhoneErrorBig5: '<p class="error"><i class="icon-error"></i>请填写正确的香港手机号码（8位数字）。无效手机号可能会导致订单取消。</p>',
+            contactPhoneSuccessSend: '<span class="form-des">预订成功后向您发送短信通知，境外手机号由于网络等客观原因，请以邮件为准</span>',
+            contactPhoneSuccessNSend: '<span class="form-des">此境外手机号无法接收短信，请您务必填写邮箱地址，以便接收订单确认等通知</span>',
+            contactEmailError: '<p class="error"><i class="icon-error"></i>请填写正确的Email。</p>',
+            contactEmailEmpty: '<span class="form-des">享受返现优惠必须Email确认，请确保您会填写Email。</span>',
+            contactOverseaEmail: '<span class="text_notes">请务必准确填写邮箱地址，订单确认等重要信息将发送至邮箱</span>',
+            contactOverseaEmailEmpty: '<p class="error"><i class="icon-error"></i>请务必准确填写邮箱地址，订单确认等重要信息将发送至邮箱</p>',
+            contactEmailBig5Empty: '<p class="error"><i class="icon-error"></i>请填写Email。</p>',
+            contactEmailSuccess: '<span class="form-des">您将在预订成功后收到确认邮件</span>',
+            contactEmailOptional: '选填',
+            contactEmailRequired: 'a@b.c',
+            morePhonetError: '<p class="error"><i class="icon-error"></i>请填写正确的电话号码。</p>',
+            morePhoneSuccess: '<span class="form-des">选填</span>',
+            moreFaxError: '<p class="error"><i class="icon-error"></i>请填写正确的传真号码。</p>',
+            moreAreaError: '<p class="error"><i class="icon-error"></i>请填写区号。</p>',
+            couponCodeEmpty: '<i></i><p>请输入优惠券码</p>',
+            couponCodeSuccess: '<i></i>已成功使用${couponAmount}元优惠券',
+            couponCodeError: '<i></i><p>${message}</p>',
+            dateWrongNormal: '<i></i>您选择的部分入住日期无法预订或不满足促销条件，请修改日期或<a href="/Domestic/ShowHotelList.aspx?city=2&checkin=2013-12-25&checkout=2013-12-26">重新选择房型</a>。',
+            sevenDayNumberWrong: '该生活用品数量不能为空，且不超过最大入住人数',
+            hotelTip: '<a class="btn_tips_more" href="javascript:;">显示更多<i></i></a>',
+            hotelTipMore: '显示更多<i></i>',
+            hotelTipLess: '收起<i></i>',
+            wrongDate: '<i></i>日期格式不正确。',
+            more28Day: '<i></i>入住时间不能超过28天。',
+            viewNoresult: '<p>找不到“${val}”，请您重新搜索。</p>',
+            numsBoxNote: '<div class="b_nums_box_note"><p>大于8间，请致电携程客服订。</p></div>',
+            ensureLastArrivalTime: '如需取消或修改订单请于${time}前通知携程，若未按时入住酒店，我们将扣除您相应担保费用。',
+            ensureLastArrivalOverTime: '此订单一经确认就不能取消和修改，过时携程将会扣除您相应担保费用。',
+            receiver: '请填写收件人',
+            phone: '请填写正确的手机号码',
+            province: '请填写省份',
+            city: '请填写城市',
+            canton: '请填写区县',
+            post: '请填写6位数邮编',
+            addr: '请填写收件地址',
+            receiptTitle: [
+                '<span class="error"><i class="icon-arrow"></i><i class="icon-error"></i><p>请填写发票抬头。</p></span>',
+                '<span class="error"><i class="icon-arrow"></i><i class="icon-error"></i><p>请填写正确的发票抬头。</p></span>',
+                '<span class="error"><i class="icon-arrow"></i><i class="icon-error"></i><p>请填写正确的发票抬头。内容不可为“个人”、“客户”、“单位”或“公司”。</p></span>'
+            ],
+            receiptNewTitle: [
+                '<i class="icon-arrow"></i><i class="icon-error"></i><p>请填写发票抬头。</p>',
+                '<i class="icon-arrow"></i><i class="icon-error"></i><p>请填写正确的发票抬头。</p>',
+                '<i class="icon-arrow"></i><i class="icon-error"></i><p>请填写正确的发票抬头。内容不可为“个人”、“客户”、“单位”或“公司”。</p>'
+            ],
+            invoice_Invoice_TaxpayerNumber_Empty:'请填写纳税人识别号。',
+            invoice_Invoice_TaxpayerNumber_Error:'请填写正确的纳税人识别号。',
+            prepay: '如您无法提供信用卡担保，也可使用网银、礼品卡等方式直接在线付房费。<a class="toprepay_btn" href="#">改为在线付&gt;</a>',
+            contactSaveError: '修改联系人错误',
+            receiptSaveError: '修改发票错误',
+            validRoom: '<span class="error"><i class="icon-arrow"></i><i class="icon-error"></i><p>请填写入住人或入住房号。</p></span>',
+            successMail: '<p class="gray">已成功发送邮件，请注意查收</p>',
+            failMail: '<p class="gray">邮件发送失败</p>',
+            successRemind: '<p class="gray">预订员正在加急处理中</p>',
+            failRemind: '<p class="gray">催单失败</p>',
+            hasSendNotifi: '已发送通知',
+            auditCheckin: '入住信息审核中',
+            roomCheckInFail: '<span class="error"><i class="icon-arrow"></i><i class="icon-error"></i><p>入住信息确认 ajax失败</p></span>',
+            notifiEmailEmpty: '<span class="error"><i class="icon-arrow"></i><i class="icon-error"></i><p>邮件地址不能为空</p></span>',
+            smsNotice: '发送短信通知',
+            emailNotice: '发送邮件通知',
+            smsSendSuccess: '<p class="error"><i class="icon-error"></i>短信发送失败!</p>',
+            emailSendSuccess: '<p class="error"><i class="icon-error"></i>邮件发送失败!</p>',
+            notifiPhoneEmpty: '<span class="error"><i class="icon-arrow"></i><i class="icon-error"></i><p>手机号码错误</p></span>',
+            mergeInvoiceEmpty: '<p class="error"><i class="icon-error"></i>请选择要合并的发票。</p>',
+            mergeInvoiceSuccess: '<p>发票合并成功!</p>',
+            mergeInvoiceWrong: '<p class="error"><i class="icon-error"></i>合并发票失败。</p>',
+            splitInvoiceSuccess: '<p>发票拆分成功!</p>',
+            splitInvoiceWrong: '<p class="error"><i class="icon-error"></i>拆分发票失败。</p>',
+            splitInvoicePriceUnEquals: '<p class="error"><i class="icon-error"></i>拆分发票的出票金额之和与原发票金额不等!</p>',
+            splitInvoicePriceWrong: '<p class="error"><i class="icon-error"></i>拆分的发票金额必须为大于0的整数</p>',
+            guaranteeNotice: '<p>此酒店房型在<span>${time}</span>之后为担保房型，房量紧张，需提供信用卡担保或积分担保。房间保留到<span>${date}</span>中午12：00。</p><p>您可以选择确定，携程将引导您进行下一步支付操作，或重新选择延迟时间。</p><i class="icon-info"></i>',
+            delayCheckinSuccess: '<div class="delay-suc"><i class="layout_ib"></i>延迟到店需求已通知酒店，如酒店无法接受，我们会电话通知您，敬请留意。</div>',
+            delayCheckinFail: '<div class="delay-fail"><i class="layout_ib"></i>您的要求提交失败，请电话联系携程。</div>'
+        }
+    </script>
+
+    <script type="text/javascript" async="async">
+        $LAB.script({ src: '//webresource.c-ctrip.com/ResHotelBookingOnline/R6/js/lib/knockout-2.2.0.js?Releaseno=2019_08_04', charset: "utf-8"}).wait()
+            .script({ src: '//webresource.c-ctrip.com/ResHotelBookingOnline/R6/js/lib/biz.js?Releaseno=2019_08_04', charset: "utf-8" }).wait()
+            .script({ src: '//webresource.c-ctrip.com/ResHotelBookingOnline/R6/js/lib/pcc.js?Releaseno=2019_08_04', charset: "utf-8" }).wait()
+            .script({ src: '//webresource.c-ctrip.com/ResHotelBookingOnline/R6/js/jsonp/country.js?Releaseno=2019_08_04', charset: "utf-8" }).wait()
+            .script({ src: '//webresource.c-ctrip.com/ResHotelBookingOnline/R6/js/widget/CPlugin.js?Releaseno=2019_08_04', charset: "utf-8" }).wait()
+            .script({ src: '//webresource.c-ctrip.com/ResHotelBookingOnline/R6/js/order_detail.js?Releaseno=2019_08_04', charset: "utf-8" })
+            .wait(function () {
+
+                var $j = jQuery.noConflict();
+                var areas = $j(".phone-box-area");
+                areas.each(function(){
+                    var area = $j(this);
+                    var areaBlur = $(this);
+                    var areadata = area.attr("data-area");
+                    if (areadata == null || areadata == ""){ areadata = '{"Code": 86,"Cn": "中国大陆","En": "China","Py": "ZHONG GUO DA LU","Country": "CN","Open": 1,"CountryId": "1","Heat": 100}'; }
+                    area.selectCountryCode({
+                        countryName: $.parseJSON(areadata)["Cn"],
+                        countryCode: $.parseJSON(areadata)["Code"],
+                        inputText: function(data) {
+                            return data.cn + "(+" + data.code + ")";
+                        },
+                        onSelect: function(data) {
+                            var _data = Object();
+                            for (var key in data){
+                                _data[key.replace(/^\S/,function(s){return s.toUpperCase();})] = data[key];
+                            }
+                            area.attr('data-area',JSON.stringify(_data));
+                        },
+                        onBlur:function(){
+                            areaBlur.trigger("blur");
+                        }
+                    });
+                });
+
+
+                // 消费卷新代码块
+                var popEditCoupon = $('#popEditCoupon');
+                var useCoponButton = $('#UseCoponButton');
+
+                useCoponButton.popBox(
+                    {
+                        container: popEditCoupon,
+                        onSubmit: checkCoupon,
+                        onShow: function(){
+                            $("#allowPrice").text(0);
+                            $("#txtCoupon").value(0);
+                            $('#CouponAlertDiv').css("display", "none");
+                        }
+                    }
+                );
+
+                $("#J_PrintOrder").popBox({ container: $(".pop-box-print"), onSubmit: OpenPrintPage });
+
+                function checkCoupon(pop, target){
+                    var value = $("#txtCoupon").value().trim() || "0",
+                        JSONHEADER = { "content-type": "application/x-www-form-urlencoded; charset=utf8" },
+                        totalPrice = 0,
+                        err_coupondiv = $('#CouponAlertDiv'),
+                        err_coupon = $('#CouponAlert'),
+                        rNumber = /^([1-9]\d*|0)$/,
+                        disableClass = "disabled";
+
+                    if(target.hasClass(disableClass)){
+                        return false;
+                    }
+                    target.addClass(disableClass);
+
+                    if(value){
+                        if(value=='0'){
+                            err_coupondiv.css("display", "block");
+                            err_coupon.html('消费券金额为整数，请正确填写');
+                            target.removeClass(disableClass);
+                            return;
+                        }
+                        if(!rNumber.test(value)){
+                            err_coupondiv.css("display", "block");
+                            err_coupon.html('消费券金额为整数，请正确填写');
+                            target.removeClass(disableClass);
+                            return;
+                        }
+                        if(parseInt(value, 10) > parseInt(totalPrice, 10)){
+                            err_coupondiv.css("display", "block");
+                            err_coupon.html('您填写的消费券超出最大使用限额，请重新填写');
+                            target.removeClass(disableClass);
+                            return;
+                        }
+                    }
+
+                    err_coupondiv.css("display", "none");
+                    $("#lblAllowPrice2").html(value);
+
+                    $.ajax("Tool/AjaxChangeCoupon.aspx",
+                        {
+                            method: "POST",
+                            context: {
+                                orderid:10403683475,
+                                hidCoupon:value
+                            },
+                            escape: true,
+                            header: JSONHEADER,
+                            onsuccess: function (xhq, data) {
+                                var rs = data && $.parseJSON(data);
+                                if (rs && rs.code == 200) {
+                                    document.getElementById('CashBackFinish').style.display = "block";
+                                    document.getElementById('CashBackFinish2').style.display = "block";
+                                    document.getElementById('CashBackDoing').style.display = "none";
+                                    target.removeClass(disableClass);
+                                    pop.close();
+                                    location.reload();
+                                    return;
+                                }
+                                else {
+                                    err_coupondiv.css("display", "block");
+                                    err_coupon.html(rs.data);
+                                    target.removeClass(disableClass);
+                                    return;
+                                }
+                            },
+                            onerror: function(){
+                                target.removeClass(disableClass);
+                                pop.close();
+                            }
+                        });
+                    return false;
+                }
+            })
+
+        function OpenPrintPage()
+        {
+            var printAreaNum = "";
+            if(document.getElementById("printcheck1") && document.getElementById("printcheck1").checked)printAreaNum = printAreaNum+"1,";
+            if(document.getElementById("printcheck2") && document.getElementById("printcheck2").checked)printAreaNum = printAreaNum+"2,";
+            if(document.getElementById("printcheck3") && document.getElementById("printcheck3").checked)printAreaNum = printAreaNum+"3,";
+            if(document.getElementById("printcheck4") && document.getElementById("printcheck4").checked)printAreaNum = printAreaNum+"4,";
+            if(document.getElementById("printcheck5") && document.getElementById("printcheck5").checked)printAreaNum = printAreaNum+"5,";
+            if(document.getElementById("printcheck6") && document.getElementById("printcheck6").checked)printAreaNum = printAreaNum+"6,";
+            if(document.getElementById("printcheck7") && document.getElementById("printcheck7").checked)printAreaNum = printAreaNum+"7,";
+            document.aspnetForm.action = 'ViewOrderPrint.aspx?';
+            document.aspnetForm.printArea.value=printAreaNum;
+            //document.aspnetForm.__VIEWSTATE.name = 'NOVIEWSTATE';
+            setTimeout( function(){document.aspnetForm.submit();},0);
+        }
+
+        var orderInfo = {
+            "ctype": "ORD",//String-- //内容类型ORD - 订单；PRD - 产品；POI ?C POI；UDF - 用户自定义（指示服务端如何理解“业务传递过来的值”）,
+            "cid": "10403683475",//String--//内容类型对应的具体值为ORD时传订单ID，为PRD时传产品ID，为UDF时传自定义内容ID",
+            "biz": "",//String--//N 订单所属bu标识",
+            "desc": "",//String--//简略描述,
+            "title": "",//String--//标题",
+            "price": "398",//String--//价格",
+            "currency": "RMB",//String--//币种（三字码）"
+            "ext": {}//Map<String,String>--//其它一些供BU扩展的自定义参数目前根据接入BU的情况，整理了以下几个必传属性：对于机票：对于酒店："
+        };
+
+
+        $.mod.load('sideBar', '2.0', function () {
+            var sidebar = $(document).regMod('sideBar', '2.0', {
+                url: {
+                    feedBackURL: '//my.ctrip.com/uxp/Community/CommunityAdvice.aspx?producttype=3',
+                    liveChatURL: '//servicechat.ctrip.com/?bizType=1341&pageCode=102134&isPreSale=0&channel=HTL'+"&orderInfo="+encodeURIComponent(JSON.stringify(orderInfo))
+                },
+                title: {
+                    liveChat: '在线咨询'
+                },
+                CSS:'.side_fixed{position:fixed;right:20px;bottom:50px;z-index:9999;width:35px;}\
+			                .to_top,.c_sidebar{background-image:url(${src});_background-image:url(${srcIE6});background-repeat:no-repeat;}\
+			                .to_top{position:relative;float:left;clear:both;width:35px;height:0;margin-bottom:2px;padding-top:35px;overflow:hidden;cursor:pointer;z-index:2;visibility:hidden;background-position:0 0;}\
+			                .to_top:hover{background-position:-79px 0;}\
+			                .c_sidebar{display:inline-block;width:35px;height:32px;padding-top:3px;margin-bottom:2px;overflow:hidden;vertical-align:top;font-size:12px;color:#fff;background-position:0 -37px;text-align:center;text-decoration:none;line-height:14px;}\
+			                .c_sidebar:hover{background-position:-79px -37px;}\
+			                .c_sidebar_hl{background-position:-40px -37px;}',
+                bottom_px:150
+            });
+
+        });
+        $("#J_BookAgain").bind("click", function () {
+
+            window['__bfi'].push(['_tracklog', 'htl.orderdetail.reorder', $.stringifyJSON($.BizData.infomationData)]);
+        });
+    </script>
+
+
+
+    <script>
+        function showOrDisplayInfo(target)
+        {
+            var e = this.event;
+            e.preventDefault ? e.stopPropagation() : e.cancelBubble = true;
+            var target = $(target);
+            var parentTarget = target.parentNode();
+            if(parentTarget && parentTarget.hasClass('J_rule_fold')){
+                parentTarget = parentTarget.parentNode();
+            }
+
+            if(parentTarget) {
+                var ruleContent = parentTarget.find('.J_rule_context');
+                if(ruleContent){
+                    if(target.hasClass('show_unfold ')){
+                        target.addClass('show_fold');
+                        target.removeClass('show_unfold');
+                        ruleContent.show();
+                    }else{
+                        target.addClass('show_unfold');
+                        target.removeClass('show_fold');
+                        ruleContent.hide();
+                    }
+                }
+            }
+
+        }
+    </script>
+
+    <div id="base_ft">
+        <p>
+            <a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引" href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;<a rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp; |&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com/crptravel/default/landing" title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a>
+        </p>
+        <p>
+            <a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop" target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://join.easytrip.com/jiameng/#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://dst.ctrip.com/">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="隐私政策">隐私政策</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://m.ctrip.com/webapp/vacations/tour/supplier" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright&copy;</a>,&nbsp;<a href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a>
+        </p>
+        <p class="gns">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002731"><i class="icon-gns"></i>沪公网备31010502002731号</a>
+        </p>
+        <div class="honour_wrap">
+            <a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow">信用评级</a><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow">上海工商</a><a href="https://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow">诚信网站</a><a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网">网络社会征信网</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心">信息举报中心</a><a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站">可信网站</a><a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow">违法和不良信息举报中心</a>
+        </div>
+    </div><config id="timespan" value="20160329"></config><!--InstanceEnd name="position"-->
+    <script type="text/javascript">var globalConfig={H1:'https',AjaxUrl:'accounts.ctrip.com',H3:'my.ctrip.com',PassportUrl:'passport.ctrip.com',Lang:'UTF8'};</script><script type="text/javascript" src="../user/js/activitycontroller_v2.min_1.js" charset="utf-8"></script>
+
+</form>
+
+</body>
+</html>

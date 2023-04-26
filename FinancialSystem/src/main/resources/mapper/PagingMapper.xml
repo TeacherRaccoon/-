@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kgc.finance.dao.PagingMapper">
+    <!--业务员分页数据-->
+    <select id="businessPagingCount" resultType="integer">
+        SELECT
+        COUNT(1)
+        FROM
+        `infoentry`
+        <trim prefix="where" prefixOverrides="and|or">
+            <!--业务员id-->
+            <if test="salesmanId!=null and salesmanId!=''">
+                and `salesmanId` = #{salesmanId}
+            </if>
+            <!--订单创建时间-->
+            <if test="createDate!=null and createDate!=''">
+                and `createDate` LIKE CONCAT(#{createDate},"%")
+            </if>
+            <!--订单号-->
+            <if test="orderId!=null and orderId!=''">
+                and `orderId` LIKE CONCAT("%",#{orderId},"%")
+            </if>
+            <!--借款人姓名-->
+            <if test="userName!=null and userName!=''">
+                and `userName` LIKE CONCAT("%",#{userName},"%")
+            </if>
+            <!--订单状态-->
+            <if test="status!=null and status!=''">
+                and `status` = #{status}
+            </if>
+            <!--交易类型-->
+            <if test="payType!=null and payType!=''">
+                and `payType` = #{payType}
+            </if>
+        </trim>
+    </select>
+
+    <select id="businessPagingData" resultType="com.kgc.finance.pojo.InfoEntry">
+        SELECT
+            `orderId`,
+            `userName`,
+            `identity`,
+            `phone`,
+            `maritalStatus`,
+            `spouseName`,
+            `spouseIdentity`,
+            `privateLending`,
+            `lawsuitCase`,
+            `totalAmount`,
+            `foreclosure`,
+            `houseName`,
+            `area`,
+            `address`,
+            `assessment`,
+            `ownerName`,
+            `originalBank`,
+            `originalAmount`,
+            `amountBlance`,
+            `newBank`,
+            `newAmount`,
+            `managerName`,
+            `managerPhone`,
+            `amount`,
+            `amountDays`,
+            `rate`,
+            `brokerage`,
+            `feeWay`,
+            `paragraphTime`,
+            `dealPrice`,
+            `orderAmount`,
+            `superviseAmount`,
+            `buyerName`,
+            `buyerIdentity`,
+            `createDate`,
+            `status`,
+            `salesmanId`,
+            `payType`
+        FROM
+            `infoentry`
+        <trim prefix="where" prefixOverrides="and|or">
+            <!--业务员id-->
+            <if test="salesmanId!=null and salesmanId!=''">
+                and `salesmanId` = #{salesmanId}
+            </if>
+            <!--订单创建时间-->
+            <if test="createDate!=null and createDate!=''">
+                and `createDate` LIKE CONCAT(#{createDate},"%")
+            </if>
+            <!--订单号-->
+            <if test="orderId!=null and orderId!=''">
+                and `orderId` LIKE CONCAT("%",#{orderId},"%")
+            </if>
+            <!--借款人姓名-->
+            <if test="userName!=null and userName!=''">
+                and `userName` LIKE CONCAT("%",#{userName},"%")
+            </if>
+            <!--订单状态-->
+            <if test="status!=null and status!=''">
+                and `status` = #{status}
+            </if>
+            <!--交易类型-->
+            <if test="payType!=null and payType!=''">
+                and `payType` = #{payType}
+            </if>
+        </trim>
+        ORDER BY `createDate` DESC
+        LIMIT #{index}, #{pageSize}
+    </select>
+
+
+
+    <!--风控员分页数据-->
+    <select id="RiskControlCount" resultType="integer">
+        SELECT
+        COUNT(1)
+        FROM
+        `infoentry`
+        <trim prefix="where" prefixOverrides="and|or">
+            <!--业务员id-->
+            <if test="id!=null and id!=''">
+                and orderId
+                IN (
+                SELECT  orderId FROM timeiine WHERE operatorId like CONCAT(#{id},'%')
+                GROUP BY orderId
+                )
+            </if>
+            <!--订单创建时间-->
+            <if test="createDate!=null and createDate!=''">
+                and `createDate` LIKE CONCAT(#{createDate},"%")
+            </if>
+            <!--订单号-->
+            <if test="orderId!=null and orderId!=''">
+                and `orderId` LIKE CONCAT("%",#{orderId},"%")
+            </if>
+            <!--借款人姓名-->
+            <if test="userName!=null and userName!=''">
+                and `userName` LIKE CONCAT("%",#{userName},"%")
+            </if>
+            <!--订单状态-->
+            <if test="status!=null and status!=''">
+                OR  `status` = #{status}
+            </if>
+            <!--交易类型-->
+            <if test="payType!=null and payType!=''">
+                and `payType` = #{payType}
+            </if>
+        </trim>
+    </select>
+
+
+    <!-- 业务员分页数据-->
+    <select id="RiskControlPageData" resultType="com.kgc.finance.pojo.InfoEntry">
+        SELECT
+        `orderId`,
+        `userName`,
+        `identity`,
+        `phone`,
+        `maritalStatus`,
+        `spouseName`,
+        `spouseIdentity`,
+        `privateLending`,
+        `lawsuitCase`,
+        `totalAmount`,
+        `foreclosure`,
+        `houseName`,
+        `area`,
+        `address`,
+        `assessment`,
+        `ownerName`,
+        `originalBank`,
+        `originalAmount`,
+        `amountBlance`,
+        `newBank`,
+        `newAmount`,
+        `managerName`,
+        `managerPhone`,
+        `amount`,
+        `amountDays`,
+        `rate`,
+        `brokerage`,
+        `feeWay`,
+        `paragraphTime`,
+        `dealPrice`,
+        `orderAmount`,
+        `superviseAmount`,
+        `buyerName`,
+        `buyerIdentity`,
+        `createDate`,
+        `status`,
+        `salesmanId`,
+        `payType`
+        FROM
+        `infoentry`
+        <trim prefix="where" prefixOverrides="and|or">
+            <!--业务员id-->
+            <if test="id!=null and id!=''">
+                and orderId
+                IN (
+                SELECT  orderId FROM timeiine WHERE operatorId like CONCAT(#{id},'%')
+                GROUP BY orderId
+                )
+            </if>
+            <!--订单创建时间-->
+            <if test="createDate!=null and createDate!=''">
+                and `createDate` LIKE CONCAT(#{createDate},"%")
+            </if>
+            <!--订单号-->
+            <if test="orderId!=null and orderId!=''">
+                and `orderId` LIKE CONCAT("%",#{orderId},"%")
+            </if>
+            <!--借款人姓名-->
+            <if test="userName!=null and userName!=''">
+                and `userName` LIKE CONCAT("%",#{userName},"%")
+            </if>
+            <!--订单状态-->
+            <if test="status!=null and status!=''">
+                OR `status` = #{status}
+            </if>
+            <!--交易类型-->
+            <if test="payType!=null and payType!=''">
+                and `payType` = #{payType}
+            </if>
+        </trim>
+        ORDER BY `createDate` DESC
+        LIMIT #{index}, #{pageSize}
+    </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

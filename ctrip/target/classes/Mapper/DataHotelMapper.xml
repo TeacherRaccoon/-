@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--该映射文件映射的接口为UserMapper-->
+<mapper namespace="com.example.ctrip.Dao.DataHotelMapper">
+    <insert id="addHotel" parameterType="com.example.ctrip.Pojo.Hotel">
+     insert into hotel
+    (hotelCode,    hotelName,   hotelDetails,  level,   address,   contact,   phone,   fox,    cityId)
+     values
+    (#{hotelCode},#{hotelName},#{hotelDetails},#{level},#{address},#{contact},#{phone},#{fox},#{cityId})
+    </insert>
+
+    <!--酒店-->
+    <select id="getcity" resultType="com.example.ctrip.Pojo.Hotel">
+        SELECT h.id,h.cityId,h.hotelName,h.level,h.address,h.price ,ci.`imgUrl`
+        FROM hotel h,ctrip_img ci
+        where h.id = ci.hotelId
+        <if test="cityId!=null and cityId!=0">
+            and h.`cityId` = #{cityId}
+        </if>
+        limit 0,6
+    </select>
+
+    <!--旅游产品-->
+    <select id="gettravel" resultType="com.example.ctrip.Pojo.TravelProduct">
+    SELECT  t.id,t.departCityId, t.subHead,t.totalPrice,t.productLevel,ci.`imgUrl` FROM
+    travel_product t LEFT JOIN ctrip_img ci ON t.id=ci.travelProId
+    WHERE  t.`departCityId` = #{departCityId} LIMIT 0,6
+    </select>
+
+    <!--查询门票-->
+    <select id="getticket" resultType="com.example.ctrip.Pojo.TicketSpot">
+    SELECT id,spotName,price,`level`,imgUrl FROM tickets_spot WHERE
+            cityId=#{cityId} LIMIT 0,6
+    </select>
+
+
+</mapper>

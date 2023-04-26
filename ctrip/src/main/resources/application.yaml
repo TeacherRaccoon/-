@@ -1,0 +1,61 @@
+server:
+  port: 8080
+  #解决控制台中文乱码
+  tomcat:
+    uri-encoding: UTF-8
+user:
+  abc: test;
+
+spring:
+  data:
+    solr:
+      host: http://localhost:8083/solr/
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.52.92.57:3306/ctrip?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+    #用户名密码自行设置
+    username: root
+    password: q@123456
+  redis:
+    port: 6379
+    database: 0
+    host: 106.52.92.57
+    jedis:
+      pool:
+        max-active: 200
+        min-idle: 0
+        max-idle: 10
+        max-wait: -1ms
+      # 连接超时时间（毫秒）
+    lettuce:
+      shutdown-timeout: 1000ms
+    password: root
+  #解决控制台中文乱码
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+  devtools:
+    restart:
+      enabled: true
+  freemarker:
+    cache: false
+
+mybatis:
+  #Mybatis.xml路径
+  mapper-locations: classpath:Mapper/**.xml
+  #取别名
+  type-aliases-package: com.example.ctrip.Pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    auto-mapping-behavior: full
+
+#logging:
+#  config: classpath:config/logback-spring.xml
+#  path: D:/nmyslog/nmys
+
+
+
+
+

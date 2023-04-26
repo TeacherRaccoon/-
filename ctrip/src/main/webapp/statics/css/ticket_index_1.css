@@ -1,0 +1,1501 @@
+﻿html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #FFF;
+}
+
+body {
+    background-color: #FFF;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: microsoft yahei, simsun, sans-serif;;
+    color: #333;
+}
+
+img, fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+input, textarea {
+    font-size: 12px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    outline: 0 none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: microsoft yahei, Simsun, sans-serif;
+}
+
+ul li, ol li {
+    list-style: none;
+}
+
+dfn {
+    font-style: normal;
+    font-size: 12px;
+    font-family: Arial !important;
+}
+
+select {
+    padding: 1px;
+    font-family: Arial, Simsun, sans-serif;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+}
+
+input[type="text"] {
+    padding: 3px;
+    border: solid 1px #CCC;
+    box-shadow: 1px 1px 3px #DDDDDD inset;
+}
+
+input {
+    _padding: 3px;
+    overflow: visible;
+    border: 1px solid #CCC;
+}
+
+.layoutfix {
+    display: inline-block;
+}
+
+.layoutfix {
+    display: block;
+    overflow: hidden;
+}
+
+.basefix {
+    *zoom: 1;
+}
+
+.basefix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.float_left {
+    float: left !important;
+}
+
+.float_right {
+    float: right !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.border_none {
+    border: 0 none !important;
+}
+
+.base_price {
+    font-style: normal;
+    font-family: arial;
+    text-decoration: none;
+}
+
+.base_price dfn {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.base_label {
+    _padding-bottom: 1px;
+    *display: inline-block;
+    border-bottom: 1px solid transparent;
+    _border-bottom: none;
+    _font-family: Simsun;
+    cursor: pointer;
+}
+
+.base_label:hover {
+    border-bottom: 1px dashed #aaa;
+}
+
+.base_label input {
+    margin: -4px 3px 0 0;
+    *margin-top: -2px;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    border: none;
+    font-family: Arial;
+    vertical-align: middle;
+}
+
+.input_error {
+    background-color: #FFF7D9 !important;
+    border-color: #D80000 #E50000 #E50000 #D80000 !important;
+    border-style: solid;
+}
+
+.input_default {
+    color: #808080 !important;
+}
+
+.inputSel {
+    color: #808080 !important;
+}
+
+/**loading**/
+.c_loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 200px;
+    margin: -30px 0 0 -100px;
+    font: bold 14px simsun;
+}
+
+.c_loading img, .base_loading img {
+    padding: 0 0.5em 6px 0;
+    vertical-align: middle;
+}
+
+.base_loading {
+    font: bold 14px simsun;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/****/
+.cui_nav, .cui_hd {
+    width: 1180px;
+}
+
+.cui_sub_nav {
+    width: 1178px;
+}
+
+.ticket_bd {
+    width: 1180px;
+    margin: 0 auto;
+    zoom: 1;
+}
+
+.ticket_bd:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.ticket_bg {
+    background: #f6f6f6
+}
+
+.bd_middle {
+    padding-bottom: 40px;
+}
+
+.base_price {
+    color: #ff6701;
+}
+
+.search_input_notice i, .city_station .city_present i, .ticket_banner .arrow_left i, .ticket_banner .arrow_right i, .hot_search_box .tips_close, .ticket_list_b .btn_panic i, .ranking_box li .ranking_num, .characteristic dl i {
+    background-image: url(../images/un_ticket_1.png);
+    background-repeat: no-repeat;
+}
+
+.title_img {
+    background-image: url(../images/ticket_bg_1.png);
+    background-repeat: no-repeat;
+}
+
+.ranking_box, .side_left {
+    background: url(../images/side_ticket_1.png) left bottom no-repeat;
+}
+
+/*=== 侧边导航  ===*/
+.side_left {
+    float: left;
+    width: 330px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    display: inline;
+}
+
+.side_nav {
+    padding: 0 20px;
+    border: 2px solid #ccc;
+    border-bottom: none;
+    overflow: hidden;
+    height: 479px;
+}
+
+.side_nav li {
+    margin-top: -1px;
+    padding: 15px 0;
+    border-top: 1px dashed #dfdfdf;
+}
+
+.side_nav h2 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #258ce3;
+}
+
+.side_nav h2 a {
+    color: #258ce3;
+}
+
+.side_nav p {
+    margin-left: -5px;
+    height: 18px;
+    overflow: hidden;
+}
+
+.side_nav p a {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+/*=== 右边内容 ===*/
+.main_right {
+    float: right;
+    width: 830px;
+}
+
+.search_wrap {
+    height: 37px;
+    position: relative;
+    z-index: 2;
+}
+
+.search_wrap .search_input_notice {
+    position: absolute;
+    color: #999;
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    left: 12px;
+    top: 3px;
+    z-index: -1;
+    padding-left: 30px;
+}
+
+.search_wrap .search_input_notice i {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+
+.search_wrap .main_search_txt {
+    border: 3px solid #fb9125;
+    height: 24px;
+    width: 500px;
+    float: left;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: transparent;
+    padding: 3px 10px;
+    background-image: url(about:blank);
+}
+
+.search_wrap .main_search_txt:focus, .search_wrap .main_search_cur {
+    background: #fef7f2;
+    outline: none;
+    border-color: #ff6701;;
+}
+
+.search_wrap .main_search_btn {
+    height: 36px;
+    width: 130px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 36px;
+    float: left;
+    background: #fb9125;
+    color: #fff;
+}
+
+.search_wrap .main_search_btn:hover {
+    background: #fd7b2b;
+    text-decoration: none;
+}
+
+.hot_search_box {
+    border: 2px solid #ff6701;
+    padding: 0 10px 10px;
+    width: 502px;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    background: #fff;
+}
+
+.hot_search_box .tips_close {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 10px;
+    top: 10px;
+    background-position: -40px -20px;
+}
+
+.hot_search_box .hot_list {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+    zoom: 1;
+}
+
+.hot_search_box .hot_list li {
+    zoom: 1;
+    vertical-align: top;
+}
+
+.hot_search_box .hot_list li a {
+    display: block;
+    width: 100%;
+    zoom: 1;
+    overflow: hidden;
+    line-height: 26px;
+    margin: 0 -10px;
+    padding: 0 10px;
+}
+
+.hot_search_box .hot_list li a:hover, .hot_search_box .hot_list li.selected a {
+    background: #f6f6f6;
+    text-decoration: none;
+}
+
+.hot_search_box .hot_list li em, .hot_search_box .hot_list li span {
+    float: left;
+    width: 45%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.hot_search_box .hot_list li span {
+    float: right;
+    width: 55%;
+    text-align: right;
+}
+
+.hot_search_box .hot_page {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 0;
+}
+
+.hot_search_box .hot_page a {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    font-family: tahoma, arial;
+    display: inline-block;
+    text-align: center;
+}
+
+.hot_search_box .hot_page a:hover, .hot_search_box .hot_page .cur {
+    border-radius: 50%;
+    background: #f6f6f6;
+    text-decoration: none;
+}
+
+.search_wrap .city_station {
+    width: 144px;
+    float: right;
+    height: 34px;
+    position: relative;
+    border: 2px solid #fff;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.city_station .city_present {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    line-height: 35px;
+    height: 35px;
+    display: block;
+    background: #fff;
+    padding: 0 12px;
+    font-style: normal;
+}
+
+.city_station .city_present span {
+    padding: 0 30px 0 0;
+    display: block;
+    border-bottom: 1px dashed #fff;
+    text-align: right;
+    zoom: 1;
+}
+
+.city_station .city_present i {
+    position: absolute;
+    width: 16px;
+    height: 11px;
+    background-position: -20px 0;
+    right: 15px;
+    top: 13px;
+    overflow: hidden;
+}
+
+.city_station .city_box {
+    border: 2px solid #ccc;
+    position: absolute;
+    right: -2px;
+    top: 33px;
+    width: 304px;
+    padding: 10px 0 10px 20px;
+    display: none;
+    background: #fff;
+}
+
+.city_station .city_box a {
+    width: 70px;
+    float: left;
+    margin-right: 5px;
+    display: inline;
+    line-height: 1.7;
+}
+
+.search_wrap .city_station_on {
+    border-color: #ccc;
+}
+
+.city_station_on .city_present span {
+    border-bottom-color: #ccc;
+}
+
+.city_station_on .city_box {
+    display: block;
+}
+
+.city_station_on .city_present i {
+    background-position: -40px 0;
+}
+
+.hot_search {
+    color: #666;
+    padding: 8px 0 14px;
+    overflow: hidden;
+    zoom: 1;
+    white-space: nowrap;
+    height: 18px;
+    line-height: 18px;
+    width: 656px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hot_search a {
+    margin-right: 8px;
+}
+
+.ticket_banner {
+    width: 830px;
+    height: 410px;
+    overflow: hidden;
+    position: relative;
+    background: #eee url(../images/loadding_210_118_1.gif) center center no-repeat;
+}
+
+.ticket_banner .banner_col {
+    height: 100%;
+}
+
+.ticket_banner .banner_col a {
+    position: absolute;
+    width: 830px;
+    height: 410px;
+    background: url(../images/place_hold_b_1.png) center center no-repeat #eee;
+}
+
+.ticket_banner .banner_col img {
+    width: 830px;
+    height: 410px;
+    display: block;
+}
+
+.ticket_banner .banner_num {
+    position: absolute;
+    bottom: 30px;
+    font-size: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.ticket_banner .banner_num a {
+    width: 6px;
+    height: 6px;
+    border: 3px solid #fff;
+    display: inline-block;
+    opacity: 0.7;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.ticket_banner .banner_num a.cur, .ticket_banner .banner_num a:hover {
+    background: #fff;
+    opacity: 1;
+}
+
+.ticket_banner .arrow_left, .ticket_banner .arrow_right {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    top: 50%;
+    margin-top: -40px;
+    opacity: 0.5;
+    cursor: pointer;
+    *background: url(about:blank);
+}
+
+.ticket_banner .arrow_left {
+    left: 10px;
+}
+
+.ticket_banner .arrow_right {
+    right: 10px;
+}
+
+.ticket_banner .arrow_left i, .ticket_banner .arrow_right i {
+    width: 16px;
+    height: 28px;
+    background-position: 0 -20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -14px 0 0 -8px;
+}
+
+.ticket_banner .arrow_left i {
+    background-position: -20px -20px;
+}
+
+.ticket_banner .arrow_left:hover, .ticket_banner .arrow_right:hover {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#33000000', endColorstr='#33000000');
+    background: rgba(0, 0, 0, 0.2);
+}
+
+:root .ticket_banner .arrow_left:hover, :root .ticket_banner .arrow_right:hover {
+    filter: none;
+}
+
+.ticket_text_list {
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #eaeaea;
+    zoom: 1;
+}
+
+.ticket_text_list ul {
+    margin-left: -20px;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.ticket_text_list li {
+    width: 280px;
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+    display: inline;
+}
+
+/*==== 特权日 地区门票 ====*/
+.ticket_mod {
+    zoom: 1;
+}
+
+.mod_hd {
+    position: relative;
+    zoom: 1;
+    border-bottom: 2px solid #ff6701;
+    height: 54px;
+    padding-top: 20px;
+}
+
+.mod_hd h2 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #ff6701;
+    margin-right: 20px;
+    display: inline
+}
+
+.mod_hd .title_tips {
+    color: #999;
+    font-size: 14px;
+    display: inline;
+}
+
+.mod_hd .title_img {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    width: 151px;
+    height: 61px;
+}
+
+.mod_bd {
+    zoom: 1;
+}
+
+.mod_bd:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.privilege_mod {
+    padding-bottom: 30px;
+}
+
+.ticket_list_b {
+    margin: 10px -11px 0 -9px;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.ticket_list_b li {
+    float: left;
+    width: 300px;
+}
+
+.ticket_list_b li a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 270px;
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid #f6f6f6;
+}
+
+.ticket_list_b a:hover {
+    background: #fff;
+    text-decoration: none;
+    border-color: #ff6701;
+}
+
+.ticket_list_b a:hover .list_title {
+    text-decoration: underline;
+}
+
+.ticket_list_b .list_pic {
+    width: 280px;
+    height: 158px;
+    display: block;
+    background: url(../images/place_hold_m_1.png) center center no-repeat #eee;
+}
+
+.ticket_list_b .icon_discount {
+    width: 60px;
+    height: 28px;
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    background: #ff6600;
+    color: #fff;
+    font: normal 18px/28px tahoma, arial;
+    text-align: center;
+}
+
+.ticket_list_b .icon_discount span {
+    font-size: 12px;
+    vertical-align: 2px;
+}
+
+.ticket_list_b .icon_discount i {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    border-top: 6px solid #ff6600;
+    border-left: 30px dashed transparent;
+    border-right: 30px dashed transparent;
+    border-bottom: none;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+.ticket_list_b .list_title {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 0 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+    width: 100%;
+}
+
+.ticket_list_b .list_time {
+    margin-bottom: 4px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 18px;
+}
+
+.ticket_list_b .btn_panic {
+    float: right;
+    width: 80px;
+    height: 49px;
+    font-size: 16px;
+    line-height: 49px;
+    text-align: center;
+    color: #fff;
+    background: #ff6701;
+    position: relative;
+    padding-left: 17px;
+    overflow: hidden;
+}
+
+.ticket_list_b .btn_panic i {
+    width: 17px;
+    height: 50px;
+    background-color: #f6f6f6;
+    background-position: -20px -55px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.ticket_list_b a:hover .btn_panic {
+    background: #e95200;
+}
+
+.ticket_list_b a:hover .btn_panic i {
+    background-color: #fff;
+    background-position: 0px -55px;
+}
+
+.ticket_list_b .base_price {
+    margin-bottom: 5px;
+}
+
+.ticket_list_b .base_price strong {
+    font: normal 24px tahoma, arial, sans-serif;
+    margin-right: 2px;
+}
+
+.ticket_list_b .base_price dfn {
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.ticket_list_b .original_price {
+    display: block;
+    margin-top: 4px;
+}
+
+.area_mod .mod_hd {
+    border-bottom-color: #258ce3;
+}
+
+.area_mod .hd_tab {
+    font-size: 0;
+}
+
+.area_mod .hd_tab .cur, .area_mod .hd_tab a:hover {
+    color: #258ce3;
+    text-decoration: none;
+}
+
+.area_mod .hd_tab a {
+    font-size: 16px;
+    color: #666;
+    margin-right: 20px;
+}
+
+.area_mod .hd_tab .cur {
+    font-size: 30px;
+}
+
+.area_mod .mod_hd .title_img {
+    background-position: 0 -80px;
+    width: 164px;
+    height: 66px;
+    bottom: -5px;
+}
+
+.area_list li a {
+    height: 265px;
+    border-color: #fff;
+}
+
+.area_list .list_time {
+    color: #ff6701;
+    margin-bottom: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 18px;
+}
+
+/*===== 产品列表 =====*/
+.product_list {
+    zoom: 1;
+    padding-top: 15px;
+    height: 227px;
+    _overflow: hidden;
+}
+
+.product_list:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.product_list dt {
+    width: 180px;
+    height: 210px;
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+    display: inline;
+    background: url(../images/place_hold_m_1.png) center center no-repeat #eee;
+}
+
+.product_list dt img {
+    width: 180px;
+    height: 210px;
+    display: block;
+}
+
+.product_list dd {
+    float: right;
+    border-bottom: 1px solid #e8e8e8;
+    width: 980px;
+}
+
+.product_list dd .basefix {
+    margin: -10px -10px 0 -10px;
+}
+
+.product_list dd a {
+    float: left;
+    width: 230px;
+    height: 210px;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 9px 9px 15px;
+    border: 1px solid #fff;
+}
+
+.product_list dd a:hover {
+    border-color: #ff6701;
+    text-decoration: none;
+    position: relative;
+}
+
+.product_list dd img {
+    width: 230px;
+    height: 130px;
+    display: block;
+    margin-bottom: 5px;
+    background: url(../images/place_hold_m_1.png) center center no-repeat #eee;
+}
+
+.product_list dd h3 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.product_list dd a:hover h3 {
+    text-decoration: underline;
+}
+
+.product_list dd .price_box {
+    line-height: 1.4;
+    float: left;
+    overflow: hidden;
+}
+
+.product_list dd .base_price dfn {
+    font-size: 18px;
+}
+
+.product_list dd .base_price strong {
+    font-weight: normal;
+    font-size: 24px;
+    margin-right: 2px;
+}
+
+.product_list dd .original_price {
+    display: block;
+    margin-left: -35px;
+}
+
+.product_list dd .btn_buy {
+    float: right;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    background: #ff6701;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 18px;
+    line-height: 30px;
+}
+
+.product_list dd a:hover .btn_buy {
+    background: #e95200;
+}
+
+.product_list dd .discount_price {
+    display: none;
+}
+
+.product_list dd .discount_price em {
+    font: normal 14px tahoma, arial, sans-serif;
+}
+
+.product_list dd .discount_price span {
+    color: #ff7a17;
+    font-size: 14px;
+}
+
+.product_list dd .discount_price span dfn {
+    font-size: 12px;
+}
+
+/*===== 排行榜 =====*/
+.ranking_col {
+    padding: 25px 0 30px;
+    margin-left: -20px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.ranking_box {
+    margin-left: 20px;
+    float: left;
+    display: inline;
+    width: 280px;
+    height: 400px;
+    background-color: #fff;
+    background-position: -340px bottom;
+}
+
+.ranking_box h3 {
+    font: normal 24px/65px microsoft yahei;
+    margin: 0 20px 15px 20px;
+    color: #000;
+    border-bottom: 1px dashed #ddd;
+}
+
+.ranking_box ol {
+    margin: 0 20px;
+    zoom: 1;
+}
+
+.ranking_box li {
+    zoom: 1;
+}
+
+.ranking_box li a {
+    display: block;
+    font-size: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 20px;
+}
+
+.ranking_box li a:hover {
+    text-decoration: none;
+    background: #f6f6f6;
+}
+
+.ranking_box li span, .ranking_box li em {
+    display: inline-block;
+    line-height: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.ranking_box li .ranking_num {
+    width: 24px;
+    padding-right: 6px;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-position: -40px -80px;
+    font-family: tahoma, arial, sans-serif;
+}
+
+.ranking_box li .num_hot {
+    background-position: -40px -55px;
+}
+
+.ranking_box li a:hover .ranking_area {
+    text-decoration: underline;
+}
+
+.ranking_box li .ranking_area {
+    font-size: 12px;
+    width: 115px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ranking_box li .price_r {
+    font-family: tahoma, arial, sans-serif;
+    width: 85px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.ranking_box li .base_price {
+    font-size: 18px;
+}
+
+.ranking_box li .base_price dfn {
+    vertical-align: 2px;
+}
+
+
+/*===== bottombanner =====*/
+.bottom_banner {
+    padding-top: 30px;
+    zoom: 1;
+}
+
+.bottom_banner .banner_list_s, .bottom_banner .banner_list_b {
+    zoom: 1;
+    margin-left: -20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.bottom_banner .banner_list_s a, .bottom_banner .banner_list_b a {
+    background: url(../images/place_hold_m_1.png) center center no-repeat #eee;
+}
+
+.bottom_banner .banner_list_s a {
+    width: 280px;
+    height: 150px;
+    margin-left: 20px;
+    float: left;
+    display: inline;
+}
+
+.bottom_banner .banner_list_s img {
+    width: 280px;
+    height: 150px;
+    display: block;
+}
+
+.bottom_banner .banner_list_b a {
+    width: 580px;
+    height: 130px;
+    vertical-align: top;
+    margin-left: 20px;
+    float: left;
+    display: inline;
+}
+
+.bottom_banner .banner_list_b img {
+    width: 580px;
+    height: 130px;
+    display: block;
+}
+
+/*===== characteristic =====*/
+.characteristic {
+    width: 1080px;
+    padding: 20px 50px;
+    height: 52px;
+    overflow: hidden;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.characteristic dl {
+    float: left;
+    position: relative;
+    width: 380px;
+    color: #999;
+    padding-left: 60px;
+    padding-top: 3px;
+}
+
+.characteristic .quan {
+    width: 130px;
+}
+
+.characteristic dl dt {
+    font: bold 16px/28px 'microsoft yahei';
+}
+
+.characteristic dl i {
+    position: absolute;
+    display: block;
+    width: 53px;
+    height: 52px;
+    top: 0;
+    left: 0px;
+}
+
+.fast i {
+    background-position: 0 -110px;
+}
+
+.down i {
+    background-position: -56px -110px;
+}
+
+.quan i {
+    background-position: -112px -110px;
+}
+
+/*===== seo ====*/
+.bottom_seo {
+    color: #999;
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.bottom_seo dl {
+    zoom: 1;
+}
+
+.bottom_seo dl dt {
+    line-height: 2;
+    position: relative;
+}
+
+.bottom_seo dl dd a { /* margin-right:20px; */
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+    line-height: 1.7;
+    white-space: nowrap;
+    width: 170px;
+}
+
+.bottom_seo .line dd {
+    font-size: 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+.bottom_seo .whole dd {
+    font-size: 0;
+    height: auto;
+}
+
+.bottom_seo .area_seo dd a { /* margin-right:40px; */
+}
+
+.bottom_seo .area_seo dd .more {
+    margin-right: 0;
+    color: #258ce3;
+}
+
+.bottom_seo .area_seo dd.bottom_line {
+    margin-bottom: 3px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.bottom_seo p {
+    margin-bottom: 5px;
+}
+
+.ico_fold,
+.ico_unfold {
+    background: #f7f7f7;
+    height: 9px;
+    width: 9px;
+    line-height: 9px;
+    text-align: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    font-family: arial;
+    text-decoration: none;
+    color: #ccc;
+}
+
+/* 微信活动 */
+.weixin_code {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: 600px;
+    z-index: 99;
+    margin-top: -200px;
+}
+
+.weixin_code .s_code, .weixin_code .b_code {
+    display: inline-block;
+    *zoom: 1;
+    background-repeat: no-repeat;
+    background-image: url(../images/weixin_code_1.png);
+}
+
+.weixin_code .b_code {
+    width: 150px;
+    height: 300px;
+    background-position: 0 0;
+    cursor: default;
+}
+
+.weixin_code .s_code {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -200px;
+    width: 40px;
+    height: 165px;
+    background-position: 0 -307px;
+}
+
+.weixin_code i {
+    position: absolute;
+    display: block;
+    right: 20px;
+    top: 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .cui_nav, .cui_hd {
+        width: 980px;
+    }
+
+    .cui_sub_nav {
+        width: 978px;
+    }
+
+    .ticket_bd {
+        width: 980px;
+    }
+
+    .side_left {
+        width: 300px;
+        padding-bottom: 6px;
+    }
+
+    .side_nav {
+        padding: 0 10px;
+        height: 480px;
+    }
+
+    .main_right {
+        width: 660px;
+    }
+
+    .search_wrap .main_search_txt {
+        width: 350px;
+    }
+
+    .hot_search_box {
+        width: 352px;
+    }
+
+    .hot_search {
+        width: 506px;
+    }
+
+    .ticket_banner {
+        width: 660px;
+    }
+
+    .ticket_banner .banner_col a {
+        width: 660px;
+    }
+
+    .ticket_banner .banner_col img {
+        margin-left: -85px;
+    }
+
+    .ticket_text_list li {
+        width: 230px;
+    }
+
+    .mod_hd .title_img {
+        right: 20px;
+    }
+
+    .ticket_list_b li {
+        width: 250px;
+    }
+
+    .ticket_list_b li a {
+        height: 238px;
+    }
+
+    .ticket_list_b .list_title {
+        font-size: 14px;
+    }
+
+    .ticket_list_b .list_pic {
+        width: 230px;
+        height: 130px;
+    }
+
+    .ticket_list_b .btn_panic {
+        width: 70px;
+    }
+
+    .product_list {
+        height: 201px;
+    }
+
+    .product_list dt {
+        width: 160px;
+        height: 190px;
+    }
+
+    .product_list dt img {
+        width: 160px;
+        height: 190px;
+    }
+
+    .product_list dd {
+        width: 800px;
+    }
+
+    .product_list dd a {
+        width: 185px;
+        height: 189px;
+        padding-bottom: 0;
+    }
+
+    .product_list dd img {
+        width: 185px;
+        height: 100px;
+    }
+
+    .product_list dd .base_price strong {
+        font-size: 20px;
+    }
+
+    .product_list dd .btn_buy {
+        width: 50px;
+        height: 26px;
+        font-size: 14px;
+        line-height: 26px;
+        margin-top: 16px;
+    }
+
+    .ranking_box {
+        width: 230px;
+    }
+
+    .ranking_box h3 {
+        font-size: 20px;
+        margin: 0 10px 15px 10px;
+        line-height: 60px;
+    }
+
+    .ranking_box ol {
+        margin: 0 10px;
+    }
+
+    .ranking_box li .ranking_area {
+        width: 85px;
+    }
+
+    .bottom_banner .banner_list_s img, .bottom_banner .banner_list_s a {
+        width: 230px;
+        height: 120px
+    }
+
+    .bottom_banner .banner_list_b img, .bottom_banner .banner_list_b a {
+        width: 480px;
+        height: 110px;
+    }
+
+    .characteristic {
+        width: 940px;
+        padding: 20px;
+    }
+
+    .characteristic dl {
+        width: 300px;
+    }
+
+    .characteristic .quan {
+        width: 160px;
+    }
+
+    .bottom_seo .area_seo dd a {
+        margin-right: 15px;
+    }
+}
+
+/* 微信活动 */
+@media (max-width: 1500px), (max-device-width: 1500px) {
+    .weixin_code {
+        left: inherit;
+        right: 0;
+        margin-left: 0;
+    }
+
+    .weixin_code .b_code, .weixin_code i {
+        display: none;
+    }
+
+    .weixin_code .s_code {
+        display: block;
+    }
+}
+
+/*fix广告位 IE位置错位的问题*/
+.jmkt-picsroller {
+    float: left;
+}

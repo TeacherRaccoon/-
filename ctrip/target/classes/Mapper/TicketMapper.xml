@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--该映射文件映射的接口为TicketMapper-->
+<mapper namespace="com.example.ctrip.Dao.TicketMapper">
+
+    <resultMap id="uticOrder" type="com.example.ctrip.Pojo.TicketOrder">
+        <result column="orderName" property="orderName"/>
+        <result column="orderCode" property="orderCode"/>
+        <result column="creationDate" property="creationDate"/>
+        <result column="totalPrice" property="totalPrice"/>
+        <result column="orderTime" property="orderTime"/>
+        <result column="number" property="number"/>
+        <result column="travelId" property="travelId"/>
+        <result column="ticketType" property="ticketType"/>
+        <result column="orderStatus" property="orderStatus"/>
+        <association property="ticketSpot" javaType="com.example.ctrip.Pojo.TicketSpot">
+            <result column="travelId" property="id"/>
+            <result column="openTime" property="openTime"/>
+            <result column="price" property="price"/>
+            <result column="address" property="address"/>
+            <result column ="spotName" property="spotName"/>
+        </association>
+        <collection property="passengers" ofType="com.example.ctrip.Pojo.UserPassenger">
+            <result column="passengerId" property="id"/>
+            <result column="name" property="name"/>
+            <result column="phone" property="phone"/>
+            <result column="certificateNumber" property="certificateNumber"/>
+        </collection>
+    </resultMap>
+
+    <!--添加景点-->
+    <insert id="addSpot" parameterType="com.example.ctrip.Pojo.TicketSpot">
+        insert into tickets_spot (spotName,address,openTime,price,`level`,imgUrl,notice,reduce,cityId,special,trainAdvice)
+        values(#{spotName},#{address},#{openTime},#{price},#{level},#{imgUrl},#{notice},#{reduce},#{cityId},#{special},#{trainAdvice})
+    </insert>
+    <!--添加景点评论-->
+    <insert id="addComments" parameterType="com.example.ctrip.Pojo.TicketComment">
+        insert into tickets_comment (spotId,content,postedTime,score,userId)
+        values(#{spotId},#{content},#{postedTime},#{score},#{userId})
+    </insert>
+
+
+    <!-- 根据地区查询景区信息和门票价格-->
+    <select id="selectCityByTicket" resultType="com.example.ctrip.Pojo.ScenicSpot">
+        SELECT s.*,t.price FROM travel_scenic_spot s LEFT JOIN tickets t ON t.travelId=s.id
+        WHERE cityId IN (SELECT id FROM ctrip_city WHERE id=#{id})
+    </select>
+
+    <!-- 根据地区分页查询景区信息-->
+    <select id="getScnicSpotListPage" resultType="com.example.ctrip.Pojo.ScenicSpot">
+     SELECT s.*,t.price FROM travel_scenic_spot s LEFT JOIN tickets t ON t.travelId=s.id
+        WHERE cityId IN (SELECT id FROM ctrip_city WHERE id=#{id})
+        LIMIT #{index},#{pageSize}
+    </select>
+    <!--根据景区id获取所有门票项目类型、票价类型、价格-->
+    <select id="getTicketType_priceById" resultType="com.example.ctrip.Pojo.Ticket">
+       SELECT p.projectName,f.fareType,t.price FROM tickets t
+       LEFT JOIN tickets_fare f ON f.id=t.projectId
+       LEFT JOIN tickets_project p ON p.id=t.projectId
+       WHERE t.travelId IN (SELECT id FROM travel_scenic_spot s WHERE s.id=#{id})
+    </select>
+
+    <!--==============-->
+    <!--获取特权门票-->
+    <select id="getTicket" resultType="com.example.ctrip.Pojo.Ticket">
+       SELECT ti.`ticketName` ticketName ,ts.special special,ci.imgUrl imgUrl,ti.`price` price,ti.`spotId` spotId
+        FROM travel_scenic_spot ts,tickets ti,ctrip_img ci
+        WHERE ts.id = ti.`spotId` AND ci.`scenicSpotsId` = ts.`id`
+        and ts.cityId = #{cityId}
+    </select>
+
+    <!--根据景点id获取景点详情 包括票价等一些信息-->
+    <select id="getSpotById" resultType="com.example.ctrip.Pojo.TicketSpot">
+SELECT id,spotName ,cityId,address,openTime,price,LEVEL,imgUrl,notice,reduce,special,trainAdvice FROM tickets_spot where id=#{spotId}
+    </select>
+
+    <!--特权门票的显示-->
+    <select id="getTicketSopt" resultType="com.example.ctrip.Pojo.TicketSpot">
+        select id,spotName,address,openTime,price,level,imgUrl,special,reduce,cityId from tickets_spot
+        where cityId = #{cityId}
+    </select>
+
+    <!--获取景点所有的评论数-->
+    <select id="getComentCount" resultType="int">
+        select count(id) from tickets_comment where spotId = #{spotId}
+    </select>
+
+    <!--根据景点id，起始位置获取景点的所有评论-->
+    <select id="getCommentBySpotId" resultType="com.example.ctrip.Pojo.TicketComment" parameterType="map">
+        SELECT u.petName ,t.content,t.score,t.postedTime,t.spotId
+        FROM tickets_comment t,`user` u
+        WHERE u.Id = t.userId AND spotid=#{spotId}
+        ORDER BY postedTime DESC
+        limit #{start},#{end}
+    </select>
+
+    <!--获取所有的该景点评论数，计算平均分，并获取最近一条记录信息-->
+    <select id="getAllCommentCount" resultType="Map">
+        SELECT COUNT(1) allCount, AVG(score) avgScore, t.id, u.petName ,t.content,t.score,t.postedTime,t.spotId
+        FROM tickets_comment t,`user` u
+        WHERE u.Id = t.userId AND spotid=#{spotId}
+        ORDER BY postedTime DESC
+        LIMIT 0,1
+    </select>
+
+    <!--根据城市 id 获取所有该城市的景点数量-->
+    <select id="getSpotListCountByCityId" resultType="int">
+      select count(id) from tickets_spot where cityId = #{cityId}
+    </select>
+
+    <!--根据城市 id 景点名称获取曲该城市的景点数量-->
+    <select id="getSpotCountByCityIdSpotName" resultType="int" parameterType="map">
+        SELECT COUNT(id) FROM tickets_spot
+        WHERE cityId = #{cityId}
+        <if test="spotName!=null and spotName!=''">
+            AND spotName LIKE CONCAT("%",#{spotName},"%")
+        </if>
+    </select>
+
+    <!--根据城市 id 景点名称获取曲该城市的景点列表-->
+    <select id="getSpotListByCityIdSpotName" resultType="Map" parameterType="map">
+        SELECT ts.spotName,ts.address,ts.level,ts.special,AVG(tc.score) as avgScore,ts.id spotId,ts.imgUrl,ts.price
+        FROM tickets_spot ts ,tickets_comment tc
+        WHERE ts.id=tc.spotId
+        AND cityId = #{cityId}
+        <if test="spotName!=null and spotName!=''">
+            AND spotName LIKE CONCAT("%",#{spotName},"%")
+        </if>
+        GROUP BY ts.id
+        LIMIT #{start},#{pageSize}
+    </select>
+
+    <!--添加门票订单添加订单时需要完成订单与游客的映射-往ctrip_orderRel中添加相应的映射-->
+    <insert id="addTicketOrder" parameterType="com.example.ctrip.Pojo.TicketOrder">
+        insert into tickets_order
+         (orderCode,orderName,ticketType,orderType,travelId,orderStatus,totalPrice,number,insurance,creationDate
+          ,orderTime,travelEndTime,travelInTime,modifyDate)
+          values(#{orderCode},#{orderName},#{ticketType},#{orderType},#{travelId},#{orderStatus},#{totalPrice},#{number},#{insurance},#{creationDate},
+            #{orderTime},#{travelEndTime},#{travelInTime},#{modifyDate})
+    </insert>
+
+    <!--添加订单与联系人的关系-->
+    <insert id="addTicOrderRel" parameterType="com.example.ctrip.Pojo.CtripOrderRel">
+        insert into ctrip_orderRel (orderCode,orderType,passengerId)
+        values (#{orderCode},#{orderType},#{passengerId})
+    </insert>
+
+    <!--根据订单编码查询订单信息-->
+    <select id="getTOrderInfo" resultType="com.example.ctrip.Pojo.TicketOrder">
+        select orderCode,orderName,ticketType,totalPrice,orderTime from tickets_order
+        where orderCode = #{orderCode}
+    </select>
+
+    <!--修改订单状态-->
+    <update id="upTorderStatus">
+        update tickets_order set  orderStatus = #{orderStatus} where orderCode = #{orderCode}
+    </update>
+
+    <!--根据订单编码查询订单详情包括景点信息、旅客信息、订单详情-->
+    <select id="getOrderInfo" resultType="map">
+        SELECT
+tio.orderName,tio.orderCode,tio.creationDate,tio.totalPrice,tio.or
+derTime,tio.number,
+        co.passengerId,tio.travelId,ts.`openTime`,ts.`price`
+        FROM tickets_order tio ,ctrip_orderRel co ,tickets_spot ts
+        WHERE tio.`orderCode`=co.`orderCode`
+        AND tio.travelId = ts.id
+        AND tio.orderCode = #{orderCode}
+    </select>
+
+    <!--根据订单编码查询订单详情包括景点信息、旅客信息、订单详
+    情-->
+    <select id="getTorderInfo" resultMap="uticOrder" parameterType="string">
+        select tio.orderName,tio.orderCode,tio.creationDate,tio.totalPrice,tio.orderTime,tio.number,tio.orderStatus,tio.orderType,
+        tio.ticketType,
+        co.passengerId,tio.travelId,ts.`openTime`,ts.spotName,ts.address,ts.id,ts.`price`,
+        up.`phone`,up.`certificateNumber`,up.id as passengerId,up.name
+        FROM tickets_order tio ,ctrip_orderRel co ,tickets_spot ts,user_passenger up
+        WHERE tio.`orderCode`=co.`orderCode`
+        and up.id = co.`passengerId`
+        AND tio.travelId = ts.id
+        AND tio.orderCode = #{orderCode}
+    </select>
+
+    <select id="getHotSpotNameId" resultType="Map" parameterType="list">
+        select spotName ,id from tickets_spot where id in
+        <foreach collection="list" item="spotIds" open="(" separator="," close=")" >
+            #{spotIds}
+        </foreach>
+
+
+    </select>
+
+
+
+
+</mapper>

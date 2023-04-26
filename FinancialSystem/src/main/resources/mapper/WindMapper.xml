@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kgc.finance.dao.WindMapper">
+    <!--风控人员分页数据-->
+    <select id="windPagingCount" resultType="integer">
+        SELECT
+        COUNT(1)
+        FROM
+        `infoentry`
+        <trim prefix="where" prefixOverrides="and|or">
+            <!--风控人员id-->
+            <if test="status!=null and status!= ''">
+                and `status` = #{status}
+            </if>
+            <if test="status==null">
+                <if test="windId!=null and windId!=''">
+                    and `windId` = #{windId}
+                    or `status` = 2
+                </if>
+                <if test="windId==null and windId==''">
+                    or `status` != 1
+                </if>
+            </if>
+
+            <!--订单创建时间-->
+            <if test="createDate!=null and createDate!=''">
+                and `createDate` LIKE CONCAT(#{createDate},"%")
+            </if>
+            <!--订单号-->
+            <if test="orderId!=null and orderId!=''">
+                and `orderId` LIKE CONCAT("%",#{orderId},"%")
+            </if>
+            <!--借款人姓名-->
+            <if test="userName!=null and userName!=''">
+                and `userName` LIKE CONCAT("%",#{userName},"%")
+            </if>
+
+            <!--交易类型-->
+            <if test="payType!=null and payType!=''">
+                and `payType` = #{payType}
+            </if>
+        </trim>
+    </select>
+
+    <select id="windPagingData" resultType="com.kgc.finance.pojo.InfoEntry">
+        SELECT
+            `orderId`,
+            `userName`,
+            `identity`,
+            `phone`,
+            `maritalStatus`,
+            `spouseName`,
+            `spouseIdentity`,
+            `privateLending`,
+            `lawsuitCase`,
+            `totalAmount`,
+            `foreclosure`,
+            `houseName`,
+            `area`,
+            `address`,
+            `assessment`,
+            `ownerName`,
+            `originalBank`,
+            `originalAmount`,
+            `amountBlance`,
+            `newBank`,
+            `newAmount`,
+            `managerName`,
+            `managerPhone`,
+            `amount`,
+            `amountDays`,
+            `rate`,
+            `brokerage`,
+            `feeWay`,
+            `paragraphTime`,
+            `dealPrice`,
+            `orderAmount`,
+            `superviseAmount`,
+            `buyerName`,
+            `buyerIdentity`,
+            `createDate`,
+            `status`,
+            `salesmanId`,
+            `payType`
+        FROM
+            `infoentry`
+        <trim prefix="where" prefixOverrides="and|or">
+            <!--风控人员id-->
+            <if test="status!=null and status!= ''">
+                and `status` = #{status}
+            </if>
+            <if test="status==null">
+                <if test="windId!=null and windId!=''">
+                    and `windId` = #{windId}
+                    or `status` = 2
+                </if>
+                <if test="windId==null and windId==''">
+                    or `status` != 1
+                </if>
+            </if>
+            <!--订单创建时间-->
+            <if test="createDate!=null and createDate!=''">
+                and `createDate` LIKE CONCAT(#{createDate},"%")
+            </if>
+            <!--订单号-->
+            <if test="orderId!=null and orderId!=''">
+                and `orderId` LIKE CONCAT("%",#{orderId},"%")
+            </if>
+            <!--借款人姓名-->
+            <if test="userName!=null and userName!=''">
+                and `userName` LIKE CONCAT("%",#{userName},"%")
+            </if>
+
+            <!--交易类型-->
+            <if test="payType!=null and payType!=''">
+                and `payType` = #{payType}
+            </if>
+        </trim>
+        ORDER BY `createDate` DESC
+        LIMIT #{index}, #{pageSize}
+    </select>
+</mapper>

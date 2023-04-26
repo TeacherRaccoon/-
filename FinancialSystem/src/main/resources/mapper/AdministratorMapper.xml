@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--该映射文件映射的接口为UserMapper-->
+<mapper namespace="com.kgc.finance.dao.AdministratorDao">
+
+    <!--添加信息-->
+    <insert id="insertAdministrator" parameterType="com.kgc.finance.pojo.Administrator">
+    INSERT INTO `houseLoan`.`administrator`
+          ( `name`, `account`, `password`, `gender`, `role`, `status`, `registerDate`)
+      VALUES ( #{name}, #{account},#{password}, #{gender}, #{role}, #{status}, NOW());
+    </insert>
+
+    <!--删除信息-->
+    <delete id="deleteAdministrator" parameterType="map">
+        DELETE FROM administrator WHERE id=#{id}
+    </delete>
+
+
+    <!--通过id修改信息-->
+    <update id="updateAdministrator" parameterType="com.kgc.finance.pojo.Administrator">
+        UPDATE administrator
+        <trim prefix="SET" suffixOverrides="," suffix="WHERE id=#{id}">
+            <if test="name!=null">`name`=#{name},</if>
+            <if test="account!=null">account=#{account},</if>
+            <if test="password!=null and password!=''">password=#{password},</if>
+            <if test="gender!=null">gender=#{gender},</if>
+            <if test="role!=null">role=#{role},</if>
+            <if test="status!=null">status=#{status},</if>
+            modifyDate=NOW(),
+        </trim>
+    </update>
+
+    <!--通过id查询信息-->
+    <select id="getIdFindAdministrator" parameterType="map" resultType="com.kgc.finance.pojo.Administrator">
+        SELECT * FROM administrator WHERE id=#{id}
+    </select>
+
+    <!--通过管理员姓名查询信息-->
+    <select id="getNameFindAdministrator" parameterType="map" resultType="com.kgc.finance.pojo.Administrator">
+        SELECT id,`name`,account,`password`,gender,role,`status`,registerDate,modifyDate FROM administrator WHERE account=#{account}
+    </select>
+
+
+    <!--获取管理员表数据总数-->
+    <select id="getAdminCount" parameterType="map" resultType="integer">
+        SELECT COUNT(1) FROM administrator
+        <where>
+            <if test="name!=null" >
+                and  administrator.`name` LIKE concat('%',#{name},'%')
+            </if>
+            <if test="role!=null">
+                AND role=#{role}
+            </if>
+            <if test="registerDate!=null">
+                and registerDate like CONCAT('%',#{registerDate},'%')
+            </if>
+        </where>
+    </select>
+
+
+
+    <!--分页查询-->
+    <select id="getAdminPage" parameterType="map" resultType="com.kgc.finance.pojo.Administrator">
+        select id,`name`,account,`password`,gender,role,`status`,registerDate,modifyDate from administrator
+        <where>
+            <if test="name!=null">
+              and  `name` LIKE CONCAT('%',#{name},'%')
+            </if>
+            <if test="registerDate!=null">
+              and registerDate like CONCAT('%',#{registerDate},'%')
+            </if>
+            <if test="role!=null">
+                AND role=#{role}
+            </if>
+        </where>
+        ORDER BY `status` DESC,role, registerDate
+        LIMIT #{pageNo},#{pageSize}
+    </select>
+
+
+
+    <!--分页查询-->
+    <select id="homepage"  parameterType="map" resultType="map">
+     SELECT id,name,account,role,`status` FROM administrator WHERE role!=0
+     ORDER BY role, registerDate
+     LIMIT #{pageNo},#{pageSize}
+    </select>
+
+
+    <!--获取不同状态下的订单数量-->
+    <select id="getStatusFindNum"  parameterType="map" resultType="map">
+    SELECT infoentry.status,COUNT(1) as count FROM infoentry
+    GROUP BY status
+    </select>
+
+
+    <!--根据id获取name和role-->
+    <select id="getIdFindnameAndRole"  parameterType="integer" resultType="map">
+     SELECT `name`,role FROM administrator WHERE id =#{id}
+    </select>
+
+</mapper>

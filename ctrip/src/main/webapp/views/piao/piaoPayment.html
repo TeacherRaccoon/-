@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>携程旅行网</title>
+    <link rel="stylesheet" type="text/css" href="../../statics/css/style.90201b7d.css">
+    <link rel="stylesheet" type="text/css" href="../../statics/css/banklogo.05c0e9fd.css">
+</head>
+<body>
+<div class="pop_s2" style="width: 600px; display: none; margin-top: -235.007px; margin-left: -300.007px;"
+     w-action="{&quot;popInit&quot;:&quot;&quot;,&quot;pop&quot;:&quot;#payData.isShowHint&quot;}" id="pop_2">
+    <div class="pop_hd">
+        <h3>温馨提示</h3>
+    </div>
+    <div class="pop_bd">
+        <div class="txt_s2">
+            <div class="txt_s_inner">
+                <h4>尊敬的顾客：</h4>
+                <p>按照国家有关税收法律法规，在您购买应税货物或接受应税服务的同时，有权索取增值税发票。</p>
+                <p>如您为自然人以外的单位或个体工商户，符合规定条件的，索取增值税专用发票时，应向我们提供购买方名称、纳税人识别号、地址电话、开户行及账号信息等四项信息，不需相关证件或其他证明材料。</p>
+                <p>您在索取增值税普通发票时，不需提供相关证件或其他证明材料。</p>
+                <p>欢迎您对我们的工作进行监督。</p>
+                <p>主管税务机关投诉举报电话：12366</p>
+            </div>
+        </div>
+    </div>
+    <div class="pop_btn">
+        <a href="javascript:;" class="btn_03" id="pop_close" onclick="payData.hidehint()">关闭</a>
+    </div>
+</div>
+<div class="header_area">
+    <h1 class="ctrip_logo">携程</h1>
+    <div class="sub_bar">
+        <a href="javascript:;" class="prompt" onclick="payData.showhint()"><i></i>温馨提示</a>
+        <a href="http://my.ctrip.com/uxp/Community/CommunityAdvice.aspx#ctm_ref=sbr_hp_nav_commu_txt_21" class="advice"
+           target="_blank"><i></i>建议与反馈</a>
+    </div>
+</div>
+<div id="main_area" class="main_area" style=" margin-top:5px;">
+
+
+    <div class="return_area" w-show="[==,#payData.status,#1]" style="display: none;">
+        <h3 class="return_tit"><i class="return_icon loading_b1"></i>加载支付方式中，请耐心等待</h3>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#2]">
+        <h3 class="return_tit"><i class="return_icon abnormal_b1"></i>未成功加载支付方式，请尝试刷新</h3>
+        <div class="btn_area">
+            <a href="javascript:;" class="btn_01" onclick="window.location.reload()">立即刷新</a>
+        </div>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#4]">
+        <h3 class="return_tit"><i class="return_icon abnormal_b1"></i>该订单暂无法支付，请联系携程客服 </h3>
+        <ul class="return_list">
+            <li>国内：1010-6666</li>
+            <li>国内（座机拨打）：800-820-6666</li>
+            <li>香港：852-3610-6666</li>
+            <li>海外：+86-21-3406-4888</li>
+        </ul>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#6]">
+        <h3 class="return_tit"><i class="return_icon abnormal_b1"></i>系统异常，请稍后再试</h3>
+    </div>
+    <div class="return_area" style="display:none" w-show="[==,#payData.status,#7]">
+        <h3 class="return_tit"><i class="return_icon fail_b1"></i>证件信息不正确，无法支付！</h3>
+        <p class="return_p">可能是您的个人信息（姓名、证件类型或证件号）有误</p>
+        <div class="btn_area">
+            <a href="http://localhost:8080/views/piao/piaoChangLongBill.html" class="btn_01">返回订单填写页检查</a>
+        </div>
+    </div>
+    <div w-show="[==,status,#3]">
+        <div class="order_info" style="margin-bottom: 10px;">     <!-- S 订单金额 -->
+            <div class="price_area">
+                <div class="price_h1">订单金额<span class="price_s1">¥<i w-html="amount|number:2">385.00</i></span></div>
+            </div>     <!-- E 订单金额 -->     <!-- S 订单标题 -->
+            <div class="order_tit"><h2> 长隆野生动物世界
+                景点地址广东省广州市番禺区大石镇105国道大石段593号查看地图
+                开放时间全年 周一至周五 09:30-18:00，周六至周日 09:30-18:30；如有调整，请以景区现场为准 </h2>
+                <h3 id="num-date">  </h3> <!--人数：1成人 出发日期：2019-08-29-->
+                <div class="price_num"><i></i>支付剩余时间<span>00:00</span>，超时订单可能会被取消</div>
+                <i class="bg_icon01"></i></div>     <!-- E 订单标题 -->     <!-- S 订单详情 -->
+            <div class="order_detail" style="display:none" w-show="[==,isOrderDetailsShow,#true]"></div><!-- E 订单详情 -->
+            <!-- S 提示信息 -->
+            <div class="tip_area"> 订单资源紧张，请在20分钟内付款。订单提交后，如需修改、取消、退订，携程将按资源的退变更条款收取费用。 <i></i></div><!-- E 提示信息 -->
+        </div>
+        <div class="tab_area" w-show="[>,#payData.payCurrent.restAmount,#0]">
+            <div class="tab_titl">
+                <ul>
+                    <!--<li _tmplitem="18"   onclick="payData.otherPay.otherPayTabs[0].select()"  w-class='{"curr":"[&&,#payData.otherPay.otherPayTabs[0].isSelected,1]"}'><i _tmplitem="18"  class="tab_icon1"></i>微信支付<span _tmplitem="18"  style="display: none" w-show="#payData.otherPay.otherPayTabs[0].isSelected"> isselected</span> </li>-->
+                    <li class="" w-event="javascript:void(0)"
+                        w-class="{&quot;curr&quot;:&quot;[&amp;&amp;,isSelected,#true]&quot;}" ubt="09d"><i
+                            class="tab_icon2"></i>微信支付
+                    </li>
+                    <!--<li _tmplitem="18"   onclick="payData.otherPay.otherPayTabs[1].select()"  w-class='{"curr":"[&&,#payData.otherPay.otherPayTabs[1].isSelected,1]"}'><i _tmplitem="18"  class="tab_icon1"></i>储蓄卡<span _tmplitem="18"  style="display: none" w-show="#payData.otherPay.otherPayTabs[1].isSelected"> isselected</span> </li>-->
+                    <li class="" w-event="{&quot;click&quot;:&quot;select()&quot;}"
+                        w-class="{&quot;curr&quot;:&quot;[&amp;&amp;,isSelected,#true]&quot;}" ubt="09c"><i
+                            class=" tab_icon10"></i>储蓄卡
+                    </li>
+                    <!--<li _tmplitem="18"   onclick="payData.otherPay.otherPayTabs[2].select()"  w-class='{"curr":"[&&,#payData.otherPay.otherPayTabs[2].isSelected,1]"}'><i _tmplitem="18"  class="tab_icon1"></i>信用卡<span _tmplitem="18"  style="display: none" w-show="#payData.otherPay.otherPayTabs[2].isSelected"> isselected</span> </li>-->
+                    <li class="" w-event="{&quot;click&quot;:&quot;select()&quot;}"
+                        w-class="{&quot;curr&quot;:&quot;[&amp;&amp;,isSelected,#true]&quot;}" ubt="09b"><i
+                            class="tab_icon9"></i>信用卡
+                    </li>
+                    <!--<li _tmplitem="18"   onclick="payData.otherPay.otherPayTabs[3].select()"  w-class='{"curr":"[&&,#payData.otherPay.otherPayTabs[3].isSelected,1]"}'><i _tmplitem="18"  class="tab_icon1"></i>支付宝<span _tmplitem="18"  style="display: none" w-show="#payData.otherPay.otherPayTabs[3].isSelected"> isselected</span> </li>-->
+                    <li class="curr" w-event="{&quot;click&quot;:&quot;select()&quot;}"
+                        w-class="{&quot;curr&quot;:&quot;[&amp;&amp;,isSelected,#true]&quot;}" ubt="09x"><i
+                            class="tab_icon3"></i>支付宝
+                    </li>
+                    <!--<li _tmplitem="18"   onclick="payData.otherPay.otherPayTabs[4].select()"  w-class='{"curr":"[&&,#payData.otherPay.otherPayTabs[4].isSelected,1]"}'><i _tmplitem="18"  class="tab_icon1"></i>更多<span _tmplitem="18"  style="display: none" w-show="#payData.otherPay.otherPayTabs[4].isSelected"> isselected</span> </li>-->
+                    <li class="" w-event="{&quot;click&quot;:&quot;select()&quot;}"
+                        w-class="{&quot;curr&quot;:&quot;[&amp;&amp;,isSelected,#true]&quot;}" ubt="09y"><i
+                            class="tab_icon4"></i>更多
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_con" w-show="[>,#payData.payCurrent.restAmount,#0]">                   <!-- S item1 -->
+                <div class="tab_item tab_item2" w-show="isSelected" style="display: none;"><p class="wechat_txt">
+                    点击“去支付”后，请打开手机微信的“扫一扫”，扫描二维码支付</p></div>                   <!-- E item1 --><!-- S item1 -->
+                <div class="tab_item tab_item1 clearfix" w-show="isSelected" style="display: none;"><!-- 最近使用 -->
+                    <!-- 银行卡 -->                  <!-- 无常用卡 -->
+                    <div class="cardbin_area" w-show="isPreCardNoMatch" style="display: none;"><p class="cardbin_txt">
+                        您暂无常用卡，请在下方添加卡片：</p>
+                        <div class="card_con">
+                            <ul>
+                                <li>
+                                    <div class="input_item"><label class="fill_in" lb="银行卡号">银行卡号</label> <input
+                                            class="input_txt1" ubt="05a" value="" maxlength="23"
+                                            placeholder="请输入银行卡号进行智能识别" format="cardno" w-model="cardNo.value"
+                                            w-class="{&quot;input_error&quot;:&quot;cardNo.isError&quot;}"
+                                            w-event="{blur:'cardNo.check()',focus:'cardNo.setNOError()'}"></div>
+                                    <span class="tip_error noslide" w-show="cardNo.isError" style="display:none"><i></i><span
+                                            w-html="cardNo.errorMessage"></span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn_area" w-show="isPreCardNoMatch" style="display: none;"><a href="javascript:;"
+                                                                                              class="btn_02"
+                                                                                              w-show="[==,cardNo.value,#'']"
+                                                                                              ubt="05k">下一步</a> <a
+                            href="javascript:;" class="btn_01"
+                            w-show="[&amp;&amp;,cardNo.value,[==,cardLoading,#false]]"
+                            w-event="{&quot;click&quot;:&quot;cardNOMatch()&quot;}" ubt="05k"
+                            style="display: none;">下一步</a> <a href="javascript:;" class="btn_01" w-show="cardLoading"
+                                                              style="display: none;"><img
+                            w-init="{initImgsrc:'#\'loading_1\''}"
+                            src="//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_1.9e391eb0.gif"></a>
+                    </div>
+                </div>                   <!-- E item1 -->                   <!-- S item1 -->
+                <div class="tab_item tab_item1 clearfix" w-show="isSelected" style="display: none;"><!-- 最近使用 -->
+                    <!-- 银行卡 -->                  <!-- 无常用卡 -->
+                    <div class="cardbin_area" w-show="isPreCardNoMatch" style="display: none;"><p class="cardbin_txt">
+                        您暂无常用卡，请在下方添加卡片：</p>
+                        <div class="card_con">
+                            <ul>
+                                <li>
+                                    <div class="input_item"><label class="fill_in" lb="银行卡号">银行卡号</label> <input
+                                            class="input_txt1" ubt="05a" value="" maxlength="23"
+                                            placeholder="请输入银行卡号进行智能识别" format="cardno" w-model="cardNo.value"
+                                            w-class="{&quot;input_error&quot;:&quot;cardNo.isError&quot;}"
+                                            w-event="{blur:'cardNo.check()',focus:'cardNo.setNOError()'}"></div>
+                                    <span class="tip_error noslide" w-show="cardNo.isError" style="display:none"><i></i><span
+                                            w-html="cardNo.errorMessage"></span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn_area" w-show="isPreCardNoMatch" style="display: none;"><a href="javascript:;"
+                                                                                              class="btn_02"
+                                                                                              w-show="[==,cardNo.value,#'']"
+                                                                                              ubt="05k">下一步</a> <a
+                            href="javascript:;" class="btn_01"
+                            w-show="[&amp;&amp;,cardNo.value,[==,cardLoading,#false]]"
+                            w-event="{&quot;click&quot;:&quot;cardNOMatch()&quot;}" ubt="05k"
+                            style="display: none;">下一步</a> <a href="javascript:;" class="btn_01" w-show="cardLoading"
+                                                              style="display: none;"><img
+                            w-init="{initImgsrc:'#\'loading_1\''}"
+                            src="//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_1.9e391eb0.gif"></a>
+                    </div>
+                </div>                   <!-- E item1 -->                   <!-- S item1 -->
+                <div class="tab_item tab_item3" w-show="isSelected" style="display: block;"><p class="alipay_txt">
+                    点击“去支付”后，将跳转到支付宝页面进行付款</p></div>                   <!-- E item1 --><!-- S item1 -->
+                <div class="tab_item tab_item5" w-show="isSelected" style="display: none;"><h3 class="logo_list_tit">
+                    第三方</h3>
+                    <ul class="logo_list_b1 clearfix">
+                        <li w-class="{&quot;curr&quot;:&quot;paywayItems[8].isSelected&quot;}" ubt="03a"
+                            w-event="{&quot;click&quot;:&quot;paywayItems[8].select()&quot;}"><i
+                                class="bank_logo more_qqpay"></i> <i>&nbsp;</i><span class="bank_name">QQ支付</span> <span
+                                class="card_selected" w-show="paywayItems[8].isSelected" style="display: none;"></span>
+                        </li>
+                    </ul>
+                    <h3 class="logo_list_tit">网银支付<span>需跳转银行页面，无法享受携程支付的快捷便利</span></h3>
+                    <ul class="logo_list_b1 clearfix" w-init="setEbankMoreButton">
+                        <li w-class="{&quot;curr&quot;:&quot;paywayItems[0].isSelected&quot;,&quot;disable&quot;:&quot;[&amp;&amp;,[!=,paywayItems[0].payAmountLimit,#0],[>,paywayItems[0].otherPaywayCurrent.totalAmount,paywayItems[0].payAmountLimit]]&quot;}"
+                            ubt="07a" w-event="{&quot;click&quot;:&quot;paywayItems[0].select()&quot;}"
+                            w-action="{showLimitText:&quot;[&amp;&amp;,[!=,paywayItems[0].payAmountLimit,#0],[>,paywayItems[0].otherPaywayCurrent.totalAmount,paywayItems[0].payAmountLimit]]&quot;}"
+                            limit="0.00"><i class="bank_logo creditcard_comm"></i> <i>&nbsp;</i><span class="bank_name">交行网银(网银)</span>
+                            <span class="card_selected" w-show="paywayItems[0].isSelected"
+                                  style="display: none;"></span> <span style="display: none;"
+                                                                       w-show="[&amp;&amp;,[!=,paywayItems[0].payAmountLimit,#0],[>,paywayItems[0].otherPaywayCurrent.totalAmount,paywayItems[0].payAmountLimit]]"
+                                                                       class="n_tip_c01"><b></b>超出订单限额</span></li>
+                        <li w-class="{&quot;curr&quot;:&quot;paywayItems[1].isSelected&quot;,&quot;disable&quot;:&quot;[&amp;&amp;,[!=,paywayItems[1].payAmountLimit,#0],[>,paywayItems[1].otherPaywayCurrent.totalAmount,paywayItems[1].payAmountLimit]]&quot;}"
+                            ubt="07a" w-event="{&quot;click&quot;:&quot;paywayItems[1].select()&quot;}"
+                            w-action="{showLimitText:&quot;[&amp;&amp;,[!=,paywayItems[1].payAmountLimit,#0],[>,paywayItems[1].otherPaywayCurrent.totalAmount,paywayItems[1].payAmountLimit]]&quot;}"
+                            limit="0.00"><i class="bank_logo creditcard_ccb"></i> <i>&nbsp;</i><span class="bank_name">中国建设银行(网银)</span>
+                            <span class="card_selected" w-show="paywayItems[1].isSelected"
+                                  style="display: none;"></span> <span style="display: none;"
+                                                                       w-show="[&amp;&amp;,[!=,paywayItems[1].payAmountLimit,#0],[>,paywayItems[1].otherPaywayCurrent.totalAmount,paywayItems[1].payAmountLimit]]"
+                                                                       class="n_tip_c01"><b></b>超出订单限额</span></li>
+                        <li class="disable" w-class="{&quot;curr&quot;:&quot;paywayItems[2].isSelected&quot;}" ubt="07a"
+                            onmouseover="showsuper(this,'notSupportIETip','您当前的浏览器环境可能不支持您选择的网银，建议更换为IE浏览器。')"
+                            onmouseout="hidesuper(this,'notSupportIETip')"><i class="bank_logo creditcard_icbc"></i> <i>&nbsp;</i><span
+                                class="bank_name">中国工商银行(网银)</span> <span class="card_selected"
+                                                                          w-show="paywayItems[2].isSelected"
+                                                                          style="display: none;"></span> <span
+                                class="n_tip_c01"><b></b>需要IE浏览器</span></li>
+                        <li w-class="{&quot;curr&quot;:&quot;paywayItems[3].isSelected&quot;,&quot;disable&quot;:&quot;[&amp;&amp;,[!=,paywayItems[3].payAmountLimit,#0],[>,paywayItems[3].otherPaywayCurrent.totalAmount,paywayItems[3].payAmountLimit]]&quot;}"
+                            ubt="07a" w-event="{&quot;click&quot;:&quot;paywayItems[3].select()&quot;}"
+                            w-action="{showLimitText:&quot;[&amp;&amp;,[!=,paywayItems[3].payAmountLimit,#0],[>,paywayItems[3].otherPaywayCurrent.totalAmount,paywayItems[3].payAmountLimit]]&quot;}"
+                            limit="0.00"><i class="bank_logo creditcard_boc"></i> <i>&nbsp;</i><span class="bank_name">中国银行(网银)</span>
+                            <span class="card_selected" w-show="paywayItems[3].isSelected"
+                                  style="display: none;"></span> <span style="display: none;"
+                                                                       w-show="[&amp;&amp;,[!=,paywayItems[3].payAmountLimit,#0],[>,paywayItems[3].otherPaywayCurrent.totalAmount,paywayItems[3].payAmountLimit]]"
+                                                                       class="n_tip_c01"><b></b>超出订单限额</span></li>
+                        <li w-class="{&quot;curr&quot;:&quot;paywayItems[4].isSelected&quot;,&quot;disable&quot;:&quot;[&amp;&amp;,[!=,paywayItems[4].payAmountLimit,#0],[>,paywayItems[4].otherPaywayCurrent.totalAmount,paywayItems[4].payAmountLimit]]&quot;}"
+                            ubt="07a" w-event="{&quot;click&quot;:&quot;paywayItems[4].select()&quot;}"
+                            w-action="{showLimitText:&quot;[&amp;&amp;,[!=,paywayItems[4].payAmountLimit,#0],[>,paywayItems[4].otherPaywayCurrent.totalAmount,paywayItems[4].payAmountLimit]]&quot;}"
+                            limit="0.00"><i class="bank_logo creditcard_abc"></i> <i>&nbsp;</i><span class="bank_name">中国农业银行(网银)</span>
+                            <span class="card_selected" w-show="paywayItems[4].isSelected"
+                                  style="display: none;"></span> <span style="display: none;"
+                                                                       w-show="[&amp;&amp;,[!=,paywayItems[4].payAmountLimit,#0],[>,paywayItems[4].otherPaywayCurrent.totalAmount,paywayItems[4].payAmountLimit]]"
+                                                                       class="n_tip_c01"><b></b>超出订单限额</span></li>
+                        <li w-class="{&quot;curr&quot;:&quot;paywayItems[5].isSelected&quot;,&quot;disable&quot;:&quot;[&amp;&amp;,[!=,paywayItems[5].payAmountLimit,#0],[>,paywayItems[5].otherPaywayCurrent.totalAmount,paywayItems[5].payAmountLimit]]&quot;}"
+                            ubt="07a" w-event="{&quot;click&quot;:&quot;paywayItems[5].select()&quot;}"
+                            w-action="{showLimitText:&quot;[&amp;&amp;,[!=,paywayItems[5].payAmountLimit,#0],[>,paywayItems[5].otherPaywayCurrent.totalAmount,paywayItems[5].payAmountLimit]]&quot;}"
+                            limit="0.00"><i class="bank_logo creditcard_cmb"></i> <i>&nbsp;</i><span class="bank_name">招商银行(网银)</span>
+                            <span class="card_selected" w-show="paywayItems[5].isSelected"
+                                  style="display: none;"></span> <span style="display: none;"
+                                                                       w-show="[&amp;&amp;,[!=,paywayItems[5].payAmountLimit,#0],[>,paywayItems[5].otherPaywayCurrent.totalAmount,paywayItems[5].payAmountLimit]]"
+                                                                       class="n_tip_c01"><b></b>超出订单限额</span></li>
+                        <li w-class="{&quot;curr&quot;:&quot;paywayItems[6].isSelected&quot;,&quot;disable&quot;:&quot;[&amp;&amp;,[!=,paywayItems[6].payAmountLimit,#0],[>,paywayItems[6].otherPaywayCurrent.totalAmount,paywayItems[6].payAmountLimit]]&quot;}"
+                            ubt="07a" w-event="{&quot;click&quot;:&quot;paywayItems[6].select()&quot;}"
+                            w-action="{showLimitText:&quot;[&amp;&amp;,[!=,paywayItems[6].payAmountLimit,#0],[>,paywayItems[6].otherPaywayCurrent.totalAmount,paywayItems[6].payAmountLimit]]&quot;}"
+                            limit="0.00"><i class="bank_logo creditcard_spdb"></i> <i>&nbsp;</i><span class="bank_name">浦发银行(网银)</span>
+                            <span class="card_selected" w-show="paywayItems[6].isSelected"
+                                  style="display: none;"></span> <span style="display: none;"
+                                                                       w-show="[&amp;&amp;,[!=,paywayItems[6].payAmountLimit,#0],[>,paywayItems[6].otherPaywayCurrent.totalAmount,paywayItems[6].payAmountLimit]]"
+                                                                       class="n_tip_c01"><b></b>超出订单限额</span></li>
+                        <li class="disable" w-class="{&quot;curr&quot;:&quot;paywayItems[7].isSelected&quot;}" ubt="07a"
+                            onmouseover="showsuper(this,'notSupportIETip','您当前的浏览器环境可能不支持您选择的网银，建议更换为IE浏览器。')"
+                            onmouseout="hidesuper(this,'notSupportIETip')"><i class="bank_logo creditcard_psbc"></i> <i>&nbsp;</i><span
+                                class="bank_name">中国邮政储蓄银行(网银)</span> <span class="card_selected"
+                                                                            w-show="paywayItems[7].isSelected"
+                                                                            style="display: none;"></span> <span
+                                class="n_tip_c01"><b></b>需要IE浏览器</span></li>
+                    </ul>
+                </div>                   <!-- E item1 -->              </div>
+            <div class="btn_area"
+                 w-show="[&amp;&amp;,[==,parent.payCurrent.otherPaywayCurrent.isCard,#false],[!=,parent.payCurrent.otherPaywayCurrent.tabCatalogLayout,#'RecentPay']] ">
+                <a href="javascript:;" ubt="06a" class="btn_01" w-event="{click:'parent.payCurrent.submit()'}"
+                   w-show="[&amp;&amp;,[==,parent.payCurrent.submitBtnStatus,#1],[&amp;&amp;,[!=,parent.payCurrent.otherPaywayCurrent.brandId,#'AccountPay'],[&amp;&amp;,[!=,parent.payCurrent.otherPaywayCurrent.brandId,#'CreditsGuarantee'],[!=,parent.payCurrent.otherPaywayCurrent.brandId,#'Cash']]]]">
+                    <span class="price_s5">¥<i w-html="parent.payCurrent.restAmount|number:2">385.00</i></span>，去支付</a>
+                <a href="javascript:;" ubt="" class="btn_01" w-event="{click:'parent.payCurrent.submit()'}"
+                   w-show="[&amp;&amp;,[==,parent.payCurrent.submitBtnStatus,#1],[==,parent.payCurrent.otherPaywayCurrent.brandId,#'Cash']]"
+                   style="display: none;"> 下一步</a> <a href="javascript:;" class="btn_01"
+                                                      w-show="[&amp;&amp;,[==,parent.payCurrent.submitBtnStatus,#2],[&amp;&amp;,[!=,parent.payCurrent.otherPaywayCurrent.brandId,#'AccountPay'],[!=,parent.payCurrent.otherPaywayCurrent.brandId,#'CreditsGuarantee']]]"
+                                                      style="display: none;"> <img
+                    w-init="{initImgsrc:'#\'loading_1\''}"
+                    src="//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_1.9e391eb0.gif"> </a> <a
+                    href="javascript:;" class="btn_01"
+                    w-show="[&amp;&amp;,[==,parent.payCurrent.submitBtnStatus,#3],[&amp;&amp;,[!=,parent.payCurrent.otherPaywayCurrent.brandId,#'AccountPay'],[!=,parent.payCurrent.otherPaywayCurrent.brandId,#'CreditsGuarantee']]]"
+                    style="display: none;"> <img w-init="{initImgsrc:'#\'loading_1\''}"
+                                                 src="//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_1.9e391eb0.gif">跳转中
+            </a></div>
+        </div>
+        <div class="browser_area"><a
+                href="javascript:history.back()"
+                class="pre_btn_b1" ubt="04f">&lt; 返回修改订单</a></div>
+    </div>
+    <div class="return_area" w-show="[==,parent.status,#5]" style="display: none;">
+        <div class="icon_txt_area1"><i class="icon_ab1"></i>
+            <h3>确认该卡是本人银行卡？</h3>
+            <p>通过本人银行卡进行携程账户实名认证，可有效保障携程账户资金安全，防止他人盗取</p></div>
+        <div class="return_info">
+            <ul>
+                <li><span>真实姓名：</span><span w-html="realName"></span></li>
+                <li><span>证件类型：</span><span w-html="idTypeName"></span></li>
+                <li><span>证件号码：</span><span w-html="idNo"></span></li>
+            </ul>
+        </div>
+        <div class="btn_area"><a href="javascript:;" class="btn_01" w-show="[==,status,#1]" w-event="{click:'submit()'}"
+                                 　ubt="10a">确认，该卡是本人银行卡</a> <a href="javascript:;" class="btn_01"
+                                                               w-show="[==,status,#2]" style="display: none;"> <img
+                w-init="{initImgsrc:'#\'loading_1\''}"
+                src="//pic.c-ctrip.com/picaresonline/fncpaymentonline/cnres/img/loading_1.9e391eb0.gif"></a> <a
+                href="javascript:;" class="btn_05" w-event="{click:'close()'}" ubt="10b">不是本人银行卡</a></div>
+    </div>
+</div>
+<div class="security">
+    <div class="md">
+        <div class="safety"></div>
+        <div>携程支付安全承诺</div>
+    </div>
+    <div class="md">
+        <a href="http://www.atsec.cn/cn/pci-attestation/CTRIP-PCIAttestation-atsec-PCI-DSS-C-55161.jpg" class="pci"
+           target="_blank"></a>
+        <div>通过PCI DSS标准</div>
+    </div>
+</div>
+<div id="tmpl" style="display: none">
+</div>
+</body>
+
+</html>
+
+<script src="../../statics/jquery-2.1.4/jquery.js"></script>
+<script src="../../statics/js_myt/layui/layui.all.js"></script>
+<script src="../../statics/js_myt/common.js"></script>
+
+<script src="js_three/piaoPayment.js"></script>

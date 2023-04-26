@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>携程跟团游钻级标准</title>
+    <meta name="description" content="携程旅行网">
+    <meta name="keywords" content="携程旅行网">
+    <link rel="shortcut icon" href="//www.ctrip.com/favicon.ico">
+    <script type="text/javascript" async="" src="https://webresource.c-ctrip.com/ResUnionOnline/R1/remarketing/js/__nts.js?v=201986141748"></script>
+    <script type="text/javascript" async="" src="https://webresource.c-ctrip.com/ResUnionOnline/R1/remarketing/js/remarketing.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" id="rmsd__script" async="" src="https://webresource.c-ctrip.com/resaresonline/risk/ubtrms/d.min.661c0503.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8" async="" defer="defer" crossorigin="anonymous" src="https://webresource.c-ctrip.com/ResUnionOnline/R1/common/marinRedirect.js?v=20190831"></script>
+    <script type="text/javascript" charset="utf-8" async="" defer="defer" crossorigin="anonymous" src="https://webresource.c-ctrip.com/resaresonline/risk/ubtrms/latest/default/rms.js?v=20190831"></script>
+    <script type="text/javascript" charset="utf-8" async="" src="https://webresource.c-ctrip.com/code/ubt/_bfa.min.js?v=20197_31"></script>
+    <script type="text/javascript" async="" src="https://webresource.c-ctrip.com/ResUnionOnline/R3/float/pcfloat.min.js?v=20160329"></script>
+    <script>
+    ;(function() {
+        function updateImageSize(uniqueId, imageWidth, imageHeight, ignoreWindowWidth) {
+            if(!uniqueId || !imageWidth || !imageHeight) return
+            var pic_wrap = document.querySelector('#' + uniqueId)
+            var windowWidth = ignoreWindowWidth ? imageWidth : window.innerWidth;
+            var styleHeight = windowWidth / imageWidth * imageHeight;
+            if (pic_wrap && styleHeight) {
+                pic_wrap.style.height = Math.ceil(styleHeight) + 'px';
+            }
+        }
+        function setImageStyle(textNode, imageNode) {
+            if(textNode && imageNode) {
+                textNode.style.display = 'none';
+                imageNode.style.height = imageNode.naturalHeight / 100 + 'rem';
+                imageNode.style.width = imageNode.naturalWidth / 100 + 'rem';
+            }
+        }
+        window.__setImageStyle = setImageStyle;
+        window.__updateImageSize = updateImageSize;
+    })();</script>
+    <script type="text/javascript" async="" src="https://accounts.ctrip.com/member/ajax/AjaxGetCookie.ashx?jsonp=BuildHTML&amp;r=0.3914040317077039&amp;encoding=0"></script>
+    <script type="text/javascript" src="https://webresource.c-ctrip.com/ResUnionOnline/R3/float/qCode.min.js"></script>
+    <script type="text/javascript" src="https://webresource.c-ctrip.com/ResUnionOnline/R3/float/yUtil.min.js"></script>
+    <script type="text/javascript" src="https://webresource.c-ctrip.com/ResUnionOnline/R3/float/floating_normal.min.js?20190831"></script>
+    <script charset="utf-8" src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/ottdCommon-f85237.js"></script>
+    <script charset="utf-8" src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/ottdH5-13ee2c.js"></script>
+    <script charset="utf-8" src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/ottdPC-70da29.js"></script>
+    <script charset="utf-8" src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/9-21285f.js"></script>
+    <link type="text/css" rel="stylesheet" href="//webresource.c-ctrip.com/ResUnionOnline/R3/float/css/pc_flaot.css"/>
+</head>
+<body style="background-color: rgb(239, 219, 184);">
+<div>
+    <style type="text/css">
+        .base_nav { margin-bottom: 0 !important; }
+    </style>
+</div>
+<input type="hidden" id="page_id" value="wait">
+<div>
+    <link href="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/css/PageHeader_V4.css?temp=6,075,885,692,528,763,729" rel="stylesheet">
+    <div class="cui-nav-bar">
+        <div class="nav-bar-cont">
+            <div class="slogan">让旅行更幸福</div>
+            <ul class="language">
+                <li>
+                    <a rel="nofollow" style="cursor:default" class="selected" onmouseover="this.className='selected language_current';this.nextElementSibling.style.display='block';" onmouseout="this.className= 'selected';this.nextElementSibling.style.display='none';"><span><em class="ico-global"></em> Language <b class="n-arrow"></b></span></a>
+                    <div class="language_wrap drowndrop" style="display: none;" onmouseover="this.style.display='block';this.previousElementSibling.className='selected language_current';" onmouseout="this.style.display='none';this.previousElementSibling.className='selected';">
+                        <ul class="language_list" id="cui_lang_list">
+                            <li>
+                                <a id="ctrip_cn" class="language_big5" href="//www.ctrip.com">简体中文</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_eng" class="language_en" href="https://www.trip.com/?locale=en_US">English (United States)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_uk" class="language_gb" href="https://uk.trip.com/?locale=en_gb">English (United Kingdom)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_hk" class="language_hk" href="http://hk.trip.com/?locale=zh_hk">繁體中文 (中國香港)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_hk_en" class="language_hk" href="https://hk.trip.com/?locale=en_hk">English(Hong Kong,China)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_korea" class="language_korea" href="https://kr.trip.com/?locale=ko_KR">韩语版</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_jap" class="language_jap" href="https://jp.trip.com/?locale=ja_JP">日语版</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_sg" class="language_sg" href="https://sg.trip.com/?locale=en_SG">English (Singapore)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_au" class="language_au" href="https://au.trip.com/?locale=en_au">English (Australia)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_de" class="language_de" href="https://de.trip.com/?locale=de_DE">Deutsch</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_fr" class="language_fr" href="https://fr.trip.com/?locale=fr_FR">Français</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_es" class="language_es" href="https://es.trip.com/?locale=es_ES">Español</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_it" class="language_it" href="https://it.trip.com/?locale=it_IT">Italiano</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_ru" class="language_ru" href="https://ru.trip.com/?locale=ru_RU">Русский</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_th" class="language_th" href="https://th.trip.com/?locale=th_TH">泰国站</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_id" class="language_id" href="https://id.trip.com/?locale=id_ID">Bahasa Indonesia</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_my" class="language_my" href="https://my.trip.com/?locale=ms_MY">Bahasa Malaysia</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_my_en" class="language_my" href="https://my.trip.com/?locale=en_my">English (Malaysia)</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_vn" class="language_vn" href="https://vn.trip.com/?locale=vi_VN">越南语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_nl" class="language_nl" href="https://nl.trip.com/?locale=nl_NL">荷兰语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_pl" class="language_pl" href="https://pl.trip.com/?locale=pl_PL">波兰语&gt;</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_gr" class="language_gr" href="https://gr.trip.com/?locale=el_GR">希腊语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_tr" class="language_tr" href="https://tr.trip.com/?locale=tr_TR">土耳其语</a>
+                            </li>
+                            <li>
+                                <a id="ctrip_pt" class="language_pt" href="https://br.trip.com/?locale=pt_BR">巴西葡萄牙语</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav-bar-set">
+                <li class="set-list set-logIn" id="nav-bar-set-login" style="display: block;">
+                    <a class="person-text" onclick="DoLogin()" style="cursor:pointer;"><span class="set-text"><span class="member-name" name="nav-bar-mname">您好</span>，请登录 </span></a>
+                </li>
+                <li class="set-list" id="nav-bar-set-reg" style="display: block;">
+                    <a class="person-text nav-per" href="https://passport.ctrip.com/user/reg/home "><span class="set-text"> 免费注册 </span></a>
+                </li>
+                <li class="set-list myctrip-name" name="cui-nav-bar-set-list" id="nav-bar-set-myctrip-name" style="display:none">
+                    <a href="https://my.ctrip.com/home/myinfo.aspx#ctm_ref=ssc_hp_myctrip_a" class="person-text nav-myctrip"><span class="set-text"><span class="member-name" name="nav-bar-d-info">普通会员</span><b class="n-arrow"></b></span></a>
+                    <ul class="per-drowndrop" style="display: none;" id="nav-bar-set-my-info">
+                        <li class="my-img">
+                            <a rel="nofollow" href="https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx"><img name="nav-bar-d-info" src="https://pic.c-ctrip.com/platform/online/home/ico_deafult.png"></a>
+                        </li>
+                        <li class="my-data">
+                            <p class="integral" name="nav-bar-d-info" rel="nofollow">积分：<a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/MineMileage.aspx ">0</a>
+                            </p>
+                            <p class="member-grade" name="nav-bar-d-info">普通会员<a style="display:none">领福利</a>
+                            </p>
+                        </li>
+                        <li class="sign-out">
+                            <a rel="nofollow" href="https://passport.ctrip.com/user/logout ">退出</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list set-infor">
+                    <i class="infor-notice"></i><a class="infor-num" id="nav-bar-set-msgnum" rel="nofollow" href="https://my.ctrip.com/message/message/messagelist.aspx?status=F#ctm_ref=ssc_hp_myctrip_message_a">消息<span></span></a>
+                </li>
+                <li class="set-list set-myctrip-list" name="cui-nav-bar-set-list">
+                    <a class="person-text nav-myctrip" href="https://my.ctrip.com/home/myinfo.aspx#ctm_ref=ssc_hp_myctrip_a "><span class="set-text"> 我的携程 <b class="n-arrow"></b></span></a>
+                    <ul class="nav-drowndrop" style="display: none;">
+                        <li>
+                            <a rel="nofollow" href="https://my.ctrip.com/favorite/myfav#ctm_ref=ssc_hp_myctrip_collect_a ">我的收藏 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="https://smarket.ctrip.com/Promocode/zh-cn/Promocode.aspx#ctm_ref=ssc_hp_myctrip_integral_a ">我的优惠券 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="https://my.ctrip.com/Home/Passenger/PassengerList.aspx#ctm_ref=ssc_hp_myctrip_info_a ">常用信息 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="https://secure.ctrip.com/webwallet/index#ctm_ref=ssc_hp_myctrip_wallet_a ">我的钱包 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list set-myorder-list" name="cui-nav-bar-set-list">
+                    <a class="person-text nav-myctrip" rel="nofollow" href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a "><span class="set-text"> 我的订单 <b class="n-arrow"></b></span></a>
+                    <ul class="nav-drowndrop drowndrop-order" style="display: none;">
+                        <li>
+                            <a rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx#ctm_ref=ssc_hp_myctrip_flightorders_a ">机票+相关订单 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx#ctm_ref=ssc_hp_myctrip_hotelorders_a ">酒店订单 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx#ctm_ref=ssc_hp_myctrip_tourorders_a ">旅游订单 </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx#ctm_ref=ssc_hp_myctrip_trainorders_a ">火车票订单 </a>
+                        </li>
+                        <li>
+                            <a href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a ">全部订单 </a>
+                        </li>
+                        <li>
+                            <a class="phone-line" href="https://passport.ctrip.com/user/member/fastOrder#ctm_ref=ssc_hp_myctrip_phoneorders_a ">手机号查订单 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list">
+                    <a target="_blank" class="person-text nav-per" href="http://kefu.ctrip.com"><span class="set-text"> 客服中心 </span></a>
+                </li>
+                <li class="set-list set-phone" name="cui-nav-bar-set-list">
+                    <a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_app"></i></span></a>
+                    <ul class="phone-drowndrop" style="display: none;">
+                        <li class="ico_code">
+                            <img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_app.jpg" alt=""><p>手机扫码快速下载</p>
+                        </li>
+                        <li class="ctrip-app">
+                            <a href="http://app.ctrip.com">携程旅行手机版</a><i class="arrow-right"></i>
+                        </li>
+                    </ul>
+                </li>
+                <li class="set-list set-wechat" name="cui-nav-bar-set-list">
+                    <a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_wechat"></i></span></a>
+                    <ul class="wechat-drowndrop" style="display: none;">
+                        <li class="ico_code">
+                            <img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_wechat.jpg" alt=""><p>携程订阅号：helloctrip</p>
+                            <p class="nth2">扫一扫，<span>领旅行福利</span>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cui_hd_cont">
+    <div class="cui_hd">
+        <input type="hidden" id="_searchboxNo_" value="ws_www20140409"><input type="hidden" id="_newHeaderFlag_" value="true">
+        <div class="ctriplogo">
+            <a title="携程旅行网" href="http://www.ctrip.com">携程旅行网 </a>
+        </div>
+        <div class="nav-tel">
+            <ul class="nav-tel-list" id="cui-nav-tel-list">
+                <li>境内：95010 </li>
+                <li>（或）400-830-6666 </li>
+                <li class="tel-list-more">香港（中国）：+ 852-3008-3295 </li>
+                <li class="tel-list-more">境外：+ 86-21-3406-4888 </li>
+            </ul>
+            <b class="n-arrow"></b>
+        </div>
+    </div>
+</div>
+    <div id="cui_nav">
+    <div class="base_nav">
+        <ul id="cui_nav_ul" class="cui_nav cui_content">
+            <li id="cui_c_ph_hp">
+                <a id="c_ph_hp" class="cui_nav_non" href="https://www.ctrip.com/">首页</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_hotel">
+                <a id="nav_hotel" class="cui_nav_has" href="https://hotels.ctrip.com/">酒店<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_hotel" class="cui_sub_nav">
+                        <li id="ul_c_ph_hotel_h">
+                            <a id="c_ph_hotel_h" href="https://hotels.ctrip.com/">国内酒店</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hoteli_h">
+                            <a id="c_ph_hoteli_h" href="https://hotels.ctrip.com/international/">海外酒店</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_inn_h">
+                            <a id="c_ph_inn_h" href="https://inn.ctrip.com/onlineinn/index?channelid=211">民宿客栈</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_apartment_h">
+                            <a id="c_ph_apartment_h" href="https://inn.ctrip.com/onlineinn/international/index?channelid=209">海外民宿</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_tuan_h">
+                            <a id="c_ph_tuan_h" href="http://tuan.ctrip.com">团购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocanj_h">
+                            <a id="c_ph_taocanj_h" href="https://vacations.ctrip.com/diysh/hotel">酒店+景点</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_meetingroom_h">
+                            <a id="c_ph_meetingroom_h" href="http://meeting.ctrip.com/?channel=0#ctm_ref=mtg_meetingroom_2dh">团队房•长住房</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_meeting_h">
+                            <a id="c_ph_meeting_h" href="https://meeting.ctrip.com/?channel=1#ctm_ref=mtg_meeting_2dh">会议<span class="label-cn" id="ACT_Label_14" style="display:none"><em>会员日</em><i class="triangle"></i></span></a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx"><i class="cui-icon-hotel"></i>酒店订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_vac">
+                <a id="nav_vac" class="cui_nav_has" href="https://vacations.ctrip.com/">旅游<span class="label-cn" id="ACT_Label_47" style=""><em>提前订</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_vac" class="cui_sub_nav">
+                        <li id="ul_c_ph_vacations_v">
+                            <a id="c_ph_vacations_v" href="https://vacations.ctrip.com/">旅游首页<span class="label-cn" id="ACT_Label_48" style=""><em>十一预售</em><i class="triangle"></i></span></a>
+                        </li>
+                        <li class="divider " style="display:none"></li>
+                        <li id="ul_c_ph_around_v">
+                            <a id="c_ph_around_v" href="https://vacations.ctrip.com/around">周末游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_vacationsd_v">
+                            <a id="c_ph_vacationsd_v" href="https://vacations.ctrip.com/grouptravel/">跟团游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocan_v">
+                            <a id="c_ph_taocan_v" href="https://vacations.ctrip.com/idiytour">自由行</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_sijiatuan">
+                            <a id="c_ph_sijiatuan" href="https://vacations.ctrip.com/tangram/MTczNg==?ctm_ref=vactang_page_1736">私家团</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_cruise_v">
+                            <a id="c_ph_cruise_v" href="https://cruise.ctrip.com/">邮轮</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocanj_v">
+                            <a id="c_ph_taocanj_v" href="https://vacations.ctrip.com/diysh">酒店+景点</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_huodong_v">
+                            <a id="c_ph_huodong_v" href="https://huodong.ctrip.com/">当地玩乐</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_zhutiyou_v">
+                            <a id="c_ph_zhutiyou_v" href="https://vacations.ctrip.com/themetravel/">主题游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_baotuan_v">
+                            <a id="c_ph_baotuan_v" href="https://vacations.ctrip.com/customtravel">定制旅行</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_youxue_v">
+                            <a id="c_ph_youxue_v" href="https://vacations.ctrip.com/youxue">游学</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_visa_v">
+                            <a id="c_ph_visa_v" href="https://vacations.ctrip.com/visa">签证</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_mice_v">
+                            <a id="c_ph_mice_v" href="https://mice.ctrip.com">企业会奖</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hh_v">
+                            <a id="c_ph_hh_v" target="_blank" rel="nofollow" href="https://www.hhtravel.com/#ctm_ref=hh_ct_thp_nav">高端游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_golf_v">
+                            <a id="c_ph_golf_v" href="http://fun.iwanoutdoor.com/">爱玩户外</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_insurance_v">
+                            <a id="c_ph_insurance_v" href="https://vacations.ctrip.com/insurance">保险</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_deals_v">
+                            <a id="c_ph_deals_v" href="https://vacations.ctrip.com/tours/deals/index">特卖汇</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i class="cui-icon-vacations"></i>旅游订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_gentuan">
+                <a id="nav_gentuan" class="cui_nav_non" dividerclass="divider_spec" href="https://vacations.ctrip.com/grouptravel">跟团游</a>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_ziyouxing">
+                <a id="nav_ziyouxing" class="cui_nav_non" dividerclass="divider_spec" href="https://vacations.ctrip.com/idiytour">自由行</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_flight">
+                <a id="nav_flight" class="cui_nav_has" href="https://flights.ctrip.com/">机票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_flight" class="cui_sub_nav">
+                        <li id="ul_c_ph_flights_f">
+                            <a id="c_ph_flights_f" href="https://flights.ctrip.com">国内机票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightsi_f">
+                            <a id="c_ph_flightsi_f" href="https://flights.ctrip.com/international/search/">国际•港澳台机票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_fuzzy_f">
+                            <a id="c_ph_fuzzy_f" href="https://flights.ctrip.com/fuzzy/#ctm_ref=ctr_nav_flt_fz_pgs">特价机票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_taocan_f">
+                            <a id="c_ph_taocan_f" href="https://taocan.ctrip.com">机+酒</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightstoolbox_f">
+                            <a id="c_ph_flightstoolbox_f" href="https://flights.ctrip.com/actualtime">航班动态</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_bookseat_f">
+                            <a id="c_ph_bookseat_f" rel="nofollow" href="https://flights.ctrip.com/domestic/checkinseat/index">值机选座</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightorderlist_f">
+                            <a id="c_ph_flightorderlist_f" rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx">退票改签</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_airportguides_f">
+                            <a id="c_ph_airportguides_f" rel="nofollow" href="https://flights.ctrip.com/booking/airport-guides.html">机场攻略</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_flightdingzhi_f">
+                            <a id="c_ph_flightdingzhi_f" href="https://flights.ctrip.com/itinerary/charter/book">定制包机</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx"><i class="cui-icon-flight"></i>机票订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_trains">
+                <a id="nav_trains" class="cui_nav_has" href="https://trains.ctrip.com">火车<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_trains" class="cui_sub_nav">
+                        <li id="ul_c_ph_train_t">
+                            <a id="c_ph_train_t" href="https://trains.ctrip.com">国内火车票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_traino_t">
+                            <a id="c_ph_traino_t" href="http://rails.ctrip.com">国际•港台火车票</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx"><i class="cui-icon-train"></i>火车票订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_destination">
+                <a id="nav_destination" class="cui_nav_has" href="https://bus.ctrip.com/">汽车 · 船<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_destination" class="cui_sub_nav">
+                        <li id="ul_c_ph_bus_t">
+                            <a id="c_ph_bus_t" href="https://bus.ctrip.com/">汽车票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_travelBus_t">
+                            <a id="c_ph_travelBus_t" href="https://pages.c-ctrip.com/bus/pages/travelBus/travelBus.html">景区/机场专线</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_ship_t">
+                            <a id="c_ph_ship_t" href="https://bus.ctrip.com/ship/">船票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_yacht_t">
+                            <a id="c_ph_yacht_t" target="_blank" rel="nofollow" href="https://yacht.ctrip.com/">游艇帆船</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_daozy_t">
+                            <a id="c_ph_daozy_t" href="http://pages.c-ctrip.com/bus/xicui/201803/dzy/html/pc.html">到站游</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/QicheOrderlist.aspx"><i class="cui-icon-bus"></i>汽车票订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_car">
+                <a id="nav_car" class="cui_nav_has" href="https://car.ctrip.com/#ctm_ref=chp_var_txt">用车<span class="label-cn" id="ACT_Label_43" style="display:none"><em>五折</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_car" class="cui_sub_nav">
+                        <li id="ul_c_ph_car_c">
+                            <a id="c_ph_car_c" href="https://car.ctrip.com/#ctm_ref=chp_var_txt">用车首页</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hwzj_c">
+                            <a id="c_ph_hwzj_c" href="https://car.ctrip.com/hwzijia#ctm_ref=chp_var_txt">境外租车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hwdaijia_c">
+                            <a id="c_ph_hwdaijia_c" href="https://car.ctrip.com/hwdaijia#ctm_ref=chp_var_txt">境外接送机<span class="label-cn" id="ACT_Label_44" style="display:none"><em>暑期特惠</em><i class="triangle"></i></span></a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hwrizu_c">
+                            <a id="c_ph_hwrizu_c" href="https://car.ctrip.com/line/index">境外包车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_zj_c">
+                            <a id="c_ph_zj_c" href="https://car.ctrip.com/zijia#ctm_ref=chp_var_txt">国内租车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_daijia_c">
+                            <a id="c_ph_daijia_c" href="https://car.ctrip.com/daijia#ctm_ref=chp_var_txt">国内接送机/火车</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_rizu_c">
+                            <a id="c_ph_rizu_c" href="https://car.ctrip.com/idayweb">国内包车</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/CarOrderList.aspx"><i class="cui-icon-car"></i>用车订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_ticket">
+                <a id="nav_ticket" class="cui_nav_has" href="https://piao.ctrip.com/">门票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_ticket" class="cui_sub_nav">
+                        <li id="ul_c_ph_piao_p">
+                            <a id="c_ph_piao_p" href="https://piao.ctrip.com/?clear=t#ctm_ref=tkt_home_tab_inland">境内门票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_piaooversea_p">
+                            <a id="c_ph_piaooversea_p" href="https://piao.ctrip.com/oversea#ctm_ref=tkt_home_tab_oversea">出境•港澳台门票</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_huodong_p">
+                            <a id="c_ph_huodong_p" href="https://huodong.ctrip.com#ctm_ref=ctr_hp_ttd">当地玩乐</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_wifi_p">
+                            <a id="c_ph_wifi_p" href="https://huodong.ctrip.com/wifi#ctm_ref=ctr_hp_wifi">出境WiFi•电话卡</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_around_p">
+                            <a id="c_ph_around_p" href="https://vacations.ctrip.com/around">周末游</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_disney_p">
+                            <a id="c_ph_disney_p" href="http://piao.ctrip.com/dest/t4651499.html">上海海昌</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/LocalUnionOrderList.aspx"><i class="cui-icon-ticket"></i>门票玩乐订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_c_ph_you">
+                <a id="c_ph_you" class="cui_nav_non" href="https://you.ctrip.com/">攻略</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_g">
+                <a id="nav_g" class="cui_nav_has" href="http://g.ctrip.com/">全球购<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_g" class="cui_sub_nav">
+                        <li id="ul_c_ph_mdg_g">
+                            <a id="c_ph_mdg_g" href="https://g.ctrip.com/">名店购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_cshop_g">
+                            <a id="c_ph_cshop_g" href="https://pages.c-ctrip.com/shoppingchic/cshop/index.html">旅游购物商城</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_ts_g">
+                            <a id="c_ph_ts_g" href="https://tax.ctrip.com/?bid=2&amp;cid=1&amp;pid=1">退税</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_ylth_g">
+                            <a id="c_ph_ylth_g" href="https://g.ctrip.com/gsmarketingactive/unionpay?ctm_ref=M_gw_3home_paypal_cl">银联特惠</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_skjl_g">
+                            <a id="c_ph_skjl_g" href="https://card.ctrip.com/#ctm_ref=ctr_bid_0_cid_1_pid_1">万千赏</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_forex_g">
+                            <a id="c_ph_forex_g" href="https://forex.ctrip.com/?bid=62&amp;1=1">外币兑换</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="http://forex.ctrip.com/order/list/"><i class="cui-icon-foreign"></i>外币兑换订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_lpk">
+                <a id="nav_lpk" class="cui_nav_has" href="https://lipin.ctrip.com">礼品卡<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_lpk" class="cui_sub_nav">
+                        <li id="ul_c_ph_lipin_l">
+                            <a id="c_ph_lipin_l" href="https://lipin.ctrip.com">礼品卡首页</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_lipinholiday_l">
+                            <a id="c_ph_lipinholiday_l" href="https://lipin.ctrip.com/lipinonline/theme">节日/主题购卡</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_xcb_l">
+                            <a id="c_ph_xcb_l" href="https://lipin.ctrip.com/xcb">礼品卡福袋</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_lipincorp_l">
+                            <a id="c_ph_lipincorp_l" href="https://lipin.ctrip.com/lipinonline/static/intentional">企业采购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_dhq_l">
+                            <a id="c_ph_dhq_l" href="https://lipin.ctrip.com/voucher">兑换券</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_forexlipin_l">
+                            <a id="c_ph_forexlipin_l" href="https://forex.ctrip.com/?bid=12&amp;1=1">外币兑换</a>
+                        </li>
+                    </ul>
+                    <a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/TicketOrderList.aspx"><i class="cui-icon-card"></i>礼品卡订单 &gt;</a>
+                </div>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_sl">
+                <a id="nav_sl" class="cui_nav_has" href="https://ct.ctrip.com/#ctm_ref=xcct">商旅<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_sl" class="cui_sub_nav">
+                        <li id="ul_c_ph_slsy_s">
+                            <a id="c_ph_slsy_s" href="https://ct.ctrip.com/#ctm_ref=xcct">商旅首页</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_chl_s">
+                            <a id="c_ph_chl_s" href="https://ct.ctrip.com/platformquery/landing/index#ctm_ref=xcpt">企业差旅平台</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_hj_s">
+                            <a id="c_ph_hj_s" href="https://mice.ctrip.com">会议旅游</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_cruise">
+                <a id="nav_cruise" class="cui_nav_non" dividerclass="divider_spec" href="https://cruise.ctrip.com">邮轮</a>
+            </li>
+            <li class="divider divider_spec"></li>
+            <li id="cui_nav_mudidi">
+                <a id="nav_mudidi" class="cui_nav_non" dividerclass="divider_spec" href="https://dst.ctrip.com/">目的地</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_finance_pc">
+                <a id="finance_pc" class="cui_nav_non" href="https://jr.ctrip.com/#/?clientSource=CTRIP">金融</a>
+            </li>
+            <li class="divider "></li>
+            <li id="cui_nav_more">
+                <a id="nav_more" class="cui_nav_has" rel="nofollow" href="https://mall.ctrip.com">更多<i class="cui_ico_triangle"></i><span class="point"></span></a>
+                <div class="cui_subnav_wrap">
+                    <ul id="ul_nav_more" class="cui_sub_nav">
+                        <li id="ul_c_ph_ypsc_m">
+                            <a id="c_ph_ypsc_m" href="https://mall.ctrip.com">优品商城</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_sjhy_m">
+                            <a id="c_ph_sjhy_m" href="https://pages.c-ctrip.com/commerce/dy1/index10.html">超级会员</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_tuangou_m">
+                            <a id="c_ph_tuangou_m" href="https://tuan.ctrip.com">团购</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_cards_m">
+                            <a id="c_ph_cards_m" rel="nofollow" href="https://cards.ctrip.com">合作卡</a>
+                        </li>
+                        <li class="divider "></li>
+                        <li id="ul_c_ph_xcyd_m">
+                            <a id="c_ph_xcyd_m" href="https://sport.ctrip.com/">携程运动</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="nav_bh" class="cui_nav_behind" style="display:none;height:0px;"></div>
+</div>
+    <div id="ActConfig_ID" style="display:none">[{"id":"48","onlinetime":"2019/08/20 00:00:23$2019/08/31 23:55:21"},{"id":"47","onlinetime":"2019/08/20 00:00:23$2019/08/31 23:55:21"},{"id":"43","onlinetime":"2019/08/05 14:20:03$2019/08/19 23:55:01"},{"id":"44","onlinetime":"2019/08/05 14:20:03$2019/08/19 23:55:01"},{"id":"14","onlinetime":"2019/12/31 23:55:04$2200/08/08 16:19:09"},{"id":"15","onlinetime":"2018/12/13 08:23:32$2180/12/31 23:55:09"}]</div>
+    <input type="hidden" id="popfloating_isshow" value="0"><input type="hidden" id="siteDomainHeadFloat" value="ctrip"><input type="hidden" id="bsType" value="0">
+    <input type="hidden" id="formatTel" value="[{'formatTelNum':'95010','prefix':'境内：','sortIndex':'1','standardTelNum':'SHMobile95010','suffix':''},{'formatTelNum':'400-830-6666','prefix':'（或）','sortIndex':'2','standardTelNum':'4008306666','suffix':''},{'formatTelNum':'+ 852-3008-3295','prefix':'香港（中国）：','sortIndex':'3','standardTelNum':'85230083295','suffix':''},{'formatTelNum':'+ 86-21-3406-4888','prefix':'境外：','sortIndex':'4','standardTelNum':'34064888','suffix':''}]">
+    <script>
+        ;window.replace=function(){return ''};
+        window.replace=function(){return""}; !function(){window.replace=function(){return""};(function(){var h=document,c=function(a){return h.getElementById(a)},k=null,l=null,m=0,d=[c("cui_nav_hotel"),c("cui_nav_vac"),c("cui_nav_flight"),c("cui_nav_trains"),c("cui_nav_destination"),c("cui_nav_car"),c("cui_nav_ticket"),c("cui_nav_g"),c("cui_nav_lpk"),c("cui_nav_sl"),c("cui_nav_more")],g={onmouseenter:function(a,b){(h.all?a.onmouseenter=b:a.onmouseover=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&& b())})},onmouseout:function(a,b){(h.all?a.onmouseleave=b:a.onmouseout=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&&b())})},addEvent:function(a,b,f){(a.addEventListener?a.addEventListener(b,f,!1):(a.attachEvent?a.attachEvent("on"+b,f):a["on"+b]=f))}},e={setTime:function(){g.onmouseenter(c("cui_nav"),function(){setTimeout(function(){m=150},30)});g.onmouseout(c("cui_nav"),function(){m=0})},initEvent:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b= a;g.onmouseenter(d[b],function(){e.interFn(d[b])});g.onmouseout(d[b],function(){e.outerFn(d[b])})})(a)},reset:function(){for(var a=0,b=d.length;b>a;a++)d[a].className=(-1<d[a].className.indexOf("cui_nav_current")?"cui_nav_current":"")},padReset:function(a){for(var b=0,f=d.length;f>b;b++)(-1<d[b].className.indexOf("cui_nav_current")?d[b].className="cui_nav_current":b!==a&&(d[b].className=""))},interFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),f="",d=0;d<b.length;d++)b[d].className.match((/cui_nav_current/))&& (f=b[d]);null!=l&&(clearTimeout(l),l=null);k=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")?f.className="cui_nav_current":(a.className="cui_nav_o",f.className="cui_nav_current cui_nav_unhover"))},m)},outerFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),d="",c=0;c<b.length;c++)b[c].className.match((/cui_nav_current/))&&(d=b[c]);null!=k&&(clearTimeout(k),k=null);l=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")? d.className="cui_nav_current":(a.className="",d.className="cui_nav_current"))},250)},initMobile:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b=a,c=d[b].getElementsByTagName("A")[0];c.href="###";c.onmousedown=function(){e.padReset(b);-1===d[b].className.indexOf("cui_nav_current")&&((-1<d[b].className.indexOf("cui_nav_o")?(d[b].className="",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",c.style.visibility="hidden",
+                setTimeout(function(){c.style.visibility= "visible"},10)):(d[b].className="cui_nav_o",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",document.getElementsByClassName("cui_nav_current")[0].className+=" cui_nav_unhover")))}})(a)},contains:function(a){for(var b=0,c=d.length;c>b;b++)if(0<d[b].compareDocumentPosition(a)-19)return!0;return!1}};c("headStyleId")&&c("headStyleId").parentNode.removeChild(c("headStyleId"));((/ip(hone|od)|ipad/i).test(navigator.userAgent)?(e.initMobile(),g.addEvent(h.body,"click",function(a){e.contains(a.target|| a.srcElement)||e.reset()})):(e.setTime(),e.initEvent()))})()}(); </script></div><div id="root"><div class="imvc-view-item"><div><style type="text/css" data-preload="tangram">@charset "UTF-8";@font-face{font-family:market_icon;src:url(data:application/octet-stream;base64,AAEAAAAKAIAAAwAgT1MvMjZ+UAIAAAEoAAAAVmNtYXAN6FRbAAAByAAAAbpnbHlmHHGFNAAAA6wAAAnQaGVhZBXpRusAAADQAAAANmhoZWEIXwQSAAAArAAAACRobXR4SAAAAAAAAYAAAABIbG9jYRNkETQAAAOEAAAAJm1heHABIgByAAABCAAAACBuYW1lLMpMogAADXwAAAIKcG9zdIxKECYAAA+IAAABogABAAAEAAAAAFwEAAAA//8EAQABAAAAAAAAAAAAAAAAAAAAEgABAAAAAQAAfCKrl18PPPUACwQAAAAAANlkgPsAAAAA2WSA+wAA//8EAQP5AAAACAACAAAAAAAAAAEAAAASAGYABgAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQQAAZAABQAIAokCzAAAAI8CiQLMAAAB6wAyAQgAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA4AjtEAQAAAAAXAQAAAEAAAABAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAwAAAAMAAAAcAAEAAAAAALQAAwABAAAAHAAEAJgAAAAiACAABAACAADgCOAe4LPgvOGn4n3ii+Nj433j2eVF5s/pUelT7RD//wAAAADgCOAe4LLgu+Gn4n3ii+Nj433j2eVF5s/pUelT7RD//wAAH/kf5B9RH0oeYB2LHX4cpxyOHDMayBk/Fr4WvRMBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAGgAlgDEAOIBBAFeAcgB8gJmApQC8gMWA24D4gR2BOgAAAABAAAAAAMWA20AEwAAJQYuATY3ATY0JwEuAT4BFwEWFAcBiQsaEAELAWkDA/6XCgIQGgsBbh8fnAgBFRoHASwECgQBLAkZEwII/tEYOhoAAAMAAAAAA5YDlgALABcAIwAAASY0NjIfARYUBiInJS4BJz4BNx4BFw4BJz4BNy4BJw4BBx4BAr8KExoKoAkTGQr+jJrNBATNmprMBATMmn+oAwOof3+pAwOpASoKGRMJoQoZEwk3BM2amswEBMyams08A6l/f6gDA6h/f6kAAAAAAQAAAAADdQLrABYAAAE2LgEGBwEGJxYnAS4BDgEXARYXFjY3A20IARYaCP7KBwgBA/7LCRoTAwgBNQUEGTsUArULGhABC/6PBgQBAwFxCgIQGgv+jwYCFQUYAAABAAAAAAN1Au8AFgAAARYOASYnASYHMgcBDgEuATcBNjc2FhcDbQgBFxkI/soHCAED/ssJGhMDCAE1BQQZOxQBYAoaEQELAXIFAwL+jgkDERoKAXEGAxQFGAAAAAEAAAAAAv4CsQAOAAABFxYOASMhIiY0PwE+ARcCIdYGAQ0I/jIJDAXWDSIOAqD9BxELDBEG/Q4CCwAAAAEAAAAAAv4CggARAAABNzYuAQchIgYVFBYfAR4BNzYCINcHAg0G/jEKDAMC1wwiDgMBYP4HEQsBDAkEBwL+DQILAgAAAwAAAAAD0APRABsAJwAzAAABJiIPAScmIgYUHwEHBhQWMj8BFxYyNjQvATc2Ay4BJz4BNx4BFw4BAwYABxYAFzYANyYAAsUECgSzswQKBwOzswMHCgSzswQKBwOzswbLufcEBPe5ufcEBPe5xf76BQUBBsXFAQYFBf76AsUDA7OzAwcKBLOzBAoHA7OzAwcKBLOzCP2RBPe5ufcEBPe5ufcDgAX++sXF/voFBQEGxcUBBgAAAgAAAAADwQOgACcARQAAJSEuAScRPgE3MzI2PQE0JisBDgEHER4BFyE+ATc1NCYrASIGHQEOARM2NC8BJiIGFB8BJgQHBhYXMRY2NzYkFwcGFBYyNwL0/dgdJgEBJh3kDxQUD+o5TAEBTDkCNDlMARQPAg8UASanCAi2CxsUCmes/upDBQoMDhsGQAEOm4oKFBoLqAEmHQHoHSYBFA8DDhQBTDn+DDlLAgFMOXsOFBQOdR0mAg4JFwm2ChQbCmgBxaENGAcGCg6Qtg2LChoUCQAAAAABAAAAAAKrA2sAEwAAJRY+ASYnAS4BNwE+AS4BBwEGFhcCdQsaEAEL/pEDAQIBcQoCEBoL/okVAhucCAEVGgcBLAQHAgEvCRkTAgj+zRU7FgAAAAADAAAAAAO9A7gAOABCAEwAAAEuAScOAQcOAQcVHgEXMzc1JyM+ATceARcjBxUUFhcOAQcnIw4BHQEUFhczPgE3NT4BNz4BNzUuAQUjIiYnNT4BNzMFFAYrATUzHgEVA1sIw5CQwwkrNQEBTTo7ISEfCpxzcp0KHyERDRlMLyGEERgYEYQSFwFHbx42RQIBNv1fGh4nAQEnHhoClSgeGRkeKAJtjbsDA7uNDUUuKDlMAiHzIW+SAwOSbyHzDRIBLUASEAEXETMRFwEBFxEKGGNGBko2KC5F4CceKB0nAW0eJ7IBJx0AAAAAAgAAAAADgQPWAAsAFwAAJQYiJwA1PgEgFhcWJT4BNy4BJw4BBx4BAjoaQRv+ugTZAUXaBAP+f0hhAgJhSEhhAgJhQhYWAS/8r7m5r/48AmBISWACAmBJSGAAAAADAAAAAAP5A/kACwAXADQAAAEuAScOAQceARc+ATcGAAcmACc2ADcWAAUhLgE0NjchJyY0NjIXARYXHgEGBwYHAQYiJjQ3A7kF+Lu6+AUF+Lq7+EUG/uPW1v7jBgYBHdbWAR3+4v4HDhMTDgH42QkTGgoBBAMDDAcMCwIG/v0LGhMJAgC7+AQE+Lu7+AQE+LvW/uMGBgEd1tYBHQYG/uP3ARIcEgHZChoTCf79BAQHGRcFBwX+/QoUGgoAAAEAAP//BAED+AARAAAJAQYmJyY1ET4BNzIXAR4BBwYDuvzxLFUWDAFALxsYAw8qHBQRAZz+eBQcKhgaAxAvQAEM/ngWVSsiAAQAAAAAA3wD0AALABcAIwAvAAABHgEHBgAHJgAnJjYXDgEXFhIXNhI3NiYDLgEnPgE3HgEXDgEnPgE3LgEnDgEHHgEB/L3CEyX+4ikp/uYqGMa/nqUVI+kiIu0fEKKdQ1oCAllEQ1kCAllDMUIBAUIxMUIBAUID0Abvp6X+vh0dAUKkp/A5BcqMiv7xGBgBD4qMyv41AllDQ1kCAllDQ1koAUIxMUIBAUIxMUIAAAAABAAAAAAD1AOpABsAMQA9AEkAACUnJjY/AT4BNS4BJw4BBx4BFzI/AT4BHwImJxcWBicmLwEOASMuARA2Nx4BFxQHHgEBITIWFAYjISImNDYXITIWFAYjISImNDYDUwQDAgUHHB0C1b6/1QEB1b97WgcGDwYHdQcIYA4cISIxUTJ5RuTx8eTk8AFECRn9mgFqDhISDv6WDhISDgFADRISDf7ADhIS+goKFAkILGc4o8UDA8Wjo8UDLQQEAQMCGRgTNB4kBAYLERgbBfEBavEFBfG1iGcTOAG8ExoTExoTwBMaExMaEwAAAAYAAAAAA8ADtgATACUANQBFAFUAZQAAJQYHIiY0NjMWFzMyNj8BFwcOASMBIzU+ATceARcVIzUuAScOAQcFIgYdARQWOwEyNj0BNCYjJzMeARcVDgEHIy4BJzU+AQUiBh0BFBY7ATI2PQE0JiMnMx4BFxUOAQcjLgEnNT4BAisQGxceHhcbEEcqTh8sKywoZDb+TkAE16Wl1wRAAq+PibQDApUJDAwJFgkMDAkWFiQwAQEwJBYkMAEBMP1kCQwMCRYJDAwJFhYkMAEBMCQWJDABATBgFAEeLh4BFB4cKC8oJCcBlUCl1wQCy7NAQJOrAgOzilUMCasJDAwJqwkMQAEwJKskMAEBMCSrJDA/DAmrCQwMCasJDEABMCSrJDABATAkqyQwAAAABAAAAAADwAPAAAsAFwAgAEkAAAEeARcOAQcuASc+ARM+ATcuAScOAQceATc0NjIWFAYiJhMeARUOAQcOAR0BBgcjJic1NDY3PgE1LgEiBgcVBgcjJic1ND4CMhYCAL79BQX9vr79BQX9vp7SBATSnp7SBATSdhciFxciF5gXGQEzLQ4RAQcwBwEoIBoeATZSNgEBBzAHARkuOUA5A8AF/b6+/QUF/b6+/fzRBNKentIEBNKentKUERcXIhcXAbAUNR4sRxEGGA8XBwEBBxYjOgwLJhgiLS0iCAcBAQcIHjUoFRUAAAAQAMYAAQAAAAAAAQAHAAAAAQAAAAAAAgAHAAcAAQAAAAAAAwAHAA4AAQAAAAAABAAHABUAAQAAAAAABQALABwAAQAAAAAABgAHACcAAQAAAAAACgArAC4AAQAAAAAACwATAFkAAwABBAkAAQAOAGwAAwABBAkAAgAOAHoAAwABBAkAAwAOAIgAAwABBAkABAAOAJYAAwABBAkABQAWAKQAAwABBAkABgAOALoAAwABBAkACgBWAMgAAwABBAkACwAmAR50YW5ncmFtUmVndWxhcnRhbmdyYW10YW5ncmFtVmVyc2lvbiAxLjB0YW5ncmFtR2VuZXJhdGVkIGJ5IHN2ZzJ0dGYgZnJvbSBGb250ZWxsbyBwcm9qZWN0Lmh0dHA6Ly9mb250ZWxsby5jb20AdABhAG4AZwByAGEAbQBSAGUAZwB1AGwAYQByAHQAYQBuAGcAcgBhAG0AdABhAG4AZwByAGEAbQBWAGUAcgBzAGkAbwBuACAAMQAuADAAdABhAG4AZwByAGEAbQBHAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAHMAdgBnADIAdAB0AGYAIABmAHIAbwBtACAARgBvAG4AdABlAGwAbABvACAAcAByAG8AagBlAGMAdAAuAGgAdAB0AHAAOgAvAC8AZgBvAG4AdABlAGwAbABvAC4AYwBvAG0AAAACAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAECAQMBBAEFAQYBBwEIAQkBCgELAQwBDQEOAQ8BEAERARIPcXVuYXItZGVsZXRlZF9vD3lvLXNvdXN1b2UwMWItZhR5by1qaWFudG91X3hpYWUwYWQtZhZ5by1qaWFudG91X3NoYW5nZTBhZC1mDXlvLWZvbGRlMGJhLW8PeW8tdW5mb2xkZTBiYi1vG2R1amlhLW1lbmdjZW5nX2d1YW5iaWUxYTYtZhRkdWppYS1mZW54aWFuZ2UyN2MtZhV5by1mYW5odWl6dWl4aW5lMjg3LWYQZHVqaWEta2VmdWUzNjMtZhB5by1kaW5nd2VpZTM3ZC1vF2R1amlhLWppYW50b3VfeW91ZTNkOS1mHGR1amlhLXhpYW5ncWluZ19ib2ZhbmdlNTQ1LW8TZHVqaWEtZGluZ3dlaWU2Y2YtbxRfX2ljb24tbWVzc2FnZWU5NTEtZhRfX2ljb24tc2VydmljZWU5NTMtZhNkdWppYS1iYW5nemh1ZWQxMC1mAAAAAA==)}.icon-share{font-family:market_icon;color:#fff;font-size:20px;display:block}.cm-header-txtwhite .icon-share{color:#fff}.cm-header .cm-page-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.icon-back,.icon-cus-service,.icon-message{font-family:market_icon;color:#fff;font-size:20px;display:block}.cm-header-dark-icon .icon-back,.cm-header-dark-icon .icon-cus-service,.cm-header-dark-icon .icon-message,.cm-header-dark-icon .icon-share{color:#333}.cm-header-light-icon .icon-back,.cm-header-light-icon .icon-cus-service,.cm-header-light-icon .icon-message,.cm-header-light-icon .icon-share{color:#fff}.icon_arrdown,.icon_arrup{font-family:market_icon;color:#fff;font-size:14px;vertical-align:middle}.icon_expand{font-family:market_icon;color:#fff}.icon_location{font-family:market_icon;color:#fff}.icon_arrow_large,.icon_seacrh{font-family:market_icon}blockquote,body,button,code,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}html{background-color:#fff}body{background-color:#fff;font-size:12px;line-height:1.5;color:#333}fieldset,img{margin:0;padding:0;border:0}img{display:block}input,textarea{font-size:12px}table{border-collapse:collapse}a{color:#666;text-decoration:none;outline:0 none;cursor:pointer}a:hover{color:#0065bb}h1,h2,h3,h4,h5{font-family:microsoft yahei,Simsun,sans-serif;font-weight:400}ol li,ul li{list-style:none}dfn{font-style:normal;font-size:12px;font-family:Arial!important}em{font-style:normal}select{padding:1px;font-family:Arial,Simsun,sans-serif;border:1px solid #ccc;background-color:#fff}input[type=text]{padding:3px;border:solid 1px #ccc;box-shadow:1px 1px 3px #ddd inset}input[type=text]:focus{background-color:#f1f9ff;border-color:#5d9de5 #67a1e2 #67a1e2 #5d9de5;border-style:solid;border-width:1px;box-shadow:1px 1px 3px #d0dee6 inset}input[type=number]::-webkit-inner-spin-button{display:none}.basefix:after,.coupon_area_img{clear:both;content:'.';display:block;height:0;overflow:hidden}.market_body_pc{position:relative}.banner_pc{width:100%;min-width:1180px;background-repeat:no-repeat;background-position:center top;max-height:1000px;overflow:hidden}.pic_wrapper{width:1180px;margin:0 auto;overflow:hidden;zoom:1;max-height:1000px;position:relative}.pic_wrapper img{overflow:hidden;font-size:0;display:block}.market_area{width:1180px;margin:0 auto 50px auto}.market_box_pc{width:1180px;margin:0 auto}.market_tit_box{height:77px;line-height:77px}.market_cont .cont1,.market_cont .cont2,.market_tit{font-size:24px;color:#333;text-align:center;font-weight:400}.active_box{padding:80px 0;text-align:center}.actend_animate,.active_animate,.nosearch_animate{background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/no_start.png) center center no-repeat;width:300px;height:300px;margin:0 auto 20px;background-size:300px auto!important}.active_txt{font-size:30px;color:#333;margin:0 auto}.nosearch_animate{background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/act_nofind.png) center center no-repeat}.actend_animate{background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/act_end.png) center center no-repeat}.scity_name{position:absolute;top:60px;left:260px}.scity_name a{width:130px;height:40px;line-height:40px;float:left;text-align:center;font-size:16px;color:#fff;background:#19a0f0}.scity_name a em{font-size:12px;margin-lefT:6px}.city_box{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100}.hidden_city_box{position:absolute;z-index:100;top:0;left:0;width:100%;min-width:1180px;z-index:100}.hidden_city_box .city_list,.hidden_city_box .city_mask_lay{display:none}.city_content_station{position:absolute;width:1180px;left:50%;margin-left:-590px}.city_content_station .scity_name{position:absolute;top:60px;left:30px}.city_box .city_mask_lay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,.7)}.city_box .tips{text-align:center;padding:17px 0}.city_box .tips p{text-align:center;font-size:14px;color:#999}.city_box .city_list{width:630px;height:300px;position:absolute;top:170px;left:33%;background:#fff;overflow:hidden}.city_box .city_list ul{padding-top:10px;height:190px;overflow:auto;padding:0 45px}.city_box .city_list ul li{text-align:center;color:#666;font-size:14px;float:left;width:130px;height:40px;line-height:40px}.city_box .city_list ul li a{width:130px;float:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.city_box .city_list ul li a.on{background:#19a0f0;color:#fff}.tags_box{position:absolute;top:0;left:0}.tags_type{height:30px;line-height:30px;font-size:14px;color:#fff;padding:0 19px;display:inline-block}.tags_destination{background:rgba(0,0,0,.5)}.tags_gt{background:#ff7069}.tags_private_team{background:#ff8cbb}.tags_diy_tour{background:#ffb700}.tags_tickets{background:#f67c27}.tags_golf{background:#7ec536}.tags_study_abroad{background:#18c158}.tags_wifi_card{background:#2fd792}.tags_cruise{background:#00d0bb}.tags_play{background:#01b1d1}.tags_free_trip{background:#4ba3ff}.tags_daycation{background:#187fd9}.tags_trafffic{background:#507be8}.tags_travel_bycar{background:#a0a6ff}.tags_visa{background:#ba6eff}.tags_scene_hotel{background:#a0a6ff}.product_box_bg{min-width:1180px}.product_wrap{width:1180px;margin:0 auto}.product_navbox{padding:10px 20px 10px 21px;text-align:center}.product_navbox a{background:#f7f7f7;border-radius:8px;width:145px;height:60px;line-height:60px;text-align:center;font-size:24px;color:#333;margin-right:20px;display:inline-block;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical}.product_navbox a.on{background:#19a0f0;color:#fff}.product_navbox a:last-child{margin-right:0}.product_toparea{width:1180px;box-sizing:border-box;margin:0 auto}.product_toparea .proinfo_item{height:208px;background:#fff;position:relative;overflow:hidden;margin-bottom:20px}.product_toparea .proinfo_item:last-child{margin-bottom:0}.product_toparea .proinfo_item a{display:block;position:relative;height:208px}.product_toparea .proinfo_item .left_img{float:left;width:370px;height:208px;margin-right:20px;position:relative;overflow:hidden}.product_toparea .proinfo_item .left_img .left_img_box{display:block;border:none;position:absolute;left:0;right:0;top:0;bottom:0;background-size:cover;background-position:center center;background-image:url(http://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/banner_pc.png)}.start_city{width:100%;height:30px;line-height:30px;position:absolute;bottom:0;left:0;text-align:center;color:#fff;font-size:14px;background:rgba(0,0,0,.5)}.product_toparea .proinfo_item .pro_content{height:198px;padding-top:10px;overflow:hidden;position:relative;padding-right:20px}.product_toparea .proinfo_item .pro_content h4{font-size:18px;color:#333;height:56px;line-height:28px;margin-bottom:20px;overflow:hidden}.product_toparea .proinfo_item .pro_content p{font-size:18px;color:#666;height:56px;line-height:28px;overflow:hidden}.product_toparea .proinfo_item .pro_price_box{width:100%;height:42px;position:absolute;bottom:12px;left:0;box-sizing:border-box;padding-right:20px}.product_toparea .proinfo_item .pro_price_box .pro_price_offer{font-size:12px;color:#ff4646;line-height:12px;display:inline-block;padding:4px;border-radius:2px;border:1px solid rgba(255,70,70,.3);margin-left:4px}.product_toparea .proinfo_item .pro_price_box .pro_price{font-size:32px;color:#ff4646;position:relative;top:4px;left:0}.pro_price dfn{font-size:18px}.pro_price em{font-size:18px;vertical-align:middle}.product_toparea .proinfo_item .pro_price_box .book_btn{width:200px;height:42px;line-height:42px;background:#ff4646;font-size:18px;color:#fff;text-align:center;float:right}.product_toparea .proinfo_item .pro_price_box img.book_btn{width:200px;height:42px;line-height:42px;font-size:18px;text-align:center;display:block;float:right;border:none;background:0 0}.product_mid_navbox{padding:0}.product_mid_navbox a{float:left;width:168px;margin:0;border-radius:0;background:#fff}.product_midarea .proinfo_miditem{float:left;background:#fff;overflow:hidden}.product_toparea .proinfo_miditem:last-child{margin-right:0}.product_midarea .proinfo_miditem a{display:block;position:relative;width:100%}.product_toparea .proinfo_miditem .pro_img{width:100%;height:152px;position:relative;overflow:hidden}.product_toparea .proinfo_miditem .pro_img .pro_img_box{position:absolute;display:block;left:0;right:0;top:0;bottom:0;background-size:cover;background-position:center center;background-image:url(http://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/banner_pc.png)}.product_midarea .proinfo_miditem .promid_content{padding:6px 10px 10px 10px;font-size:16px;color:#333;box-sizing:border-box;overflow:hidden}.product_midarea .proinfo_miditem .promid_content h4{height:48px;line-height:24px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.product_midarea .proinfo_miditem .promid_content .pro_price_box{font-size:24px;color:#ff4646;overflow:hidden;float:left;min-height:36px;line-height:36px;max-height:36px;min-width:12px;clear:both}.product_midarea .proinfo_miditem .promid_content .pro_price_box .pro_price_offer{float:right;font-size:12px;color:#ff4646;line-height:12px;padding:4px;border-radius:2px;border:1px solid rgba(255,70,70,.3);margin-left:4px;position:relative;top:6px}.pro_price_box .pro_price dfn,.product_midarea .pro_price_box .pro_price em{font-size:14px}.product_midarea .promid_content p{clear:both;width:250px;height:42px;line-height:42px;background:#ff4646;color:#fff;font-size:16px;text-align:center;display:block;margin:0 auto}.product_midarea .promid_content .book_btn{clear:both;width:250px;height:42px;line-height:42px;background:#ff4646;color:#fff;font-size:16px;text-align:center;display:block;margin:0 auto}.product_midarea .promid_content img.book_btn{clear:both;width:250px;height:42px;line-height:42px;color:#fff;font-size:16px;text-align:center;display:block;margin:0 auto;background:0 0}.coupon_wrapper{width:100%}.coupon_wrapper_content{width:1130px;margin:0 auto}.coupon_area{padding:0 15px;height:144px;margin:0 auto}.coupon_area1{width:880px}.coupon_content,.coupon_content02,.coupon_content03,.coupon_content04{position:relative;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/cbg1.png);background-position:0 0;background-repeat:no-repeat;border-radius:8px;width:880px;height:144px;overflow:hidden}.coupon_content .coupon_use_btn,.coupon_content02 .coupon_use_btn,.coupon_content03 .coupon_use_btn,.coupon_content04 .coupon_use_btn{position:absolute;width:180px;height:60px;line-height:60px;color:#fff;z-index:99;font-size:28px;text-align:center;border-radius:30px;background-image:-webkit-linear-gradient(315deg,#ff8d70 0,#fc5955 100%);background-image:linear-gradient(135deg,#ff8d70 0,#fc5955 100%);left:50%;top:50%;margin-left:-90px;margin-top:-30px}.coupon_content .coupon_use_btn_img,.coupon_content02 .coupon_use_btn_img,.coupon_content03 .coupon_use_btn_img,.coupon_content04 .coupon_use_btn_img{position:absolute;width:180px;height:60px;z-index:99;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);display:block;border:none}.coupon_area .new_passenger_volume,.coupon_imgbox1 .new_passenger_volume,.coupon_imgbox2 .new_passenger_volume,.coupon_imgbox3 .new_passenger_volume,.coupon_imgbox4 .new_passenger_volume{position:absolute;padding:3px 8px 5px;font-size:24px;line-height:24px;text-align:center;background:rgba(255,0,0,.3);color:#fff;left:0;top:0;border-radius:0 0 8px 0}.coupon_mask{position:absolute;width:100%;height:100%;left:0;top:0;z-index:1;background:rgba(0,0,0,.5)}.coupon_content02{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/cbg2.png);width:520px;float:left;margin-right:60px}.coupon_content02:last-child{margin-right:0}.coupon_content03{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/cbg3.png);width:340px;float:left;margin-right:40px}.coupon_content03:last-child{margin-right:0}.coupon_content04{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/cbg4.png);width:245px;float:left;margin-right:40px}.coupon_content04:last-child{margin-right:0}.coupon_item .img_ylq1,.coupon_item .img_ylq23,.coupon_item .img_ylq4,.coupon_item .img_yqg1,.coupon_item .img_yqg23,.coupon_item .img_yqg4{width:109px;height:109px;position:absolute;top:50%;margin-top:-54.5px;right:72px;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ylq109.png);background-position:0 0;background-repeat:no-repeat;z-index:2}.coupon_item .img_yqg1{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/yqg109.png)}.coupon_item .img_ylq23{width:109px;height:109px;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ylq109.png);right:30px}.coupon_item .img_yqg23{width:109px;height:109px;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/yqg109.png);right:30px}.coupon_item .img_ylq4{width:109px;height:109px;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ylq109.png);right:10px}.coupon_item .img_yqg4{width:109px;height:109px;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/yqg109.png);right:10px}.coupon_item{height:144px;overflow:hidden;padding-left:50px;position:relative}.coupon_item .coupon_left{position:relative;float:left;height:144px}.coupon_item .coupon_left .coupon_money{font-size:72px;color:#fff;float:left;height:88px;line-height:88px;padding-top:25px}.coupon_item .coupon_left .coupon_money dfn{font-size:36px}.coupon_item .coupon_left .coupon_txtbox{padding:26px 5px 3px 10px;font-size:28px;color:#fff;float:left;width:440px}.coupon_item .coupon_left .coupon_txtbox .tit01{font-weight:400;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:28px}.coupon_item .coupon_left .coupon_txtbox .tit02{font-weight:400;text-align:left;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:26px;white-space:normal}.coupon_item .coupon_left .coupon_txtbox .describe01{font-size:20px;color:rgba(255,255,255,.7);text-align:left;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;padding:6px 0 0 12px;line-height:26px}.coupon_right{width:143px;text-align:center;position:relative;overflow:hidden;line-height:138px;float:right}.coupon_item02{padding-left:40px}.coupon_right .coupon_ylq1{font-size:28px;color:#fff}.coupon_item .coupon_left02 .coupon_txtbox02{font-size:20px;color:#fff;width:175px;padding-left:22px}.coupon_item .coupon_left02 .coupon_txtbox02 .describe02{font-size:16px;padding-left:0;line-height:20px}.coupon_right02{width:77px;height:104px;margin:20px auto}.coupon_right .coupon_ylq2{width:24px;font-size:24px;color:#fff;display:inline-block;line-height:1}.coupon_item03{padding-left:74px}.coupon_item03 .coupon_left .coupon_money,.coupon_item04 .coupon_money{font-size:56px;padding-top:20px;height:50px;line-height:50px}.coupon_item03 .coupon_left .coupon_money dfn,.coupon_item04 .coupon_money dfn{font-size:28px}.coupon_item03 .coupon_left .coupon_txtbox03{width:170px;font-size:20px;line-height:22px;padding:0;position:absolute;bottom:16px;left:-20px}.coupon_item03 .coupon_left .coupon_txtbox03 .tit03{white-space:nowrap;display:block;height:22px;line-height:22px}.coupon_item03 .coupon_left .coupon_txtbox03 .describe03{font-size:16px;white-space:nowrap;display:block;line-height:20px}.coupon_item04{padding-left:0}.coupon_item04 .coupon_money{color:#fff;padding-left:0;text-align:center}.coupon_item04 .tit04{color:#fff;font-size:20px;height:30px;line-height:30px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;-webkit-box-orient:vertical;text-align:center;padding:0 20px}.coupon_area_img{padding:0 15px;height:144px}.coupon_item04 .coupon_ylq4{font-size:20px;color:#fff;height:50px;line-height:50px;text-align:center}.coupon_imgbox1,.coupon_imgbox2,.coupon_imgbox3,.coupon_imgbox4{overflow:hidden}.coupon_imgbox1 .coupon_use_btn,.coupon_imgbox2 .coupon_use_btn,.coupon_imgbox3 .coupon_use_btn,.coupon_imgbox4 .coupon_use_btn{position:absolute;width:180px;height:60px;line-height:60px;color:#fff;z-index:99;font-size:28px;text-align:center;border-radius:30px;background-image:-webkit-linear-gradient(315deg,#ff8d70 0,#fc5955 100%);background-image:linear-gradient(135deg,#ff8d70 0,#fc5955 100%);left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.coupon_imgbox1 .coupon_use_btn_img,.coupon_imgbox2 .coupon_use_btn_img,.coupon_imgbox3 .coupon_use_btn_img,.coupon_imgbox4 .coupon_use_btn_img{position:absolute;display:block;border:none;width:180px;height:60px;z-index:99;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.coupon_imgbox1{width:880px;height:144px;float:left;position:relative}.coupon_imgbox1 img{width:880px;height:144px}.coupon_imgbox2{width:520px;height:144px;float:left;margin-right:60px;position:relative}.coupon_imgbox2 img{width:520px;height:144px}.coupon_imgbox3{width:340px;height:144px;float:left;margin-right:40px;position:relative}.coupon_imgbox3 img{width:340px;height:144px}.coupon_imgbox4{width:245px;height:144px;float:left;margin-right:40px;position:relative}.coupon_imgbox4 img{width:245px;height:144px}.coupon_imgbox2:last-child{margin-right:0}.coupon_imgbox3:last-child{margin-right:0}.coupon_imgbox4:last-child{margin-right:0}.coupon_img_mask{position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.5)}.coupon_img_mask .coupon_stamp{position:absolute;width:109px;height:109px;top:50%;margin-top:-54.5px;right:72px}.coupon_img_mask .coupon_stamp_ylq{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ylq109.png);background-position:0 0;background-repeat:no-repeat}.coupon_img_mask .coupon_stamp_yqg{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/yqg109.png);background-position:0 0;background-repeat:no-repeat}.coupon_imgbox1 .coupon_img_mask .coupon_stamp{right:72px}.coupon_imgbox2 .coupon_img_mask .coupon_stamp{right:30px}.coupon_imgbox3 .coupon_img_mask .coupon_stamp{right:30px}.coupon_imgbox4 .coupon_img_mask .coupon_stamp{right:10px;cursor:pointer}.cursor_pointer{cursor:pointer!important}.flex_coupon_r{width:1100px;margin:0 auto;padding:0 15px;overflow:hidden}.flex_coupon_r .new_passenger_volume{position:absolute;padding:3px 8px 5px;font-size:22px;line-height:24px;background:rgba(255,0,0,.3);color:#fff;left:0;top:0;border-radius:0 0 8px 0}.flex_coupon_r .coupon_mask_r{position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.5);z-index:9}.flex_coupon_r .coupon_mask_r .coupon_stamp{position:absolute;width:136px;height:136px;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ylq109.png);background-position:0 0;background-repeat:no-repeat;background-size:100% 100%;right:72px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.flex_coupon_r .coupon_use_btn{display:block;position:absolute;width:180px;height:60px;line-height:58px;text-align:center;font-size:28px;color:#fff;border-radius:60px;text-align:center;background-image:-webkit-linear-gradient(315deg,#ff8d70 0,#fc5955 100%);background-image:linear-gradient(135deg,#ff8d70 0,#fc5955 100%);-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);left:50%;top:50%}.flex_coupon_r .coupon_use_btn_img{position:absolute;width:180px;height:60px;display:block;border:none;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.flex_coupon_r .coupon_area{width:1100px;height:180px;padding:0;margin:0 auto;position:relative;background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/coupon_r_bg1.png) no-repeat;float:left}.flex_coupon_r .coupon_area .coupon_wrapper_width{height:100%;position:relative;padding:0 178px 0 60px}.flex_coupon_r .coupon_area .coupon_r_right{position:absolute;width:178px;top:0;right:0;bottom:0}.flex_coupon_r .coupon_area .coupon_r_right span{position:absolute;font-size:34px;line-height:44px;text-align:center;left:50%;top:50%;width:98px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);color:#fff;letter-spacing:2.43px;padding:0 40px}.flex_coupon_r .coupon_area .coupon_inner{height:100%;color:#fff;position:relative}.flex_coupon_r .coupon_area .coupon_inner .coupon_money{position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.flex_coupon_r .coupon_area .coupon_inner .coupon_money dfn{font-size:45px}.flex_coupon_r .coupon_area .coupon_inner .coupon_money .sum{font-size:90px;line-height:92px}.flex_coupon_r .coupon_area .coupon_inner .coupon_condition{display:inline-block;vertical-align:text-top;position:absolute;left:280px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:525px}.flex_coupon_r .coupon_area .coupon_inner .coupon_condition h4{font-size:35px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:36px}.flex_coupon_r .coupon_area .coupon_inner .coupon_condition p{opacity:.7;font-size:25px;line-height:32px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin-top:10px}.flex_coupon_r .coupon_area_ylq .coupon_r_right span,.flex_coupon_r .coupon_area_yqg .coupon_r_right span{padding:0;width:100%}.flex_coupon_r .coupon_area_yqg .coupon_stamp{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/yqg109.png)}.flex_coupon_r .coupon_area_ylq .coupon_stamp{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ylq109.png)}.flex_coupon_r .coupon_img_area{position:relative;float:left;overflow:hidden;width:1100px;height:180px}.flex_coupon_r .coupon_img_area>img{display:block;border:none;width:100%;height:100%}.flex_coupon_r.coupon_one_line_two .coupon_stamp{right:30px;width:109px;height:109px}.flex_coupon_r.coupon_one_line_two .coupon_area{width:540px;height:144px;margin-right:20px;background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/coupon_r_bg2.png) no-repeat}.flex_coupon_r.coupon_one_line_two .coupon_area:last-of-type{margin-right:0}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_wrapper_width{position:relative;padding:0 77px 0 60px}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_r_right{text-align:center;width:77px}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_r_right span{font-size:24px;line-height:26px;width:37px;padding:0 20px}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_inner .coupon_money dfn{font-size:36px}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_inner .coupon_money .sum{font-size:72px}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_inner .coupon_condition{left:219px;width:160px}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_inner .coupon_condition h4{font-size:20px;line-height:26px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;white-space:pre-wrap}.flex_coupon_r.coupon_one_line_two .coupon_area .coupon_inner .coupon_condition p{font-size:16px;line-height:20px;margin-top:8px}.flex_coupon_r.coupon_one_line_two .coupon_img_area{position:relative;float:left;overflow:hidden;width:540px;height:144px;margin-right:20px}.flex_coupon_r.coupon_one_line_two .coupon_img_area:last-of-type{margin-right:0}.flex_coupon_r.coupon_one_line_three .coupon_stamp{right:30px;width:109px;height:109px}.flex_coupon_r.coupon_one_line_three .coupon_area{width:353px;height:144px;background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/coupon_r_bg3.png) no-repeat;margin-right:20px}.flex_coupon_r.coupon_one_line_three .coupon_area:last-of-type{margin-right:0}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_wrapper_width{padding:0 77px 0 0}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_r_right{text-align:center;width:77px}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_r_right span{font-size:24px;line-height:26px;width:37px;padding:0 20px}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_inner .coupon_money{left:0;top:13px;-webkit-transform:translateY(0);transform:translateY(0);width:100%;text-align:center}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_inner .coupon_money dfn{font-size:28px}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_inner .coupon_money .sum{font-size:56px;line-height:58px}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_inner .coupon_condition{width:100%;left:0;top:80px;-webkit-transform:translateY(0);transform:translateY(0)}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_inner .coupon_condition h4{padding:0 15px;font-size:20px;line-height:22px;text-align:center}.flex_coupon_r.coupon_one_line_three .coupon_area .coupon_inner .coupon_condition p{padding:0 15px;font-size:16px;line-height:18px;text-align:center;margin-top:8px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.flex_coupon_r.coupon_one_line_three .coupon_img_area{width:353px;height:144px;margin-right:20px}.flex_coupon_r.coupon_one_line_three .coupon_img_area:last-of-type{margin-right:0}.flex_coupon_r.coupon_one_line_four .coupon_stamp{right:8px;width:109px;height:109px}.flex_coupon_r.coupon_one_line_four .coupon_area{width:260px;height:144px;background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/coupon_r_bg4.png) no-repeat;margin-right:20px}.flex_coupon_r.coupon_one_line_four .coupon_area:last-of-type{margin-right:0}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_wrapper_width{padding:0}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_r_right{text-align:center;width:100%;top:104px}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_r_right span{font-size:20px;line-height:22px;width:100%}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_inner .coupon_money{left:0;top:10px;-webkit-transform:translateY(0);transform:translateY(0);width:100%;text-align:center}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_inner .coupon_money dfn{font-size:28px}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_inner .coupon_money .sum{font-size:56px;line-height:58px}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_inner .coupon_condition{left:0;top:82px;width:100%}.flex_coupon_r.coupon_one_line_four .coupon_area .coupon_inner .coupon_condition h4{font-size:20px;padding:0 15px;text-align:center}.flex_coupon_r.coupon_one_line_four .coupon_img_area{width:260px;height:144px;margin-right:20px}.flex_coupon_r.coupon_one_line_four .coupon_img_area:last-of-type{margin-right:0}.cp_pop_box{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999}.cp_pop_box .close_icon{width:18px;height:17px;position:absolute;top:20px;right:20px;background:url(https://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/close.png) 0 0 no-repeat}.cp_mask_lay{position:absolute;width:100%;height:100%;z-index:1;background:rgba(0,0,0,.3)}.cp_pop_cont{width:400px;height:160px;background:#fff;position:absolute;top:50%;left:40%;z-index:9}.cp_pop_main{padding:40px 40px;text-align:center}.cp_pop_main01{padding:30px 40px}.close_icon1,.success_icon{width:36px;height:36px;background:url(https://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/close1.png) 0 0 no-repeat;display:inline-block}.cp_pop_tips{text-align:center;color:#333;font-size:14px;margin-top:20px}.success_icon{background:url(https://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/gx.png) 0 0 no-repeat}.ad_equal_wrapper{margin:0 auto}.ad_equal_wrapper:after{content:".";display:block;height:0;clear:both;visibility:hidden}.ad_equal_item_content{width:1180px;box-sizing:border-box;margin:0 auto}.flex_ad_equal{display:block;margin:0 auto}.flex_ad_equal:after{content:".";display:block;height:0;clear:both;visibility:hidden}.ad_equal_area{float:left}.ad_equal_wrapper_width{overflow:hidden;position:relative}.ad_equal_wrapper_width img{border:none;position:absolute;top:0;height:100%;left:50%}.ad_equal_wrapper_h{height:446px}.ad_equal_wrapper_m{height:368px}.ad_equal_wrapper_l{height:236px}.ad_equal_num2 .ad_equal_wrapper_width img{width:590px;margin-left:-295px}.ad_equal_num3 .ad_equal_wrapper_width img{width:394px;margin-left:-197px}.ad_equal_num4 .ad_equal_wrapper_width img{width:295px;margin-left:-147.5px}.carousel_container{width:100%;margin:0 auto;position:relative;height:100%;padding:0;z-index:1;box-sizing:border-box}.carousel_pag_outside{padding-bottom:46px}.carousel_wrapper{position:relative;width:1180px;height:100%;margin:0 auto}.carousel_slide{width:100%;height:100%;position:relative}.carousel_slide .carousel_ad_logo{position:absolute;left:0;bottom:0;width:45px;height:16px;background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ad_logo.png) no-repeat;background-size:100% 100%}.carousel_slide img{display:block;border:none;width:100%}.carousel_h .carousel_slide img{height:446px}.carousel_m .carousel_slide img{height:368px}.carousel_l .carousel_slide img{height:236px}.carousel_pagination{position:absolute;z-index:10;text-align:center;bottom:30px;left:0;width:100%;box-sizing:border-box}.carousel_pag_outside .carousel_pagination{bottom:-46px}.carousel_pagination_bullet{margin:0 8px;width:16px;height:16px;border-radius:16px;display:inline-block}.carousel_pagination_bullet_active{width:50px}.carousel_button_next,.carousel_button_prev{position:absolute;width:50px;height:80px;top:50%;margin-top:-40px;opacity:.7;z-index:11;cursor:pointer}.carousel_button_next img,.carousel_button_prev img{display:block;border:none;width:100%}.carousel_button_prev{left:0}.carousel_button_next{right:0}.anchor_point_wrapper{position:fixed;width:180px;right:100px;padding:10px;box-sizing:border-box;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.anchor_point_bottom,.anchor_point_top{width:100%;overflow:hidden}.anchor_point_bottom img,.anchor_point_top img{display:block;width:100%;max-height:250px;border:none}.anchor_point_box li{text-align:center;font-size:16px;line-height:16px;margin:6px 0;cursor:pointer;width:100%;box-sizing:border-box;font-family:MicrosoftYaHei;max-height:40px;overflow:hidden}.anchor_point_box li img{display:block;width:100%;max-height:40px}.anchor_point_box .btn_default{color:#666}.hot_zone_box{width:100%;overflow:hidden;background-repeat:no-repeat;background-position:center center;min-width:1180px}.hot_zone_wrapper{width:1180px;margin:0 auto;position:relative}.hot_zone_wrapper img{display:block;border:none;width:100%;max-height:1000px}.hot_zone_wrapper .hot_zone_item{position:absolute;width:40px;height:40px;background:#fff;z-index:2;cursor:pointer}.trip_err{background:url(https://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/trip_pc_err1.png) center center no-repeat;width:196px;height:196px;margin:0 auto 20px;background-size:196px auto}.ctrip_err{background:url(https://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/trip_pc_err2.png) center center no-repeat;width:120px;height:120px;margin:0 auto 20px;background-size:120px auto}.video_component_wrapper{position:relative;width:100%;background-repeat:no-repeat;background-position:center center;min-width:1180px;margin:0 auto}.video_component_content{position:absolute;height:376px;border-radius:12px;overflow:hidden;width:670px;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.video_component_content .video_img{position:absolute;left:0;top:0;right:0;bottom:0;background-position:center center;background-size:cover;background-image:url(https://pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/345_194.png)}.video_component_content .video_play_btn{position:absolute;width:170px;height:170px;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-size:100% 100%;background-position:center center;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/video_play.png);cursor:pointer}.video_component_content .video_play_btn.video_pause_btn{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/video_pause.png)}.video_component_content .video_control_box{position:absolute;width:100%;height:32px;bottom:24px;left:0;right:0}.video_component_content .video_control_box .video_control_play{position:absolute;width:32px;height:32px;left:40px;top:0;cursor:pointer;background-size:100% 100%;background-position:center center;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/play_icon.png)}.video_component_content .video_control_box .video_control_play.video_control_pause{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/pause_icon.png)}.video_component_content .video_control_box .video_control_full{position:absolute;width:32px;height:32px;right:40px;top:0;background-size:100% 100%;background-position:center center;background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/full_icon.png)}.video_component_content .video_control_box .video_control_full.video_control_exit{background-image:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/exit_icon.png)}.video_component_content .video_control_box .video_control_center{position:absolute;top:0;bottom:0;left:104px;right:104px}.video_component_content .video_control_box .video_control_center .time_span{position:absolute;font-size:20px;line-height:1;color:#fff;opacity:.8;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.video_component_content .video_control_box .video_control_center .time_span.time_span_right{right:0}.video_component_content .video_control_box .video_control_center .time_span.time_span_left{left:0}.video_component_content .video_control_box .video_control_center .progress_box{position:absolute;left:65px;right:65px;top:0;bottom:0}.video_component_content .video_control_box .video_control_center .progress_box .progress_bg_bottom{position:absolute;left:0;right:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);height:4px;background:rgba(255,255,255,.6);border-radius:4px}.video_component_content .video_control_box .video_control_center .progress_box .progress_in_top{position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);height:4px;background:#fff;border-radius:4px}.video_component_content .video_control_box .video_control_center .progress_box .progress_in_top .progress_bar_btn{position:absolute;right:0;width:0;height:20px;-webkit-transform:translateY(-50%);transform:translateY(-50%);z-index:1}.video_component_content .video_control_box .video_control_center .progress_box .progress_in_top .progress_bar_btn::before{content:'';width:20px;height:20px;border-radius:10px;background:#fff;position:absolute;z-index:2;top:1px;left:-10px}.multiple_modules_tab_wrapper{width:100%;min-width:1180px}.multiple_modules_tab_wrapper.multiple_modules_tab_fixed{position:fixed;top:0;left:0;z-index:1000}.multiple_modules_tab_box{width:1180px;margin:0 auto;font-size:0;background:0 0}.multiple_modules_tab_box .multiple_modules_tab_item{display:inline-block;font-size:18px;margin-right:40px;height:54px;line-height:54px;color:#333;vertical-align:middle}.multiple_modules_tab_box .multiple_modules_tab_item .tab_title_box{position:relative}.multiple_modules_tab_box .multiple_modules_tab_item .cur_line_bottom{position:absolute;height:4px;left:0;right:0;bottom:0;background:#0086f6;display:none}.multiple_modules_tab_box .multiple_modules_tab_item.multiple_modules_tab_cur{color:#0086f6}.multiple_modules_tab_box .multiple_modules_tab_item.multiple_modules_tab_cur .cur_line_bottom{position:absolute;height:4px;left:0;right:0;bottom:0;background:#0086f6;display:block}.multiple_modules_tab_box.tab_has_main_sub .multiple_modules_tab_item{margin-right:0;padding:0 24px;font-size:18px;text-align:center;line-height:20px;overflow:hidden;color:#333;height:64px}.multiple_modules_tab_box.tab_has_main_sub .multiple_modules_tab_item .tab_title_box{margin-top:12px}.multiple_modules_tab_box.tab_has_main_sub .multiple_modules_tab_item .tab_main_title{line-height:20px}.multiple_modules_tab_box.tab_has_main_sub .multiple_modules_tab_item .tab_subtitle{font-size:14px}.multiple_modules_tab_box.tab_has_main_sub .multiple_modules_tab_item.multiple_modules_tab_cur{background:#0086f6;color:#fff}.multiple_modules_tab_box.tab_has_main .multiple_modules_tab_item{margin-right:0;height:44px;line-height:44px;text-align:center;padding:0 24px;font-size:18px}.multiple_modules_tab_box.tab_has_main .multiple_modules_tab_item.multiple_modules_tab_cur{background:#0086f6;color:#fff}.multiple_modules_tab_box.tab_in_center{text-align:center}.multiple_modules_tab_box.tab_in_center .multiple_modules_tab_item:last-of-type{margin-right:0}.floor_title_wrapper{width:100%;min-width:1180px;margin:0 auto;padding:20px 0;background:#fff}.floor_title_wrapper .floor_title_content{width:1180px;margin:0 auto;position:relative;font-size:32px;line-height:32px;text-align:center;color:#333}.floor_title_wrapper .floor_title_right{position:absolute;right:0;bottom:0;font-size:14px;line-height:14px;color:#666;padding-right:14px;cursor:pointer}.floor_title_wrapper .floor_title_right::before{content:'\e008';position:absolute;font-family:market_icon;right:0;top:0}@media screen and (max-width:1680px){.anchor_point_wrapper{right:50px}}@media screen and (max-width:1440px){.anchor_point_wrapper{right:0}}@media screen and (max-width:1200px){.city_content_station{width:980px;margin-left:-490px}.anchor_point_wrapper{right:0;display:none!important}}</style><style type="text/css" data-preload="slick_carousel">@charset "UTF-8";.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}.slick-dots,.slick-next,.slick-prev{position:absolute;display:block;padding:0}.slick-dots li button:before,.slick-next:before,.slick-prev:before{font-family:slick;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.slick-loading .slick-list{background:url(//pic.c-ctrip.com/common/loading_48.gif) center center no-repeat #fff}.slick-next,.slick-prev{font-size:0;line-height:0;top:50%;width:20px;height:20px;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);cursor:pointer;color:transparent;border:none;outline:0;background:0 0}.slick-next:focus,.slick-next:hover,.slick-prev:focus,.slick-prev:hover{color:transparent;outline:0;background:0 0}.slick-next:focus:before,.slick-next:hover:before,.slick-prev:focus:before,.slick-prev:hover:before{opacity:1}.slick-next.slick-disabled:before,.slick-prev.slick-disabled:before{opacity:.25}.slick-next:before,.slick-prev:before{font-size:20px;line-height:1;opacity:.75;color:#fff}.slick-prev{left:-25px}[dir=rtl] .slick-prev{right:-25px;left:auto}.slick-prev:before{content:'←'}.slick-next:before,[dir=rtl] .slick-prev:before{content:'→'}.slick-next{right:-25px}[dir=rtl] .slick-next{right:auto;left:-25px}[dir=rtl] .slick-next:before{content:'←'}.slick-dotted.slick-slider{margin-bottom:30px}.slick-dots{bottom:20px;width:100%;margin:0;list-style:none;text-align:center}.slick-dots li{position:relative;display:inline-block;width:20px;height:20px;margin:0 2px;padding:0;cursor:pointer}.slick-dots li button{font-size:0;line-height:0;display:block;width:20px;height:20px;padding:5px;cursor:pointer;color:transparent;border:0;outline:0;background:0 0}.slick-dots li button:focus,.slick-dots li button:hover{outline:0}.slick-dots li button:focus:before,.slick-dots li button:hover:before{opacity:1}.slick-dots li button:before{font-size:18px;line-height:20px;position:absolute;top:0;left:0;width:20px;height:20px;content:'•';text-align:center;color:#8b8b8b}.slick-dots li.slick-active button:before{color:#fff}.slick-slider{position:relative;width:100%;height:100%}.slick-slide{width:100%;height:100%}.slick-slide img{display:block;border:none;width:100%}.slick-dots li button::before{content:none}.h5_carousel_container .slick-slide .carousel_ad_logo{position:absolute;width:22.5px;height:8px;background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/h5/ad_logo.png) no-repeat;background-size:100% 100%;bottom:0}.h5_carousel_container .slick-dots{position:absolute;bottom:8px;list-style:none;display:block;text-align:center;margin:0;padding:0;width:100%;height:5px;box-sizing:border-box}.h5_carousel_container .slick-dots.align_right{text-align:right;padding-right:15px}.h5_carousel_container .slick-dots li{position:relative;display:inline-block;vertical-align:top;text-align:center;margin:0 2px;padding:0;width:auto;height:100%;margin:0 2.5px}.h5_carousel_container .slick-dots li button{border:0;cursor:pointer;background:#fff;opacity:.3;display:block;width:16px;height:3px;border-radius:1px;outline:0;font-size:0;color:transparent;-webkit-transition:all .5s;transition:all .5s;padding:0;opacity:.5;background:#fff;width:5px;height:5px;border-radius:5px}.h5_carousel_container .slick-dots li.slick-active button{background:#fff;opacity:1;width:24px;opacity:1;width:16px}.pc_carousel_container .slick-slider{position:relative;width:1180px;height:100%;margin:0 auto}.pc_carousel_container .slick-slide .carousel_ad_logo{position:absolute;bottom:0;width:45px;height:16px;background:url(//pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/ad_logo.png) no-repeat;background-size:100% 100%}.pc_carousel_container .slick-dots{position:absolute;z-index:10;text-align:center;bottom:30px;left:0;width:100%;height:auto;box-sizing:border-box}.pc_carousel_container.carousel_pag_outside .slick-dots{bottom:-46px}.pc_carousel_container .slick-dots li{position:relative;display:inline-block;vertical-align:top;text-align:center;margin:0 2px;padding:0;width:auto;height:100%;margin:0 8px}.pc_carousel_container .slick-dots li button{border:0;cursor:pointer;background:#fff;opacity:.3;display:block;width:16px;height:3px;border-radius:1px;outline:0;font-size:0;color:transparent;-webkit-transition:all .5s;transition:all .5s;padding:0;opacity:.5;background:#fff;width:16px;height:16px;border-radius:16px}.pc_carousel_container .slick-dots li.slick-active button{background:#fff;opacity:1;width:24px;opacity:1;width:50px}.pc_carousel_container .slick-next,.slick-prev{position:absolute;width:50px;height:80px;top:50%;margin-top:-40px;background:#999;opacity:.7;z-index:11;background-repeat:no-repeat;background-size:100% 100%;margin:0;transform:translateY(-50%)}.pc_carousel_container .slick-prev{left:0}.pc_carousel_container .slick-prev::before{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;border-left:2px solid #fff;border-bottom:2px solid #fff;-webkit-transform:rotate(45deg);transform:rotate(45deg);box-sizing:border-box;position:absolute;left:50%;margin-left:-6px;top:50%;margin-top:-10px;content:none}.pc_carousel_container .slick-next{right:0}.pc_carousel_container .slick-next::before{content:"";display:inline-block;width:20px;height:20px;vertical-align:middle;border-right:2px solid #fff;border-top:2px solid #fff;-webkit-transform:rotate(45deg);transform:rotate(45deg);box-sizing:border-box;position:absolute;right:50%;margin-right:-6px;top:50%;margin-top:-10px;content:none}.pc_carousel_container .slick-next:focus,.slick-next:hover,.slick-prev:focus,.slick-prev:hover{color:unset;outline:0;background-color:#999;background-repeat:no-repeat;background-size:100% 100%;opacity:1}.carousel_container .slick-slide>div{line-height:10px}</style><style type="text/css" data-preload="common">.hidden_city_box{position:absolute;z-index:100}.market_body_pc{max-width:1920px;margin:0 auto}map area{outline:0}</style><div class="market_body_pc" id="body_wrapper" style="background-color:#efdbb8"><div class="expose_dom" data-anchor-floor-id="276425" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:15,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276401}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300c160000010754nFF06.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:15,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276401,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276425" style=""><img src="https://dimg04.c-ctrip.com/images/300g16000001056ccA073.jpg"><div><script type="text/javascript">
+    __updateImageSize && __updateImageSize("single_banner_pc_276425", 1180, 350, true)
+    </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="expose_dom" data-anchor-floor-id="276426" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:16,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276402}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/3005160000010705s6D08.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:16,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276402,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276426" style="">
+        <img src="https://dimg04.c-ctrip.com/images/300e16000001078hfD567.jpg">
+        <div>
+            <script type="text/javascript">
+                __updateImageSize && __updateImageSize("single_banner_pc_276426", 1180, 350, true)
+            </script>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="expose_dom" data-anchor-floor-id="276427" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:17,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276403}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300f1600000104inh2CCA.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:17,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276403,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276427" style=""><img src="https://dimg04.c-ctrip.com/images/300i1600000103azg8635.jpg"><div><script type="text/javascript">
+    __updateImageSize && __updateImageSize("single_banner_pc_276427", 1180, 355, true)
+</script>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="expose_dom" data-anchor-floor-id="276428" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:18,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276404}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300t1600000104jneAF5C.jpg);background-repeat:no-repeat;background-position:center top">
+        <div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:18,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276404,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276428" style=""><img src="https://dimg04.c-ctrip.com/images/300316000001067qg5731.jpg">
+            <div>
+                <script type="text/javascript">
+                    __updateImageSize && __updateImageSize("single_banner_pc_276428", 1180, 355, true)
+                </script>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="expose_dom" data-anchor-floor-id="276429" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:19,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276405}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300b1600000106vw267CB.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:19,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276405,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276429" style="">
+        <img src="https://dimg04.c-ctrip.com/images/300w160000010aiszFE32.jpg">
+        <div>
+            <script type="text/javascript">
+                __updateImageSize && __updateImageSize("single_banner_pc_276429", 1180, 360, true)
+            </script>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="expose_dom" data-anchor-floor-id="276430" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:20,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276406}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300m160000010dvqtCC5C.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:20,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276406,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276430" style="">
+        <img src="https://dimg04.c-ctrip.com/images/300i1600000103b2g791C.jpg">
+        <div>
+            <script type="text/javascript">
+                 __updateImageSize && __updateImageSize("single_banner_pc_276430", 1180, 360, true)
+            </script>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="expose_dom" data-anchor-floor-id="276431" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:21,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276407}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300o1600000103c6g0B90.jpg);background-repeat:no-repeat;background-position:center top">
+        <div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:21,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276407,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276431" style="">
+            <img src="https://dimg04.c-ctrip.com/images/300v160000010fjc60B7A.jpg">
+            <div>
+                <script type="text/javascript">
+                    __updateImageSize && __updateImageSize("single_banner_pc_276431", 1180, 355, true)
+                </script>
+            </div></div></div></div></div><div class="expose_dom" data-anchor-floor-id="276432" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:22,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276408}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/30041600000103h9c2DAA.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:22,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276408,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276432" style=""><img src="https://dimg04.c-ctrip.com/images/300b1600000106vm8346C.jpg"><div><script type="text/javascript">
+    __updateImageSize && __updateImageSize("single_banner_pc_276432", 1180, 355, true)
+</script></div></div></div></div></div><div class="expose_dom" data-anchor-floor-id="276433" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:24,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276410}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300r1600000102x2527ED.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:24,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276410,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276433" style=""><img src="https://dimg04.c-ctrip.com/images/300316000001067wt2D15.jpg"><div><script type="text/javascript">
+    __updateImageSize && __updateImageSize("single_banner_pc_276433", 1180, 300, true)
+</script></div></div></div></div></div><div class="expose_dom" data-anchor-floor-id="276434" data-expose-key="tang_page_module_expo" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:25,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276411}" data-tracked="1"><div class="banner_pc" style="background-color:;background-image:url(https://dimg04.c-ctrip.com/images/300k1600000108oe6A72D.jpg);background-repeat:no-repeat;background-position:center top"><div class="pic_wrapper" data-trace-key="tang_page_button_click" data-trace-value="{&quot;pagetype_tech&quot;:&quot;PC&quot;,&quot;page_tangid&quot;:2117,&quot;moduleid&quot;:3,&quot;module_sort&quot;:25,&quot;floor&quot;:&quot;单帧广告&quot;,&quot;floorid&quot;:276411,&quot;button&quot;:&quot;photo&quot;,&quot;button_sort&quot;:&quot;1&quot;}"><div id="single_banner_pc_276434" style=""><img src="https://dimg04.c-ctrip.com/images/300v160000010fjfg1E5F.jpg"><div><script type="text/javascript">
+    __updateImageSize && __updateImageSize("single_banner_pc_276434", 1180, 300, true)
+</script></div></div></div></div></div></div></div></div></div>
+<div>
+    <div id="base_ft">
+    <p>
+        <a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引" href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;<a rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp; |&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com/crptravel/default/landing" title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a>
+    </p>
+    <p>
+        <a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop" target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://join.easytrip.com/jiameng/#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://dst.ctrip.com/">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="隐私政策">隐私政策</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://m.ctrip.com/webapp/vacations/tour/supplier" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright©</a>1999-2019,&nbsp;<a href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a>
+    </p>
+    <p class="gns">
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002731"><i class="icon-gns"></i>沪公网备31010502002731号</a>
+    </p>
+    <div class="honour_wrap">
+        <a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow">信用评级</a><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow">上海工商</a><a href="http://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow">诚信网站</a><a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网">网络社会征信网</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心">信息举报中心</a><a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站">可信网站</a><a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow">违法和不良信息举报中心</a>
+    </div>
+</div>
+    <config id="timespan" value="20160329"></config><!--InstanceEnd name="position"-->
+    <script type="text/javascript">
+        var globalConfig={H1:'https',AjaxUrl:'accounts.ctrip.com',H3:'my.ctrip.com',PassportUrl:'passport.ctrip.com',Lang:'gb2312'};</script><script type="text/javascript" src="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/js/ActivityController_V2.min.js?temp=-838,988,341" charset="utf-8"></script></div><div id="modal"></div><script>
+    (function() {
+        window.__DISABLED_TCP__ = true
+        window.__APP_SETTINGS__ = {"type":"createHistory","basename":"/tangram","context":{"basename":"/tangram","publicPath":"//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default","restapi":"/tangram/restapi/gateway","env":"prod","appId":"100018370","h5Version":"1.6.2","preload":{}}}
+        window.__PUBLIC_PATH__ = '//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default'
+        window.__IS_MOBILE__ = false
+        window.__CARGO__ = undefined
+    })()
+</script>
+<script>
+    (function() {
+        try {
+            window.__INITIAL_STATE__ = {"html":{"title":"携程跟团游钻级标准"},"htmlTitle":"携程跟团游钻级标准","locale":"en-US","currency":"USD","i18n":{"pageNotFound":"找不到活动啦","defaultMobileTitle":"携程旅行网","defaultOnlineTitle":"携程旅行网"},"headerInfo":{},"headerMeta":{"templateName":"GlobalConfig","category":1,"sort":0,"floorId":276424,"metricFloorId":276400,"floorName":"全局","templateId":1,"subFloors":[],"groupId":null},"hasIM":false,"isExistDSScroll":false,"prefetchedResult":[],"productHasLoaded":[],"activityStatus":0,"unorderedList":[],"pageType":2,"floorList":[{"templateName":"SingleBanner","category":2,"sort":15,"floorId":276425,"metricFloorId":276401,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300c160000010754nFF06.jpg","advertisingGroupId":"1391","bannerImageLink":"https://dimg04.c-ctrip.com/images/300g16000001056ccA073.jpg","imageHeight":"350","imageWidth":"1180","imageSize":"74844","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":16,"floorId":276426,"metricFloorId":276402,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/3005160000010705s6D08.jpg","advertisingGroupId":"1392","bannerImageLink":"https://dimg04.c-ctrip.com/images/300e16000001078hfD567.jpg","imageHeight":"350","imageWidth":"1180","imageSize":"69029","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":17,"floorId":276427,"metricFloorId":276403,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300f1600000104inh2CCA.jpg","advertisingGroupId":"1393","bannerImageLink":"https://dimg04.c-ctrip.com/images/300i1600000103azg8635.jpg","imageHeight":"355","imageWidth":"1180","imageSize":"44119","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":18,"floorId":276428,"metricFloorId":276404,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300t1600000104jneAF5C.jpg","advertisingGroupId":"1394","bannerImageLink":"https://dimg04.c-ctrip.com/images/300316000001067qg5731.jpg","imageHeight":"355","imageWidth":"1180","imageSize":"32687","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":19,"floorId":276429,"metricFloorId":276405,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300b1600000106vw267CB.jpg","advertisingGroupId":"1395","bannerImageLink":"https://dimg04.c-ctrip.com/images/300w160000010aiszFE32.jpg","imageHeight":"360","imageWidth":"1180","imageSize":"41387","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":20,"floorId":276430,"metricFloorId":276406,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300m160000010dvqtCC5C.jpg","advertisingGroupId":"1396","bannerImageLink":"https://dimg04.c-ctrip.com/images/300i1600000103b2g791C.jpg","imageHeight":"360","imageWidth":"1180","imageSize":"29644","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":21,"floorId":276431,"metricFloorId":276407,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300o1600000103c6g0B90.jpg","advertisingGroupId":"1397","bannerImageLink":"https://dimg04.c-ctrip.com/images/300v160000010fjc60B7A.jpg","imageHeight":"355","imageWidth":"1180","imageSize":"31182","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":22,"floorId":276432,"metricFloorId":276408,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/30041600000103h9c2DAA.jpg","advertisingGroupId":"1398","bannerImageLink":"https://dimg04.c-ctrip.com/images/300b1600000106vm8346C.jpg","imageHeight":"355","imageWidth":"1180","imageSize":"27558","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":24,"floorId":276433,"metricFloorId":276410,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300r1600000102x2527ED.jpg","advertisingGroupId":"1400","bannerImageLink":"https://dimg04.c-ctrip.com/images/300316000001067wt2D15.jpg","imageHeight":"300","imageWidth":"1180","imageSize":"71745","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}},{"templateName":"SingleBanner","category":2,"sort":25,"floorId":276434,"metricFloorId":276411,"floorName":"单帧广告","templateId":3,"subFloors":[],"groupId":null,"templateConfig":{"backgroundColor":"","backgroundImageLink":"https://dimg04.c-ctrip.com/images/300k1600000108oe6A72D.jpg","advertisingGroupId":"1401","bannerImageLink":"https://dimg04.c-ctrip.com/images/300v160000010fjfg1E5F.jpg","imageHeight":"300","imageWidth":"1180","imageSize":"86416","clickLinkHttp":"","clickLinkHybrid":"","clickLinkNative":"","clickLinkMiniProgram":""}}],"realPageId":2117,"globalConfig":{"tracePageId":"10650027951","pageBackgroundColor":"#efdbb8","pageTitle":"携程跟团游钻级标准","sort":0},"isDraft":false,"tracePageId":"10650027951","shouldShowWarning":false,"shouldShowCityBox":false,"whiteIcon":false,"departureCityList":[],"isMobile":false,"departureCityId":1,"departureCityName":"","hasTargetCityUpdate":false,"statusBarHeight":0,"statusBarHeightRaw":0,"screenWidth":0,"mode":"online","curVideoId":null,"location":{"pathname":"/MjExNw==","search":"?ctm_ref=vactang_page_2117","hash":"","action":"POP","query":{"ctm_ref":"vactang_page_2117"},"pattern":["/","/:pageId(\\w+[=|%3D]*)"],"params":{"pageId":"MjExNw=="},"raw":"/MjExNw==?ctm_ref=vactang_page_2117"},"basename":"/tangram","publicPath":"//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default","restapi":"/tangram/restapi/gateway","userInfo":{"IsLogin":false,"IsAnonymousLogin":false,"Auth":null,"ExtendInfo":null,"TagUserInfo":null,"IsPermission":false,"IsCorpUser":false,"ResidentPlaceId":0,"ResidentPlaceName":null,"UserActivity":null},"isLogin":false,"env":"prod","query":{"ctm_ref":"vactang_page_2117"},"extType":"1","pageId":"MjExNw==","saleChannelId":2,"previewTime":null,"hasNotch":true,"isIOS":false,"iPhoneX":false,"isIOSApp":false,"isInTrip":false,"isInTripApp":false,"isInTripH5":false,"isInZTApp":false,"isInTDSApp":false,"isInTDSOnline":false,"headerHeight":44,"extPost":{},"isSSR":true,"extQueryString":"","isInWeixin":false,"isInMiniProgram":false,"isInCtripApp":false,"showGap":false,"pageTitle":"携程跟团游钻级标准","global":{},"localePageId":2117}
+        } catch(error) {
+            console.log('parse initial-state failed', error.stack)
+        }
+    })()
+</script>
+<script>
+    ; (function() {
+        window.__bfi = window.__bfi || [];
+        if (! (window.$_bf && window.$_bf.loaded || window.$LAB || window.CtripJsLoader)) {
+            var a = new Date,
+                b = !1,
+                c = "?v=" + a.getFullYear() + a.getMonth() + "_" + a.getDate(),
+                a = document.createElement("script");
+            a.type = "text/javascript";
+            a.charset = "utf-8";
+            a.async = !0;
+            try {
+                b = "https:" == location.protocol
+            } catch(d) {}
+            a.src = ((b ? "https:": "http:")) + "//webresource.c-ctrip.com/code/ubt/_bfa.min.js" + c;
+            b = document.getElementsByTagName("script")[0];
+            b.parentNode.insertBefore(a, b)
+        }
+    })();
+</script>
+<script src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/vendor-4ece21.js"></script>
+<script src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/tripHeader-a629bb.js"></script><script src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/ottdProduct-5925fb.js"></script>
+<script src="//webresource.c-ctrip.com/ares2/vacation/tangram-online-application/1.6.2/default/js/index-9f0491.js"></script>
+<script src="js_three/common_modify.js"></script>
+</body>
+</html>

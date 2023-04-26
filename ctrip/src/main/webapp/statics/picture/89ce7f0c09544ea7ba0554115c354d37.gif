@@ -1,0 +1,651 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><link rel="shortcut icon" href="https://www.ctrip.com/favicon.ico"/><title>旅游团_旅游线路_自驾游_跟团游_自由行_周边游_门票玩乐_邮轮【携程旅游】</title><meta name="description" content="携程旅游网为您提供全球旅游、自助游、团队游、自驾游、周边游、欧铁预订以及价格查询。携程旅游网为您提供全球200多个国家，上千景区的旅游服务预订，几千种线路产品供您挑选，还提供各个地区的旅游咨询服务。全年有各种折扣、抢购、团购、帮您省钱旅游。并且提供各种邮轮、独家欧铁、半自助游等新式旅游方式产品，让你的出行随心所欲，携程在手，说走就走。"/><meta name="keywords" content="旅游团_旅游线路_自驾游_跟团游_自由行_周边游_门票玩乐_邮轮【携程旅游】"/><link href="//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default/lib/css/public_vacation130620.css" rel="stylesheet" type="text/css"/><link href="//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default/page/home/css/index.css" rel="stylesheet" type="text/css"/><link href="//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default/page/home/css/slick_carousel.css" rel="stylesheet" type="text/css"/></head><body><div><link href="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/css/PageHeader_V4.css?temp=-5,871,210,558,596,295,456" rel="stylesheet" /> <div class="cui-nav-bar">
+<div class="nav-bar-cont">
+<div class="slogan">让旅行更幸福</div>
+<ul class="language">
+<li>
+<a rel="nofollow" style="cursor:default" class="selected" onmouseover="this.className='selected language_current';this.nextElementSibling.style.display='block';" onmouseout="this.className= 'selected';this.nextElementSibling.style.display='none';"><span><em class="ico-global"></em> Language <b class="n-arrow"></b></span></a>
+<div class="language_wrap drowndrop" style="display: none;" onmouseover="this.style.display='block';this.previousElementSibling.className='selected language_current';" onmouseout="this.style.display='none';this.previousElementSibling.className='selected';">
+<ul class="language_list" id="cui_lang_list">
+<li>
+<a id="ctrip_cn" class="language_big5" href="//www.ctrip.com">简体中文</a>
+</li>
+<li>
+<a id="ctrip_eng" class="language_en" href="https://www.trip.com/?locale=en_US">English (United States)</a>
+</li>
+<li>
+<a id="ctrip_uk" class="language_gb" href="https://uk.trip.com/?locale=en_gb">English (United Kingdom)</a>
+</li>
+<li>
+<a id="ctrip_hk" class="language_hk" href="http://hk.trip.com/?locale=zh_hk">繁&#39636;中文 (香港)</a>
+</li>
+<li>
+<a id="ctrip_hk_en" class="language_hk" href="https://hk.trip.com/?locale=en_hk">English(Hong Kong)</a>
+</li>
+<li>
+<a id="ctrip_korea" class="language_korea" href="https://kr.trip.com/?locale=ko_KR">韩语版</a>
+</li>
+<li>
+<a id="ctrip_jap" class="language_jap" href="https://jp.trip.com/?locale=ja_JP">日语版</a>
+</li>
+<li>
+<a id="ctrip_sg" class="language_sg" href="https://sg.trip.com/?locale=en_SG">English (Singapore)</a>
+</li>
+<li>
+<a id="ctrip_au" class="language_au" href="https://au.trip.com/?locale=en_au">English (Australia)</a>
+</li>
+<li>
+<a id="ctrip_de" class="language_de" href="https://de.trip.com/?locale=de_DE">Deutsch</a>
+</li>
+<li>
+<a id="ctrip_fr" class="language_fr" href="https://fr.trip.com/?locale=fr_FR">Fran&ccedil;ais</a>
+</li>
+<li>
+<a id="ctrip_es" class="language_es" href="https://es.trip.com/?locale=es_ES">Espa&ntilde;ol</a>
+</li>
+<li>
+<a id="ctrip_it" class="language_it" href="https://it.trip.com/?locale=it_IT">Italiano</a>
+</li>
+<li>
+<a id="ctrip_ru" class="language_ru" href="https://ru.trip.com/?locale=ru_RU">Русский</a>
+</li>
+<li>
+<a id="ctrip_th" class="language_th" href="https://th.trip.com/?locale=th_TH">泰国站</a>
+</li>
+<li>
+<a id="ctrip_id" class="language_id" href="https://id.trip.com/?locale=id_ID">Bahasa Indonesia</a>
+</li>
+<li>
+<a id="ctrip_my" class="language_my" href="https://my.trip.com/?locale=ms_MY">Bahasa Malaysia</a>
+</li>
+<li>
+<a id="ctrip_my_en" class="language_my" href="https://my.trip.com/?locale=en_my">English (Malaysia)</a>
+</li>
+<li>
+<a id="ctrip_vn" class="language_vn" href="https://vn.trip.com/?locale=vi_VN">越南语</a>
+</li>
+<li>
+<a id="ctrip_nl" class="language_nl" href="https://nl.trip.com/?locale=nl_NL">荷兰语</a>
+</li>
+<li>
+<a id="ctrip_pl" class="language_pl" href="https://pl.trip.com/?locale=pl_PL">波兰语&gt;</a>
+</li>
+<li>
+<a id="ctrip_gr" class="language_gr" href="https://gr.trip.com/?locale=el_GR">希腊语</a>
+</li>
+<li>
+<a id="ctrip_tr" class="language_tr" href="https://tr.trip.com/?locale=tr_TR">土耳其语</a>
+</li>
+<li>
+<a id="ctrip_pt" class="language_pt" href="https://br.trip.com/?locale=pt_BR">巴西葡萄牙语</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<ul class="nav-bar-set">
+<li class="set-list set-logIn" id="nav-bar-set-login" style="display:none">
+<a class="person-text" onclick="DoLogin()" style="cursor:pointer;"><span class="set-text"><span class="member-name" name="nav-bar-mname">您好</span>，请登录 </span></a>
+</li>
+<li class="set-list" id="nav-bar-set-reg" style="display:none">
+<a class="person-text nav-per" href="https://passport.ctrip.com/user/reg/home "><span class="set-text"> 免费注册 </span></a>
+</li>
+<li class="set-list myctrip-name" name="cui-nav-bar-set-list" id="nav-bar-set-myctrip-name" style="display:none">
+<a href="https://my.ctrip.com/home/myinfo.aspx#ctm_ref=ssc_hp_myctrip_a" class="person-text nav-myctrip"><span class="set-text"><span class="member-name" name="nav-bar-d-info">普通会员</span><b class="n-arrow"></b></span></a>
+<ul class="per-drowndrop" style="display: none;" id="nav-bar-set-my-info">
+<li class="my-img">
+<a rel="nofollow" href="https://sinfo.ctrip.com/MyInfo/AccountCenter/UserInfoUpdate.aspx"><img name="nav-bar-d-info" src="https://pic.c-ctrip.com/platform/online/home/ico_deafult.png"></a>
+</li>
+<li class="my-data">
+<p class="integral" name="nav-bar-d-info" rel="nofollow">积分：<a href="https://sinfo.ctrip.com/MyInfo/AccountCenter/MineMileage.aspx ">0</a>
+</p>
+<p class="member-grade" name="nav-bar-d-info">普通会员<a style="display:none">领福利</a>
+</p>
+</li>
+<li class="sign-out">
+<a rel="nofollow" href="https://passport.ctrip.com/user/logout ">退出</a>
+</li>
+</ul>
+</li>
+<li class="set-list set-infor">
+<i class="infor-notice"></i><a class="infor-num" id="nav-bar-set-msgnum" rel="nofollow">消息<span>0</span></a>
+</li>
+<li class="set-list set-myctrip-list" name="cui-nav-bar-set-list">
+<a class="person-text nav-myctrip" href="https://my.ctrip.com/home/myinfo.aspx#ctm_ref=ssc_hp_myctrip_a "><span class="set-text"> 我的携程 <b class="n-arrow"></b></span></a>
+<ul class="nav-drowndrop" style="display: none;">
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/favorite/myfav#ctm_ref=ssc_hp_myctrip_collect_a ">我的收藏 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://smarket.ctrip.com/Promocode/zh-cn/Promocode.aspx#ctm_ref=ssc_hp_myctrip_integral_a ">我的优惠券 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Passenger/PassengerList.aspx#ctm_ref=ssc_hp_myctrip_info_a ">常用信息 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://secure.ctrip.com/webwallet/index#ctm_ref=ssc_hp_myctrip_wallet_a ">我的钱包 </a>
+</li>
+</ul>
+</li>
+<li class="set-list set-myorder-list" name="cui-nav-bar-set-list">
+<a class="person-text nav-myctrip" rel="nofollow" href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a "><span class="set-text"> 我的订单 <b class="n-arrow"></b></span></a>
+<ul class="nav-drowndrop drowndrop-order" style="display: none;">
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx#ctm_ref=ssc_hp_myctrip_flightorders_a ">机票+相关订单 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx#ctm_ref=ssc_hp_myctrip_hotelorders_a ">酒店订单 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx#ctm_ref=ssc_hp_myctrip_tourorders_a ">旅游订单 </a>
+</li>
+<li>
+<a rel="nofollow" href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx#ctm_ref=ssc_hp_myctrip_trainorders_a ">火车票订单 </a>
+</li>
+<li>
+<a href="https://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a ">全部订单 </a>
+</li>
+<li>
+<a class="phone-line" href="https://passport.ctrip.com/user/member/fastOrder#ctm_ref=ssc_hp_myctrip_phoneorders_a ">手机号查订单 </a>
+</li>
+</ul>
+</li>
+<li class="set-list">
+<a target="_blank" class="person-text nav-per" href="http://kefu.ctrip.com"><span class="set-text"> 客服中心 </span></a>
+</li>
+<li class="set-list set-phone" name="cui-nav-bar-set-list">
+<a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_app"></i></span></a>
+<ul class="phone-drowndrop" style="display: none;">
+<li class="ico_code">
+<img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_app.jpg" alt=""><p>手机扫码快速下载</p>
+</li>
+<li class="ctrip-app">
+<a href="http://app.ctrip.com">携程旅行手机版</a><i class="arrow-right"></i>
+</li>
+</ul>
+</li>
+<li class="set-list set-wechat" name="cui-nav-bar-set-list">
+<a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_wechat"></i></span></a>
+<ul class="wechat-drowndrop" style="display: none;">
+<li class="ico_code">
+<img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_wechat.jpg" alt=""><p>携程订阅号：helloctrip</p>
+<p class="nth2">扫一扫，<span>领旅行福利</span>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div><div class="cui_hd_cont">
+<div class="cui_hd">
+<input type="hidden" id="_searchboxNo_" value="ws_www20140409"><input type="hidden" id="_newHeaderFlag_" value="true">
+<div class="ctriplogo">
+<a title="携程旅行网" href="http://www.ctrip.com">携程旅行网 </a>
+</div>
+<div class="nav-tel">
+<ul class="nav-tel-list" id="cui-nav-tel-list">
+<li> 境内：95010</li>
+<li>（或）400-830-6666</li>
+<li class="tel-list-more">香港(中国)：+852-3069-9966</li>
+<li class="tel-list-more">境外：+86-21-3406-4888</li>
+</ul>
+</div>
+</div>
+</div><div id="cui_nav">
+<div class="base_nav">
+<ul id="cui_nav_ul" class="cui_nav cui_content">
+<li id="cui_c_ph_hp">
+<a id="c_ph_hp" class="cui_nav_non" href="https://www.ctrip.com/">首页</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_hotel">
+<a id="nav_hotel" class="cui_nav_has" href="https://hotels.ctrip.com/">酒店<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_hotel" class="cui_sub_nav">
+<li id="ul_c_ph_hotel_h">
+<a id="c_ph_hotel_h" href="https://hotels.ctrip.com/">国内酒店</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hoteli_h">
+<a id="c_ph_hoteli_h" href="https://hotels.ctrip.com/international/">海外酒店</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_inn_h">
+<a id="c_ph_inn_h" href="https://inn.ctrip.com/onlineinn/index?channelid=211">民宿客栈</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_apartment_h">
+<a id="c_ph_apartment_h" href="https://inn.ctrip.com/onlineinn/international/index?channelid=209">海外民宿</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_tuan_h">
+<a id="c_ph_tuan_h" href="http://tuan.ctrip.com">团购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocanj_h">
+<a id="c_ph_taocanj_h" href="https://vacations.ctrip.com/diysh/hotel">酒店+景点</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_meetingroom_h">
+<a id="c_ph_meetingroom_h" href="http://meeting.ctrip.com/?channel=0#ctm_ref=mtg_meetingroom_2dh">团队房&bull;长住房</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_meeting_h">
+<a id="c_ph_meeting_h" href="https://meeting.ctrip.com/?channel=1#ctm_ref=mtg_meeting_2dh">会议<span class="label-cn" id="ACT_Label_14" style="display:none"><em>会员日</em><i class="triangle"></i></span></a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/HotelOrderList.aspx"><i class="cui-icon-hotel"></i>酒店订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_vac" class="cui_nav_current">
+<a id="nav_vac" class="cui_nav_has" href="https://vacations.ctrip.com/">旅游<span class="label-cn" id="ACT_Label_40" style="display:none"><em>嗨暑价</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_vac" class="cui_sub_nav">
+<li id="ul_c_ph_vacations_v">
+<a id="c_ph_vacations_v" class="cui_sub_current" href="https://vacations.ctrip.com/">旅游首页<span class="label-cn" id="ACT_Label_41" style="display:none"><em>678月节</em><i class="triangle"></i></span></a>
+</li>
+<li class="divider " style="display:none"></li>
+<li id="ul_c_ph_around_v">
+<a id="c_ph_around_v" href="https://vacations.ctrip.com/around">周末游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_vacationsd_v">
+<a id="c_ph_vacationsd_v" href="https://vacations.ctrip.com/grouptravel/">跟团游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocan_v">
+<a id="c_ph_taocan_v" href="https://vacations.ctrip.com/idiytour">自由行</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_sijiatuan">
+<a id="c_ph_sijiatuan" href="https://vacations.ctrip.com/tangram/MTczNg==?ctm_ref=vactang_page_1736">私家团</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cruise_v">
+<a id="c_ph_cruise_v" href="https://cruise.ctrip.com/">邮轮</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocanj_v">
+<a id="c_ph_taocanj_v" href="https://vacations.ctrip.com/diysh">酒店+景点</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_huodong_v">
+<a id="c_ph_huodong_v" href="https://huodong.ctrip.com/">当地玩乐</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_zhutiyou_v">
+<a id="c_ph_zhutiyou_v" href="https://vacations.ctrip.com/themetravel/">主题游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_baotuan_v">
+<a id="c_ph_baotuan_v" href="https://vacations.ctrip.com/customtravel">定制旅行</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_youxue_v">
+<a id="c_ph_youxue_v" href="https://vacations.ctrip.com/youxue">游学</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_visa_v">
+<a id="c_ph_visa_v" href="https://vacations.ctrip.com/visa">签证</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_mice_v">
+<a id="c_ph_mice_v" href="https://mice.ctrip.com">企业会奖</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hh_v">
+<a id="c_ph_hh_v" target="_blank" rel="nofollow" href="https://www.hhtravel.com/#ctm_ref=hh_ct_thp_nav">高端游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_golf_v">
+<a id="c_ph_golf_v" href="http://fun.iwanoutdoor.com/">爱玩户外</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_insurance_v">
+<a id="c_ph_insurance_v" href="https://vacations.ctrip.com/insurance">保险</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_deals_v">
+<a id="c_ph_deals_v" href="https://vacations.ctrip.com/tours/deals/index">特卖汇</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i class="cui-icon-vacations"></i>旅游订单 &gt;</a>
+</div>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_gentuan">
+<a id="nav_gentuan" class="cui_nav_non" DividerClass="divider_spec" href="https://vacations.ctrip.com/grouptravel">跟团游</a>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_ziyouxing">
+<a id="nav_ziyouxing" class="cui_nav_non" DividerClass="divider_spec" href="https://vacations.ctrip.com/idiytour">自由行</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_flight">
+<a id="nav_flight" class="cui_nav_has" href="https://flights.ctrip.com/">机票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_flight" class="cui_sub_nav">
+<li id="ul_c_ph_flights_f">
+<a id="c_ph_flights_f" href="https://flights.ctrip.com">国内机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightsi_f">
+<a id="c_ph_flightsi_f" href="https://flights.ctrip.com/international/search/">国际&bull;港澳台机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_fuzzy_f">
+<a id="c_ph_fuzzy_f" href="https://flights.ctrip.com/fuzzy/#ctm_ref=ctr_nav_flt_fz_pgs">特价机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocan_f">
+<a id="c_ph_taocan_f" href="https://taocan.ctrip.com">机+酒</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightstoolbox_f">
+<a id="c_ph_flightstoolbox_f" href="https://flights.ctrip.com/actualtime">航班动态</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_bookseat_f">
+<a id="c_ph_bookseat_f" rel="nofollow" href="https://flights.ctrip.com/domestic/checkinseat/index">值机选座</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightorderlist_f">
+<a id="c_ph_flightorderlist_f" rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx">退票改签</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_airportguides_f">
+<a id="c_ph_airportguides_f" rel="nofollow" href="https://flights.ctrip.com/booking/airport-guides.html">机场攻略</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightdingzhi_f">
+<a id="c_ph_flightdingzhi_f" href="https://flights.ctrip.com/itinerary/charter/book">定制包机</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx"><i class="cui-icon-flight"></i>机票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_trains">
+<a id="nav_trains" class="cui_nav_has" href="https://trains.ctrip.com">火车<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_trains" class="cui_sub_nav">
+<li id="ul_c_ph_train_t">
+<a id="c_ph_train_t" href="https://trains.ctrip.com">国内火车票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_traino_t">
+<a id="c_ph_traino_t" href="http://rails.ctrip.com">国际&bull;港台火车票</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/RailwayOrderList.aspx"><i class="cui-icon-train"></i>火车票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_destination">
+<a id="nav_destination" class="cui_nav_has" href="https://bus.ctrip.com/">汽车 &middot; 船<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_destination" class="cui_sub_nav">
+<li id="ul_c_ph_bus_t">
+<a id="c_ph_bus_t" href="https://bus.ctrip.com/">汽车票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ship_t">
+<a id="c_ph_ship_t" href="https://bus.ctrip.com/ship/">船票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_yacht_t">
+<a id="c_ph_yacht_t" target="_blank" rel="nofollow" href="https://yacht.ctrip.com/">游艇帆船</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_daozy_t">
+<a id="c_ph_daozy_t" href="http://pages.c-ctrip.com/bus/xicui/201803/dzy/html/pc.html">到站游</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/QicheOrderlist.aspx"><i class="cui-icon-bus"></i>汽车票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_car">
+<a id="nav_car" class="cui_nav_has" href="https://car.ctrip.com/#ctm_ref=chp_var_txt">用车<span class="label-cn" id="ACT_Label_43" style="display:none"><em>抢五折</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_car" class="cui_sub_nav">
+<li id="ul_c_ph_car_c">
+<a id="c_ph_car_c" href="https://car.ctrip.com/#ctm_ref=chp_var_txt">用车首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwzj_c">
+<a id="c_ph_hwzj_c" href="https://car.ctrip.com/hwzijia#ctm_ref=chp_var_txt">境外租车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwdaijia_c">
+<a id="c_ph_hwdaijia_c" href="https://car.ctrip.com/hwdaijia#ctm_ref=chp_var_txt">境外接送机<span class="label-cn" id="ACT_Label_44" style="display:none"><em>暑期特价</em><i class="triangle"></i></span></a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwrizu_c">
+<a id="c_ph_hwrizu_c" href="https://car.ctrip.com/line/index">境外包车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_zj_c">
+<a id="c_ph_zj_c" href="https://car.ctrip.com/zijia#ctm_ref=chp_var_txt">国内租车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_daijia_c">
+<a id="c_ph_daijia_c" href="https://car.ctrip.com/daijia#ctm_ref=chp_var_txt">国内接送机/火车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_rizu_c">
+<a id="c_ph_rizu_c" href="https://car.ctrip.com/idayweb">国内包车</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/CarOrderList.aspx"><i class="cui-icon-car"></i>用车订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_ticket">
+<a id="nav_ticket" class="cui_nav_has" href="https://piao.ctrip.com/">门票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_ticket" class="cui_sub_nav">
+<li id="ul_c_ph_piao_p">
+<a id="c_ph_piao_p" href="https://piao.ctrip.com/?clear=t#ctm_ref=tkt_home_tab_inland">境内门票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_piaooversea_p">
+<a id="c_ph_piaooversea_p" href="https://piao.ctrip.com/oversea#ctm_ref=tkt_home_tab_oversea">出境&bull;港澳台门票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_huodong_p">
+<a id="c_ph_huodong_p" href="https://huodong.ctrip.com#ctm_ref=ctr_hp_ttd">当地玩乐</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_wifi_p">
+<a id="c_ph_wifi_p" href="https://huodong.ctrip.com/wifi#ctm_ref=ctr_hp_wifi">出境WiFi&bull;电话卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_around_p">
+<a id="c_ph_around_p" href="https://vacations.ctrip.com/around">周末游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_disney_p">
+<a id="c_ph_disney_p" href="http://piao.ctrip.com/dest/t4651499.html">上海海昌</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/LocalUnionOrderList.aspx"><i class="cui-icon-ticket"></i>门票玩乐订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_c_ph_you">
+<a id="c_ph_you" class="cui_nav_non" href="https://you.ctrip.com/">攻略</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_g">
+<a id="nav_g" class="cui_nav_has" href="http://g.ctrip.com/">全球购<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_g" class="cui_sub_nav">
+<li id="ul_c_ph_mdg_g">
+<a id="c_ph_mdg_g" href="https://g.ctrip.com/">名店购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cshop_g">
+<a id="c_ph_cshop_g" href="https://pages.c-ctrip.com/shoppingchic/cshop/index.html">旅游购物商城</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ts_g">
+<a id="c_ph_ts_g" href="https://tax.ctrip.com/?bid=2&amp;cid=1&amp;pid=1">退税</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ylth_g">
+<a id="c_ph_ylth_g" href="https://g.ctrip.com/gsmarketingactive/unionpay?ctm_ref=M_gw_3home_paypal_cl">银联特惠</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_skjl_g">
+<a id="c_ph_skjl_g" href="https://card.ctrip.com/#ctm_ref=ctr_bid_0_cid_1_pid_1">万千赏</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_forex_g">
+<a id="c_ph_forex_g" href="https://forex.ctrip.com/?bid=62&amp;1=1">外币兑换</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://forex.ctrip.com/order/list/"><i class="cui-icon-foreign"></i>外币兑换订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_lpk">
+<a id="nav_lpk" class="cui_nav_has" href="https://lipin.ctrip.com">礼品卡<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_lpk" class="cui_sub_nav">
+<li id="ul_c_ph_lipin_l">
+<a id="c_ph_lipin_l" href="https://lipin.ctrip.com">礼品卡首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_lipinholiday_l">
+<a id="c_ph_lipinholiday_l" href="https://lipin.ctrip.com/lipinonline/theme">节日/主题购卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_xcb_l">
+<a id="c_ph_xcb_l" href="https://lipin.ctrip.com/xcb">礼品卡福袋</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_lipincorp_l">
+<a id="c_ph_lipincorp_l" href="https://lipin.ctrip.com/lipinonline/static/intentional">企业采购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_dhq_l">
+<a id="c_ph_dhq_l" href="https://lipin.ctrip.com/voucher">兑换券</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_forexlipin_l">
+<a id="c_ph_forexlipin_l" href="https://forex.ctrip.com/?bid=12&amp;1=1">外币兑换</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="https://my.ctrip.com/Home/Order/TicketOrderList.aspx"><i class="cui-icon-card"></i>礼品卡订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_sl">
+<a id="nav_sl" class="cui_nav_has" href="https://ct.ctrip.com/#ctm_ref=xcct">商旅<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_sl" class="cui_sub_nav">
+<li id="ul_c_ph_slsy_s">
+<a id="c_ph_slsy_s" href="https://ct.ctrip.com/#ctm_ref=xcct">商旅首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_chl_s">
+<a id="c_ph_chl_s" href="https://ct.ctrip.com/platformquery/landing/index#ctm_ref=xcpt">企业差旅平台</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hj_s">
+<a id="c_ph_hj_s" href="https://mice.ctrip.com">会议旅游</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_cruise">
+<a id="nav_cruise" class="cui_nav_non" DividerClass="divider_spec" href="https://cruise.ctrip.com">邮轮</a>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_mudidi">
+<a id="nav_mudidi" class="cui_nav_non" DividerClass="divider_spec" href="https://dst.ctrip.com/">目的地</a>
+</li>
+<li class="divider "></li>
+<li id="cui_finance_pc">
+<a id="finance_pc" class="cui_nav_non" href="https://jr.ctrip.com">金融</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_more">
+<a id="nav_more" class="cui_nav_has" rel="nofollow" href="https://mall.ctrip.com">更多<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_more" class="cui_sub_nav">
+<li id="ul_c_ph_ypsc_m">
+<a id="c_ph_ypsc_m" href="https://mall.ctrip.com">优品商城</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_sjhy_m">
+<a id="c_ph_sjhy_m" href="https://pages.c-ctrip.com/commerce/dy1/index10.html">超级会员</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_tuangou_m">
+<a id="c_ph_tuangou_m" href="https://tuan.ctrip.com">团购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cards_m">
+<a id="c_ph_cards_m" rel="nofollow" href="https://cards.ctrip.com">合作卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_xcyd_m">
+<a id="c_ph_xcyd_m" href="https://sport.ctrip.com/">携程运动</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="nav_bh" class="cui_nav_behind" style="display:none;height:0px;"></div>
+</div><div id="ActConfig_ID" style="display:none">[{"id":"41","onlinetime":"2019/07/17 11:30:17$2019/08/04 23:55:14"},{"id":"40","onlinetime":"2019/07/17 11:30:26$2019/08/04 23:55:14"},{"id":"44","onlinetime":"2019/07/11 00:00:03$2019/07/25 23:55:01"},{"id":"43","onlinetime":"2019/07/11 00:00:03$2019/07/25 23:55:01"},{"id":"14","onlinetime":"2019/12/31 23:55:04$2200/08/08 16:19:09"},{"id":"15","onlinetime":"2018/12/13 08:23:32$2180/12/31 23:55:09"}]</div><input type="hidden" id="popfloating_isshow" value="0"><input type="hidden" id="siteDomainHeadFloat" value="ctrip"><input type="hidden" id="bsType" value="0"><input type="hidden" id="formatTel" value="[{'formatTelNum':'95010','prefix':'境内：','sortIndex':'1','standardTelNum':'SHMobile95010','suffix':''},{'formatTelNum':'400-830-6666','prefix':'（或）','sortIndex':'2','standardTelNum':'4008306666','suffix':''},{'formatTelNum':'+ 852-3008-3268','prefix':'香港（中国）：','sortIndex':'3','standardTelNum':'85230083268','suffix':''},{'formatTelNum':'+ 86-21-3406-4888','prefix':'境外：','sortIndex':'4','standardTelNum':'34064888','suffix':''}]">
+<script> ;window.replace=function(){return ''};window.replace=function(){return""}; !function(){window.replace=function(){return""};(function(){var h=document,c=function(a){return h.getElementById(a)},k=null,l=null,m=0,d=[c("cui_nav_hotel"),c("cui_nav_vac"),c("cui_nav_flight"),c("cui_nav_trains"),c("cui_nav_destination"),c("cui_nav_car"),c("cui_nav_ticket"),c("cui_nav_g"),c("cui_nav_lpk"),c("cui_nav_sl"),c("cui_nav_more")],g={onmouseenter:function(a,b){(h.all?a.onmouseenter=b:a.onmouseover=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&& b())})},onmouseout:function(a,b){(h.all?a.onmouseleave=b:a.onmouseout=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&&b())})},addEvent:function(a,b,f){(a.addEventListener?a.addEventListener(b,f,!1):(a.attachEvent?a.attachEvent("on"+b,f):a["on"+b]=f))}},e={setTime:function(){g.onmouseenter(c("cui_nav"),function(){setTimeout(function(){m=150},30)});g.onmouseout(c("cui_nav"),function(){m=0})},initEvent:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b= a;g.onmouseenter(d[b],function(){e.interFn(d[b])});g.onmouseout(d[b],function(){e.outerFn(d[b])})})(a)},reset:function(){for(var a=0,b=d.length;b>a;a++)d[a].className=(-1<d[a].className.indexOf("cui_nav_current")?"cui_nav_current":"")},padReset:function(a){for(var b=0,f=d.length;f>b;b++)(-1<d[b].className.indexOf("cui_nav_current")?d[b].className="cui_nav_current":b!==a&&(d[b].className=""))},interFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),f="",d=0;d<b.length;d++)b[d].className.match((/cui_nav_current/))&& (f=b[d]);null!=l&&(clearTimeout(l),l=null);k=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")?f.className="cui_nav_current":(a.className="cui_nav_o",f.className="cui_nav_current cui_nav_unhover"))},m)},outerFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),d="",c=0;c<b.length;c++)b[c].className.match((/cui_nav_current/))&&(d=b[c]);null!=k&&(clearTimeout(k),k=null);l=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")? d.className="cui_nav_current":(a.className="",d.className="cui_nav_current"))},250)},initMobile:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b=a,c=d[b].getElementsByTagName("A")[0];c.href="###";c.onmousedown=function(){e.padReset(b);-1===d[b].className.indexOf("cui_nav_current")&&((-1<d[b].className.indexOf("cui_nav_o")?(d[b].className="",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",c.style.visibility="hidden",setTimeout(function(){c.style.visibility= "visible"},10)):(d[b].className="cui_nav_o",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",document.getElementsByClassName("cui_nav_current")[0].className+=" cui_nav_unhover")))}})(a)},contains:function(a){for(var b=0,c=d.length;c>b;b++)if(0<d[b].compareDocumentPosition(a)-19)return!0;return!1}};c("headStyleId")&&c("headStyleId").parentNode.removeChild(c("headStyleId"));((/ip(hone|od)|ipad/i).test(navigator.userAgent)?(e.initMobile(),g.addEvent(h.body,"click",function(a){e.contains(a.target|| a.srcElement)||e.reset()})):(e.setTime(),e.initEvent()))})()}(); </script></div><div id="base_bd" class="bg_miancolor"><div id="root"><div class="imvc-view-item"><div class="base_bd"><div class="vacation_bd"><div class="index_top_wrap basefix"><div class="city_wrap"><dl class="start_city_station"><div class="city_wrap"><span class="group_img_box"><i></i></span><dl class="start_city_station "><dt><i></i>深圳<span>站</span><b></b></dt></dl></div><dt class="flt_htl_btn" data-index="1"><span><i></i>机+酒<b></b></span><a class="index_ico_save"></a></dt></dl></div><div class="search_wrap"><div class="new_search_content"><div class="new_search_box"><label class="new_search_notice">请输入目的地、主题或关键字</label><input type="text" class="search_txt" value=""/></div><dl class="catalog_list catalog_icon_down"><dt><a href="javascript:void(0);">全部产品<i></i></a></dt><dd style="display:none"><a data-id="64" href="javascript:;">出发地参团</a><a data-id="512" href="javascript:;">目的地参团</a><a data-id="2" href="javascript:;">自由行</a><a data-id="65536" href="javascript:;">目的地自由行</a><a data-id="1048576" href="javascript:;">私家团</a><a data-id="2097152" href="javascript:;">目的地私家团</a><a data-id="4" href="javascript:;">邮轮</a><a data-id="262144" href="javascript:;">酒店+景点</a><a data-id="8192" href="javascript:;">游学</a><a data-id="-16" href="javascript:;">高端游</a><a data-id="-2" href="javascript:;">当地玩乐</a><a data-id="-4" href="javascript:;">门票</a><a data-id="1024" href="javascript:;">一日游</a><a data-id="32" href="javascript:;">签证</a></dd></dl></div><a class="main_search_btn" href="javascript:void(0);"><i></i>搜 索</a></div></div><div class="basefix festival_logo_frame"><div class="sidenav_destination new index_b"><ul class="destination_list"><li data-index="22" class=""><div class="destination_col "><i class="icon_side icon_theme"></i><h3><span><a href="//vacations.ctrip.com/themetravel" target="_blank">主题旅游<span class="in_hot"></span></a> </span></h3><p><a class="" href="//vacations.ctrip.com/whole-0B126/?searchValue=%E7%88%B8%E5%A6%88%E6%94%BE%E5%BF%83%E6%B8%B8&amp;searchText=%E7%88%B8%E5%A6%88%E6%94%BE%E5%BF%83%E6%B8%B8" target="_blank">爸妈游</a><a class="" href="//vacations.ctrip.com/whole-0B126/?searchValue=%E8%9C%9C%E6%9C%88%E6%B8%B8&amp;searchText=%E8%9C%9C%E6%9C%88%E6%B8%B8" target="_blank">蜜月游</a><a class="" href="//cruise.ctrip.com/search" target="_blank">邮轮游</a><a class="orange" href="//vacations.ctrip.com/themetravel/yueyezijia" target="_blank">越野自驾</a><a class="" href="//vacations.ctrip.com/tours/s-hongkong-10558849?from=do" target="_blank">香港迪士尼</a></p></div></li><li data-index="2" class=""><div class="destination_col "><i class="icon_side icon_circum"></i><h3><span><a href="//vacations.ctrip.com/whole-30b126/?searchvalue=%e5%91%a8%e8%be%b9&amp;searchtext=%e5%91%a8%e8%be%b9" target="_blank">周边旅游</a> </span></h3><p><a class="orange" href="//vacations.ctrip.com/tours/d-hongkong-38?salecity=30" target="_blank">香港</a><a class="" href="//vacations.ctrip.com/tours/d-guilin-28?salecity=30" target="_blank">桂林</a><a class="" href="//vacations.ctrip.com/tours/d-xiamen-21?salecity=30" target="_blank">厦门</a><a class="orange" href="//vacations.ctrip.com/tours/d-zhuhai-27?salecity=30" target="_blank">珠海</a><a class="orange" href="//vacations.ctrip.com/tours/d-qingyuan-517?salecity=30" target="_blank">清远</a><a class="orange" href="//vacations.ctrip.com/tours/d-huizhou-213?salecity=30" target="_blank">惠州</a><a class="" href="//vacations.ctrip.com/tours/d-macau-39?salecity=30" target="_blank">澳门</a></p></div></li><li data-index="3" class=""><div class="destination_col destination_inland"><i class="icon_side icon_inland"></i><h3><span><a href="" target="_blank">境内旅游</a> </span></h3><p><a class="" href="//vacations.ctrip.com/tours/d-shenzhen-26?salecity=30" target="_blank">深圳</a><a class="" href="//vacations.ctrip.com/tours/d-beijing-1?salecity=30" target="_blank">北京</a><a class="orange" href="//vacations.ctrip.com/tours/d-lijiang-32?salecity=30" target="_blank">丽江</a><a class="" href="//vacations.ctrip.com/tours/d-sanya-61?salecity=30" target="_blank">三亚</a><a class="" href="//vacations.ctrip.com/tours/d-chengdu-104?salecity=30" target="_blank">成都</a><a class="" href="//vacations.ctrip.com/tours/d-zhangjiajie-23?salecity=30" target="_blank">张家界</a><a class="" href="//vacations.ctrip.com/tours/d-shanghai-2?salecity=30" target="_blank">上海</a><a class="" href="//vacations.ctrip.com/tours/d-xian-7?salecity=30" target="_blank">西安</a><a class="" href="//vacations.ctrip.com/tours/d-guangzhou-152?salecity=30" target="_blank">广州</a><a class="" href="//vacations.ctrip.com/tours/d-chongqing-158?salecity=30" target="_blank">重庆</a><a class="" href="//vacations.ctrip.com/tours/d-hangzhou-14?salecity=30" target="_blank">杭州</a><a class="" href="//vacations.ctrip.com/tours/d-hulunbuir-458?salecity=30" target="_blank">呼伦贝尔</a><a class="" href="//vacations.ctrip.com/tours/d-kunming-29?salecity=30" target="_blank">昆明</a><a class="" href="//vacations.ctrip.com/tours/d-guiyang-33?salecity=30" target="_blank">贵阳</a></p></div></li><li data-index="4" class=""><div class="destination_col "><i class="icon_side icon_hk"></i><h3><span><a href="//vacations.ctrip.com/tours/d-hongkong-38?salecity=30" target="_blank">香港</a> </span><span><a href="//vacations.ctrip.com/tours/d-macau-39?salecity=30" target="_blank">澳门</a> </span><span><a href="//vacations.ctrip.com/tours/d-taiwan-100076?salecity=30" target="_blank">台湾</a> </span></h3><p><a class="" href="//vacations.ctrip.com/tours/d-taipei-360?salecity=30" target="_blank">台北</a><a class="" href="//vacations.ctrip.com/tours/d-kaohsiung-756?salecity=30" target="_blank">高雄</a><a class="" href="//vacations.ctrip.com/tours/d-hualien-1366?salecity=30" target="_blank">花莲</a><a class="" href="//vacations.ctrip.com/tours/d-taichung-1369?salecity=30" target="_blank">台中</a><a class="" href="//vacations.ctrip.com/tours/d-tainan-757?salecity=30" target="_blank">台南</a><a class="" href="//vacations.ctrip.com/tours/d-kinmen-1368?salecity=30" target="_blank">金门</a><a class="" href="//vacations.ctrip.com/tours/d-penghu-1367?salecity=30" target="_blank">澎湖</a></p></div></li><li data-index="5" class=""><div class="destination_col "><i class="icon_side icon_jp"></i><h3><span><a href="//vacations.ctrip.com/tours/d-japan-100041?salecity=30" target="_blank">日本</a> </span><span><a href="//vacations.ctrip.com/tours/d-mongolia-20391?salecity=30" target="_blank">蒙古</a> </span></h3><p><a class="orange" href="//vacations.ctrip.com/tours/d-osaka-293?salecity=30" target="_blank">大阪</a><a class="orange" href="//vacations.ctrip.com/tours/d-hokkaido-296?salecity=30" target="_blank">北海道</a><a class="" href="//vacations.ctrip.com/tours/d-tokyo-294?salecity=30" target="_blank">东京</a><a class="" href="//vacations.ctrip.com/whole-30b126/?searchvalue=%e5%86%b2%e7%bb%b3&amp;searchtext=%e5%86%b2%e7%bb%b3" target="_blank">冲绳</a><a class="" href="//vacations.ctrip.com/tours/d-kyoto-430?salecity=30" target="_blank">京都</a><a class="orange" href="//vacations.ctrip.com/tours/d-nagoya-2127?salecity=30" target="_blank">名古屋</a><a class="" href="//vacations.ctrip.com/tours/d-nara-1045?salecity=30" target="_blank">奈良</a></p></div></li><li data-index="6" class=""><div class="destination_col "><i class="icon_side icon_asia"></i><h3><span><a href="//vacations.ctrip.com/tours/r-dongnanya-110?salecity=30" target="_blank">东南亚</a> </span><span><a href="//vacations.ctrip.com/tours/r-nanya-109?salecity=30" target="_blank">南亚</a> </span></h3><p><a class="orange" href="//vacations.ctrip.com/tours/d-thailand-100021?salecity=30" target="_blank">泰国</a><a class="" href="//vacations.ctrip.com/tours/d-maldives-330?salecity=30" target="_blank">马尔代夫</a><a class="orange" href="//vacations.ctrip.com/tours/d-bali-438?salecity=30" target="_blank">巴厘岛</a><a class="" href="//vacations.ctrip.com/tours/d-singapore-21396?salecity=30" target="_blank">新加坡</a><a class="" href="//vacations.ctrip.com/tours/d-vietnam-100046?salecity=30" target="_blank">越南</a><a class="orange" href="//vacations.ctrip.com/tours/d-phuket-364?salecity=30" target="_blank">普吉岛</a><a class="" href="//vacations.ctrip.com/tours/d-malaysia-100022?salecity=30" target="_blank">马来西亚</a></p></div></li><li data-index="7" class=""><div class="destination_col "><i class="icon_side icon_europe"></i><h3><span><a href="//vacations.ctrip.com/tours/r-ouzhou-120002?salecity=30" target="_blank">欧洲</a> </span></h3><p><a class="" href="//vacations.ctrip.com/tours/d-russia-100083?salecity=30" target="_blank">俄罗斯</a><a class="" href="//vacations.ctrip.com/tours/d-switzerland-100050?salecity=30" target="_blank">瑞士</a><a class="orange" href="//vacations.ctrip.com/tours/d-iceland-100096?salecity=30" target="_blank">冰岛</a><a class="" href="//vacations.ctrip.com/tours/d-serbia-100232?salecity=30" target="_blank">塞尔维亚</a><a class="" href="//vacations.ctrip.com/tours/d-unitedkingdom-20354?salecity=30" target="_blank">英国</a><a class="" href="//vacations.ctrip.com/tours/d-italy-100026?salecity=30" target="_blank">意大利</a><a class="" href="//vacations.ctrip.com/tours/d-greece-100036?salecity=30" target="_blank">希腊</a></p></div></li><li data-index="8" class=""><div class="destination_col "><i class="icon_side icon_america"></i><h3><span><a href="//vacations.ctrip.com/tours/r-meizhou-102?salecity=30" target="_blank">美洲</a> </span></h3><p><a class="" href="//vacations.ctrip.com/tours/d-saipan-569?salecity=30" target="_blank">塞班岛</a><a class="" href="//vacations.ctrip.com/tours/d-unitedstates-100047?salecity=30" target="_blank">美国</a><a class="" href="//vacations.ctrip.com/tours/d-hawaii-251?salecity=30" target="_blank">夏威夷</a><a class="" href="//vacations.ctrip.com/tours/d-canada-100029?salecity=30" target="_blank">加拿大</a><a class="" href="//vacations.ctrip.com/tours/d-losangeles-120518?salecity=30" target="_blank">洛杉矶</a><a class="" href="//vacations.ctrip.com/tours/d-newyork-248?salecity=30" target="_blank">纽约</a><a class="" href="//vacations.ctrip.com/tours/d-bahamas-21598?salecity=30" target="_blank">巴哈马</a></p></div></li><li data-index="9" class=""><div class="destination_col "><i class="icon_side icon_other"></i><h3><span><a href="//vacations.ctrip.com/tours/r-aoxinnantai-114?salecity=30" target="_blank">澳新南太</a> </span><span><a href="//vacations.ctrip.com/tours/r-zhongdongfei-113?salecity=30" target="_blank">中东非</a> </span></h3><p><a class="" href="//vacations.ctrip.com/tours/d-dubai-1062?salecity=30" target="_blank">迪拜</a><a class="" href="//vacations.ctrip.com/tours/d-turkey-100073?salecity=30" target="_blank">土耳其</a><a class="" href="//vacations.ctrip.com/tours/d-australia-100048?salecity=30" target="_blank">澳大利亚</a><a class="orange" href="//vacations.ctrip.com/tours/d-morocco-100132?salecity=30" target="_blank">摩洛哥</a><a class="" href="//vacations.ctrip.com/tours/d-newzealand-100078?salecity=30" target="_blank">新西兰</a><a class="orange" href="//vacations.ctrip.com/tours/d-mauritius-444?salecity=30" target="_blank">毛里求斯</a><a class="" href="//vacations.ctrip.com/whole-30b126/?searchvalue=%e5%9f%83%e5%8f%8a&amp;searchtext=%e5%9f%83%e5%8f%8a" target="_blank">埃及</a></p></div></li></ul></div><div class="index_right new"><div class="banner_loop"><div id="html-03MOZZQS037LYGYCK1121"></div></div><div class="ad-con"><a class="banner-pic" href="https://vacations.ctrip.com/tangram/MTYzNg==?ctm_ref=vactang_page_1636" target="_blank" id="vac-103045-assortarea-entry-1"><img src="https://images3.c-ctrip.com/dj/201907/678_gn_195x254.jpg"/></a><a class="banner-pic" href="https://vacations.ctrip.com/tangram/OTAy?ctm_ref=vactang_page_902" target="_blank" id="vac-103045-assortarea-entry-2"><img src="https://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/zm0114000000xf1wz293B.jpg"/></a><a class="banner-pic" href="https://cruise.ctrip.com/activity/sale.html?ctm_ref=vdc_ctm_12" target="_blank" id="vac-103045-assortarea-entry-3"><img src="https://pic.c-ctrip.com/cruise/activity/sale/pic_190603.png"/></a><a class="banner-pic" href="https://vacations.ctrip.com/vacation/marketing/index/cytx" target="_blank" id="vac-103045-assortarea-entry-4"><img src="https://images3.c-ctrip.com/dj/201906/cytx_195x254.jpg"/></a></div><div class="ad-con-bottom"><a class="bottom-pic" target="_blank" href="https://dst.ctrip.com/#ctm_ref=vdc_ctm_2464"><img src="//pages.c-ctrip.com/dstweb/201905/banner/mddbanner810x72.jpg" alt=""/></a></div></div></div><div><div class="base_loading"><img alt="" src="//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/loading.gif"/><strong>查询中，请稍候...</strong></div><div class="base_loading"><img alt="" src="//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/loading.gif"/><strong>查询中，请稍候...</strong></div><div class="base_loading"><img alt="" src="//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/loading.gif"/><strong>查询中，请稍候...</strong></div><div class="base_loading"><img alt="" src="//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/loading.gif"/><strong>查询中，请稍候...</strong></div><div class="base_loading"><img alt="" src="//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/loading.gif"/><strong>查询中，请稍候...</strong></div><div class="tb_cooperation"><div class="hd"><h2>目的地及景区合作</h2><a href="//dst.ctrip.com" class="more" target="_blank" id="vac-103045-bottom-more">更多目的地及景区合作&gt;&gt;</a></div><div class="bd"><ul class="basefix"><li id="vac-103045-bottom-welfare"><a href="http://www.discoverhongkong.com/china/summerfun/index.html?WT.mc_id=120220" target="_blank"><img src="//images3.c-ctrip.com/dj/201604/xglogo.jpg" alt="香港"/><p>香港</p></a></li><li id="vac-103045-bottom-welfare"><a href="https://pages.ctrip.com/dstweb/201801/wn/index.html " target="_blank"><img src="https://pages.c-ctrip.com/dstweb/201810/banner/wnlogo.jpg" alt="万宁"/><p>万宁</p></a></li><li id="vac-103045-bottom-welfare"><a href="https://pages.ctrip.com/dstweb/201804/oc/index.html" target="_blank"><img src="https://images3.c-ctrip.com/dj/201506/cxlogo.png" alt="美国橙县旅游"/><p> 美国橙县旅游</p></a></li><li id="vac-103045-bottom-welfare"><a href="http://pages.ctrip.com/commerce/promote/201609/destination/pt/index.html" target="_blank"><img src="//images3.c-ctrip.com/dj/201606/mdd/ptlogo.jpg" alt="舟山普陀"/><p>舟山普陀</p></a></li><li id="vac-103045-bottom-welfare"><a href="http://you.ctrip.com/it/suzhou73.html" target="_blank"><img src="//images3.c-ctrip.com/dj/201610/mdd/sz110_85.jpg" alt="最美苏州"/><p>最美苏州</p></a></li><li id="vac-103045-bottom-welfare"><a href="https://pages.c-ctrip.com/dstweb/201810/201810gz/index.html" target="_blank"><img src="https://pages.c-ctrip.com/dstweb/201810/banner/gz.jpg" alt="贵州"/><p>贵州</p></a></li><li id="vac-103045-bottom-welfare"><a href="https://dst.ctrip.com/it/gansu82.html#ctm_ref=www_hp_bs_lst" target="_blank"><img src="https://pages.c-ctrip.com/dstweb/201810/banner/gs.jpg" alt="甘肃"/><p>甘肃</p></a></li><li id="vac-103045-bottom-welfare"><a href="https://pages.ctrip.com/dstweb/201803/anji/index.html" target="_blank"><img src="https://pages.c-ctrip.com/dstweb/201810/banner/aj.jpg" alt="安吉"/><p> 安吉</p></a></li></ul></div></div></div></div><div class="index_bottom_wrap"><div class="index_bottom"><ul class="zone_wrap"><li id="html-03MOZZQS037LYGYCK1122"></li><li id="html-03MOZZQS037LYGYCK1144"></li><li id="html-03MOZZQS037LYGYCK1143"></li><li id="html-03MOZZQS037LYGYCK1145"></li></ul><div class="bottom_lcbz_wrap"><div class="bottom_lcbz_state"><a href="//pages.ctrip.com/commerce/promote/201409/other/xcfw/index1.html#ctm_ref=ad_2427_21409" class="lcbz_state_url" target="_blank"><ul class="basefix"><li class="lcbz_first"><i class="lcbz_ico_service"></i><em class="lcbz_stress">放心的服务</em><span class="lcbz_splitline"></span><span class="lcbz_text">领先的服务标准 独创的保障体系</span></li><li><i class="lcbz_ico_price"></i><em class="lcbz_stress">放心的价格</em><span class="lcbz_splitline"></span><span class="lcbz_text">具竞争力的价格 无任何隐形费用</span></li></ul></a></div><div class="bottom_lcbz_list basefix"><dl class="security"><dt><i></i>6重旅游保障</dt><dd><a target="_blank" href="//pages.ctrip.com/groupTravelUED/pc/20180125/lc_guarantee.html" rel="nofollow">团队游体验保障</a></dd><dd><a target="_blank" href="//pages.ctrip.com/groupTravelUED/pc/20180125/lc_guarantee.html" rel="nofollow">特殊原因退订保障</a></dd><dd><a target="_blank" href="//pages.ctrip.com/groupTravelUED/pc/20180125/lc_guarantee.html" rel="nofollow">灾害旅游体验保障金</a></dd><dd><a target="_blank" href="//pages.ctrip.com/groupTravelUED/pc/20180125/lc_guarantee.html" rel="nofollow">旅游预警机制</a></dd><dd><a target="_blank" href="//pages.ctrip.com/groupTravelUED/pc/20180125/lc_guarantee.html" rel="nofollow">应急援助体系</a></dd><dd><a target="_blank" href="//pages.ctrip.com/groupTravelUED/pc/20180125/lc_guarantee.html" rel="nofollow">一站式旅游保险</a></dd></dl><dl class="help"><dt><i></i>预订帮助</dt><dd><a target="_blank" href="//pages.ctrip.com/commerce/vacations/knowledge/index.html#/" rel="nofollow">如何预订旅游产品</a></dd><dd><a target="_blank" href="//pages.ctrip.com/commerce/promote/201004/package/dj/page_4.htm" rel="nofollow">支付方式</a></dd><dd><a target="_blank" href="//pages.ctrip.com/commerce/vacations/use_coupon_guideline/coupon_use.html" rel="nofollow">优惠券使用指南</a></dd></dl><dl class="guide"><dt><i></i>安全指南</dt><dd><a target="_blank" href="//pages.ctrip.com/commerce/promote/201004/package/dj/page_5.htm" rel="nofollow">出行安全常识</a></dd><dd><a target="_blank" href="//pages.ctrip.com/commerce/promote/201004/package/dj/page_5.htm" rel="nofollow">旅游活动风险防范</a></dd><dd><a target="_blank" href="//pages.ctrip.com/commerce/promote/201004/package/dj/page_5.htm" rel="nofollow">特殊人群安全防范</a></dd></dl><dl class="standard"><dt><i></i>旅游标准化</dt><dd><a target="_blank" href="//pages.ctrip.com/commerce/promote/201306/vacation/bzh/index.html" rel="nofollow">了解标准化</a></dd><dd><a target="_blank" href="//pages.ctrip.com/commerce/promote/201306/vacation/bzh/index2.html" rel="nofollow">建设标准化</a></dd><dd><a target="_blank" href="//pages.ctrip.com/commerce/promote/201306/vacation/bzh/index3.html" rel="nofollow">携程建设动态</a></dd></dl></div></div><div class="bottom_seo"><dl><p>携程旅游为您提供以下索引:<a target="_blank" href="//vacations.ctrip.com/tours"> <!-- -->境内旅游城市</a><a target="_blank" href="//vacations.ctrip.com/tours/inter"> <!-- -->出境旅游城市</a><a target="_blank" href="//pages.ctrip.com/public/sitemap/dj.html"> <!-- -->旅游索引</a></p></dl><dl><dt>热门省份旅游</dt><dd><a target="_blank" href="//vacations.ctrip.com/tours/d-yunnan-100007">云南</a><a target="_blank" href="//vacations.ctrip.com/tours/d-hainan-100001">海南</a><a target="_blank" href="//vacations.ctrip.com/tours/d-xizang-100003">西藏</a><a target="_blank" href="//vacations.ctrip.com/tours/d-sichuan-100009">四川</a><a target="_blank" href="//vacations.ctrip.com/tours/d-taiwan-100076">台湾</a><a target="_blank" href="//vacations.ctrip.com/tours/d-zhejiang-100065">浙江</a><a target="_blank" href="//vacations.ctrip.com/tours/d-shanxi-100056">山西</a><a target="_blank" href="//vacations.ctrip.com/tours/d-shandong-100039">山东</a><a target="_blank" href="//vacations.ctrip.com/tours/d-xinjiang-100008">新疆</a><a target="_blank" href="//vacations.ctrip.com/tours/d-heilongjiang-100055">黑龙江</a><a target="_blank" href="//vacations.ctrip.com/tours/d-jilin-100031">吉林</a><a target="_blank" href="//vacations.ctrip.com/tours/d-liaoning-100061">辽宁</a><a target="_blank" href="//vacations.ctrip.com/tours/d-hebei-100059">河北</a><a target="_blank" href="//vacations.ctrip.com/tours/d-henan-100058">河南</a><a target="_blank" href="//vacations.ctrip.com/tours/d-shanxi-100057">陕西</a><a target="_blank" href="//vacations.ctrip.com/tours/d-gansu-100060">甘肃</a><a target="_blank" href="//vacations.ctrip.com/tours/d-ningxia-100063">宁夏</a><a target="_blank" href="//vacations.ctrip.com/tours/d-jiangsu-100066">江苏</a><a target="_blank" href="//vacations.ctrip.com/tours/d-anhui-100068">安徽</a><a target="_blank" href="//vacations.ctrip.com/tours/d-jiangxi-100054">江西</a><a target="_blank" href="//vacations.ctrip.com/tours/d-fujian-100038">福建</a><a target="_blank" href="//vacations.ctrip.com/tours/d-hubei-100067">湖北</a><a target="_blank" href="//vacations.ctrip.com/tours/d-hunan-100053">湖南</a><a target="_blank" href="//vacations.ctrip.com/tours/d-guangdong-100051">广东</a><a target="_blank" href="//vacations.ctrip.com/tours/d-guangxi-100052">广西</a><a target="_blank" href="//vacations.ctrip.com/tours/d-guizhou-100064">贵州</a><a target="_blank" href="//vacations.ctrip.com/tours/d-qinghai-100032">青海</a><a target="_blank" href="//vacations.ctrip.com/tours/d-neimenggu-100062">内蒙古</a></dd></dl><dl><dt>热门目的地旅游</dt><dd><a target="_blank" href="//vacations.ctrip.com/tours/d-hongkong-38">香港旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-xiamen-21">厦门旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-qingdao-5">青岛旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-guilin-28">桂林旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-beijing-1">北京旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-hangzhou-14">杭州旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-lijiang-32">丽江旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-shanghai-2">上海旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-sanya-61">三亚旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-nanjing-9">南京旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-dali-31">大理旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-dalian-4">大连旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-tianjin-154">天津旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-jinan-128">济南旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-changsha-148">长沙旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-zhuhai-27">珠海旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-wuxi-10">无锡旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-yangzhou-12">扬州旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-ningbo-83">宁波旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-lushan-20">庐山旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-dunhuang-8">敦煌旅游<!-- --> </a><a target="_blank" href="//vacations.ctrip.com/tours/d-luoyang-198">洛阳旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-wuhan-145">武汉旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-taishan-6">泰山旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-guangzhou-152">广州旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-kunming-29">昆明旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-suzhou-11">苏州旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-xian-7">西安旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-huangshan-19">黄山旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-shenzhen-26">深圳旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-chengdu-104">成都旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-zhangjiajie-23">张家界旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-jiuzhaigouhu-25">九寨沟旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-lianyungang-238">连云港旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-qinhuangdao-132">秦皇岛旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-changbaishan-268">长白山旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-xishuangbanna-30">西双版纳旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-sanxia-109">长江三峡旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-xianggelila-106">香格里拉旅游</a><a target="_blank" href="//vacations.ctrip.com/tours">更多目的地</a></dd></dl><dl><dt>热门国家旅游</dt><dd><a target="_blank" href="//vacations.ctrip.com/tours/d-thailand-100021">泰国旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-france-100024">法国旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-unitedkingdom-20354">英国旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-northkorea-100103">朝鲜旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-vietnam-100046">越南旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-japan-100041">日本旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-unitedstates-100047">美国旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-republicofkorea-100042">韩国旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-russia-100083">俄罗斯旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-turkey-100073">土耳其旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-nepal-100079">尼泊尔旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-newzealand-100078">新西兰旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-malaysia-100022">马来西亚旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-australia-100048">澳大利亚旅游</a></dd></dl><dl><dt>热门出境城市旅游</dt><dd><a target="_blank" href="//vacations.ctrip.com/tours/d-dubai-1062">迪拜旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-sabah-538">沙巴旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-hawaii-251">夏威夷旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-saipan-569">塞班岛旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-phuket-364">普吉岛旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-bali-438">巴厘岛旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-singapore-53">新加坡旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-jejuisland-297">济州岛旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-seychelles-100153">塞舌尔旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-maldives-330">马尔代夫旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/d-mauritius-444">毛里求斯旅游</a><a target="_blank" href="//vacations.ctrip.com/tours/inter">更多</a></dd></dl><dl><dd><span>友情链接</span><a href="http://www.jdgwdq.com" target="_blank">酒店大全</a><a href="http://car.ctrip.com/zijia" target="_blank">神州租车</a><a href="http://vacations.ctrip.com/subject/yuandan" target="_blank">元旦旅游</a><a href="http://vacations.ctrip.com/subject/chunjie" target="_blank">春节旅游</a><a href="http://vacations.ctrip.com/subject/qingming" target="_blank">清明旅游</a><a href="http://vacations.ctrip.com/subject/wuyi" target="_blank">五一旅游</a><a href="http://vacations.ctrip.com/subject/duanwu" target="_blank">端午旅游</a><a href="http://vacations.ctrip.com/subject/wenquan" target="_blank">温泉旅游</a><a href="http://travel.163.com/" target="_blank">网易旅游</a><a href="http://www.iqiyi.com/lvyou/" target="_blank">爱奇艺旅游</a><a href="http://you.ctrip.com/" target="_blank">携程旅游攻略</a><a href="http://travel.ifeng.com" target="_blank">凤凰网旅游</a><a href="http://vacations.ctrip.com/subject/haidao" target="_blank">海岛旅游</a><a href="http://www.mipang.com" target="_blank">米胖旅游网</a><a href="http://www.mafengwo.cn" target="_blank">马蜂窝</a><a href="http://www.qyer.com/" target="_blank">穷游网</a><a href="http://vacations.ctrip.com/subject/zhongqiu" target="_blank">中秋旅游</a><a href="http://vacations.ctrip.com/subject/guoqing" target="_blank">国庆旅游</a><a href="http://vacations.ctrip.com" target="_blank">更多&gt;&gt;</a></dd></dl></div></div></div><ul class="side_function"><li><a href="javascript:void(0);" class="revision_function_btn"><i class="revision_function_qr"></i>扫码领券</a><div class="revision_function_sub_qr" style="display:none"><div class="revision_qr_content"><img class="revision_qr_bg" src="//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/detail/erweima11.png"/><p class="revision_qr_img"><img src="//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/detail/erweima22.png"/></p><p class="revision_qr_text">扫码关注领券</p><p class="revision_qr_text">最高立减<span class="revision_qr_price">900</span>元</p></div></div></li><li><a href="http://my.ctrip.com/uxp/Community/CommunityAdvice.aspx?producttype=6" target="_blank" class="revision_function_btn" id="vac-103045-mask-remark"><i class="revision_function_feedback"></i>意见反馈</a></li><li><a href="javascript:void(0);" class="revision_function_btn" id="btnToTop" style="display:none"><i class="revision_function_top"></i>回到顶端</a></li></ul></div></div></div></div><div><div id="base_ft">
+<p>
+<a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引" href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;<a rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp; |&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com/crptravel/default/landing" title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a>
+</p>
+<p>
+<a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop" target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://join.easytrip.com/jiameng/#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://dst.ctrip.com/">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="隐私政策">隐私政策</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://m.ctrip.com/webapp/vacations/tour/supplier" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright&copy;</a>,&nbsp;<a href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a>
+</p>
+<p class="gns">
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002731"><i class="icon-gns"></i>沪公网备31010502002731号</a>
+</p>
+<div class="honour_wrap">
+<a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow">信用评级</a><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow">上海工商</a><a href="https://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow">诚信网站</a><a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网">网络社会征信网</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心">信息举报中心</a><a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站">可信网站</a><a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow">违法和不良信息举报中心</a>
+</div>
+</div><config id="timespan" value="20160329"></config><!--InstanceEnd name="position"-->
+<script type="text/javascript">var globalConfig={H1:'https',AjaxUrl:'accounts.ctrip.com',H3:'my.ctrip.com',PassportUrl:'passport.ctrip.com',Lang:'gb2312'};</script><script type="text/javascript" src="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/js/ActivityController_V2.min.js?temp=2,028,943,924" charset="utf-8"></script></div><div>
+              <!--[if lte IE 8]>
+                <style>
+                  .versions_box { background: #FDF1DA; font-size: 14px; color: #222222; text-align:center; line-height:34px; }
+                  .versions_box .versions_text { position:relative; }
+                  .versions_box .versions_text i { background: url(//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/path.png) no-repeat; display:inline-block; background-position:0 0; width:16px; height:18px; vertical-align: -2px; margin-right: 3px; *vertical-align:middle;}
+                </style>
+                <script src="//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default/lib/browser-warning.js"></script>
+              <![endif]-->
+            </div><script>(function() {
+            window.__INITIAL_STATE__ = {"isAB":"A","title":"旅游团_旅游线路_自驾游_跟团游_自由行_周边游_门票玩乐_邮轮【携程旅游】","description":"携程旅游网为您提供全球旅游、自助游、团队游、自驾游、周边游、欧铁预订以及价格查询。携程旅游网为您提供全球200多个国家，上千景区的旅游服务预订，几千种线路产品供您挑选，还提供各个地区的旅游咨询服务。全年有各种折扣、抢购、团购、帮您省钱旅游。并且提供各种邮轮、独家欧铁、半自助游等新式旅游方式产品，让你的出行随心所欲，携程在手，说走就走。","keywords":"旅游团_旅游线路_自驾游_跟团游_自由行_周边游_门票玩乐_邮轮【携程旅游】","isHeadLess":false,"isHao123":false,"departureCity":{"currentSaleCityId":30,"currentDepartureCityId":30,"currentCityName":"深圳"},"dpFlightBlackList":{},"dpBoxInfo":{"adultNum":2,"childArr":[],"babyNum":0,"flightDepartCity":{"name":"","id":""},"flightDepartTime":"","flightArriveCity":{"name":"","id":"","internal":null},"flightArriveTime":"","hotels":[{"cityInfo":{"id":null,"name":""},"checkInTime":"","leaveTime":""}]},"dpBoxSearchResult":null,"dpBoxError":{"message":"","location":"","isDeparture":false,"index":0},"hotSearchWords":null,"searchBoxPlaceHolder":{},"searchResult":null,"navigation":{"navigationList":[{"title":[{"id":18648,"text":"主题旅游","highLight":false,"linkUrl":"//vacations.ctrip.com/themetravel","sort":1,"pinYin":"zhuti"}],"index":22,"hotList":[{"id":18649,"text":"爸妈游","highLight":false,"linkUrl":"//vacations.ctrip.com/whole-0B126/?searchValue=%E7%88%B8%E5%A6%88%E6%94%BE%E5%BF%83%E6%B8%B8&searchText=%E7%88%B8%E5%A6%88%E6%94%BE%E5%BF%83%E6%B8%B8","sort":5,"pinYin":"bamayou","tagName":""},{"id":18651,"text":"蜜月游","highLight":false,"linkUrl":"//vacations.ctrip.com/whole-0B126/?searchValue=%E8%9C%9C%E6%9C%88%E6%B8%B8&searchText=%E8%9C%9C%E6%9C%88%E6%B8%B8","sort":15,"pinYin":"miyueyou","tagName":""},{"id":20473,"text":"邮轮游","highLight":false,"linkUrl":"//cruise.ctrip.com/search","sort":20,"pinYin":"youlunyou","tagName":""},{"id":18706,"text":"越野自驾","highLight":true,"linkUrl":"//vacations.ctrip.com/themetravel/yueyezijia","sort":25,"pinYin":"yueyezijia","tagName":""},{"id":19598,"text":"香港迪士尼","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/s-hongkong-10558849?from=do","sort":99,"pinYin":"xgdsn","tagName":""}],"hasPopList":false},{"title":[{"id":2,"text":"周边旅游","highLight":false,"linkUrl":"//vacations.ctrip.com/whole-30b126/?searchvalue=%e5%91%a8%e8%be%b9&searchtext=%e5%91%a8%e8%be%b9","sort":1}],"index":2,"hotList":[{"id":38,"text":"香港","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-hongkong-38?salecity=30","sort":1,"tagName":""},{"id":28,"text":"桂林","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-guilin-28?salecity=30","sort":2,"tagName":""},{"id":21,"text":"厦门","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-xiamen-21?salecity=30","sort":3,"tagName":""},{"id":27,"text":"珠海","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-zhuhai-27?salecity=30","sort":4,"tagName":""},{"id":517,"text":"清远","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-qingyuan-517?salecity=30","sort":5,"tagName":""},{"id":213,"text":"惠州","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-huizhou-213?salecity=30","sort":6,"tagName":""},{"id":39,"text":"澳门","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-macau-39?salecity=30","sort":7,"tagName":""}],"hasPopList":false},{"title":[{"id":3,"text":"境内旅游","highLight":false,"linkUrl":"","sort":1}],"index":3,"hotList":[{"id":26,"text":"深圳","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-shenzhen-26?salecity=30","sort":1,"tagName":""},{"id":1,"text":"北京","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-beijing-1?salecity=30","sort":2,"tagName":""},{"id":32,"text":"丽江","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-lijiang-32?salecity=30","sort":3,"tagName":""},{"id":61,"text":"三亚","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-sanya-61?salecity=30","sort":4,"tagName":""},{"id":104,"text":"成都","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-chengdu-104?salecity=30","sort":5,"tagName":""},{"id":23,"text":"张家界","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-zhangjiajie-23?salecity=30","sort":6,"tagName":""},{"id":2,"text":"上海","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-shanghai-2?salecity=30","sort":7,"tagName":""},{"id":7,"text":"西安","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-xian-7?salecity=30","sort":8,"tagName":""},{"id":152,"text":"广州","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-guangzhou-152?salecity=30","sort":9,"tagName":""},{"id":158,"text":"重庆","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-chongqing-158?salecity=30","sort":10,"tagName":""},{"id":14,"text":"杭州","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-hangzhou-14?salecity=30","sort":11,"tagName":""},{"id":458,"text":"呼伦贝尔","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-hulunbuir-458?salecity=30","sort":12,"tagName":""},{"id":29,"text":"昆明","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-kunming-29?salecity=30","sort":13,"tagName":""},{"id":33,"text":"贵阳","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-guiyang-33?salecity=30","sort":14,"tagName":""}],"hasPopList":false},{"title":[{"id":4,"text":"香港","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-hongkong-38?salecity=30","sort":1},{"id":4,"text":"澳门","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-macau-39?salecity=30","sort":2},{"id":4,"text":"台湾","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-taiwan-100076?salecity=30","sort":3}],"index":4,"hotList":[{"id":360,"text":"台北","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-taipei-360?salecity=30","sort":1,"tagName":""},{"id":756,"text":"高雄","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-kaohsiung-756?salecity=30","sort":2,"tagName":""},{"id":1366,"text":"花莲","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-hualien-1366?salecity=30","sort":3,"tagName":""},{"id":1369,"text":"台中","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-taichung-1369?salecity=30","sort":4,"tagName":""},{"id":757,"text":"台南","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-tainan-757?salecity=30","sort":5,"tagName":""},{"id":1368,"text":"金门","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-kinmen-1368?salecity=30","sort":6,"tagName":""},{"id":1367,"text":"澎湖","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-penghu-1367?salecity=30","sort":7,"tagName":""}],"hasPopList":false},{"title":[{"id":5,"text":"日本","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-japan-100041?salecity=30","sort":1},{"id":5,"text":"蒙古","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-mongolia-20391?salecity=30","sort":2}],"index":5,"hotList":[{"id":293,"text":"大阪","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-osaka-293?salecity=30","sort":1,"tagName":""},{"id":296,"text":"北海道","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-hokkaido-296?salecity=30","sort":2,"tagName":""},{"id":294,"text":"东京","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-tokyo-294?salecity=30","sort":3,"tagName":""},{"id":1446652,"text":"冲绳","highLight":false,"linkUrl":"//vacations.ctrip.com/whole-30b126/?searchvalue=%e5%86%b2%e7%bb%b3&searchtext=%e5%86%b2%e7%bb%b3","sort":4,"tagName":""},{"id":430,"text":"京都","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-kyoto-430?salecity=30","sort":5,"tagName":""},{"id":2127,"text":"名古屋","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-nagoya-2127?salecity=30","sort":6,"tagName":""},{"id":1045,"text":"奈良","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-nara-1045?salecity=30","sort":7,"tagName":""}],"hasPopList":false},{"title":[{"id":6,"text":"东南亚","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/r-dongnanya-110?salecity=30","sort":1},{"id":6,"text":"南亚","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/r-nanya-109?salecity=30","sort":2}],"index":6,"hotList":[{"id":100021,"text":"泰国","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-thailand-100021?salecity=30","sort":1,"tagName":""},{"id":330,"text":"马尔代夫","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-maldives-330?salecity=30","sort":2,"tagName":""},{"id":438,"text":"巴厘岛","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-bali-438?salecity=30","sort":3,"tagName":""},{"id":21396,"text":"新加坡","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-singapore-21396?salecity=30","sort":4,"tagName":""},{"id":100046,"text":"越南","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-vietnam-100046?salecity=30","sort":5,"tagName":""},{"id":364,"text":"普吉岛","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-phuket-364?salecity=30","sort":6,"tagName":""},{"id":100022,"text":"马来西亚","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-malaysia-100022?salecity=30","sort":7,"tagName":""}],"hasPopList":false},{"title":[{"id":7,"text":"欧洲","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/r-ouzhou-120002?salecity=30","sort":1}],"index":7,"hotList":[{"id":100083,"text":"俄罗斯","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-russia-100083?salecity=30","sort":1,"tagName":""},{"id":100050,"text":"瑞士","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-switzerland-100050?salecity=30","sort":2,"tagName":""},{"id":100096,"text":"冰岛","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-iceland-100096?salecity=30","sort":3,"tagName":""},{"id":100232,"text":"塞尔维亚","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-serbia-100232?salecity=30","sort":4,"tagName":""},{"id":20354,"text":"英国","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-unitedkingdom-20354?salecity=30","sort":5,"tagName":""},{"id":100026,"text":"意大利","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-italy-100026?salecity=30","sort":6,"tagName":""},{"id":100036,"text":"希腊","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-greece-100036?salecity=30","sort":7,"tagName":""}],"hasPopList":false},{"title":[{"id":8,"text":"美洲","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/r-meizhou-102?salecity=30","sort":1}],"index":8,"hotList":[{"id":569,"text":"塞班岛","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-saipan-569?salecity=30","sort":1,"tagName":""},{"id":100047,"text":"美国","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-unitedstates-100047?salecity=30","sort":2,"tagName":""},{"id":251,"text":"夏威夷","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-hawaii-251?salecity=30","sort":3,"tagName":""},{"id":100029,"text":"加拿大","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-canada-100029?salecity=30","sort":4,"tagName":""},{"id":120518,"text":"洛杉矶","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-losangeles-120518?salecity=30","sort":5,"tagName":""},{"id":248,"text":"纽约","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-newyork-248?salecity=30","sort":6,"tagName":""},{"id":21598,"text":"巴哈马","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-bahamas-21598?salecity=30","sort":7,"tagName":""}],"hasPopList":false},{"title":[{"id":9,"text":"澳新南太","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/r-aoxinnantai-114?salecity=30","sort":1},{"id":9,"text":"中东非","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/r-zhongdongfei-113?salecity=30","sort":2}],"index":9,"hotList":[{"id":1062,"text":"迪拜","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-dubai-1062?salecity=30","sort":1,"tagName":""},{"id":100073,"text":"土耳其","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-turkey-100073?salecity=30","sort":2,"tagName":""},{"id":100048,"text":"澳大利亚","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-australia-100048?salecity=30","sort":3,"tagName":""},{"id":100132,"text":"摩洛哥","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-morocco-100132?salecity=30","sort":4,"tagName":""},{"id":100078,"text":"新西兰","highLight":false,"linkUrl":"//vacations.ctrip.com/tours/d-newzealand-100078?salecity=30","sort":5,"tagName":""},{"id":444,"text":"毛里求斯","highLight":true,"linkUrl":"//vacations.ctrip.com/tours/d-mauritius-444?salecity=30","sort":6,"tagName":""},{"id":100030,"text":"埃及","highLight":false,"linkUrl":"//vacations.ctrip.com/whole-30b126/?searchvalue=%e5%9f%83%e5%8f%8a&searchtext=%e5%9f%83%e5%8f%8a","sort":7,"tagName":""}],"hasPopList":false}],"navigationPopList":[]},"advertise":{"travelVaneAdvertise":[{"imgUrl":"https://images3.c-ctrip.com/dj/201907/678_gn_195x254.jpg","linkUrl":"https://vacations.ctrip.com/tangram/MTYzNg==?ctm_ref=vactang_page_1636","sortOrder":2},{"imgUrl":"https://pages.c-ctrip.com/groupTravelUED/markrt_mb/pc/zm0114000000xf1wz293B.jpg","linkUrl":"https://vacations.ctrip.com/tangram/OTAy?ctm_ref=vactang_page_902","sortOrder":3},{"imgUrl":"https://pic.c-ctrip.com/cruise/activity/sale/pic_190603.png","linkUrl":"https://cruise.ctrip.com/activity/sale.html?ctm_ref=vdc_ctm_12","sortOrder":5},{"imgUrl":"https://images3.c-ctrip.com/dj/201906/cytx_195x254.jpg","linkUrl":"https://vacations.ctrip.com/vacation/marketing/index/cytx","sortOrder":6}],"middleAdvertise":[{"imgUrl":"https://images3.c-ctrip.com/dj/201902/tmhcytx_348x260.jpg","linkUrl":"https://vacations.ctrip.com/vacation/marketing/index/cytx#ctm_ref=vdc_ctm_2465","sortOrder":1},{"imgUrl":"https://images3.c-ctrip.com/dj/201902/tmh_pc2_424_260.jpg","linkUrl":"https://vacations.ctrip.com/tours/deals/index#ctm_ref=vdc_ctm_2466","sortOrder":2},{"imgUrl":"https://images3.c-ctrip.com/dj/201905/sq1_pc3_404_129.jpg","linkUrl":"https://vacations.ctrip.com/tangram/MTE2Ng==?ctm_ref=vactang_page_1166#ctm_ref=vdc_ctm_2467","sortOrder":3},{"imgUrl":"https://images3.c-ctrip.com/dj/201902/pcad2_404129.jpg","linkUrl":"https://vacations.ctrip.com/tours/d-thailand-100021?from=do#ctm_ref=vdc_ctm_2468","sortOrder":4}]},"seckill":{},"dealProductList":[],"dealProductListCache":{},"productInfos":{"1":{"sideImgList":[{"imgUrl":"","linkUrl":""}],"tabList":[{"name":"","products":[],"tabID":0}],"catgoryName":"","canShow":false,"loaded":false},"2":{},"3":{},"4":{},"5":{}},"location":{"pathname":"/","search":"","hash":"","action":"POP","query":{},"pattern":["/","/index","/startcity/:startcity"],"params":{},"raw":"/"},"basename":"","publicPath":"//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default","restapi":"http://apigateway.ctripcorp.com/restapi/soa2","env":"prod","pageId":103045}
+            window.__APP_SETTINGS__ = {"type":"createHistory","basename":"","context":{"basename":"","publicPath":"//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default","restapi":"//online.ctrip.com/restapi/soa2","env":"prod","appId":"100018068","preload":{}}}
+            window.__PUBLIC_PATH__ = '//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default'
+          })()</script><script src="//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default/js/vendor-65f7a1.js"></script><script src="//webresource.c-ctrip.com/ares2/vacation/vacation-home/1.3.20/default/js/index-0d362c.js"></script><script>
+            ; (function() {
+                window.__bfi = window.__bfi || [];
+                if (! (window.$_bf && window.$_bf.loaded || window.$LAB || window.CtripJsLoader)) {
+                    var a = new Date,
+                    b = !1,
+                    c = "?v=" + a.getFullYear() + a.getMonth() + "_" + a.getDate(),
+                    a = document.createElement("script");
+                    a.type = "text/javascript";
+                    a.charset = "utf-8";
+                    a.async = !0;
+                    try {
+                        b = "https:" == location.protocol
+                    } catch(d) {}
+                    a.src = ((b ? "https:": "http:")) + "//webresource.c-ctrip.com/code/ubt/_bfa.min.js" + c;
+                    b = document.getElementsByTagName("script")[0];
+                    b.parentNode.insertBefore(a, b)
+                }
+            })();
+          </script><input type="hidden" name="page_id" id="page_id" value="103045"/></body></html>

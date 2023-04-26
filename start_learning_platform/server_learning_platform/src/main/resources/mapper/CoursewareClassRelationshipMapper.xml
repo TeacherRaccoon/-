@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.performance.mapper.CoursewareClassRelationshipMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.performance.bean.CoursewareClassRelationship">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="classInfoId" column="class_info_id" jdbcType="VARCHAR"/>
+            <result property="coursewareInfoId" column="courseware_info_id" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,class_info_id,courseware_info_id
+    </sql>
+</mapper>

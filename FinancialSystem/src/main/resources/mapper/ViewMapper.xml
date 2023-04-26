@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.kgc.finance.dao.ViewMapper">
+    <select id="orderInfo" resultType="com.kgc.finance.pojo.InfoEntry">
+        select
+          `orderId`,
+          `userName`,
+          `identity`,
+          `phone`,
+          `maritalStatus`,
+          `spouseName`,
+          `spouseIdentity`,
+          `privateLending`,
+          `lawsuitCase`,
+          `totalAmount`,
+          `foreclosure`,
+          `houseName`,
+          `area`,
+          `address`,
+          `assessment`,
+          `ownerName`,
+          `originalBank`,
+          `originalAmount`,
+          `amountBlance`,
+          `newBank`,
+          `newAmount`,
+          `managerName`,
+          `managerPhone`,
+          `amount`,
+          `amountDays`,
+          `rate`,
+          `brokerage`,
+          `feeWay`,
+          `paragraphTime`,
+          `dealPrice`,
+          `orderAmount`,
+          `superviseAmount`,
+          `buyerName`,
+          `buyerIdentity`,
+          `createDate`,
+          `status`,
+          `salesmanId`,
+          `payType`
+        FROM
+          `infoentry`
+        where
+          `orderId` =#{orderId}
+    </select>
+    <select id="outAmountInfo" resultType="com.kgc.finance.pojo.OutAmountInfo">
+        SELECT
+          `outAmountId`,
+          `amountNo`,
+          `amountName`,
+          `amountBank`,
+          `returnedName`,
+          `returnedBank`,
+          `returnedAmount`,
+          `creationDate`,
+          `modifyDate`,
+          `orderId`
+        FROM
+          `outamountinfo`
+        WHERE
+          `orderId` =#{orderId}
+    </select>
+    <select id="imgInfo"  resultType="com.kgc.finance.pojo.UploadInfo">
+        SELECT
+            `infoId`,
+            `imgUrl`,
+            `orderId`,
+            `imageType`,
+            `creationDate`,
+            `modifyDate`
+        FROM
+            `uploadinfo`
+        WHERE
+            `orderId` = #{orderId}
+    </select>
+    <update id="alterState">
+        UPDATE
+            `infoentry`
+        SET
+            `status` = #{status}
+            <if test="salesmanId!=null and salesmanId!=''">
+           , salesmanId=#{salesmanId}
+            </if>
+        <if test="windId!=null and windId!=''">
+            , windId=#{windId}
+        </if>
+        <if test="financeId!=null and financeId!=''">
+            , financeId=#{financeId}
+        </if>
+        where
+            `orderId` = #{orderId}
+    </update>
+    <!--删除信息-->
+    <delete id="deleteView" parameterType="integer">
+        DELETE FROM infoentry WHERE orderId=#{orderId}
+    </delete>
+
+</mapper>

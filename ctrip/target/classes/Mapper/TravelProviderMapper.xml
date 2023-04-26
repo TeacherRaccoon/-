@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--TravelProviderMapper的sql映射文件-->
+<mapper namespace="com.example.ctrip.Dao.TravelProviderMapper">
+
+    <!--查询指定id供应商的基本信息：id、名称、简称、许可证图片id、许可证号-->
+    <select id="getProviderById" resultType="com.example.ctrip.Pojo.TravelProvider">
+        select id,providerName,providerAbb,certificateId,licenseNo from travel_provider where id = #{id};
+    </select>
+    <!--多条件查询满足条件的供应商-->
+    <select id="getProviderByCondition" parameterType="map" resultType="com.example.ctrip.Pojo.TravelProvider">
+        <!--后面用起来再来写这条sql-->
+        select distinct id,providerName,providerAbb,certificateId,licenseNo from travel_provider
+        <where>
+            <if test="providerName !=null and providerName !=''">
+                providerName like concat('%',#{providerName},'%')
+            </if>
+        </where>
+    </select>
+    <!--多条件分页查询-->
+    <select id="getProviderByPage" parameterType="map" resultType="com.example.ctrip.Pojo.TravelProvider">
+        select distinct id,providerName,providerAbb,certificateId,licenseNo from travel_provider
+        <where>
+            <!--后面补充条件-->
+            <if test="providerName !=null and providerName !=''">
+                providerName like concat('%',#{providerName},'%')
+            </if>
+        </where>
+        limit #{start},#{length}
+    </select>
+    <!--新供应商添加-->
+    <insert id="addProvider" parameterType="map">
+        insert into travel_provider
+         providerName,
+         providerAbb,
+         productDetails,
+         certificateId,
+         provinceId,
+         cityId,
+         providerAddress,
+         licenseNo,
+         creationDate
+         value(
+            #{providerName},
+            #{providerAbb},
+            #{productDetails},
+            #{certificateId},
+            #{provinceId},
+            #{cityId},
+            #{providerAddress},
+            #{licenseNo},
+            NOW()
+        )
+    </insert>
+    <update id="updateProvider" parameterType="map" >
+        update from travel_provider
+        <trim suffixOverrides=",">
+            <if test="providerName !=null and providerName!=''">
+                providerName=#{providerName},
+            </if>
+            <if test="providerAbb !=null and providerAbb!=''">
+                providerAbb=#{providerAbb},
+            </if>
+            <if test="productDetails !=null and productDetails!=''">
+                productDetails=#{productDetails},
+            </if>
+            <if test="certificateId !=null">
+                certificateId=#{certificateId},
+            </if>
+            <if test="provinceId !=null">
+                provinceId=#{provinceId},
+            </if>
+            <if test="cityId !=null">
+                cityId=#{cityId},
+            </if>
+            <if test="providerAddress !=null and providerAddress!=''">
+                providerAddress=#{providerAddress},
+            </if>
+            <if test="licenseNo !=null and licenseNo!=''">
+                licenseNo=#{licenseNo},
+            </if>
+        </trim>
+        modifyDate=NOW()
+         where id=#{id}
+    </update>
+    <!--删除指定id的供应商-->
+    <delete id="delProviderById">
+        delete from travel_provider where id=#{id}
+    </delete>
+</mapper>

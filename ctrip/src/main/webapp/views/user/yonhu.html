@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	AutoPost
+</title></head>
+<body onload="javascript:AutoSubmit();">
+    <form name="form1" method="post" action="../AutoPost_New.aspx" id="form1">
+<input type="hidden" name="BackURL" id="BackURL" value="https://my.ctrip.com/home/Order/AllOrder.aspx" />
+<input type="hidden" name="ResponseMethod" id="ResponseMethod" value="GET" />
+<input type="hidden" name="SessionID" id="SessionID" value="s2qihy3c5swlie2lw35zxy2m480120" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTU4MjMyMzI1ZGTs9Rv7vqrG28gB7vIfNAoYSvNKpQ==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2B3A1ACA" />
+        <div>
+        </div>
+    </form>
+
+    <script type="text/javascript" language="javascript">
+        function AutoSubmit() {
+            var objForm = document.getElementById("aspnetForm");
+            if (objForm == null) {
+                objForm = document.getElementById("form1");
+            }
+            objForm.action = "https://passport.ctrip.com/user/login";
+            objForm.submit();
+        }
+    </script>
+
+</body>
+</html>

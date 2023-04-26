@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ctrip.Dao.TravelOrderMapper">
+    <!--旅客-->
+    <resultMap id="userPassenger" type="com.example.ctrip.Pojo.UserPassenger">
+        <id property="id" column="upId"/>
+        <result property="name" column="upName"/>
+        <result property="phone" column="upPhone"/>
+        <result property="certificateType" column="certificateType"/>
+        <result property="certificateNumber" column="certificateNumber"/>
+    </resultMap>
+    <!--联系人-->
+    <resultMap id="userContact" type="com.example.ctrip.Pojo.UserContact">
+        <id property="id" column="ucId"/>
+        <result property="name" column="ucName"/>
+        <result property="phone" column="ucPhone"/>
+        <result property="email" column="email"/>
+    </resultMap>
+    <!--订单-->
+    <resultMap id="travelOrder" type="com.example.ctrip.Pojo.TravelOrder">
+        <id property="id" column="id"/>
+        <result property="orderCode" column="orderCode"/>
+        <result property="travelProTitle" column="travelProTitle"/>
+        <result property="travelProTheme" column="travelProductType"/>
+        <result property="tradeNo" column="tradeNo"/>
+        <result property="totalPrice" column="totalPrice"/>
+        <result property="orderStatus" column="orderStatus"/>
+        <result property="payType" column="payType"/>
+        <result property="isCommen" column="isCommen"/>
+        <result property="startDate" column="startDate"/>
+        <result property="endDate" column="endDate"/>
+        <result property="adultNum" column="adultNum"/>
+        <result property="childNum" column="childNum"/>
+        <result property="creationDate" column="creationDate"/>
+        <result property="orginName" column="orginName"/>
+        <result property="userId" column="userId"/>
+        <association property="userContact" resultMap="userContact"/>
+        <collection property="userPassengerList"  resultMap="userPassenger"/>
+    </resultMap>
+
+    <resultMap id="travelOrder1" type="com.example.ctrip.Pojo.TravelOrder">
+        <id column="id" property="id"/>
+        <result property="orderCode" column="orderCode"/>
+        <result property="travelProTitle" column="travelProTitle"/>
+        <result property="totalPrice" column="totalPrice"/>
+        <result property="startDate" column="startDate"/>
+        <result property="adultNum" column="adultNum"/>
+        <result property="childNum" column="childNum"/>
+        <result property="userId" column="userId"/>
+    </resultMap>
+    <insert id="addTravelOrder" parameterType="com.example.ctrip.Pojo.TravelOrder">
+        insert into travel_order
+            (`orderCode`,`travelProTitle`,`travelProId`,`travelProTheme`,`tradeNo`,`totalPrice`,
+                `orderStatus`,`payType`,`orderType`,`startDate`,`endDate`,`adultNum`,`childNum`,
+                `moreRequirements`,`creationDate`,`userId`,`orginName`,`hasInvoice`,`userContactId`)
+                values (
+                    #{orderCode},
+                    #{travelProTitle},
+                    #{travelProId},
+                    #{travelProTheme},
+                    #{tradeNo},
+                    #{totalPrice},
+                    #{orderStatus},
+                    #{payType},
+                    2,
+                    #{startDate},
+                    #{endDate},
+                    #{adultNum},
+                    #{childNum},
+                    #{moreRequirements},
+                    NOW(),
+                    #{userId},
+                    #{orginName},
+                    0,
+                    #{userContactId}
+                )
+    </insert>
+    <select id="getTravelOrder" resultMap="travelOrder">
+        select  t.id,t.orderCode,t.travelProTitle,t.travelProductType,t.tradeNo,t.totalPrice,t.orderStatus,t.payType,t.isComment,
+                t.orginName,t.startDate,t.endDate,t.adultNum,t.childNum,t.creationDate,t.userId,temp1.*,temp2.* from travel_order as t,
+                (select up.id as upId,up.name as upName,up.phone as upPhone,up.certificateType,up.certificateNumber from user_passenger as up
+                    where up.id in(select userPassengerId from travelOrder_userPassenger where orderId=#{id}))as temp1,
+                (select uc.id as ucId,uc.name as ucName,uc.phone as ucPhone,uc.email from user_contact as uc
+                    where uc.id=(select userContactId from travel_order where travel_order.id=#{id}))as temp2
+        where t.id=#{id}
+    </select>
+    <select id="getTravelOrderByTime" resultMap="travelOrder1">
+        select id,orderCode,travelProTitle,totalPrice,startDate,adultNum,childNum,userId from travel_order
+            where userId=#{userId} order by creationDate desc limit 1
+    </select>
+    <update id="updateTravelOrder" parameterType="map">
+        update travel_order set tradeNo=#{tradeNo},orderStatus=#{orderStatus},isComment=#{isComment},modifyDate=now() where orderCode=#{orderCode}
+    </update>
+    <delete id="delTravelOrder">
+
+    </delete>
+    <insert id="insertUserPassenger"  parameterType="com.example.ctrip.Pojo.UserPassenger" >
+        insert into  user_passenger(name,gender,phone,certificateType,certificateNumber,birthday,userId,orderId)
+            values(#{name},#{gender},#{phone},#{certificateType},#{certificateNumber},#{birthday},#{userId},#{orderId})
+    </insert>
+    <insert id="insertUserContact"  parameterType="com.example.ctrip.Pojo.UserContact">
+        insert into user_contact(`name`,phone,email,userId)
+            values(#{name},#{phone},#{email},#{userId})
+    </insert>
+    <insert id="insertOrderAndContactAndPassenger" >
+        insert into travelOrder_userPassenger(orderId,userPassengerId,creationDate) values(#{orderId},#{userPassengerId},NOW())
+    </insert>
+    <select id="getUserOrderId" resultType="java.lang.Integer">
+        select id from travel_order where userId=#{userId} order by creationDate desc limit 1
+    </select>
+    <select id="getUserPassengerId" resultType="java.lang.Integer">
+        select id from user_passenger where userId=#{userId} and orderId=#{orderId} order by createDate desc limit 1
+    </select>
+    <select id="getAllPassengerByUserId" resultType="com.example.ctrip.Pojo.UserPassenger">
+        select  id,`name`,certificateType,certificateNumber,phone from user_passenger where userId=#{userId}
+    </select>
+    <select id="getUserContactId" resultType="integer">
+        select id from user_contact where userId=#{userId} order by creationDate desc limit 1
+    </select>
+    <update id="updateInventory" >
+        update travel_time_inventory set store=store-(select adultNum from travel_order where orderCode=#{orderCode}),modifyDate=NOW()
+            where productId=(select travelProId from travel_order where orderCode=#{orderCode} ) and recordDate=(select startDate from travel_order where orderCode=#{orderCode})
+    </update>
+</mapper>

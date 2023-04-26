@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--该映射文件映射的接口为UserMapper-->
+<mapper namespace="com.example.ctrip.Dao.TicketOrderMapper">
+
+    <!-- 添加门票订单 -->
+    <insert id="addTicketOrder" parameterType="com.example.ctrip.Pojo.TicketOrder">
+        INSERT INTO tickets_order
+	    (orderCode,orderName,orderType,travelId,travelInTime,orderStatus,orderTime,totalPrice,number,creationDate)
+	    VALUES (#{orderCode},#{orderName},#{orderType},#{travelId},#{travelInTime},#{orderStatus},NOW(),#{totalPrice},number,NOW())
+    </insert>
+
+    <!--添加评论-->
+    <insert id="addTicketSore">
+        INSERT INTO tickets_sore
+	    (userId, sore, content, cretionDate, ticketId)
+	    VALUES(#{userId}, #{sore},#{content},NOW(),#{ticketId})
+    </insert>
+
+    <!--修改评论-->
+    <update id="updateTicketSore">
+        update tickets_sore
+        <trim  prefix="set" suffixOverrides=",">
+            <if test="userId !=null">userId=#{userId},</if>
+            <if test="sore !=null">sore=#{sore},</if>
+            <if test="content !=null and content !=''">content=#{content},</if>
+            <if test="ticketId != null">ticketId=#{ticketId},</if>
+            cretionDate=NOW()
+        </trim>
+
+        WHERE id=#{id}
+    </update>
+
+    <!--删除评论-->
+    <delete id="delectTicketSore">
+        delete from tickets_sore where id=#{id}
+    </delete>
+
+    <!-- 根据景点id查询所有评论 -->
+    <select id="getSoreByScenicSpotId" resultType="com.example.ctrip.Pojo.TicketSore">
+       SELECT * FROM tickets_sore ts WHERE ts.ticketId IN(SELECT id FROM travel_scenic_spot
+       WHERE id=#{id})
+    </select>
+
+    <!--景点评论分页-->
+    <select id="getSoreListPage" resultType="com.example.ctrip.Pojo.TicketSore">
+        SELECT * FROM tickets_sore ts WHERE ts.ticketId IN(SELECT id FROM travel_scenic_spot
+        WHERE id=#{id}) LIMIT #{index},#{pageSize}
+    </select>
+
+</mapper>

@@ -1,0 +1,9 @@
+com\example\ctrip\Controller\TravelProReviewControllerTest.class
+com\example\ctrip\Controller\TravelProGradeControllerTest.class
+com\example\ctrip\CtripApplicationTests.class
+com\example\ctrip\Controller\JsoupUse02Test.class
+com\example\ctrip\hxl\hotel_Test.class
+com\example\ctrip\Controller\FtpFileUtilTest.class
+com\example\ctrip\CtripApplicationTests$LambdaTest.class
+com\example\ctrip\Controller\TravelProductControllerTest.class
+com\example\ctrip\Controller\TravelProviderControllerTest.class

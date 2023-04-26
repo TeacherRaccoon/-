@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://mat1.gtimg.com/libs/jquery2/2.2.0/jquery.js"></script>
+</head>
+<body>
+文件上传:
+<input id="upload" style="width: 200px;height: 50px" type="file" multiple value="选择文件"><br/>
+<button id="btn" style="width: 100px;height: 40px">submit</button>
+
+<script>
+    function getId(id){
+        return document.getElementById(id);
+    }
+    let len;
+    let imgArray;
+    $("#upload").on("change",function () {
+        let inputId = $(this).attr("id");
+        let input = getId(inputId);
+        len =input.files.length;
+        imgArray=input.files;
+    });
+    $("#btn").on("click",function () {
+        let formdata = new FormData();
+        for(let i=0;i<len;i++){
+            formdata.append('file',imgArray[i]);
+        }
+        if(len!==0){
+            console.log(imgArray);
+            $.ajax({
+                url:"http://localhost:8090/upload",
+                type:"post",
+                dataType:"json",
+                data:formdata,
+                processData: false,
+                contentType: false,
+                success:function (data) {
+                    console.log(data);
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>
